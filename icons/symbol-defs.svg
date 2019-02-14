@@ -1,0 +1,10 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="IconAttention" viewBox="0 0 32 32">
+<title>IconAttention</title>
+<path fill="#ecc30f" style="fill: var(--color1, #ecc30f)" d="M28.631 0h-25.262c-1.856 0-3.369 1.512-3.369 3.369v25.262c0 1.856 1.512 3.369 3.369 3.369h25.262c1.85 0 3.369-1.512 3.369-3.369v-25.262c0-1.856-1.512-3.369-3.369-3.369z"></path>
+<path fill="#343a40" style="fill: var(--color2, #343a40)" d="M18.262 26.475h-4.525v-4.525h4.525z"></path>
+<path fill="#343a40" style="fill: var(--color2, #343a40)" d="M16.756 20.438h-1.512l-1.506-14.075h4.525z"></path>
+</symbol>
+</defs>
+</svg>

@@ -1,0 +1,2594 @@
+ //
+// cards/CARDS
+// --------------------------------------------------
+
+
+// Base class
+.card {
+  margin-bottom: 0px;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: $card-border-radius;
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+}
+
+
+
+// jeff:this is to override the card drawer bg color
+.card-drawer{
+  background-color: #ffffff;
+  border-color:$gray;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  margin-bottom:30px;
+}
+
+
+// db
+.card-card {
+  &.vehicle {
+    background-color: $white;
+    border-color:$gray;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    margin-bottom:0px;
+    img {
+      text-align: center;
+      width: 100%;
+
+      @media (min-width: $screen-desktop) {
+        float: left;
+        width: 50%;
+      }
+    }
+    ul {
+      @media (min-width: $screen-desktop) {
+        padding-left:15px;
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+// db
+.card-card {
+  &.image-without-header {
+    .title {
+      overflow: hidden;
+      img {
+        width: 25%;
+        float: left;
+        @media (min-width: $screen-tablet) {
+          float: none;
+          width: 100%;
+          margin-bottom: 40px;
+        }
+      }
+
+      h4 {
+          margin: 0px;
+          padding-left: 20px;
+          float: left;
+          width: 75%;
+        @media (min-width: $screen-tablet) {
+          width: 100%;
+          float: none;
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+.card-card {
+  &.image-with-text-dashboard {
+    background-color: $white;
+    border-color:$gray;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    margin-bottom:30px;
+
+    .title {
+      overflow: hidden;
+      margin-bottom:20px;
+      text-align: center;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    h5 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+  }
+}
+
+.card-card {
+    &.device-vertical {
+        cursor: pointer;
+        background-color: $white;
+        border-color:$gray;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        display: block;
+        img {
+            float: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &:hover {
+            background-color: $gray-light;
+            border-color: $brand-primary;
+            a {
+                cursor: auto;
+            }
+        }
+    }
+}
+
+
+.card-card {
+    &.device-horizontal {
+        background-color: $gray-light;
+        border-color: $brand-primary;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        display: block;
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+            @media (min-width: $screen-tablet) {
+                width: 50%;
+                float: left;
+                margin-bottom: 0px;
+            }
+        }
+        ul {
+            @media (min-width: $screen-tablet) {
+                padding-left:15px;
+                float: left;
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.card.card-tertiary {
+  margin-bottom: 30px;
+  background-color: $gray-light;
+  min-height: 225px;
+}
+
+.card.card-account {
+  margin-bottom: 30px;
+  min-height: 420px;
+  margin-bottom: 20px;
+
+}
+
+.card.card-addVehicle{
+  max-height: 300px;
+  background-color: white;
+}
+
+// card contents
+.card-body {
+  padding: 20px 20px 40px 20px;
+}
+
+
+
+// List groups in cards
+//
+// By default, space out list group content from card headings to account for
+// any kind of custom content between the two.
+
+.card {
+  > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+
+      // Remove border radius for top one
+      &:first-child {
+        @include border-top-radius(0);
+      }
+      // But keep it for the last one
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.card-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0;
+  }
+}
+
+
+// Tables in cards
+//
+// Place a non-bordered `.table` within a card (not within a `.card-body`) and
+// watch it go full width.
+
+.card {
+  > .table {
+    margin-bottom: 0;
+  }
+  > .card-body + .table {
+    border-top: 1px solid $table-border-color;
+  }
+}
+
+
+// Optional heading
+.card-heading, .card-heading-expand {
+  position: relative;
+  padding: 0px;
+  border-bottom: 0px solid transparent;
+  @include border-top-radius($card-border-radius - 1);
+  a {
+  color:$white;
+  text-decoration: none;
+  }
+  a:hover {
+  color:$white;
+  text-decoration: none;
+  }
+
+
+}
+
+.card-heading-expand{
+  cursor:pointer;
+  span.icon-ui-arrowdown {
+    color: $blue;
+  }
+}
+
+
+
+
+.card-heading-expand > span {
+  position:absolute;
+  top: 25px;
+  right: 15px;
+  font-size: 20px;
+  line-height: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+// Within heading, strip any `h*` tag of it's default margins for spacing.
+.card-title {
+  margin:0px;
+  padding: 20px;
+  > a {
+    color: inherit;
+  }
+  ul.list-inline.icons{
+    color: $blue;
+    font-size: 40px
+  }
+  ul.list-inline.icons li {
+      padding-right: 0px;
+      margin-bottom: 10px;
+  }
+  .with-icon {
+    overflow: hidden;
+    span {
+      float: left;
+      font-size: 42px;
+    }
+    h4 {
+      margin-left:52px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.card-title-expand {
+  padding: 15px 20px;
+  margin:0px 30px 0px 0px;
+  > a {
+    color: inherit;
+  }
+  h5,p {
+    margin-bottom: 0px;
+    margin-left: 30px;
+  }
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+}
+
+
+
+
+.card-primary-tool .card-title {
+    color:$white;
+    h3 {
+        color:$white;
+    }
+}
+
+
+
+
+
+// DB: Makes Title work with icon floated to right
+.card-title-icon {
+  padding: 15px 20px;
+  margin-right:40px;
+  margin-bottom: 0px;
+  color:$white;
+  > a {
+    color: inherit;
+  }
+}
+
+
+
+
+
+
+
+// Optional footer (stays gray in every modifier class)
+.card-footer {
+  padding: 0px;
+  background-color: transparent;
+  border-top: 0px solid $card-inner-border;
+  @include border-bottom-radius($card-border-radius - 1);
+}
+
+
+
+
+// Dbaker
+
+.card-image {
+  padding: 0px;
+  text-align: center;
+  position: relative;
+    @media (min-width: $screen-tablet) {
+    }
+
+  img {
+    @media (min-width: $screen-tablet) {
+      max-height: 194px;
+      display: inline;
+    }
+    @media (min-width: $screen-desktop) {
+      max-height: 160px;
+      display: inline;
+    }
+  }
+
+  .vin {
+    text-transform: uppercase;
+    background-color: $gray-light;
+    padding:5px 10px;
+    position: absolute;
+    top:0px;
+    left: -20px;
+    margin:0px;
+  }
+
+}
+
+
+
+.card-bg-extend {
+  padding:20px;
+}
+
+
+
+.card-bg-extend-border {
+  padding: 20px;
+  border-top:1px solid $gray;
+}
+
+
+.card-bg-extend-borderbottom {
+  padding: 10px 20px;
+  border-bottom:1px solid $gray;
+// db: list inline with pipe
+   ul li:before {
+    padding-right:0px;
+      @media (min-width: 320px) {
+        padding-right:0px;
+      }
+    }
+
+   ul li:before > li {
+    padding-right:0px;
+      @media (min-width: 320px) {
+        padding-right:05px;
+      }
+    }
+
+  .list-inline-pipe {
+    @include list-unstyled();
+    > li {
+      display: block;
+      content: none;
+      padding-left: 0px;
+      @media (min-width: 320px) {
+        display: inline-block;
+      }
+    }
+    > li + li {
+      padding-left: 0px;
+      margin-top:10px;
+      @media (min-width: 320px) {
+        margin-top:0px;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .list-inline-pipe {
+    @include list-unstyled();
+    > li:before {
+      content: none;
+
+      @media (min-width: 320px) {
+        content: "| ";
+        color:$gray;
+      }
+
+    }
+  }
+
+  .list-inline-pipe {
+    @include list-unstyled();
+    > li:first-child:before {
+      content: "";
+    }
+  }
+}
+
+// db: list inline with pipe IE fix
+* html .list-inline-pipe li {
+  border-left: 1px solid black;
+  padding: 0 0.4em 0 0.4em;
+  margin: 0 0.4em 0 -0.4em;
+}
+
+
+
+
+
+
+
+
+
+// db: list inline with pipe THIS DOES NOT REMOVE PIPE ON SCREEN SIZE
+
+.list-inline-pipe {
+  @include list-unstyled();
+  > li {
+    display: block;
+    content: none;
+    @media (min-width: 475px) {
+      display: inline-block;
+    }
+  }
+  > li + li {
+    padding-left: 5px;
+  }
+}
+
+.list-inline-pipe {
+  @include list-unstyled();
+  > li:before {
+    content: none;
+
+    @media (min-width: 475px) {
+      content: "| ";
+    }
+
+  }
+}
+
+.list-inline-pipe {
+  @include list-unstyled();
+  > li:first-child:before {
+    content: "";
+  }
+}
+
+// db: list inline with pipe IE fix
+* html .list-inline-pipe li {
+  border-left: 1px solid black;
+  padding: 0 0.4em 0 0.4em;
+  margin: 0 0.4em 0 -0.4em;
+}
+
+
+
+
+
+// Dbaker: horizontal list links for cards
+// .card-bg-extend-border ul.list-inline li + li {
+//   margin-bottom: 0px;
+//   margin-top: 10px;
+//   float:none;
+//       @media (min-width: 369px) {
+//       float: right;
+//       margin-left: 0px;
+//       margin-top:0px;
+//       // margin: 10px 0px 0px 0px;
+//     }
+//     @media (min-width: $screen-tablet) {
+//       float: none;
+//       margin-left: 0px;
+//       margin-top:10px;
+//       // margin: 10px 0px 0px 0px;
+//     }
+//     @media (min-width: $screen-lg-desktop) {
+//       float: right;
+//       margin-top:0px;
+//     }
+// }
+
+
+
+
+
+// db: card for individual items within card
+.card-single-content-border {
+  border-bottom:1px solid $gray;
+  padding: 20px 20px 20px 20px;
+  @include clearfix();
+  @media (min-width: $screen-tablet) {
+    border-bottom: none;
+    border-right: 1px solid $gray;
+    margin-right:-15px;
+  }
+}
+
+
+.card-single-content {
+  padding: 20px 20px 20px 20px;
+  @include clearfix();
+  @media (min-width: $screen-tablet) {
+  margin-left:-15px;
+  }
+}
+
+
+
+
+// Dbaker: horizontal list links for cards without list-inline applied to ul
+.card-bg-extend-border ul li button.btn-link {
+  text-align: left;
+}
+
+.card-bg-extend-border ul li a.btn-link {
+  text-align: left;
+}
+
+
+// .card-bg-extend-border ul li + li {
+//   margin-bottom: 0px;
+//   margin-top: 10px;
+//   float:none;
+// }
+
+
+
+
+
+// Collapsable cards (aka, accordion)
+//
+// Wrap a series of cards in `.card-group` to turn them into an accordion with
+// the help of our collapse JavaScript plugin.
+
+.card-group {
+  // Tighten up margin so it's only between cards
+  .card {
+    margin-bottom: 0;
+    border-radius: $card-border-radius;
+    overflow: hidden; // crop contents when collapsed
+    + .card {
+      margin-top: -1px;
+    }
+  }
+
+  .card-heading {
+    border-bottom: 0;
+    + .card-collapse .card-body {
+      border-top: 1px solid $card-inner-border;
+    }
+  }
+  .card-footer {
+    border-top: 0;
+    + .card-collapse .card-body {
+      border-bottom: 1px solid $card-inner-border;
+    }
+  }
+
+  // New subcomponent for wrapping collapsable content for proper animations
+  .card-collapse {
+    .card-body {
+      border-top: 1px solid $card-inner-border;
+    }
+  }
+}
+
+
+// Contextual variations
+.card-default {
+  @include card-variant-default($card-default-border, $card-default-text, $card-default-heading-bg, $card-default-border);
+}
+.card-primary {
+  @include card-variant-primary($card-default-border, $card-primary-text, $card-primary-heading-bg, $card-primary-border);
+}
+.card-secondary {
+  @include card-variant($card-default-border, $card-secondary-text, $card-secondary-heading-bg, $card-secondary-border);
+}
+.card-tertiary {
+  @include card-variant-tertiary($card-default-border, $card-info-text, $card-tertiary-heading-bg, $card-tertiary-border);
+}
+
+.card-informational {
+  @include card-variant($card-default-border, $card-informational-text, $card-informational-heading-bg, $card-informational-border);
+}
+
+// DB added august 2016 29th
+.card-plan {
+  @include card-variant($card-default-border, $card-default-text, $card-tertiary-heading-bg, $card-default-border);
+}
+
+
+// Contextual variations with icon left
+.card-default-icon {
+  @include card-variant-icon($card-default-border, $card-default-icon-text, $card-default-icon-heading-bg, $card-default-icon-border);
+}
+.card-primary-icon {
+  @include card-variant-icon($card-default-border, $card-primary-icon-text, $card-primary-icon-heading-bg, $card-primary-icon-border);
+}
+
+// Contextual variations with TOOL
+.card-primary-tool {
+    @include card-variant-tool($card-default-border, $card-primary-text, $card-primary-heading-bg, $card-primary-border);
+}
+
+// Contextual variations with EXPAND/COLLAPSE
+.card-default-expand {
+  @include card-variant-expand($card-default-border, $card-default-expand-heading-bg, $card-default-expand-border, $card-expanded-bg-color);
+}
+
+.card-default-expand-contained {
+  @include card-variant-expand-contained($card-default-border, $card-default-expand-text, $card-default-expand-heading-bg, $card-default-expand-border, $card-expanded-bg-color);
+}
+
+
+
+
+
+
+.card-success {
+  @include card-variant($card-success-border, $card-success-text, $card-success-heading-bg, $card-success-border);
+}
+.card-warning {
+  @include card-variant($card-warning-border, $card-warning-text, $card-warning-heading-bg, $card-warning-border);
+}
+.card-danger {
+  @include card-variant($card-danger-border, $card-danger-text, $card-danger-heading-bg, $card-danger-border);
+}
+.card-info {
+  @include card-variant($card-info-border, $card-info-text, $card-info-heading-bg, $card-info-border);
+}
+
+
+
+
+// -------------START Card - Vehicle Profile----------------
+
+.card-vehicle-display {
+  padding: 0px;
+  position: relative;
+  border-bottom: 1px solid $gray;
+  .card-vehicle-display-image {
+    text-align: center;
+    height:210px;
+    background:url(https://media.carbook.com/MediaGallery/media/Mjk4NTQ2Xk1lZGlhIEdhbGxlcnk/gRXJ8lc4okfBm8dNLKsx3SWKP3-rpUidctvFsKY4MA4c3is7Ro3jqlBX5JLY43qc_irjnUY1nEk/cc_2015BUI001a_01_640_17U.png) center center no-repeat;
+    background-size: auto 100%;
+    @media (max-width: $screen-sm) {
+      height: 320px;
+    }
+    @media (max-width: $screen-xs) {
+      height: 210px;
+    }
+  }
+  .vin {
+    text-transform: uppercase;
+    background-color: $gray-light;
+    padding:5px 10px;
+    margin:0px;
+    p { 
+      margin: 0px;
+    }
+  }
+}
+
+
+.card-vehicle-mileage {
+  padding: 40px 20px;
+  @media (min-width: $screen-desktop) {
+    overflow: hidden;
+  }
+  .card-vehicle-mileage-icon {
+    text-align: center;
+    float: left;
+    span {
+      font-size: 40px;
+      line-height: 6;
+    }
+    p {
+      margin-bottom: 0px;
+      padding:0px;
+      color: $gray-darkest;
+    }
+  }
+  .card-vehicle-mileage-odometer {
+    margin-left: 84px;
+    @media (min-width: $screen-desktop) {
+      margin-left: 20px;
+      float: left;
+    }
+    h2 {
+      margin-bottom: 0px;
+      line-height: 9em;
+      display: inline-block;
+    }
+
+  }
+  .card-vehicle-mileage-update {
+    margin-top:40px;
+    @media (min-width: $screen-desktop) {
+      float: right;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    a {
+      @media (min-width: $screen-desktop) {
+      width: 200px;
+      }
+    }
+  }
+}
+
+.card-vehicle-learn{
+  display: none;
+  p {
+    margin-bottom: 20px;
+  }
+  .inline-buttons a.btn {
+    @media (min-width: $screen-desktop) {
+      max-width:200px;
+    }
+    @media (min-width: $screen-lg-desktop) {
+      max-width: 303px;
+    }
+  }
+  @media (min-width: $screen-tablet) {
+    border-top: 1px solid $gray;
+    display: block;
+    padding: 20px 20px 10px 20px;
+  }
+}
+
+// -------------END Card - Vehicle Profile----------------
+
+
+// -------------START Card - Four Column----------------
+
+.card-vehicle-profile-tools {
+  background-color: $white;
+  text-align: center;
+
+    .tools-title {
+      margin-bottom: 20px;
+      overflow: hidden;
+      @media (min-width: $screen-desktop) {
+          text-align: center;
+          margin-bottom:20px;
+      }
+
+    img {
+      float: left;
+      margin: 0px;
+      @media (min-width: $screen-desktop) {
+        float: none;
+        text-align: center;
+        display: inline;
+        margin: 0px 0px 20px 0px;
+      }
+    }
+    h5 {
+      text-align: left;
+      margin-left: 50px;
+      margin-bottom: 0px;
+      @media (min-width: $screen-desktop) {
+        text-align: center;
+        margin:0px;
+      }
+    }
+  }
+  .tools-content {
+    p {
+      text-align: left;
+      margin: 0px;
+      @media (min-width: $screen-desktop) {
+        text-align: center;
+        margin: 0px;
+      }
+    }
+  }
+
+  .tools-footer {
+    text-align: left;
+    overflow: hidden;
+    ul.image-list {
+      margin-bottom: 0px;
+      li>img {
+        float: left;
+        text-align: center;
+      }
+      li>p {
+        margin: 0px 0px 0px 40px;
+      }
+    }
+  }
+}
+
+// -columns of same height styles--
+.table-container {
+  display:table;
+  width:100%;
+  vertical-align:top;
+}
+.table-row {
+  display:table-row;
+}
+
+.table-cell-column1,
+.table-cell-column2,
+.table-cell-column3 {
+  display:table-cell;
+  float:left;
+  vertical-align:top;
+  border-bottom:1px solid $gray;
+  @media (min-width: $screen-lg-desktop) {
+    float:none;
+    border-right:1px solid $gray;
+    border-bottom:none;
+  }
+}
+
+
+.table-cell-column4 {
+  display:table-cell;
+  float:left;
+  vertical-align:top;
+  border-bottom:1px solid $gray;
+  @media (min-width: $screen-lg-desktop) {
+    float:none;
+    border-bottom:none;
+  }
+}
+
+
+.table-item {
+  width:100%;
+  height:100%;
+  padding: 40px 5px;
+  display:table;
+}
+
+.table-cell-content {
+  display:table-cell;
+}
+
+// -------------END Card - Four Column----------------
+
+
+
+// -------------START Card - Five Column----------------
+
+ul.link-flex-container {
+  display: block;
+  margin:0px;
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    display: block;
+    padding:20px;
+    margin:0px;
+    text-align: center;
+    border-bottom: 1px solid $gray;
+    &:last-child {
+      border-bottom: none;
+    }
+    @media (min-width: $screen-tablet) {
+      display: flex;
+      align-items: center;
+      width:20%;
+      border-right: 1px solid $gray;
+      border-bottom: none;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// -------------END Card - Five Column----------------
+
+
+
+
+
+
+
+
+
+// -------------Warranty  Widget----------------
+.card-warranty-alert {
+  @include clearfix();
+  background-color: $gray-light;
+  border: 1px solid $gray;
+  padding:10px;
+  @media (min-width: $screen-tablet) {
+    float: left;
+    text-align: center;
+    width: 40%;
+    margin-right:20px;
+  }
+
+
+  span {
+    margin-bottom: 0px;
+    font-size: 30px;
+    float: left;
+    @media (min-width: $screen-tablet) {
+      float: none;
+    }
+  }
+
+  p {
+    margin-bottom: 0px;
+    margin-top: 7px;
+    margin-left: 40px;
+    @media (min-width: $screen-tablet) {
+      margin-left: 0px;
+
+    }
+  }
+
+}
+
+
+ul.card-warranty-alert-title {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  @media (min-width: $screen-tablet) {
+  margin-top: 0px;
+  }
+}
+
+
+
+
+.card-informational ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.card-informational {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  .card-body {
+    border-bottom: 1px solid $gray;
+  }
+}
+
+
+// -------------Account finance  Widget----------------
+.card-finance-item-text {
+  margin-right: 115px;
+
+}
+
+
+
+
+// ------------- OVD Maintenance  Widget----------------
+
+// LEFT PANE
+.card-maintenance-left {
+  padding: 0px;
+  border-bottom: 1px solid $gray;
+    @media (min-width: $screen-lg-desktop) {
+      border-bottom: none;
+      margin-right:-15px;
+      border-right: 1px solid $gray;
+    }
+}
+
+.tire-pressure-display {
+  position: relative;
+  margin-bottom: 20px;
+    ul {
+      position: relative,
+    }
+
+    li {
+      margin-bottom: 5px;
+        @media (min-width: $screen-lg-desktop) {
+          margin-bottom: 0px;
+        }
+    }
+
+    li p {
+      display: inline;
+        @media (min-width: $screen-lg-desktop) {
+          display: block;
+        }
+    }
+
+    li img {
+      display: inline;
+      width: inherit;
+      @media (min-width: $screen-lg-desktop) {
+        text-align: center;
+      }
+    }
+
+    li.front-left {
+      @media (min-width: $screen-lg-desktop) {
+        position: absolute;
+        text-align: center;
+        top:205px;
+        left:228px;
+      }
+    }
+
+    li.rear-left {
+      @media (min-width: $screen-lg-desktop) {
+        position: absolute;
+        text-align: center;
+        top:150px;
+        left:316px;
+      }
+    }
+
+    li.front-right {
+      @media (min-width: $screen-lg-desktop) {
+        position: absolute;
+        text-align: center;
+        top:60px;
+        left:23px;
+      }
+    }
+
+    li.rear-right {
+      @media (min-width: $screen-lg-desktop) {
+        position: absolute;
+        text-align: center;
+        top:-4px;
+        left:158px;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: none;
+      @media (min-width: $screen-lg-desktop) {
+        display: inline;
+      }
+
+    }
+    p {
+      margin-bottom: 0px;
+    }
+}
+
+
+
+
+// RIGHT PANE
+.card-maintenance-right {
+  padding: 0px;
+  margin-left:-15px;
+    @media (max-width: $screen-lg-desktop) {
+      margin-left:0px;
+    }
+}
+
+
+.card-maintenance-subtitle {
+  padding: 20px;
+  border-bottom: 1px solid $gray;
+  background-color: $gray-light;
+    h4 {
+      margin-bottom:0px;
+    }
+}
+
+
+
+
+.card-maintenance-body {
+  padding: 20px;
+}
+
+
+
+// MIDDLE PANE
+.card-maintenance-subtitle-middle {
+  padding: 20px;
+  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
+  background-color: $gray-light;
+    h4 {
+      margin-bottom:0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------- OVD Vehicle Details Widget----------------
+
+.ovd-vehicle-system {
+  background-color: $gray-light;
+  @media (max-width: $screen-desktop) {
+    background-color: inherit;
+  }
+}
+
+
+// LEFT PANE
+.card-nav-tabs {
+  z-index: 50000;
+  position: relative;
+  @media (max-width: $screen-desktop) {
+    display: none;
+  }
+}
+
+.card-nav-tabs-selector {
+  padding: 20px 20px 0px 20px;
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
+}
+
+ul.card-tabs > li{
+  position: relative;
+  display: block;
+  background-color: $gray-light;
+  border-bottom: 1px solid $gray;
+  cursor: pointer;
+  &:hover {
+    background-color: $white;
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $white;
+      margin-top: -10px;
+    }
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 11px solid $gray;
+      margin-top: -11px;
+    }
+  }
+}
+
+
+
+ul.card-tabs > li.active{
+  background-color: $white;
+  cursor: default;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $white;
+    margin-top: -10px;
+  }
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 11px solid $gray;
+    margin-top: -11px;
+  }
+  & a{
+    cursor: default;
+  }
+}
+
+ul.card-tabs > li > a {
+  padding: 15px;
+  display: block;
+}
+
+ul.card-tabs > li > a > img {
+  float: left;
+}
+
+ul.card-tabs > li > a > p {
+  color: $gray-dark;
+  margin: 0px 0px 0px 35px;
+}
+
+
+// RIGHT PANE
+.card-vehicle-systems-content{
+  padding: 20px;
+  margin-left: 0px;
+  background-color: $white;
+    @media (min-width: $screen-desktop) {
+      margin-left: -30px;
+      padding: 20px 20px 20px 20px;
+      border-left: 1px solid $gray;
+    }
+}
+
+.card-vehicle-systems-image img {
+  width: 100%;
+}
+
+
+
+
+
+// ------------- Login  Widget----------------
+
+.card-login-title {
+  padding: 20px;
+  border-bottom: 1px solid $gray;
+  background-color: $gray-light;
+  overflow: hidden;
+
+  ul {
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    zoom: 1;
+    @media (min-width: $screen-tablet) {
+        width: 70%;
+    }
+
+    + a.btn-right {
+      @media (min-width: $screen-tablet) {
+          margin-top:0px;
+          float: right;
+      }
+    }
+  }
+
+  h6 {
+    margin-bottom:0px;
+    color: $gray-dark;
+  }
+}
+
+.login {
+  background-color: $white;
+  ul {
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    zoom: 1;
+    @media (min-width: $screen-tablet) {
+        width: 70%;
+    }
+
+    + a.btn-right {
+      @media (min-width: $screen-tablet) {
+          margin-top:0px;
+          float: right;
+      }
+    }
+  }
+
+  h6 {
+    margin-bottom:0px;
+    color: $gray-dark;
+  }
+
+  p {
+    color: $gray-dark;
+  }
+
+  .year{
+    margin-bottom:10px;
+    @media (min-width: $screen-desktop) {
+        margin-bottom:0px;
+    }
+  }
+
+
+  .make{
+    margin-bottom:10px;
+    @media (min-width: $screen-desktop) {
+        margin-bottom:0px;
+    }
+  }
+
+
+  .model {
+    margin-bottom:10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+// -------------Vehicle Profile Snapshot Vehicle Image----------------
+
+.card-vehicle-display-snapshot {
+  padding: 0px;
+  text-align: center;
+  position: relative;
+
+  img {
+    @media (min-width: $screen-tablet) {
+      max-height: 194px;
+      display: inline;
+    }
+    @media (min-width: $screen-desktop) {
+      max-height: 160px;
+      display: inline;
+    }
+  }
+
+  .vin {
+    text-transform: uppercase;
+    background-color: $gray-light;
+    padding:5px 10px;
+    position: absolute;
+    top:5px;
+    left: 0px;
+    margin:0px;
+
+    @media (max-width: $screen-tablet) {
+      top: 20px;
+    }
+
+    @media (max-width: $screen-xs) {
+      top: 5px;
+    }
+  }
+}
+
+
+.vehicle-snapshot {
+
+  border-top:1px solid $gray;
+
+  .table-cell-column1 {
+    display:table-cell;
+    float:left;
+    vertical-align:top;
+    border-bottom: none;
+    border-right:1px solid $gray;
+    @media (min-width: $screen-lg-desktop) {
+      float:none;
+      border-right:1px solid $gray;
+    }
+  }
+
+  .table-cell-column2 {
+    display:table-cell;
+    float:left;
+    vertical-align:top;
+    border-bottom: none;
+    @media (min-width: $screen-lg-desktop) {
+      float:none;
+      border-right:1px solid $gray;
+    }
+  }
+
+  .table-cell-column3 {
+    display:table-cell;
+    float:left;
+    vertical-align:top;
+    border-top:1px solid $gray;
+    border-bottom:none;
+    background-color: $gray-light;
+    @media (min-width: $screen-lg-desktop) {
+      float:none;
+      border-bottom:none;
+      border-top:none;
+      border-right:none;
+    }
+  }
+
+  .card-vehicle-mileage-icon {
+    padding: 0px;
+    text-align: center;
+    border-right: none;
+    @media (min-width: $screen-tablet) {
+      padding:0px;
+    }
+    @media (min-width: $screen-desktop) {
+      padding:0px;
+    }
+    h1 {
+      margin: 0px;
+      line-height: 0px;
+      display: block;
+    }
+    h5 {
+      @media (max-width: 320px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .card-vehicle-mileage-odometer {
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    @media (min-width: $screen-tablet) {
+      margin-left:0px;
+      margin-right: 0px;
+      padding:0px;
+      border-left: none;
+    }
+    @media (min-width: $screen-desktop) {
+      padding:0px;
+    }
+
+    h3 {
+      font-size: 25px;
+      margin-bottom: 5px;
+      display: inline;
+      margin:0px;
+      @media (min-width: 357px) {
+        font-size: 35px;
+      }
+      @media (min-width: 422px) {
+        font-size: 35px;
+        display: block;
+      }
+      @media (min-width: $screen-tablet) {
+        font-size: 35px;
+        margin: 0px;
+      }
+    }
+
+    p {
+      margin: 0px;
+      line-height: 0px;
+      display: inline;
+      @media (min-width: $screen-tablet) {
+        margin: 0px;
+        line-height: 0px;
+        display: inline;
+      }
+    }
+  }
+
+  .card-vehicle-mileage-edit {
+    margin-left:0px;
+    margin-right:0px;
+    background-color: inherit;
+    border-top: none;
+    padding:0px;
+    overflow: hidden;
+      ul {
+        margin:0px;
+        display: inline-block;
+        zoom: 1; //  IE inline-block fix
+        *display: inline; //  IE inline-block fix
+        width: 50%;
+        float: left;
+          @media (min-width: $screen-tablet) {
+            margin:0px;
+            display: inline-block;
+            zoom: 1; //  IE inline-block fix
+            *display: inline; //  IE inline-block fix
+            width: 100%;
+            float: none;
+          }
+
+          @media (min-width: $screen-desktop) {
+            margin:0px;
+            display: inline-block;
+            zoom: 1; //  IE inline-block fix
+            *display: inline; //  IE inline-block fix
+            width: 50%;
+            float: left;
+          }
+
+      }
+      ul > li:first-child {
+        text-transform: uppercase;
+        margin-bottom: 0px;
+      }
+  }
+
+}
+
+
+
+.table-cell-content {
+  display:table-cell;
+}
+
+// -------------END Vehicle Profile Tools Widget----------------
+
+
+
+
+
+
+// -------------NEW Active Vehicle Widget----------------
+
+
+// -columns of same height styles--
+.table-container {
+  display:table;
+  width:100%;
+  vertical-align:top;
+}
+.table-row {
+  display:table-row;
+}
+
+.table-cell-content {
+  display:table-cell;
+}
+
+.card-vehicle-display2 {
+  .table-item {
+    width:100%;
+    height:100%;
+    padding: 0px;
+    display:table;
+  }
+  .table-cell-vehicle-display-column1 {
+    display:table-cell;
+    float:left;
+    vertical-align:top;
+    padding: 0px;
+    border-bottom: 1px solid $gray;
+    border-right: none;
+    @media (min-width: $screen-sm) {
+      float:none;
+      border-bottom: none;
+      border-right: 1px solid $gray;
+    }
+  }
+  .table-cell-vehicle-display-column2 {
+    display:table-cell;
+    vertical-align:top;
+    padding: 0px;
+    float:left;
+    background-color: $gray-light;
+    overflow: hidden;
+    border-bottom: none;
+    @media (min-width: $screen-sm) {
+    float:none;
+    border-bottom: none;
+    border-right: none;
+    }
+    @media (min-width: $screen-lg) {
+    float:none;
+    border-bottom: none;
+    border-right: none;
+    }
+  }
+  .table-cell-vehicle-display-column3 {
+    display:table-cell;
+    float:none;
+    vertical-align:top;
+    border-right: 1px solid $gray;
+    padding: 0px;
+    background-color: $white;
+    @media (min-width: $screen-lg-desktop) {
+      border-bottom:none;
+    }
+  }
+  .table-cell-vehicle-display-column4 {
+    display:table-cell;
+    float:none;
+    vertical-align:top;
+    padding: 0px;
+    background-color: $white;
+    border-right: none;
+    @media (min-width: $screen-lg-desktop) {
+      border-right: none;
+      border-bottom:none;
+    }
+  }
+  .table-cell-vehicle-display-column5 {
+    display:table-cell;
+    float:none;
+    vertical-align:top;
+    padding: 0px;
+    background-color: yellow;
+    @media (min-width: $screen-lg-desktop) {
+      border-bottom:none;
+    }
+  }
+  .card-vehicle-image-area {
+    position: relative;
+    .card-vehicle-display-image {
+      text-align: center;
+      height:210px;
+      @media (max-width: $screen-sm) {
+      height: 320px;
+      }
+      @media (min-width: $screen-md) {
+      height: 320px;
+      }
+      @media (max-width: $screen-xs) {
+      height: 210px;
+      }
+    }
+    img {
+      display: inline;
+      max-height:100%;
+    }
+    .vin {
+      text-transform: uppercase;
+      background-color: $gray-light;
+      padding:5px 10px;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      margin:0px;
+    }
+  }
+  .card-vehicle-mileage-area {
+    .card-vehicle-mileage-icon2 {
+      padding: 20px;
+      text-align: center;
+      border-right: none;
+      h1 {
+        margin: 0px;
+        line-height: 0px;
+        display: block;
+      }
+      h5 {
+        margin-bottom: 0px;
+        @media (max-width: 320px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .card-vehicle-mileage-odometer2 {
+    padding: 20px;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    h3 {
+      font-size: 35px;
+      margin-bottom: 0px;
+      @media (min-width: $screen-tablet) {
+        margin: 0px;
+      }
+    }
+
+    p {
+      margin: 0px;
+      line-height: 0px;
+      display: inline;
+    }
+  }
+}
+
+
+// -------------END Active Vehicle Widget----------------
+
+
+
+// ------------- START Vehicle Info EV Widget STATUS----------------
+.card-vehicle-info-subtitle {
+  overflow: hidden;
+  padding: 20px;
+  border-bottom: 1px solid $gray;
+  background-color: $gray-light;
+  h4 {
+    margin-bottom:0px;
+    @media (min-width: $screen-tablet) {
+      float:left;
+    }
+  }
+  ul {
+    margin-bottom: 0px;
+    display: inline;
+    @media (min-width: $screen-tablet) {
+      float: right;
+    }
+    li {
+      padding:0px;
+      p {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.card-vehicle-info-subtitle2 {
+  overflow: hidden;
+  padding: 20px;
+  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
+  background-color: $gray-light;
+  .title{
+    width: 100%;
+    @media (min-width: $screen-tablet) {
+      width: 50%
+    }
+
+    h4 {
+      margin-bottom:0px;
+    }
+    @media (min-width: $screen-tablet) {
+      float:left;
+    }
+    p {
+      margin-bottom: 15px;
+      @media (min-width: $screen-tablet) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .view-select {
+    margin-bottom: 0px;
+    width: 100%;
+    @media (min-width: $screen-tablet) {
+      float: right;
+      width: 50%
+    }
+
+    .horizontal-form {
+      @media (min-width: $screen-tablet) {
+        position: relative;
+        float: right;
+        width: 50%;
+      }
+    }
+
+    label {
+      @media (min-width: $screen-tablet) {
+        position: absolute;
+        top: 10px;
+        left: -81px;
+      }
+    }
+  }
+}
+
+.status-left {
+  padding:20px;
+  overflow: hidden;
+  @media (max-width: 302px) {
+    text-align: center;
+  }
+  @media (min-width: $screen-tablet) {
+    margin-right:-15px;
+  }
+
+  img {
+    @media (max-width: 302px) {
+      float: none;
+    }
+    margin-bottom: 20px;
+    float: left;
+    margin-right: 20px;
+    @media (min-width: $screen-tablet) {
+      margin-bottom: 0px;
+    }
+  }
+
+  a.btn-left {
+    margin: 0px;
+  }
+
+  .status-box {
+    @media (max-width: 302px) {
+      margin-left: 0px;
+      margin-bottom:20px;
+    }
+
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: $gray-light;
+    border: 1px solid $gray;
+    padding:10px;
+    margin-left: 105px;
+    h3 {
+      margin:0px 0px 0px 0px;
+      line-height: 1em;
+    }
+    h1 {
+      margin:10px 0px 0px 0px;
+      line-height: 1em;
+    }
+  }
+}
+
+.status-right {
+  margin-left: 0px;
+  border-top: 1px solid $gray;
+  padding:20px;
+  overflow: hidden;
+  @media (min-width: $screen-tablet) {
+    margin-left: -15px;
+    border-top: none;
+    border-left: 1px solid $gray;
+  }
+  a.btn-left {
+    margin: 0px;
+  }
+
+  ul {
+    margin-bottom: 0px;
+    li:first-child {
+      margin-bottom: -5px;
+        span {
+        font-size: 32px;
+        vertical-align: middle;
+        }
+    }
+    li:nth-child(even){
+      margin-bottom: 10px;
+    }
+    li:last-child {
+      margin-bottom: 20px;
+    }
+    h5 {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// ------------- START Vehicle Info EV Widget CHARGEMODE----------------
+
+.charge-mode {
+  padding:20px;
+  h5 {
+    margin:0px;
+  }
+}
+
+.charge-mode-block-container {
+  margin-bottom:20px;
+  position: relative;
+  overflow: hidden;
+  // @media (min-width: $screen-tablet) {
+  //   height:325px;
+  // }
+}
+
+
+.charge-mode-block-current-pointer {
+  display: none;
+  @media (min-width: $screen-tablet) {
+    display: block;
+    height:37px;
+    width:100%;
+    background-color: $white;
+  }
+  span {
+    display: none;
+  }
+}
+
+
+
+.charge-mode-block-one,
+.charge-mode-block-two,
+.charge-mode-block-three{
+  height:100%;
+  width:100%;
+  position: relative;
+  @media (min-width: $screen-tablet) {
+    width:33.3%;
+    float:left;
+  }
+  background-color: $gray-light;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray;
+  }
+  &.active {
+    background-color: $white;
+    cursor:auto;
+      .charge-mode-block-current-pointer {
+        display: block;
+        background-color: $brand-primary;
+        width:100%;
+        margin:0px auto;
+        height: auto;
+        color:$white;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        font-size: $font-size-base;
+        font-weight: $btn-font-weight;
+        line-height: $line-height-base;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        position: relative;
+          // @media (min-width: $screen-tablet) {
+          //   width:75%;
+          // }
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 46%;
+          content: " ";
+          height: 0;
+          width: 0;
+          border-top: 10px solid $brand-primary;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+        }
+        span {
+          display: block;
+        }
+      }
+  }
+}
+
+
+.charge-mode-block-one,
+.charge-mode-block-two,
+.charge-mode-block-three {
+  &.active,
+  &.active-selected {
+    background-color: $white;
+    cursor:auto;
+    .radio-button:before {
+      content: " ";
+      width: 22px;
+      height: 22px;
+      background: $brand-primary;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 95% auto;
+      border-radius: 50%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  &.active-disabled {
+    background-color: $white;
+      .charge-mode-block-content {
+        background-color: $gray-light;
+      }
+      .charge-mode-block-current-pointer {
+        display: block;
+        background-color: $gray;
+        width:100%;
+        margin:0px auto;
+        height: auto;
+        color:$white;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        font-size: $font-size-base;
+        font-weight: $btn-font-weight;
+        line-height: $line-height-base;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        position: relative;
+          // @media (min-width: $screen-tablet) {
+          //   width:75%;
+          // }
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 46%;
+          content: " ";
+          height: 0;
+          width: 0;
+          border-top: 10px solid $gray;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+        }
+        span {
+          display: block;
+        }
+      }
+  }
+}
+
+
+
+
+.charge-mode-block-one,
+.charge-mode-block-two,
+.charge-mode-block-three {
+  &.active,
+  &.active-disabled {
+    .charge-mode-block-current-pointer {
+      border-left: 1px solid $gray;
+      border-top: 1px solid $gray;
+      border-right: 1px solid $gray;
+      @media (min-width: $screen-tablet) {
+        border: 0px;
+      }
+    }
+  }
+}
+
+
+.charge-mode-block-content {
+  padding:20px;
+  @media (min-width: $screen-tablet) {
+    height:325px;
+  }
+  h6 {
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+  }
+  .charge-graphic{
+    color: $gray-darker;
+    text-align: center;
+    display: block;
+    font-size: 96px;
+    line-height: 5em;
+    margin: 0px 0px 10px 0px;
+  }
+  p {
+    margin:0px;
+  }
+  .charge-mode-block-content-footer {
+      padding: 0px 0px 0px 0px;
+      text-align: center;
+      margin-top: 20px;
+    @media (min-width: $screen-tablet) {
+      position: absolute;
+      bottom: 20px;
+      left: 45%;
+    }
+    ul.radio-list li {
+      padding:0px;
+    }
+    .radio-button {
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 95% auto;
+      border-radius: 50%;
+      border: 1px solid $gray;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px $gray;
+      display: inline-block;
+      position: relative;
+      margin-right: 0.25em;
+      vertical-align: -0.5em;
+    }
+  }
+}
+
+
+.charge-mode-block-one {
+  .charge-mode-block-content {
+    border-left: 1px solid $gray;
+    border-top: 1px solid $gray;
+    border-right: 1px solid $gray;
+    @media (min-width: $screen-tablet) {
+      border-right: 0px;
+      border-left: 1px solid $gray;
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
+
+.charge-mode-block-two {
+  .charge-mode-block-content {
+    border-left: 1px solid $gray;
+    border-top: 1px solid $gray;
+    border-right: 1px solid $gray;
+    @media (min-width: $screen-tablet) {
+      border: 1px solid $gray;
+    }
+  }
+}
+
+.charge-mode-block-three {
+  .charge-mode-block-content {
+    border-top: 1px solid $gray;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+  @media (min-width: $screen-tablet) {
+    border-left: 0px;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    border-right:1px solid $gray;
+  }
+  }
+}
+
+
+.charge-mode-block-one,
+.charge-mode-block-two,
+.charge-mode-block-three {
+  &.active {
+    .charge-mode-block-content {
+      border-top: 0px;
+      @media (min-width: $screen-tablet) {
+        border-top: 1px solid $gray;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------ START VEHICLE INFO TABLE ------------- //
+.card-vehicle-info-table {
+ table {
+    display: block;
+    @media (min-width: $screen-tablet) {
+      display: table;
+    }
+  }
+
+  thead {
+    display: block;
+    @media (min-width: $screen-tablet) {
+    display: table-header-group;
+    }
+  }
+
+  tbody {
+    display: block;
+    overflow: hidden;
+    @media (min-width: $screen-tablet) {
+      display: table-row-group;
+    }
+  }
+
+  th {
+    display: block;
+    @media (min-width: $screen-tablet) {
+      display: table-cell;
+    }
+  }
+
+  tr {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: $screen-tablet) {
+      display: table-row;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  td {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: $screen-tablet) {
+      display: table-cell;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    @media (max-width: $screen-tablet) {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: $white;
+    border: none;
+    a.btn-link {
+      text-align: left;
+    }
+  }
+
+  td {
+    padding: 15px 20px 15px 20px;
+    text-align: left;
+    border: none;
+    @media (min-width: $screen-tablet) {
+      padding: 15px 20px;
+    }
+    h5 {
+      margin-bottom:0px;
+    }
+    &.link {
+      padding-top:0px;
+      @media (min-width: $screen-sm) {
+        padding-top:15px;
+        text-align: right;
+      }
+    }
+  }
+
+  td:nth-child(2){
+    padding: 0px 0px 0px 20px;
+    @media (min-width: $screen-tablet) {
+        padding: 15px 20px 15px 20px;
+    }
+  }
+
+  td:nth-child(3) {
+    padding: 5px 0px 20px 20px;
+    @media (min-width: $screen-tablet) {
+        padding: 15px 20px 15px 20px;
+    }
+  }
+
+  .parent td span {
+    @media (min-width: $screen-tablet) {
+      display:none
+    }
+  }
+
+  th {
+    h5 {
+      margin-bottom:0px;
+    }
+  }
+
+  th {
+    background-color: $white;
+    font-weight: bold;
+    color: $gray-dark;
+    white-space: nowrap;
+    padding: 15px 20px;
+    text-align: left
+  }
+
+
+table tr:nth-child(4n-1), table tr:nth-child(4n)  {
+    background: $gray-light;
+}
+
+.child td {
+  padding-top:0px;
+}
+
+.child-content {
+  border-top: 1px solid $gray;
+  padding: 15px 0px 0px 0px;
+  ul {
+    margin-bottom: 0px;
+    > li:first-child {
+      margin-bottom: 10px;
+    }
+    p:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+}
+
+
+
+
+// ------------- START Bluetooth Switch Vehicle, VIN ----------------
+
+.card-content-1 {
+   border-bottom: 1px solid $gray;
+   padding:20px;
+}
+
+.card-content {
+   padding:20px;
+}
+
+
+.table-cell-column1-bluetooth  {
+  display: table-cell;
+  float: left;
+  vertical-align: top;
+  @media (min-width: $screen-tablet) {
+    float: none;
+    border-right: 1px solid $gray;
+    border-bottom: none;
+  }
+}
+
+.table-cell-column2-bluetooth {
+  display: table-cell;
+  float: left;
+  vertical-align: top;
+  border-top: 1px solid $gray;
+  @media (min-width: $screen-tablet) {
+    float: none;
+    border-top: none;
+  }
+}
+
+
+
+
+ul.card-tabs-topics {
+   margin: 0px;
+   background-color: $gray-light;
+   > li {
+      padding: 15px;
+      position: relative;
+      display: block;
+      border-bottom: 1px solid $gray;
+      cursor: pointer;
+      &:hover {
+         background-color: $white;
+      }
+      &:last-child {
+         border-bottom: none;
+      }
+   }
+}
+
+
+
+
+
+
+
+
+//------------ START VEHICLE MANUAL TABLE ------------- //
+.card-vehicle-manual-table {
+ table {
+    display: block;
+    @media (min-width: $screen-tablet) {
+      display: table;
+    }
+  }
+
+  thead {
+    display: block;
+    @media (min-width: $screen-tablet) {
+    display: table-header-group;
+    }
+  }
+
+  tbody {
+    display: block;
+    overflow: hidden;
+    @media (min-width: $screen-tablet) {
+      display: table-row-group;
+    }
+  }
+
+  th {
+    display: block;
+    @media (min-width: $screen-tablet) {
+      display: table-cell;
+    }
+  }
+
+  tr {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: $screen-tablet) {
+      display: table-row;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  td {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: $screen-tablet) {
+      display: table-cell;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    @media (max-width: $screen-tablet) {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: $white;
+    border: none;
+    a.btn-link {
+      text-align: left;
+    }
+  }
+
+  td {
+    padding: 20px;
+    text-align: left;
+    border: none;
+    overflow: hidden;
+    &.manual-title {
+      margin-bottom:0px;
+      > span {
+         float:left;
+         font-size:40px;
+      }
+      >h5 {
+         margin-left:45px;
+         margin-bottom:0px;
+      }
+    }
+    &.button {
+      padding-top: 0px;
+      vertical-align: top;
+      margin: 0px;
+      @media (min-width: $screen-sm) {
+        padding-top:20px;
+        text-align: right;
+      }
+      > a.btn-left {
+         margin-bottom: 0px;
+         margin-right: 0px;
+      }
+    }
+  }
+
+
+  th {
+    h5 {
+      margin-bottom:0px;
+    }
+  }
+
+  th {
+    background-color: $white;
+    font-weight: bold;
+    color: $gray-dark;
+    white-space: nowrap;
+    padding: 15px 20px;
+    text-align: left
+  }
+
+
+   table tr:nth-child(even){
+       background: $gray-light;
+   }
+
+}
+
+
+// -------------START Plan CARDS - Used in NOO ----------------
+// DB added august 2016 29th
+.card-plan {
+  .card-title {
+    ul.price-plan {
+      margin-bottom: 0px;
+      @media (min-width: $screen-desktop) {
+        text-align: right;
+      }
+      li > h2 {
+        display: block;
+        @media (min-width: $screen-desktop) {
+          display: inline;
+        }
+      }
+    }
+  }
+  ul.price-plan {
+    margin-bottom: 10px;
+    li {
+      margin-bottom:0px;
+    }
+    li > h2 {
+      display: inline;
+    }
+  }
+}

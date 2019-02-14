@@ -1,0 +1,107 @@
+//
+// Close icons
+// --------------------------------------------------
+
+
+.close {
+  float: right;
+  font-size: $font-size-base;
+  font-weight: $close-font-weight;
+  line-height: normal;
+  color: $link-color;
+  text-shadow: none;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    color: $blue-light;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button & {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+.undo {
+  float: right;
+  font-size: $font-size-base;
+  font-weight: $close-font-weight;
+  line-height: normal;
+  color: $link-color;
+  text-shadow: none;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    color: $blue-light;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button & {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+//
+// Modal-Close icons
+// --------------------------------------------------
+
+
+.close-modal {
+  font-weight: none;
+  line-height: 1;
+  color: $link-color;
+  text-shadow: none;
+  margin-top: 0px;
+  font-size: $font-size-base;
+  opacity: 1;
+  @media screen and (min-width: $screen-tablet) {
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue-light;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button & {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+
+

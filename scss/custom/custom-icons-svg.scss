@@ -1,0 +1,27 @@
+/* SVG ICONS
+ * -------------------------- */
+
+// Used for svg icons inline with text
+.icon-svg-inline {
+  display: inline-flex;
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    top: .125em;
+    position: relative;
+  }
+}
+
+
+// Used for svg icons absolute positioned 
+.icon-svg-absolute {
+  position: absolute;
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+
+// dBaker: Align SVG Icons to Text START
