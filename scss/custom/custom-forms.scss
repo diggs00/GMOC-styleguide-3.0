@@ -2,6 +2,11 @@
 // Forms
 // --------------------------------------------------
 
+// input[type="text"], textarea {
+// outline: none;
+// box-shadow:none !important;
+// border:1px solid #ccc !important;
+// }
 
 // Normalize non-controls
 //
@@ -662,7 +667,7 @@ select {
 .select-container {
   width: 100%;
   overflow:hidden;
-  background: url("../img/selectArrows.png") no-repeat right #f0f0f0;
+  background: url("../../img/selectArrows.png") no-repeat right #f0f0f0;
   border-color:$input-border;
   border-style:solid;
   border-width:1px;
@@ -671,7 +676,7 @@ select {
 .on-selectError .select-container{
   width: 100%;
   overflow:hidden;
-  background: url("../img/selectArrows_error.png") no-repeat right;
+  background: url("../../img/selectArrows_error.png") no-repeat right;
   background-color: $gray-lighter;
   border-color:$red;
   border-style:solid;
@@ -843,11 +848,11 @@ ul.checkbox-list label {
 input:checked + .checkbox-value:before {
   font-family: 'icon-ui';
   font-weight: normal;
-  content: "\e614";
-  font-size: 23px;
+  content: "\e915";
+  font-size: 1.5em;
   position: absolute;
   top: -6px;
-  left: -1px;
+  left: -2px;
   color: $blue-lighter;
 }
 
@@ -947,24 +952,24 @@ ul.radio-list-inline label {
 input:checked + .radio-value {
   &:before {
     content: " ";
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     position: absolute;
-    top: -1px;
-    left: -1px;
+    top: -2px;
+    left: -2px;
     border: 2px solid $blue-lighter;
   }
   &:after {
     content: " ";
     border-radius: 50%;
-    border-color: yellow;
+    // border-color: yellow;
     background-color: $blue-lighter;
-    width: 5em;
-    height: 75em;
+    width: 1em;
+    height: 1em;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
   }
 }
 
