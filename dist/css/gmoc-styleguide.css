@@ -13117,6 +13117,12 @@ img.article-image {
     img.article-image {
       margin-top: 0px; } }
 
+.page-content-nonav {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding-top: 110px;
+  padding-bottom: 45px; }
+
 .container.sg-title {
   margin-top: 80px; }
 
