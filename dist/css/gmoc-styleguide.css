@@ -6287,6 +6287,7 @@ ul.progress-timeline-tabs {
   vertical-align: middle;
   cursor: pointer;
   white-space: none;
+  width: 100%;
   text-decoration: none;
   user-select: none; }
   .btn:hover, .btn:focus {
@@ -12603,6 +12604,9 @@ a.btn > span {
     @media (min-width: 768px) {
       .template-violate aside {
         margin-top: 60px; } }
+
+.w-auto {
+  width: auto !important; }
 
 .margin-top-xs {
   margin-top: 5px; }
