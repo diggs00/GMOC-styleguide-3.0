@@ -849,3 +849,15 @@ img.article-image {
       margin-top: 0px;
    }
 }
+
+
+.non-homepage-login-panel {
+  margin: 60px 0px;
+  @media (max-width: $screen-tablet) {
+    margin-bottom: 0;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+    padding-bottom: 0;
+  }
+}
