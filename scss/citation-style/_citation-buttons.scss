@@ -1,0 +1,155 @@
+//
+// BUTTONS/LINKS - CITATION Style
+// --------------------------------------------------
+
+
+
+/* BUTTONS
+	 ========================================================================== */
+
+
+.btn-primary-dark-cit, .btn-primary-light-cit,  .btn-secondary-dark-cit, .btn-secondary-light-cit,{
+	text-transform: uppercase;
+	font-family: $font-family-plain-cit;
+	font-size: $h6-font-size-cit;
+	font-weight: normal;
+	padding: 15px 50px;
+	border-radius: 0rem;
+	letter-spacing: 1px;
+	&:focus,
+ 	&.focus {
+		outline: 0;
+		-webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.25);
+		box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.25);
+	}
+	@media (min-width: $screen-tablet) {
+		font-size: $font-size-base-cit * 1.25; 		//20.8px
+		letter-spacing: 2px;
+	}
+}
+
+
+.btn-primary-dark-cit {
+	@include button-variant-primary-dark-cit(
+		$white, //color
+		$cit-bg-gray, //background
+		$cit-bg-gray //border
+	);
+}
+
+.btn-primary-light-cit {
+	@include button-variant-primary-light-cit(
+		$cit-bg-gray, //color
+		$white, //background
+		$white //border
+	);
+}
+
+
+.btn-secondary-dark-cit {
+	@include button-variant-secondary-dark-cit(
+		$cit-bg-gray, //color
+		$button-color-secondary-dark-cit, //background
+		$cit-bg-gray //border
+	);
+}
+
+
+.btn-secondary-light-cit {
+	@include button-variant-secondary-dark-cit(
+		$white, //color
+		$button-color-secondary-dark-cit, //background
+		$white //border
+	);
+}
+
+
+
+/* LINKS
+	 ========================================================================== */
+.btn-link-dark-cit, .btn-link-light-cit, {
+	font-family: $font-family-bold-cit;
+	white-space: normal;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	display: inline;
+	text-decoration: underline;
+	text-underline-position: under;
+	border: 1px solid transparent;
+	&,
+	&:active,
+	&[disabled],
+	fieldset[disabled] & {
+		background-color: transparent;
+		@include box-shadow(none);
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: transparent;
+		@include box-shadow(none);
+	}
+}
+
+
+.btn-link-dark-cit {
+	color: $cit-type-gray-darkest;
+	&:hover,
+	&:focus {
+		color: $cit-type-gray-darkest;
+		text-decoration: underline;
+		text-underline-position: under;
+		background-color: transparent;
+		border-color: transparent;
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus {
+			color: $cit-type-gray-darkest;
+			text-decoration: underline;
+			text-underline-position: under;
+			background-color: transparent;
+		}
+	}
+}
+
+
+.btn-link-light-cit {
+	color: $white;
+	&,
+	&:active,
+	&[disabled],
+	fieldset[disabled] & {
+		background-color: transparent;
+		@include box-shadow(none);
+	}
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+	// border-color: transparent;
+	}
+	&:hover,
+	&:focus {
+		color: $white;
+		text-decoration: underline;
+		text-underline-position: under;
+		background-color: transparent;
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus {
+			color: $white;
+			text-decoration: underline;
+			text-underline-position: under;
+			background-color: transparent;
+		}
+	}
+}
+

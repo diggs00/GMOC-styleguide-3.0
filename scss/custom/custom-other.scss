@@ -7,7 +7,10 @@
   position: relative;
 }
 
-
+// db: Added 2-22-2019 works to make flex items same height, versison 4.01 of bootstrap has this, 4.0 doesnt
+.flex-fill {
+  flex: 1 1 auto !important;
+}
 
 
 .template-violate {

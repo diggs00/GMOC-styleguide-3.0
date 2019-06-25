@@ -1,0 +1,133 @@
+/* CARDS - CITATION Style
+   ========================================================================== */
+
+
+
+// PRIMARY CARDS:
+// --------------------------------------------------
+.card-cit-primary-left, .card-cit-primary-right{
+	border-top: 1px solid $cit-divider-gray;
+	border-bottom: 1px solid $cit-divider-gray;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: 25px;
+	@media (min-width: 576px) {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+		border: 1px solid $cit-divider-gray;
+	}
+
+	.image {
+		text-align: center;
+		padding:50px 20px 20px 20px;
+	    background:url(img/prototypes/customer-onboarding/citation-card-image.jpg) center center no-repeat;	
+		height:315px;
+		background-size: cover;
+		@media (min-width: $screen-tablet) {
+			flex-grow: 1;
+			flex-basis: 50%;
+			height: initial;
+			padding: 100px 20px 20px 20px;
+		}
+		h1, h5 {
+			color: $white;
+		}
+		h1 {
+			text-transform: uppercase;
+		}
+	}
+	.content {
+		padding: 25px;
+		background-color: $white;
+		flex-grow: 1;
+		flex-basis: 50%;
+		@media (min-width: $screen-tablet) {
+			padding:90px 60px 60px 60px;
+		}
+		a {
+			display: block;
+			margin-bottom: 30px;
+		}
+		h4 {
+			text-decoration: line-through;
+		}
+		h3 {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+.card-cit-primary-right {
+	.image {
+		order: 1;
+		@media (min-width: $screen-tablet) {
+			order: 2;
+		}
+	}
+	.content {
+		order: 2;
+		@media (min-width: $screen-tablet) {
+			order: 1;
+		}
+	}
+}
+
+
+// SECONDARY CARD:
+// --------------------------------------------------
+
+.card-cit-secondary {
+	border: 1px solid $cit-divider-gray;
+	margin-bottom: 25px;
+	background-color: $transparent;
+	width: 100%;
+	@media (min-width: 576px) {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.image-area {
+		padding:15px 15px 25px 15px;
+		@media (min-width: $screen-tablet) {
+			padding:30px;
+			flex-grow: 1;
+			flex-basis: 50%;
+		}
+		.image-container {
+			padding-top: 100%; /* 1:1 Aspect Ratio */
+	  		position: relative; /* If you want text inside of it */
+			@media (min-width: $screen-tablet) {
+
+
+			}
+			.image {
+				background:url(img/prototypes/cit-style/card-cit-secondary.jpg);
+				background-size: cover;
+	   			background-position: center center;
+	   			position: absolute;
+	  			top: 0;
+	  			left: 0;
+	  			bottom: 0;
+	  			right: 0;
+			}
+		}	
+	}
+
+	.content {
+		padding: 0px 15px 25px 15px;
+		flex-grow: 1;
+		flex-basis: 50%;
+		@media (min-width: $screen-tablet) {
+			padding: 30px 30px 30px 0px;
+		}
+		.citation-bar	{
+		    margin-top: 15px;
+		    margin-bottom: 15px;
+		}
+		h5 {
+			margin-bottom: 5px;
+		}
+	}
+}

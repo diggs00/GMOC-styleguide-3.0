@@ -1,0 +1,88 @@
+//
+// VARIABLES - CITATION Style
+// --------------------------------------------------
+
+
+
+
+/* COLORS
+   ========================================================================== */
+
+// Transparent
+// -------------------------
+$transparent:				transparent;
+
+// White
+// -------------------------
+$white:						#ffffff;
+
+// Grays Backgrounds
+// -------------------------
+$cit-bg-gray-darker:		#181818;
+$cit-bg-gray-dark:			#2b2b2b;   			   
+$cit-bg-gray:				#343a40;
+$cit-bg-gray-light:			#f0f2f4;
+$cit-bg-gray-lighter:		#f8f9fa;
+
+// Grays Type
+// -------------------------
+$cit-type-gray-darkest:		#343a40;
+$cit-type-gray-darker:		#454545;   			   
+$cit-type-gray-dark:		#656565;
+$cit-type-gray:				#e9e9e9;
+
+// Grays Dividers
+// -------------------------
+$cit-divider-gray-darker:	#666666;   			   
+$cit-divider-gray-dark:		#acacac;
+$cit-divider-gray:			#e9e9e9;
+
+// Scaffolding
+// -------------------------
+$cit-body-bg:           	$cit-bg-gray-light;
+
+// Links
+// -------------------------
+$cit-link-color-grey:       $cit-type-gray-darkest;
+$cit-link-color-white:      $white;
+
+// Buttons
+// -------------------------
+$button-color-primary-dark-cit: 		$cit-bg-gray;
+$button-color-primary-dark-text-cit: 	$white;
+$button-color-primary-light-cit:		$white;
+$button-color-primary-light-text-cit:	$cit-bg-gray;
+$button-color-secondary-dark-cit:		transparent;
+$button-color-secondary-dark-text-cit:	$cit-bg-gray;
+$button-color-secondary-light-cit:		transparent;
+$button-color-secondary-light-text-cit: $white;
+
+
+/* TYPE
+   ========================================================================== */
+
+
+// Font Family
+// -------------------------
+$font-family-light-cit: 'GMGlobalSans_Light', 'Arial', sans-serif ;
+$font-family-plain-cit: 'GMGlobalSans_Plain', 'Arial', sans-serif ;
+$font-family-semibold-cit: 'GMGlobalSans_SemiBold', 'Arial', sans-serif ;
+$font-family-bold-cit: 'GMGlobalSans_Bold', 'Arial', sans-serif ;
+
+// Font Size
+// -------------------------
+$font-size-base-cit:	1rem; // Assumes the browser default, typically `16px`
+$font-size-small-cit:	$font-size-base-cit * .875; 	//14px
+
+$h1-font-size-cit:      $font-size-base-cit * 2.1875;	//35px
+$h2-font-size-cit:      $font-size-base-cit * 2.1875;	//35px
+$h3-font-size-cit:      $font-size-base-cit * 1.875;	//30px
+
+$h35-font-size-cit:     $font-size-base-cit * 1.562;	//25px
+
+$h4-font-size-cit:      $font-size-base-cit * 1.375; 	//22px
+$h5-font-size-cit:      $font-size-base-cit * 1.25;		//20px
+$h6-font-size-cit:      $font-size-base-cit;			//16px
+
+
+

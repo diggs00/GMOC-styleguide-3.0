@@ -1,0 +1,31 @@
+/* DIVIDER/CITATION BAR - CITATION Style
+   ========================================================================== */
+
+
+// Divider
+// -------------------------
+hr.cit	{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid $cit-divider-gray-dark;
+	&.light {
+		border-top: 1px solid $cit-divider-gray;
+	}
+}
+
+
+// Citation Bar
+// -------------------------
+.citation-bar	{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    height:4px;
+    background-color:$brand-primary;
+    width:120px;
+    display: block;
+	@media (min-width: $screen-tablet) {
+	    margin-top: 15px;
+	    margin-bottom: 25px;
+	}
+}
