@@ -98,10 +98,6 @@
 		.image-container {
 			padding-top: 100%; /* 1:1 Aspect Ratio */
 	  		position: relative; /* If you want text inside of it */
-			@media (min-width: $screen-tablet) {
-
-
-			}
 			.image {
 				background:url(img/prototypes/cit-style/card-cit-secondary.jpg);
 				background-size: cover;
