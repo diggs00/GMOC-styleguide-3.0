@@ -13650,6 +13650,9 @@ h6.cit, h6.cit.heavy {
     h6.cit, h6.cit.heavy {
       font-size: 1.25rem; } }
 
+.strike-through {
+  text-decoration: line-through; }
+
 /* DIVIDER/CITATION BAR - CITATION Style
    ========================================================================== */
 hr.cit {
