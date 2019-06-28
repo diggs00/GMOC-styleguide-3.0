@@ -13886,7 +13886,7 @@ hr.cit {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 50%;
-        height: initial;
+        height: auto;
         padding: 100px 20px 20px 20px; } }
     .card-cit-primary-left .image h1, .card-cit-primary-left .image h5, .card-cit-primary-right .image h1, .card-cit-primary-right .image h5 {
       color: #ffffff; }
