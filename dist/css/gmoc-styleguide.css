@@ -13877,10 +13877,14 @@ hr.cit {
     padding: 50px 20px 20px 20px;
     background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
     height: 315px;
-    background-size: cover; }
+    background-size: cover;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto; }
     @media (min-width: 768px) {
       .card-cit-primary-left .image, .card-cit-primary-right .image {
         flex-grow: 1;
+        flex-shrink: 1;
         flex-basis: 50%;
         height: initial;
         padding: 100px 20px 20px 20px; } }
@@ -13892,9 +13896,13 @@ hr.cit {
     padding: 25px;
     background-color: #ffffff;
     flex-grow: 1;
-    flex-basis: 50%; }
+    flex-shrink: 1;
+    flex-basis: auto; }
     @media (min-width: 768px) {
       .card-cit-primary-left .content, .card-cit-primary-right .content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
         padding: 90px 60px 60px 60px; } }
     .card-cit-primary-left .content a, .card-cit-primary-right .content a {
       display: block;
@@ -13927,11 +13935,15 @@ hr.cit {
       margin-right: 0px;
       margin-bottom: 30px; } }
   .card-cit-secondary .image-area {
-    padding: 15px 15px 25px 15px; }
+    padding: 15px 15px 25px 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto; }
     @media (min-width: 768px) {
       .card-cit-secondary .image-area {
         padding: 30px;
         flex-grow: 1;
+        flex-shrink: 1;
         flex-basis: 50%; } }
     .card-cit-secondary .image-area .image-container {
       padding-top: 100%;
@@ -13939,9 +13951,8 @@ hr.cit {
       position: relative;
       /* If you want text inside of it */ }
       .card-cit-secondary .image-area .image-container .image {
-        background: url(img/prototypes/cit-style/card-cit-secondary.jpg);
+        background: url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
         background-size: cover;
-        background-position: center center;
         position: absolute;
         top: 0;
         left: 0;
@@ -13950,15 +13961,65 @@ hr.cit {
   .card-cit-secondary .content {
     padding: 0px 15px 25px 15px;
     flex-grow: 1;
-    flex-basis: 50%; }
+    flex-shrink: 1;
+    flex-basis: auto; }
     @media (min-width: 768px) {
       .card-cit-secondary .content {
-        padding: 30px 30px 30px 0px; } }
+        padding: 30px 30px 30px 0px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%; } }
     .card-cit-secondary .content .citation-bar {
       margin-top: 15px;
       margin-bottom: 15px; }
     .card-cit-secondary .content h5 {
       margin-bottom: 5px; }
+
+.card-cit-promo {
+  margin-bottom: 25px;
+  background-color: #f0f2f4;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .card-cit-promo {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 30px; } }
+  .card-cit-promo .content {
+    padding: 25px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .card-cit-promo .content {
+        text-align: left;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 58.33333%;
+        padding: 45px 60px; } }
+    .card-cit-promo .content h4 {
+      margin-bottom: 15px; }
+    .card-cit-promo .content p {
+      margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .card-cit-promo .image-area-mobile {
+      display: none; } }
+  .card-cit-promo .image-area-mobile .image-container {
+    padding-top: 66.66%;
+    /* 3:12 Aspect Ratio */
+    position: relative;
+    /* If you want text inside of it */ }
+    .card-cit-promo .image-area-mobile .image-container .image {
+      background: url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+  .card-cit-promo .image-area-desktop {
+    background: url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 41.66667%; }
 
 /* MASTHEAD - CITATION Style
    ========================================================================== */

@@ -24,8 +24,12 @@
 	    background:url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;	
 		height:315px;
 		background-size: cover;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
 		@media (min-width: $screen-tablet) {
 			flex-grow: 1;
+			flex-shrink: 1;
 			flex-basis: 50%;
 			height: initial;
 			padding: 100px 20px 20px 20px;
@@ -41,8 +45,12 @@
 		padding: 25px;
 		background-color: $white;
 		flex-grow: 1;
-		flex-basis: 50%;
+		flex-shrink: 1;
+		flex-basis: auto;
 		@media (min-width: $screen-tablet) {
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 50%;
 			padding:90px 60px 60px 60px;
 		}
 		a {
@@ -90,18 +98,21 @@
 	}
 	.image-area {
 		padding:15px 15px 25px 15px;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
 		@media (min-width: $screen-tablet) {
 			padding:30px;
 			flex-grow: 1;
+			flex-shrink: 1;
 			flex-basis: 50%;
 		}
 		.image-container {
 			padding-top: 100%; /* 1:1 Aspect Ratio */
 	  		position: relative; /* If you want text inside of it */
 			.image {
-				background:url(img/prototypes/cit-style/card-cit-secondary.jpg);
+				background:url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
 				background-size: cover;
-	   			background-position: center center;
 	   			position: absolute;
 	  			top: 0;
 	  			left: 0;
@@ -114,9 +125,13 @@
 	.content {
 		padding: 0px 15px 25px 15px;
 		flex-grow: 1;
-		flex-basis: 50%;
+		flex-shrink: 1;
+		flex-basis: auto;
 		@media (min-width: $screen-tablet) {
 			padding: 30px 30px 30px 0px;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 50%;
 		}
 		.citation-bar	{
 		    margin-top: 15px;
@@ -127,3 +142,64 @@
 		}
 	}
 }
+
+
+// PROMO CARD:
+// --------------------------------------------------
+
+.card-cit-promo {
+	margin-bottom: 25px;
+	background-color: $cit-bg-gray-light;
+	width: 100%;
+	@media (min-width: $screen-tablet) {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.content {
+		padding: 25px;
+		text-align:center;
+		@media (min-width: $screen-tablet) {
+			text-align: left;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 58.33333%;
+			padding: 45px 60px;
+		}
+		h4 {
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 25px;
+		}
+	}
+	.image-area-mobile {
+		@media (min-width: $screen-tablet) {
+			display: none;
+		}
+		.image-container {
+			padding-top: 66.66%; /* 3:12 Aspect Ratio */
+	  		position: relative; /* If you want text inside of it */
+			.image {
+				background:url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
+				background-size: cover;
+	   			position: absolute;
+	  			top: 0;
+	  			left: 0;
+	  			bottom: 0;
+	  			right: 0;
+			}
+		}
+	}
+	.image-area-desktop{
+		background:url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
+		background-size: cover;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 41.66667%;
+	}
+}
+
+
+
+
