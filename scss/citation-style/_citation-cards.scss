@@ -201,5 +201,24 @@
 }
 
 
+// CTA CARD:
+// --------------------------------------------------
+
+.card-cit-cta {
+	margin-bottom: 25px;
+	background-color: $cit-bg-gray-light;
+	width: 100%;
+	.content {
+		padding: 45px;
+		text-align:center;
+		h4 {
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 25px;
+		}
+	}
+}
+
 
 
