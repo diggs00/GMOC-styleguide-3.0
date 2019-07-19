@@ -60,6 +60,12 @@ p.cit {
 	line-height: 1.5rem; //24px
 }
 
+p.cit {
+	strong {
+		font-family: $font-family-semibold-cit;
+	}
+}
+
 p.cit.disclaimer {
 	font-family: $font-family-plain-cit;
 	font-size: $font-size-small-cit;
@@ -76,7 +82,7 @@ h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit {
 	text-transform: none;
 }
 
-h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.heavy, h6.cit.heavy, {
+h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.heavy, h6.cit.heavy {
 	font-family: $font-family-bold-cit;
 	text-transform: none;
 }

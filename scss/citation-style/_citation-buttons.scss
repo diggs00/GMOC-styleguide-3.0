@@ -7,8 +7,7 @@
 /* BUTTONS
 	 ========================================================================== */
 
-
-.btn-primary-dark-cit, .btn-primary-light-cit,  .btn-secondary-dark-cit, .btn-secondary-light-cit,{
+.btn-primary-dark-cit, .btn-primary-light-cit,  .btn-secondary-dark-cit, .btn-secondary-light-cit{
 	text-transform: uppercase;
 	font-family: $font-family-plain-cit;
 	font-size: $h6-font-size-cit;
@@ -16,6 +15,13 @@
 	padding: 15px 50px;
 	border-radius: 0rem;
 	letter-spacing: 1px;
+	@media (min-width: $screen-tablet) {
+		font-size: $font-size-base-cit * 1.25; 		//20.8px
+		letter-spacing: 2px;
+	}
+}
+
+.btn-primary-dark-cit, .btn-primary-light-cit{
 	&:focus,
  	&.focus {
 		outline: 0;
@@ -23,13 +29,17 @@
 		-moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.25);
 		box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.25);
 	}
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.25; 		//20.8px
-		letter-spacing: 2px;
-	}
 }
 
-
+.btn-secondary-dark-cit, .btn-secondary-light-cit{
+	&:focus,
+ 	&.focus {
+		outline: 0;
+		-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+		-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	}
+}
 .btn-primary-dark-cit {
 	@include button-variant-primary-dark-cit(
 		$white, //color
@@ -47,6 +57,7 @@
 }
 
 
+
 .btn-secondary-dark-cit {
 	@include button-variant-secondary-dark-cit(
 		$cit-bg-gray, //color
@@ -56,25 +67,36 @@
 }
 
 
+
 .btn-secondary-light-cit {
-	@include button-variant-secondary-dark-cit(
+	@include button-variant-secondary-light-cit(
 		$white, //color
-		$button-color-secondary-dark-cit, //background
+		$button-color-secondary-light-cit, //background
 		$white //border
 	);
 }
 
 
 
+
+
 /* LINKS
 	 ========================================================================== */
-.btn-link-dark-cit, .btn-link-light-cit, {
+
+h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.heavy, h6.cit.heavy {
+	.btn-link-dark-cit, .btn-link-light-cit {
+		font-family: inherit !important;
+	}
+}
+
+.btn-link-dark-cit, .btn-link-light-cit {
 	font-family: $font-family-bold-cit;
 	white-space: normal;
 	font-weight: bold;
 	cursor: pointer;
 	padding: 0px 0px 0px 0px;
 	text-align: left;
+	vertical-align: baseline;
 	display: inline;
 	text-decoration: underline;
 	text-underline-position: under;
