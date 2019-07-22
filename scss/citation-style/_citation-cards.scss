@@ -283,3 +283,30 @@
 }
 
 
+
+
+// PLAN TRIAL CARDS:
+// --------------------------------------------------
+
+.card-cit-plan-trial {
+	border: 1px solid $cit-divider-gray;
+	margin-bottom: 25px;
+	background-color: $transparent;
+	width: 100%;
+	.image {
+		background:url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
+		background-size: cover;
+		height: 250px;
+	}
+	.content {
+		padding: 15px;
+		.plan-title {
+			margin-left: 10px;
+			width: 100%;
+			flex-basis: 100%;
+			.plan-status {
+				margin-top: 25px;
+			}
+		}
+	}
+}

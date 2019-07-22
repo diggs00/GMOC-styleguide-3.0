@@ -1,0 +1,22 @@
+//
+// PROGRESS BAR - CITATION Style
+// --------------------------------------------------
+
+
+
+.progress-cit {
+  display: flex;
+  height: 8px;
+  background-color: $cit-type-gray-darkest;
+  margin-bottom: 5px;
+}
+
+.progress-bar-cit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $brand-primary;
+}
+
