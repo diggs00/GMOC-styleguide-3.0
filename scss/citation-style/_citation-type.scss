@@ -77,7 +77,7 @@ p.cit.disclaimer {
 
 // Headings Font Family
 // -------------------------
-h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit {
+h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, span.h1.cit, span.h2.cit, span.h3.cit, span.h4.cit, span.h5.cit, span.h6.cit {
 	font-family: $font-family-plain-cit;
 	text-transform: none;
 }
@@ -89,7 +89,7 @@ h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.h
 
 // Headings Font Size
 // -------------------------
-h1.cit, h1.cit.heavy {
+h1.cit, h1.cit.heavy, span.h1.cit {
 	font-size: $h1-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -97,7 +97,7 @@ h1.cit, h1.cit.heavy {
 	}
 }
 
-h2.cit, h2.cit.heavy {
+h2.cit, h2.cit.heavy, span.h2.cit {
 	font-size: $h2-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -105,7 +105,7 @@ h2.cit, h2.cit.heavy {
 	}
 }
 
-h3.cit, h3.cit.heavy {
+h3.cit, h3.cit.heavy, span.h3.cit {
 	font-size: $h3-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -113,7 +113,7 @@ h3.cit, h3.cit.heavy {
 	}
 }
 
-h3.cit35, h3.cit35.heavy {
+h3.cit35, h3.cit35.heavy, span.h3.cit {
 	font-size: $h35-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -121,7 +121,7 @@ h3.cit35, h3.cit35.heavy {
 	}
 }
 
-h4.cit, h4.cit.heavy {
+h4.cit, h4.cit.heavy, span.h4.cit {
 	font-size: $h4-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -129,7 +129,7 @@ h4.cit, h4.cit.heavy {
 	}
 }
 
-h5.cit, h5.cit.heavy {
+h5.cit, h5.cit.heavy, span.h5.cit {
 	font-size: $h5-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {
@@ -137,7 +137,7 @@ h5.cit, h5.cit.heavy {
 	}
 }
 
-h6.cit, h6.cit.heavy {
+h6.cit, h6.cit.heavy, span.h6.cit {
 	font-size: $h6-font-size-cit;
 	color: $cit-type-gray-darker;
 	@media (min-width: $screen-tablet) {

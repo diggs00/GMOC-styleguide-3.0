@@ -209,13 +209,13 @@
 	background-color: $cit-bg-gray-light;
 	width: 100%;
 	.content {
-		padding: 45px;
+		padding: 25px;
 		text-align:center;
-		h4 {
-			margin-bottom: 15px;
+		@media (min-width: $screen-tablet) {
+			padding: 30px;
 		}
-		p {
-			margin-bottom: 25px;
+		h5 {
+			margin-bottom: 15px;
 		}
 	}
 }
@@ -308,5 +308,39 @@
 				margin-top: 25px;
 			}
 		}
+	}
+}
+
+
+// PLAN UPCOMING CARDS:
+// --------------------------------------------------
+
+.card-cit-plan-upcoming {
+	border: 1px solid $cit-divider-gray;
+	background-color: $transparent;
+	padding: 25px;
+	margin-bottom: 25px;
+	@media (min-width: $screen-tablet) {
+		padding:30px;
+		margin-bottom: 30px;
+	}
+	.content {
+		margin-bottom: 15px;
+		@media (min-width: $screen-tablet) {
+			margin-bottom: 0px;
+		}
+		.plan-title {
+			margin-left: 10px;
+		}
+	}
+	.plan-status {
+		margin-bottom: 25px;
+		@media (min-width: $screen-tablet) {
+			margin-bottom: 0px;
+		}
+		p {
+			margin-bottom: 5px;
+		}
+
 	}
 }

@@ -14578,7 +14578,7 @@ p.cit.disclaimer {
     p.cit.disclaimer {
       font-size: 1.18125rem; } }
 
-h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit {
+h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, span.h1.cit, span.h2.cit, span.h3.cit, span.h4.cit, span.h5.cit, span.h6.cit {
   font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
   text-transform: none; }
 
@@ -14586,53 +14586,53 @@ h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.h
   font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
   text-transform: none; }
 
-h1.cit, h1.cit.heavy {
+h1.cit, h1.cit.heavy, span.h1.cit {
   font-size: 2.1875rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h1.cit, h1.cit.heavy {
+    h1.cit, h1.cit.heavy, span.h1.cit {
       font-size: 2.84375rem; } }
 
-h2.cit, h2.cit.heavy {
+h2.cit, h2.cit.heavy, span.h2.cit {
   font-size: 2.1875rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h2.cit, h2.cit.heavy {
+    h2.cit, h2.cit.heavy, span.h2.cit {
       font-size: 2.84375rem; } }
 
-h3.cit, h3.cit.heavy {
+h3.cit, h3.cit.heavy, span.h3.cit {
   font-size: 1.875rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h3.cit, h3.cit.heavy {
+    h3.cit, h3.cit.heavy, span.h3.cit {
       font-size: 2.4375rem; } }
 
-h3.cit35, h3.cit35.heavy {
+h3.cit35, h3.cit35.heavy, span.h3.cit {
   font-size: 1.562rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h3.cit35, h3.cit35.heavy {
+    h3.cit35, h3.cit35.heavy, span.h3.cit {
       font-size: 2.03125rem; } }
 
-h4.cit, h4.cit.heavy {
+h4.cit, h4.cit.heavy, span.h4.cit {
   font-size: 1.375rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h4.cit, h4.cit.heavy {
+    h4.cit, h4.cit.heavy, span.h4.cit {
       font-size: 1.7875rem; } }
 
-h5.cit, h5.cit.heavy {
+h5.cit, h5.cit.heavy, span.h5.cit {
   font-size: 1.25rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h5.cit, h5.cit.heavy {
+    h5.cit, h5.cit.heavy, span.h5.cit {
       font-size: 1.625rem; } }
 
-h6.cit, h6.cit.heavy {
+h6.cit, h6.cit.heavy, span.h6.cit {
   font-size: 1rem;
   color: #454545; }
   @media (min-width: 768px) {
-    h6.cit, h6.cit.heavy {
+    h6.cit, h6.cit.heavy, span.h6.cit {
       font-size: 1.25rem; } }
 
 .strike-through {
@@ -15017,12 +15017,13 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
   background-color: #f0f2f4;
   width: 100%; }
   .card-cit-cta .content {
-    padding: 45px;
+    padding: 25px;
     text-align: center; }
-    .card-cit-cta .content h4 {
+    @media (min-width: 768px) {
+      .card-cit-cta .content {
+        padding: 30px; } }
+    .card-cit-cta .content h5 {
       margin-bottom: 15px; }
-    .card-cit-cta .content p {
-      margin-bottom: 25px; }
 
 .card-cit-plan-active {
   border-top: 1px solid #e9e9e9;
@@ -15091,6 +15092,30 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
       flex-basis: 100%; }
       .card-cit-plan-trial .content .plan-title .plan-status {
         margin-top: 25px; }
+
+.card-cit-plan-upcoming {
+  border: 1px solid #e9e9e9;
+  background-color: transparent;
+  padding: 25px;
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .card-cit-plan-upcoming {
+      padding: 30px;
+      margin-bottom: 30px; } }
+  .card-cit-plan-upcoming .content {
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .card-cit-plan-upcoming .content {
+        margin-bottom: 0px; } }
+    .card-cit-plan-upcoming .content .plan-title {
+      margin-left: 10px; }
+  .card-cit-plan-upcoming .plan-status {
+    margin-bottom: 25px; }
+    @media (min-width: 768px) {
+      .card-cit-plan-upcoming .plan-status {
+        margin-bottom: 0px; } }
+    .card-cit-plan-upcoming .plan-status p {
+      margin-bottom: 5px; }
 
 /* MASTHEAD - CITATION Style
    ========================================================================== */
