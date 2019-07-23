@@ -8402,13 +8402,13 @@ ul.list-inline.status {
     margin-bottom: 20px; }
   .card-card.device-vertical:hover {
     background-color: #e5e5e5;
-    border-color: #fbc300; }
+    border-color: #b6862d; }
     .card-card.device-vertical:hover a {
       cursor: auto; }
 
 .card-card.device-horizontal {
   background-color: #e5e5e5;
-  border-color: #fbc300;
+  border-color: #b6862d;
   box-shadow: none;
   -webkit-box-shadow: none;
   display: block; }
@@ -8726,7 +8726,7 @@ ul.list-inline.status {
   margin-bottom: 15px; }
   .card-primary > .card-heading {
     color: #ffffff;
-    background-color: #fbc300;
+    background-color: #b6862d;
     border-color: #cacaca; }
     .card-primary > .card-heading + .card-collapse .card-body {
       border-top-color: #cacaca; }
@@ -8772,7 +8772,7 @@ ul.list-inline.status {
   margin-bottom: 15px; }
   .card-informational > .card-heading {
     color: #ffffff;
-    background-color: #fbc300;
+    background-color: #b6862d;
     border-color: #cacaca;
     border-bottom: 1px solid #cacaca; }
     .card-informational > .card-heading + .card-collapse .card-body {
@@ -8828,7 +8828,7 @@ ul.list-inline.status {
   margin-bottom: 30px; }
   .card-primary-tool > .card-heading {
     color: #ffffff;
-    background-color: #fbc300;
+    background-color: #b6862d;
     border-color: #cacaca; }
     .card-primary-tool > .card-heading + .card-collapse .card-body {
       border-top-color: #cacaca; }
@@ -9874,7 +9874,7 @@ ul.card-tabs > li > a > p {
     .charge-mode-block-two.active .charge-mode-block-current-pointer,
     .charge-mode-block-three.active .charge-mode-block-current-pointer {
       display: block;
-      background-color: #fbc300;
+      background-color: #b6862d;
       width: 100%;
       margin: 0px auto;
       height: auto;
@@ -9896,7 +9896,7 @@ ul.card-tabs > li > a > p {
         content: " ";
         height: 0;
         width: 0;
-        border-top: 10px solid #fbc300;
+        border-top: 10px solid #b6862d;
         border-right: 10px solid transparent;
         border-left: 10px solid transparent; }
       .charge-mode-block-one.active .charge-mode-block-current-pointer span,
@@ -9919,7 +9919,7 @@ ul.card-tabs > li > a > p {
     content: " ";
     width: 22px;
     height: 22px;
-    background: #fbc300;
+    background: #b6862d;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95% auto;
@@ -10413,7 +10413,7 @@ cite {
   color: #e5e5e5; }
 
 .text-primary {
-  color: #fbc300; }
+  color: #b6862d; }
 
 .text-warning {
   color: #ed211b; }
@@ -11040,7 +11040,7 @@ a.btnPop {
         padding: 1em; } }
 
 .responsiveTableWrap .primaryColorBrandColor {
-  color: #fbc300; }
+  color: #b6862d; }
 
 .responsiveTableWrap .card-header {
   padding: 20px 15px; }
@@ -11460,7 +11460,7 @@ table.ui-datepicker-calendar {
   background: #ffffff;
   color: #bdd0f2; }
   .ui-datepicker-other-month .ui-state-default:hover {
-    background-color: #fbc300;
+    background-color: #b6862d;
     color: #ffffff; }
 
 .ui-datepicker tbody tr {
@@ -14168,28 +14168,28 @@ a.btn > span {
   margin-bottom: 5px; }
 
 .brandcolor-chevy {
-  background-color: #f3bd02; }
+  background-color: #b6862d; }
 
 .brandcolor-chevy-text {
-  color: #f3bd02; }
+  color: #b6862d; }
 
 .brandcolor-buick {
-  background-color: #f26522; }
+  background-color: #c9480c; }
 
 .brandcolor-buick-text {
-  color: #f26522; }
+  color: #c9480c; }
 
 .brandcolor-gmc {
-  background-color: #c91515; }
+  background-color: #cc0000; }
 
 .brandcolor-gmc-text {
-  color: #c91515; }
+  color: #cc0000; }
 
 .brandcolor-cadillac {
-  background-color: #970505; }
+  background-color: #bead76; }
 
 .brandcolor-cadillac-text {
-  color: #970505; }
+  color: #bead76; }
 
 .brandcolor-gm {
   background-color: #134a9c; }
@@ -14652,7 +14652,7 @@ hr.cit {
   margin-top: 15px;
   margin-bottom: 30px;
   height: 4px;
-  background-color: #fbc300;
+  background-color: #b6862d;
   width: 120px;
   display: block; }
   @media (min-width: 768px) {
@@ -15181,7 +15181,7 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  background-color: #fbc300; }
+  background-color: #b6862d; }
 
 .background-dark {
   background-color: black;
