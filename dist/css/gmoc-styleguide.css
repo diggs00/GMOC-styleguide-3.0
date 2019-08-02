@@ -14664,7 +14664,7 @@ hr.cit {
 	 ========================================================================== */
 .btn-primary-dark-cit, .btn-primary-light-cit, .btn-secondary-dark-cit, .btn-secondary-light-cit {
   text-transform: uppercase;
-  font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
+  font-family: "GMGlobalSans_SemiBold", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: normal;
   padding: 15px 50px;
