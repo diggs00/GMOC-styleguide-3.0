@@ -258,11 +258,14 @@
 				@media (min-width: $screen-desktop) {
 				margin-left: 0px;
 			}
-			h4 {
+			.plan-name {
 				width: 100%;
 				@media (min-width: $screen-desktop) {
 					margin: 0px 0px 0px 20px;
 					width: 50%;
+				}
+				p {
+					margin-top:5px;
 				}
 			}
 			.pricing {

@@ -15057,12 +15057,14 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
       @media (min-width: 992px) {
         .card-cit-plan-active .content .plan-content {
           margin-left: 0px; } }
-      .card-cit-plan-active .content .plan-content h4 {
+      .card-cit-plan-active .content .plan-content .plan-name {
         width: 100%; }
         @media (min-width: 992px) {
-          .card-cit-plan-active .content .plan-content h4 {
+          .card-cit-plan-active .content .plan-content .plan-name {
             margin: 0px 0px 0px 20px;
             width: 50%; } }
+        .card-cit-plan-active .content .plan-content .plan-name p {
+          margin-top: 5px; }
       .card-cit-plan-active .content .plan-content .pricing {
         margin: 15px 0px 5px 0px; }
         @media (min-width: 992px) {
