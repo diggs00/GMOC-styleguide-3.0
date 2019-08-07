@@ -15102,7 +15102,10 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
     background-size: cover;
     height: 250px; }
   .card-cit-plan-trial .content {
-    padding: 15px; }
+    padding: 25px; }
+    @media (min-width: 768px) {
+      .card-cit-plan-trial .content {
+        padding: 30px 30px 30px 30px; } }
     .card-cit-plan-trial .content .plan-title {
       margin-left: 10px;
       width: 100%;

@@ -319,7 +319,10 @@
 		height: 250px;
 	}
 	.content {
-		padding: 15px;
+		padding: 25px;
+		@media (min-width: $screen-tablet) {
+			padding:30px 30px 30px 30px;
+		}
 		.plan-title {
 			margin-left: 10px;
 			width: 100%;
