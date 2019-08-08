@@ -175,3 +175,28 @@ h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, h1.cit.heavy, h2.cit.h
 	}
 }
 
+
+
+
+
+/* LINKS - TELEPHONE
+	 ========================================================================== */
+@media (max-width: $screen-md) {
+  a.cit[href^="tel:"]:before {
+    content: none;
+    font-size: $font-size-xlarge;
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+  a.cit[href^="tel:"]{
+    font-size: inherit;
+  }
+}
+@media (min-width: $screen-md) {
+  a.cit[href^="tel:"]{
+     pointer-events: none;
+     cursor: default;
+     color: inherit;
+   }
+ }
+

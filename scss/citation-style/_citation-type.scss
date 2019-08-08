@@ -53,18 +53,23 @@ body.cit {
 	}
 }
 
-p.cit {
+p.cit, .p.cit {
 	font-family: $font-family-plain-cit;
 	margin-top: 0rem;
 	margin-bottom: 1rem; //16px
 	line-height: 1.5rem; //24px
 }
 
-p.cit {
+p.cit, .p.cit {
 	strong {
-		font-family: $font-family-semibold-cit;
+		font-family: $font-family-bold-cit;
 	}
 }
+
+span.p.cit {
+	font-size: $font-size-base-cit;
+}
+
 
 p.cit.disclaimer {
 	font-family: $font-family-plain-cit;

@@ -29,3 +29,17 @@ hr.cit	{
 	    margin-bottom: 25px;
 	}
 }
+
+
+.citation-bar.onstar {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    height:4px;
+    background-color:$cit-blue-dark;
+    width:120px;
+    display: block;
+    @media (min-width: $screen-tablet) {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+}
