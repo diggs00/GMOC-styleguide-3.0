@@ -15,6 +15,46 @@ hr.cit	{
 }
 
 
+
+// Citation Text Divider
+// -------------------------
+.hr-cit-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $cit-divider-gray-dark;
+    p {
+        font-family:$font-family-bold-cit;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: $font-size-small-cit;
+    }
+    @media (min-width: $screen-desktop) {
+        border-bottom: none;
+        p {
+            overflow: hidden;
+        }
+        p:before,
+        p:after {
+            background-color: $cit-divider-gray-dark;
+            content: "";
+            display: inline-flex;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+        p:before {
+            right: 25px;
+            margin-left: -50%;
+        }
+        p:after {
+            left: 25px;
+            margin-right: -50%;
+        }
+    }
+}
+
+
 // Citation Bar
 // -------------------------
 .citation-bar	{
@@ -43,3 +83,4 @@ hr.cit	{
         margin-bottom: 25px;
     }
 }
+

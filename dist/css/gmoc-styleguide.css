@@ -15484,6 +15484,36 @@ hr.cit {
   hr.cit.light {
     border-top: 1px solid #e9e9e9; }
 
+.hr-cit-text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #acacac; }
+  .hr-cit-text p {
+    font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 0.875rem; }
+  @media (min-width: 992px) {
+    .hr-cit-text {
+      border-bottom: none; }
+      .hr-cit-text p {
+        overflow: hidden; }
+      .hr-cit-text p:before,
+      .hr-cit-text p:after {
+        background-color: #acacac;
+        content: "";
+        display: inline-flex;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%; }
+      .hr-cit-text p:before {
+        right: 25px;
+        margin-left: -50%; }
+      .hr-cit-text p:after {
+        left: 25px;
+        margin-right: -50%; } }
+
 .citation-bar {
   margin-top: 15px;
   margin-bottom: 30px;
