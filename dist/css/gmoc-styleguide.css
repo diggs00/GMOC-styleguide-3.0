@@ -15668,6 +15668,13 @@ hr.cit {
 h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit, h2.cit .btn-link-light-cit, h3.cit .btn-link-dark-cit, h3.cit .btn-link-light-cit, h3.cit35 .btn-link-dark-cit, h3.cit35 .btn-link-light-cit, h4.cit .btn-link-dark-cit, h4.cit .btn-link-light-cit, h5.cit .btn-link-dark-cit, h5.cit .btn-link-light-cit, h6.cit .btn-link-dark-cit, h6.cit .btn-link-light-cit, h1.cit.heavy .btn-link-dark-cit, h1.cit.heavy .btn-link-light-cit, h2.cit.heavy .btn-link-dark-cit, h2.cit.heavy .btn-link-light-cit, h3.cit.heavy .btn-link-dark-cit, h3.cit.heavy .btn-link-light-cit, h3.cit35.heavy .btn-link-dark-cit, h3.cit35.heavy .btn-link-light-cit, h4.cit.heavy .btn-link-dark-cit, h4.cit.heavy .btn-link-light-cit, h5.cit.heavy .btn-link-dark-cit, h5.cit.heavy .btn-link-light-cit, h6.cit.heavy .btn-link-dark-cit, h6.cit.heavy .btn-link-light-cit {
   font-family: inherit !important; }
 
+h3.cit35 .btn-link-dark-cit.disclaimer, h3.cit35 .btn-link-light-cit.disclaimer, h4.cit .btn-link-dark-cit.disclaimer, h4.cit .btn-link-light-cit.disclaimer, h5.cit .btn-link-dark-cit.disclaimer, h5.cit .btn-link-light-cit.disclaimer, h6.cit .btn-link-dark-cit.disclaimer, h6.cit .btn-link-light-cit.disclaimer, h1.cit.heavy .btn-link-dark-cit.disclaimer, h1.cit.heavy .btn-link-light-cit.disclaimer, h2.cit.heavy .btn-link-dark-cit.disclaimer, h2.cit.heavy .btn-link-light-cit.disclaimer, h3.cit.heavy .btn-link-dark-cit.disclaimer, h3.cit.heavy .btn-link-light-cit.disclaimer, h3.cit35.heavy .btn-link-dark-cit.disclaimer, h3.cit35.heavy .btn-link-light-cit.disclaimer, h4.cit.heavy .btn-link-dark-cit.disclaimer, h4.cit.heavy .btn-link-light-cit.disclaimer, h5.cit.heavy .btn-link-dark-cit.disclaimer, h5.cit.heavy .btn-link-light-cit.disclaimer, h6.cit.heavy .btn-link-dark-cit.disclaimer, h6.cit.heavy .btn-link-light-cit.disclaimer, p .btn-link-dark-cit.disclaimer, p .btn-link-light-cit.disclaimer {
+  font-family: "GMGlobalSans_Plain", "Arial", sans-serif !important;
+  font-size: 0.875rem; }
+
+h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy sup, h3.cit.heavy sup, h3.cit35.heavy sup, h4.cit.heavy sup, h5.cit.heavy sup, h6.cit.heavy sup, p sup {
+  display: inline-block; }
+
 .btn-link-dark-cit, .btn-link-light-cit {
   font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
   white-space: normal;
@@ -15679,7 +15686,8 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
   display: inline;
   text-decoration: underline;
   text-underline-position: under;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  line-height: 1.5rem; }
   .btn-link-dark-cit, .btn-link-dark-cit:active, .btn-link-dark-cit[disabled],
   fieldset[disabled] .btn-link-dark-cit, .btn-link-light-cit, .btn-link-light-cit:active, .btn-link-light-cit[disabled],
   fieldset[disabled] .btn-link-light-cit {
@@ -15690,13 +15698,14 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none; }
+  .btn-link-dark-cit.disclaimer, .btn-link-light-cit.disclaimer {
+    text-underline-position: auto; }
 
 .btn-link-dark-cit {
   color: #343a40; }
   .btn-link-dark-cit:hover, .btn-link-dark-cit:focus {
     color: #343a40;
     text-decoration: underline;
-    text-underline-position: under;
     background-color: transparent;
     border-color: transparent; }
   .btn-link-dark-cit[disabled]:hover, .btn-link-dark-cit[disabled]:focus,
@@ -15717,7 +15726,6 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
   .btn-link-light-cit:hover, .btn-link-light-cit:focus {
     color: #ffffff;
     text-decoration: underline;
-    text-underline-position: under;
     background-color: transparent; }
   .btn-link-light-cit[disabled]:hover, .btn-link-light-cit[disabled]:focus,
   fieldset[disabled] .btn-link-light-cit:hover,
@@ -16063,6 +16071,21 @@ h1.cit .btn-link-dark-cit, h1.cit .btn-link-light-cit, h2.cit .btn-link-dark-cit
   @media (min-width: 768px) {
     .card-cit-payment-info {
       padding: 30px 30px 30px 30px; } }
+
+.card-cit-select {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e9e9e9;
+  background-color: #ffffff;
+  padding: 25px 25px 25px 25px; }
+  @media (min-width: 768px) {
+    .card-cit-select {
+      padding: 30px 30px 30px 30px; } }
+  .card-cit-select.selected {
+    border: 2px solid #343a40; }
+  .card-cit-select .citation-bar {
+    display: inline-block;
+    margin-bottom: 15px; }
 
 /* MASTHEAD - CITATION Style
    ========================================================================== */

@@ -414,3 +414,24 @@
 	}
 }
 
+
+// SELECTABLE CARD:
+// --------------------------------------------------
+
+.card-cit-select {
+	width: 100%;
+	text-align: center;
+	border: 1px solid $cit-divider-gray;
+	background-color: $white;
+	padding: 25px 25px 25px 25px;
+	@media (min-width: $screen-tablet) {
+		padding:30px 30px 30px 30px;
+	}
+	&.selected {
+		border: 2px solid $cit-type-gray-darkest;
+	}
+	.citation-bar {
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+}
