@@ -1,0 +1,23 @@
+/* TAGS - CITATION Style
+   ========================================================================== */
+
+
+// Citation Tag
+// -------------------------
+.citation-tag {
+    text-align: center;
+    background-color:$brand-primary;
+    display: inline-block;
+    color: $white;
+    padding:3px 20px;
+}
+
+
+.citation-tag.onstar {
+    text-align: center;
+    background-color:$brand-primary;
+    display: inline-block;
+    color: $cit-blue-light;
+    padding:3px 20px;
+}
+

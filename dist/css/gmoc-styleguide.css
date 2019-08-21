@@ -16077,12 +16077,42 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   text-align: center;
   border: 1px solid #e9e9e9;
   background-color: #ffffff;
-  padding: 25px 25px 25px 25px; }
+  padding: 55px 25px 25px 25px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 25px; }
   @media (min-width: 768px) {
     .card-cit-select {
-      padding: 30px 30px 30px 30px; } }
+      padding: 60px 30px 30px 30px; } }
+  .card-cit-select:hover {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25); }
   .card-cit-select.selected {
-    border: 2px solid #343a40; }
+    cursor: default;
+    border: 4px solid #b6862d; }
+    .card-cit-select.selected:hover {
+      outline: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    .card-cit-select.selected p {
+      color: #b6862d;
+      font-weight: 700; }
+  .card-cit-select.disabled {
+    border: 1px solid #e9e9e9; }
+    .card-cit-select.disabled h6, .card-cit-select.disabled h4, .card-cit-select.disabled a {
+      color: #acacac;
+      font-weight: 700; }
+    .card-cit-select.disabled .citation-bar {
+      background-color: #acacac; }
+  .card-cit-select .citation-tag {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
   .card-cit-select .citation-bar {
     display: inline-block;
     margin-bottom: 15px; }
@@ -16380,6 +16410,22 @@ button.close-cit {
 
 a.close-cit.disabled {
   pointer-events: none; }
+
+/* TAGS - CITATION Style
+   ========================================================================== */
+.citation-tag {
+  text-align: center;
+  background-color: #b6862d;
+  display: inline-block;
+  color: #ffffff;
+  padding: 3px 20px; }
+
+.citation-tag.onstar {
+  text-align: center;
+  background-color: #b6862d;
+  display: inline-block;
+  color: #4e75ad;
+  padding: 3px 20px; }
 
 .background-dark {
   background-color: black;
