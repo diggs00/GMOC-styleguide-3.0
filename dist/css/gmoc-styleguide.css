@@ -16084,6 +16084,12 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   @media (min-width: 768px) {
     .card-cit-select {
       padding: 60px 30px 30px 30px; } }
+  .card-cit-select sup a {
+    display: inline;
+    text-align: left; }
+  .card-cit-select a {
+    display: inline-block;
+    text-align: center; }
   .card-cit-select:hover {
     outline: 0;
     -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
@@ -16097,7 +16103,7 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-    .card-cit-select.selected p {
+    .card-cit-select.selected p:last-of-type {
       color: #b6862d;
       font-weight: 700; }
   .card-cit-select.disabled {
