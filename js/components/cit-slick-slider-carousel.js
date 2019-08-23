@@ -1,5 +1,5 @@
 $(function(){
-	  $(".carousel").slick({
+	  $(".cit-carousel").slick({
 	    autoplay: false,
 	    dots: true,
 	});
