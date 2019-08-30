@@ -1,19 +1,126 @@
-/* CARDS - CITATION Style
+/* FEATURES - CITATION Style
    ========================================================================== */
 
 
-// Vertical - Features:
+// More - Features:
 // --------------------------------------------------
 
-.feature-vertical-cit {
+.feature-more-cit {
 	margin: 0px 0px 40px 0px;
 	background-color: $transparent;
+	border: 1px solid $cit-divider-gray;
+	padding-bottom: 15px;
+	@media (min-width: $screen-tablet) {
+		padding-bottom: 30px;
+	}
+	.feature-title {
+		padding: 15px 0px 0px 0px;
+		@media (min-width: $screen-tablet) {
+			text-align: center;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+	.feature {
+		padding: 0px 0px 15px 0px;
+		@media (min-width: $screen-tablet) {
+			padding:5px 15px 30px 15px;
+		}
+	}
+}
+
+
+
+// Key - Features:
+// --------------------------------------------------
+
+.feature-key-cit {
+	margin: 0px 0px 25px 0px;
+	background-color: $transparent;
 	text-align: center;
+	@media (min-width: $screen-tablet) {
+		margin: 0px 0px 40px 0px;
+	}
+	.feature-title {
+		padding: 15px 0px 10px 0px;
+		@media (min-width: $screen-tablet) {
+			text-align: center;
+			padding: 20px 0px 0px 0px;
+		}
+		.citation-bar {
+			// margin-bottom: 15px;
+		}
+	}
 	img{
 		width: 100%;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		@media (min-width: $screen-tablet) {
 			width: 75%;
+			margin-bottom: 15px;
+		}
+	}
+	svg {
+		height: 48px;
+		margin-bottom: 15px;
+		@media (min-width: $screen-tablet) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+
+// Promo - Features:
+// --------------------------------------------------
+
+.feature-promo-cit {
+	.promo {
+		margin: 0px 0px 100px 0px;
+		text-align: center;
+		@media (min-width: $screen-tablet) {
+			margin: 0px 0px 40px 0px;
+		}
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+		img{
+			width: 100%;
+			margin-bottom: 15px;
+			@media (min-width: $screen-tablet) {
+				width: 75%;
+				margin-bottom: 15px;
+			}
+		}
+		svg {
+			height: 100px;
+			margin-bottom: 15px;
+			@media (min-width: $screen-tablet) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+
+// AT&T - Features:
+// --------------------------------------------------
+
+.feature-att-cit {
+	text-align: center;
+	img{
+		width: 50%;
+		margin-bottom: 20px;
+		@media (min-width: $screen-tablet) {
+			width: 40%;
+		}
+		@media (min-width: $screen-desktop) {
+			width: 20%;
+		}
+	}
+	svg {
+		height: 100px;
+		margin-bottom: 15px;
+		@media (min-width: $screen-tablet) {
+			margin-bottom: 15px;
 		}
 	}
 }

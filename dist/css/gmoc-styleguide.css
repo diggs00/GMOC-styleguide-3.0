@@ -16670,16 +16670,92 @@ a.close-cit.disabled {
 
 /* CARDS - CITATION Style
    ========================================================================== */
-.feature-vertical-cit {
+.feature-more-cit {
   margin: 0px 0px 40px 0px;
   background-color: transparent;
-  text-align: center; }
-  .feature-vertical-cit img {
-    width: 100%;
-    margin-bottom: 30px; }
+  border: 1px solid #e9e9e9;
+  padding-bottom: 15px; }
+  @media (min-width: 768px) {
+    .feature-more-cit {
+      padding-bottom: 30px; } }
+  .feature-more-cit .feature-title {
+    padding: 15px 0px 0px 0px; }
     @media (min-width: 768px) {
-      .feature-vertical-cit img {
-        width: 75%; } }
+      .feature-more-cit .feature-title {
+        text-align: center;
+        padding: 20px 0px 0px 0px; } }
+  .feature-more-cit .feature {
+    padding: 0px 0px 15px 0px; }
+    @media (min-width: 768px) {
+      .feature-more-cit .feature {
+        padding: 5px 15px 30px 15px; } }
+
+.feature-key-cit {
+  margin: 0px 0px 25px 0px;
+  background-color: transparent;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .feature-key-cit {
+      margin: 0px 0px 40px 0px; } }
+  .feature-key-cit .feature-title {
+    padding: 15px 0px 10px 0px; }
+    @media (min-width: 768px) {
+      .feature-key-cit .feature-title {
+        text-align: center;
+        padding: 20px 0px 0px 0px; } }
+  .feature-key-cit img {
+    width: 100%;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-key-cit img {
+        width: 75%;
+        margin-bottom: 15px; } }
+  .feature-key-cit svg {
+    height: 48px;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-key-cit svg {
+        margin-bottom: 15px; } }
+
+.feature-promo-cit .promo {
+  margin: 0px 0px 100px 0px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .feature-promo-cit .promo {
+      margin: 0px 0px 40px 0px; } }
+  .feature-promo-cit .promo:last-child {
+    margin: 0px 0px 0px 0px; }
+  .feature-promo-cit .promo img {
+    width: 100%;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-promo-cit .promo img {
+        width: 75%;
+        margin-bottom: 15px; } }
+  .feature-promo-cit .promo svg {
+    height: 100px;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-promo-cit .promo svg {
+        margin-bottom: 15px; } }
+
+.feature-att-cit {
+  text-align: center; }
+  .feature-att-cit img {
+    width: 50%;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .feature-att-cit img {
+        width: 40%; } }
+    @media (min-width: 992px) {
+      .feature-att-cit img {
+        width: 20%; } }
+  .feature-att-cit svg {
+    height: 100px;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-att-cit svg {
+        margin-bottom: 15px; } }
 
 .background-dark {
   background-color: black;
