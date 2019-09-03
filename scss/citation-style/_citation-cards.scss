@@ -436,6 +436,10 @@
 	cursor: pointer;
 	position: relative;
 	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	@media (min-width: $screen-tablet) {
 		padding:45px 30px 30px 30px;
 	}
@@ -485,7 +489,6 @@
         transform: translate(-50%, -50%);
 	}
 	.citation-bar {
-		display: inline-block;
 		margin-bottom: 15px;
 	}
 }
@@ -502,6 +505,10 @@
 	padding: 25px 25px 25px 25px;
 	cursor: pointer;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	@media (min-width: $screen-tablet) {
 		padding:30px 30px 30px 30px;
 	}

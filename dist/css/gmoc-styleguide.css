@@ -15876,7 +15876,11 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   padding: 55px 25px 25px 25px;
   cursor: pointer;
   position: relative;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   @media (min-width: 768px) {
     .card-cit-select {
       padding: 45px 30px 30px 30px; } }
@@ -15916,7 +15920,6 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     margin-right: -50%;
     transform: translate(-50%, -50%); }
   .card-cit-select .citation-bar {
-    display: inline-block;
     margin-bottom: 15px; }
 
 .card-cit-price {
@@ -15926,7 +15929,11 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   background-color: #ffffff;
   padding: 25px 25px 25px 25px;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   @media (min-width: 768px) {
     .card-cit-price {
       padding: 30px 30px 30px 30px; } }
@@ -16668,7 +16675,7 @@ a.close-cit.disabled {
     .cit-carousel .carousel-text-area p a {
       font-size: 18px; }
 
-/* CARDS - CITATION Style
+/* FEATURES - CITATION Style
    ========================================================================== */
 .feature-more-cit {
   margin: 0px 0px 40px 0px;
