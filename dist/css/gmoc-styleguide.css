@@ -15767,31 +15767,25 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     @media (min-width: 992px) {
       .card-cit-plan-active .content {
         padding: 30px 0px 0px 0px; } }
-    .card-cit-plan-active .content .plan-content {
-      margin-left: 20px; }
+    .card-cit-plan-active .content .plan-content .plan-name {
+      margin: 0px 0px 0px 0px; }
       @media (min-width: 992px) {
-        .card-cit-plan-active .content .plan-content {
-          margin-left: 0px; } }
-      .card-cit-plan-active .content .plan-content .plan-name {
-        width: 100%; }
-        @media (min-width: 992px) {
-          .card-cit-plan-active .content .plan-content .plan-name {
-            margin: 0px 0px 0px 20px;
-            width: 50%; } }
-        .card-cit-plan-active .content .plan-content .plan-name p {
-          margin-top: 5px; }
-      .card-cit-plan-active .content .plan-content .pricing {
-        margin: 15px 0px 0px 0px; }
-        @media (min-width: 992px) {
-          .card-cit-plan-active .content .plan-content .pricing {
-            margin: 0px;
-            padding: 0px 20px; } }
-      .card-cit-plan-active .content .plan-content .bill-date {
-        margin: 5px 0px 0px 0px; }
-        @media (min-width: 992px) {
-          .card-cit-plan-active .content .plan-content .bill-date {
-            margin: 0px 20px 0px 00px;
-            padding: 0px 20px 0px 0px; } }
+        .card-cit-plan-active .content .plan-content .plan-name {
+          margin: 0px 40px 0px 0px; } }
+      .card-cit-plan-active .content .plan-content .plan-name p {
+        margin-top: 5px; }
+    .card-cit-plan-active .content .plan-content .pricing {
+      margin: 15px 0px 0px 40px; }
+      @media (min-width: 992px) {
+        .card-cit-plan-active .content .plan-content .pricing {
+          margin: 0px;
+          padding: 0px 20px; } }
+    .card-cit-plan-active .content .plan-content .bill-date {
+      margin: 5px 0px 0px 40px; }
+      @media (min-width: 992px) {
+        .card-cit-plan-active .content .plan-content .bill-date {
+          margin: 0px 40px 0px 0px;
+          padding: 0px 20px 0px 0px; } }
     .card-cit-plan-active .content button {
       margin-top: 25px; }
       @media (min-width: 992px) {
