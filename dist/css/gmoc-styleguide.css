@@ -15153,6 +15153,11 @@ img.article-image {
    ========================================================================== */
 /* MIXINS - CITATION Style
    ========================================================================== */
+/* UTILITIES - CITATION Style
+   ========================================================================== */
+.bg-dark {
+  background-color: #181818; }
+
 /* TYPOGRAPHY - CITATION Style
    ========================================================================== */
 @font-face {
@@ -15268,6 +15273,9 @@ h6.cit, h6.cit.heavy, span.h6.cit {
 
 .strike-through {
   text-decoration: line-through; }
+
+.disabled {
+  color: #acacac !important; }
 
 /* DIVIDER/CITATION BAR - CITATION Style
    ========================================================================== */
@@ -15791,6 +15799,54 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
       @media (min-width: 992px) {
         .card-cit-plan-active .content button {
           margin-top: 0px; } }
+
+.card-cit-plan-detail {
+  border: 1px solid #e9e9e9;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 25px; }
+  .card-cit-plan-detail.selected {
+    cursor: default;
+    border: 4px solid #003e7e; }
+    .card-cit-plan-detail.selected:hover {
+      outline: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    .card-cit-plan-detail.selected .price p:last-of-type {
+      color: #003e7e;
+      font-weight: 700; }
+  .card-cit-plan-detail .title {
+    padding: 45px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; }
+    .card-cit-plan-detail .title .citation-bar {
+      margin-bottom: 15px; }
+  .card-cit-plan-detail .content {
+    background-color: #e9e9e9;
+    padding: 30px 30px 0px 30px; }
+  .card-cit-plan-detail .price {
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 0px 30px 0px; }
+  .card-cit-plan-detail sup a {
+    display: inline;
+    text-align: left; }
+  .card-cit-plan-detail a {
+    display: inline-block;
+    text-align: center; }
+  .card-cit-plan-detail:hover {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25); }
 
 .card-cit-message {
   text-align: center;
