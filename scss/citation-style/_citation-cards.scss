@@ -316,10 +316,13 @@
 
 .card-cit-plan-detail {
 	border: 1px solid $cit-divider-gray;
-	background-color: $white;
+	background-color: $cit-type-gray;
 	cursor: pointer;
 	position: relative;
 	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	width:100%;
 	&.selected {
 		cursor: default;
 		border: 4px solid $brand-onstar;
@@ -349,16 +352,26 @@
 	.content {
 		background-color: $cit-type-gray;
 		padding: 30px 30px 0px 30px;
+		display: flex;
+		flex-direction: column;
+		ul {
+			margin-bottom:auto;
+			padding-bottom:30px;
+			margin-bottom: 30px;
+			border-bottom: 1px solid $cit-divider-gray-dark;
+		}
 	}
 	.price {
+		margin-top: auto;
 		background-color: $cit-type-gray;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 0px;
 		padding: 0px 0px 30px 0px;
+
 	}
+
 	sup a { 
 		display: inline;
 		text-align: left;
