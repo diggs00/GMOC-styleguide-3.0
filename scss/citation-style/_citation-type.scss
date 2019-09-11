@@ -80,6 +80,13 @@ p.cit.disclaimer {
 	}
 }
 
+p.cit.tiny {
+	font-family: $font-family-plain-cit;
+	font-size: $font-size-small-cit;
+	color: $cit-type-gray-dark;
+}
+
+
 // Headings Font Family
 // -------------------------
 h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, span.h1.cit, span.h2.cit, span.h3.cit, span.h4.cit, span.h5.cit, span.h6.cit {
