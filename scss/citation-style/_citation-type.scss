@@ -4,14 +4,6 @@
 
 // Fonts
 // -------------------------
-@font-face {
-	font-family: "GMGlobalSans_Light";
-	src: url("../../fonts/GMGlobalSans-3_Light.eot?#iefix") format("embedded-opentype"),
-	url("../../fonts/GMGlobalSans-3_Light.woff") format("woff"),
-	url("../../fonts/GMGlobalSans-3_Light.svg#GMGlobalSans-3_Light") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
 
 @font-face {
 	font-family: "GMGlobalSans_Plain";
@@ -24,7 +16,7 @@
 }
 
 @font-face {
-	font-family: "GMGlobalSans_SemiBold";
+	font-family: "GMGlobalSans_Bold";
 	src: url("../../fonts/GMGlobalSans-7_Bold.eot");
 	src: url("../../fonts/GMGlobalSans-7_Bold.eot?#iefix") format("embedded-opentype"),
 	url("../../fonts/GMGlobalSans-7_Bold.woff") format("woff"),
@@ -33,15 +25,6 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: "GMGlobalSans_Bold";
-	src: url("../../fonts/GMGlobalSans-8_ExtraBold.eot");
-	src: url("../../fonts/GMGlobalSans-8_ExtraBold.eot?#iefix") format("embedded-opentype"),
-	url("../../fonts/GMGlobalSans-8_ExtraBold.woff") format("woff"),
-	url("../../fonts/GMGlobalSans-8_ExtraBold.svg#GMGlobalSans-8_ExtraBold") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
 
 // Body/Paragraph/Disclaimer
 // -------------------------
