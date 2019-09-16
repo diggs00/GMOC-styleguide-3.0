@@ -15335,7 +15335,6 @@ hr.cit {
 /* BUTTONS
 	 ========================================================================== */
 .btn-primary-dark-cit, .btn-primary-light-cit, .btn-secondary-dark-cit, .btn-secondary-light-cit {
-  text-transform: uppercase;
   font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: normal;
@@ -15563,7 +15562,7 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   .card-cit-primary-left .image, .card-cit-primary-right .image {
     text-align: center;
     padding: 50px 25px 25px 25px;
-    background: url(img/prototypes/customer-onboarding/card-image-light.jpg) center center no-repeat;
+    background: url(img/prototypes/customer-onboarding/phone-image.png) center center no-repeat;
     height: 315px;
     background-size: cover;
     flex-grow: 1;
@@ -15575,14 +15574,18 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
         flex-shrink: 1;
         flex-basis: 50%;
         height: auto;
-        padding: 100px 60px 60px 60px; } }
-    .card-cit-primary-left .image h1, .card-cit-primary-left .image h5, .card-cit-primary-right .image h1, .card-cit-primary-right .image h5 {
+        padding: 40px 60px 60px 60px; } }
+    .card-cit-primary-left .image h1, .card-cit-primary-left .image h5, .card-cit-primary-left .image h3, .card-cit-primary-right .image h1, .card-cit-primary-right .image h5, .card-cit-primary-right .image h3 {
       color: #454545; }
+    .card-cit-primary-left .image h3, .card-cit-primary-right .image h3 {
+      line-height: 1em; }
   .card-cit-primary-left .image.dark, .card-cit-primary-right .image.dark {
     background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
     background-size: cover; }
-    .card-cit-primary-left .image.dark h1, .card-cit-primary-left .image.dark h5, .card-cit-primary-right .image.dark h1, .card-cit-primary-right .image.dark h5 {
+    .card-cit-primary-left .image.dark h1, .card-cit-primary-left .image.dark h5, .card-cit-primary-left .image.dark h3, .card-cit-primary-right .image.dark h1, .card-cit-primary-right .image.dark h5, .card-cit-primary-right .image.dark h3 {
       color: #ffffff; }
+    .card-cit-primary-left .image.dark h3, .card-cit-primary-right .image.dark h3 {
+      line-height: 1em; }
   .card-cit-primary-left .content, .card-cit-primary-right .content {
     padding: 25px;
     background-color: #ffffff;
@@ -15598,10 +15601,6 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     .card-cit-primary-left .content a, .card-cit-primary-right .content a {
       display: block;
       margin-bottom: 30px; }
-    .card-cit-primary-left .content h4, .card-cit-primary-right .content h4 {
-      text-decoration: line-through; }
-    .card-cit-primary-left .content h3, .card-cit-primary-right .content h3 {
-      margin-bottom: 15px; }
 
 .card-cit-primary-right .image {
   order: 1; }
@@ -15616,7 +15615,7 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
       order: 1; } }
 
 .card-cit-secondary {
-  border: 1px solid #e9e9e9;
+  border: 2px solid #e9e9e9;
   margin-bottom: 25px;
   background-color: transparent;
   width: 100%; }
@@ -15984,7 +15983,7 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
 .card-cit-price {
   width: 100%;
   text-align: center;
-  border: 1px solid #e9e9e9;
+  border: 2px solid #e9e9e9;
   background-color: #ffffff;
   padding: 25px 25px 25px 25px;
   cursor: pointer;
@@ -16763,10 +16762,7 @@ a.close-cit.disabled {
         margin-bottom: 15px; } }
   .feature-promo-cit .promo svg {
     height: 100px;
-    margin-bottom: 15px; }
-    @media (min-width: 768px) {
-      .feature-promo-cit .promo svg {
-        margin-bottom: 15px; } }
+    margin-bottom: 30px; }
 
 .feature-att-cit {
   text-align: center; }

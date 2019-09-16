@@ -21,7 +21,7 @@
 	.image {
 		text-align: center;
 		padding:50px 25px 25px 25px;
-	    background:url(img/prototypes/customer-onboarding/card-image-light.jpg) center center no-repeat;	
+	    background:url(img/prototypes/customer-onboarding/phone-image.png) center center no-repeat;	
 		height:315px;
 		background-size: cover;
 		flex-grow: 1;
@@ -32,18 +32,24 @@
 			flex-shrink: 1;
 			flex-basis: 50%;
 			height: auto;
-			padding: 100px 60px 60px 60px;
+			padding: 40px 60px 60px 60px;
 		}
-		h1, h5 {
-			color: $cit-type-gray-darker
+		h1, h5, h3 {
+			color: $cit-type-gray-darker;
+		}
+		h3 {
+			line-height: 1em;
 		}
 	}
 
 	.image.dark {
 		background:url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
 				background-size: cover;
-		h1, h5 {
-			color: $white
+		h1, h5, h3 {
+			color: $white;
+		}
+		h3 {
+			line-height: 1em;
 		}
 	}
 
@@ -63,11 +69,8 @@
 			display: block;
 			margin-bottom: 30px;
 		}
-		h4 {
-			text-decoration: line-through;
-		}
-		h3 {
-			margin-bottom: 15px;
+		h5 {
+
 		}
 	}
 }
@@ -93,7 +96,7 @@
 // --------------------------------------------------
 
 .card-cit-secondary {
-	border: 1px solid $cit-divider-gray;
+	border: 2px solid $cit-divider-gray;
 	margin-bottom: 25px;
 	background-color: $transparent;
 	width: 100%;
@@ -584,7 +587,7 @@
 .card-cit-price {
 	width: 100%;
 	text-align: center;
-	border: 1px solid $cit-divider-gray;
+	border: 2px solid $cit-divider-gray;
 	background-color: $white;
 	padding: 25px 25px 25px 25px;
 	cursor: pointer;
