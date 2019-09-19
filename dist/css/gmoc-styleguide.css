@@ -15547,167 +15547,6 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
 
 /* CARDS - CITATION Style
    ========================================================================== */
-.card-cit-primary-left-option-f {
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 25px; }
-  @media (min-width: 576px) {
-    .card-cit-primary-left-option-f {
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-bottom: 30px;
-      border: 1px solid #e9e9e9; } }
-  .card-cit-primary-left-option-f .image {
-    text-align: center;
-    padding: 25px 25px 25px 25px;
-    background: url(img/prototypes/customer-onboarding/phone-desktop-fade.jpg) center center no-repeat;
-    height: 315px;
-    background-size: cover;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-f .image {
-        flex-basis: 50%;
-        height: auto;
-        padding: 40px 60px 60px 60px;
-        background-size: cover; } }
-    @media (min-width: 992px) {
-      .card-cit-primary-left-option-f .image {
-        background-size: cover; } }
-    .card-cit-primary-left-option-f .image .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%; }
-      .card-cit-primary-left-option-f .image .title h3 {
-        line-height: 1em; }
-  .card-cit-primary-left-option-f .content {
-    padding: 25px;
-    background-color: #ffffff;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-f .content {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 50%;
-        padding: 90px 60px 60px 60px; } }
-    .card-cit-primary-left-option-f .content a {
-      display: block;
-      margin-bottom: 30px; }
-
-.card-cit-primary-left-option-a {
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 25px; }
-  @media (min-width: 576px) {
-    .card-cit-primary-left-option-a {
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-bottom: 30px;
-      border: 1px solid #e9e9e9; } }
-  .card-cit-primary-left-option-a .title {
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 10px 0px; }
-    .card-cit-primary-left-option-a .title h4 {
-      line-height: 1em; }
-  .card-cit-primary-left-option-a .image {
-    text-align: center;
-    padding: 50px 25px 25px 25px;
-    background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) center center no-repeat;
-    height: 315px;
-    background-size: cover;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-a .image {
-        flex-basis: 50%;
-        height: auto;
-        padding: 40px 60px 60px 60px;
-        background-size: cover; } }
-  .card-cit-primary-left-option-a .image.dark {
-    background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
-    background-size: cover; }
-    .card-cit-primary-left-option-a .image.dark h1, .card-cit-primary-left-option-a .image.dark h5, .card-cit-primary-left-option-a .image.dark h3 {
-      color: #ffffff; }
-    .card-cit-primary-left-option-a .image.dark h3 {
-      line-height: 1em; }
-  .card-cit-primary-left-option-a .content {
-    padding: 25px;
-    background-color: #ffffff;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-a .content {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 50%;
-        padding: 90px 60px 60px 60px; } }
-    .card-cit-primary-left-option-a .content a {
-      display: block;
-      margin-bottom: 30px; }
-
-.card-cit-primary-left-option-b {
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 25px; }
-  @media (min-width: 576px) {
-    .card-cit-primary-left-option-b {
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-bottom: 30px;
-      border: 1px solid #e9e9e9; } }
-  .card-cit-primary-left-option-b .title h5 {
-    color: #b6862d; }
-  .card-cit-primary-left-option-b .image {
-    text-align: center;
-    padding: 50px 25px 25px 25px;
-    background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) center center no-repeat;
-    height: 315px;
-    background-size: cover;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-b .image {
-        flex-basis: 50%;
-        height: auto;
-        padding: 40px 60px 60px 60px;
-        background-size: cover; } }
-  .card-cit-primary-left-option-b .image.dark {
-    background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
-    background-size: cover; }
-    .card-cit-primary-left-option-b .image.dark h1, .card-cit-primary-left-option-b .image.dark h5, .card-cit-primary-left-option-b .image.dark h3 {
-      color: #ffffff; }
-    .card-cit-primary-left-option-b .image.dark h3 {
-      line-height: 1em; }
-  .card-cit-primary-left-option-b .content {
-    padding: 25px;
-    background-color: #ffffff;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left-option-b .content {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 50%;
-        padding: 90px 60px 60px 60px; } }
-    .card-cit-primary-left-option-b .content a {
-      display: block;
-      margin-bottom: 30px; }
-
 .card-cit-primary-left, .card-cit-primary-right {
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
@@ -15720,37 +15559,49 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
       margin-right: 0px;
       margin-bottom: 30px;
       border: 1px solid #e9e9e9; } }
-  .card-cit-primary-left .image, .card-cit-primary-right .image {
-    text-align: center;
-    padding: 50px 25px 25px 25px;
-    background: url(img/prototypes/customer-onboarding/phone-mobile.jpg) center center no-repeat;
-    height: 315px;
-    background-size: cover;
+  .card-cit-primary-left .image-text, .card-cit-primary-right .image-text {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: auto; }
-    @media (min-width: 768px) {
-      .card-cit-primary-left .image, .card-cit-primary-right .image {
-        background: url(img/prototypes/customer-onboarding/phone-tablet.jpg) center center no-repeat;
-        flex-basis: 50%;
-        height: auto;
-        padding: 40px 60px 60px 60px;
-        background-size: cover; } }
-    @media (min-width: 992px) {
-      .card-cit-primary-left .image, .card-cit-primary-right .image {
-        background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) center center no-repeat;
-        background-size: cover; } }
-    .card-cit-primary-left .image h1, .card-cit-primary-left .image h5, .card-cit-primary-left .image h3, .card-cit-primary-right .image h1, .card-cit-primary-right .image h5, .card-cit-primary-right .image h3 {
-      color: #454545; }
-    .card-cit-primary-left .image h3, .card-cit-primary-right .image h3 {
-      line-height: 1em; }
-  .card-cit-primary-left .image.dark, .card-cit-primary-right .image.dark {
-    background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
-    background-size: cover; }
-    .card-cit-primary-left .image.dark h1, .card-cit-primary-left .image.dark h5, .card-cit-primary-left .image.dark h3, .card-cit-primary-right .image.dark h1, .card-cit-primary-right .image.dark h5, .card-cit-primary-right .image.dark h3 {
-      color: #ffffff; }
-    .card-cit-primary-left .image.dark h3, .card-cit-primary-right .image.dark h3 {
-      line-height: 1em; }
+    flex-basis: 50%; }
+    .card-cit-primary-left .image-text .title, .card-cit-primary-right .image-text .title {
+      text-align: center;
+      background-color: #f8f9fa;
+      padding: 10px 0px; }
+      .card-cit-primary-left .image-text .title h4, .card-cit-primary-right .image-text .title h4 {
+        line-height: 1em; }
+    .card-cit-primary-left .image-text .image, .card-cit-primary-right .image-text .image {
+      text-align: center;
+      padding: 50px 25px 25px 25px;
+      background: url(img/prototypes/customer-onboarding/phone-mobile.jpg) center center no-repeat;
+      height: 315px;
+      background-size: cover;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto; }
+      @media (min-width: 768px) {
+        .card-cit-primary-left .image-text .image, .card-cit-primary-right .image-text .image {
+          background: url(img/prototypes/customer-onboarding/phone-tablet.jpg) center center no-repeat;
+          flex-basis: 50%;
+          height: auto;
+          padding: 40px 60px 60px 60px;
+          background-size: cover; } }
+      @media (min-width: 992px) {
+        .card-cit-primary-left .image-text .image, .card-cit-primary-right .image-text .image {
+          background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) center center no-repeat;
+          background-size: cover; } }
+      .card-cit-primary-left .image-text .image h1, .card-cit-primary-left .image-text .image h5, .card-cit-primary-left .image-text .image h3, .card-cit-primary-right .image-text .image h1, .card-cit-primary-right .image-text .image h5, .card-cit-primary-right .image-text .image h3 {
+        color: #454545; }
+      .card-cit-primary-left .image-text .image h3, .card-cit-primary-right .image-text .image h3 {
+        line-height: 1em; }
+    .card-cit-primary-left .image-text .image.dark, .card-cit-primary-right .image-text .image.dark {
+      background: url(img/prototypes/customer-onboarding/Chevrolet_Citation_II_fron.jpg) center center no-repeat;
+      background-size: cover; }
+      .card-cit-primary-left .image-text .image.dark h1, .card-cit-primary-left .image-text .image.dark h5, .card-cit-primary-left .image-text .image.dark h3, .card-cit-primary-right .image-text .image.dark h1, .card-cit-primary-right .image-text .image.dark h5, .card-cit-primary-right .image-text .image.dark h3 {
+        color: #ffffff; }
+      .card-cit-primary-left .image-text .image.dark h3, .card-cit-primary-right .image-text .image.dark h3 {
+        line-height: 1em; }
   .card-cit-primary-left .content, .card-cit-primary-right .content {
     padding: 25px;
     background-color: #ffffff;
@@ -15767,10 +15618,10 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
       display: block;
       margin-bottom: 30px; }
 
-.card-cit-primary-right .image {
+.card-cit-primary-right .image-text {
   order: 1; }
   @media (min-width: 768px) {
-    .card-cit-primary-right .image {
+    .card-cit-primary-right .image-text {
       order: 2; } }
 
 .card-cit-primary-right .content {
@@ -16430,7 +16281,8 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181818', endColorstr='#00181818',GradientType=1 );
     /* IE6-9 */ }
   .masthead-cit-promo .desktop-view .content {
-    color: #ffffff; }
+    color: #ffffff;
+    padding: 0px 60px; }
     .masthead-cit-promo .desktop-view .content .citation-bar {
       margin-top: 15px;
       margin-bottom: 15px; }
