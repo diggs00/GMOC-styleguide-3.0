@@ -7,3 +7,12 @@
 .bg-dark {
 	background-color: $cit-bg-gray-darker;
 }
+
+
+// Containers
+// -------------------------
+.container-cit {
+	background-color: $white;
+	padding:30px;
+	border: 1px solid $cit-divider-gray;
+}

@@ -15157,6 +15157,11 @@ img.article-image {
 .bg-dark {
   background-color: #181818; }
 
+.container-cit {
+  background-color: #ffffff;
+  padding: 30px;
+  border: 1px solid #e9e9e9; }
+
 /* TYPOGRAPHY - CITATION Style
    ========================================================================== */
 @font-face {
