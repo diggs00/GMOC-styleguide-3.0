@@ -15911,7 +15911,8 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   border: 1px solid #e9e9e9;
   margin-bottom: 25px;
   background-color: transparent;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
   .card-cit-plan-trial .image {
     background: url(img/prototypes/cit-style/card-cit-secondary.jpg) center center no-repeat;
     background-size: cover;
