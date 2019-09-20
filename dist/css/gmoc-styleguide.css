@@ -14595,6 +14595,9 @@ a.btn > span {
     top: -20%;
     right: -30%; }
 
+.fill-gray {
+  fill: #666666; }
+
 /* Design System Elements Guide
  * -------------------------- */
 .relative {
