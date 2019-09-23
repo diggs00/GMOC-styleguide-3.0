@@ -15582,8 +15582,8 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     .card-cit-primary-left .image-text .image, .card-cit-primary-right .image-text .image {
       text-align: center;
       padding: 50px 25px 25px 25px;
-      background: url(img/prototypes/customer-onboarding/phone-mobile.jpg) center center no-repeat;
-      height: 315px;
+      background: url(img/prototypes/customer-onboarding/phone-mobile.jpg) center no-repeat;
+      height: 300px;
       background-size: cover;
       flex-grow: 1;
       flex-shrink: 1;
@@ -15597,7 +15597,7 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
           background-size: cover; } }
       @media (min-width: 992px) {
         .card-cit-primary-left .image-text .image, .card-cit-primary-right .image-text .image {
-          background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) center center no-repeat;
+          background: url(img/prototypes/customer-onboarding/phone-desktop.jpg) top center no-repeat;
           background-size: cover; } }
       .card-cit-primary-left .image-text .image h1, .card-cit-primary-left .image-text .image h5, .card-cit-primary-left .image-text .image h3, .card-cit-primary-right .image-text .image h1, .card-cit-primary-right .image-text .image h5, .card-cit-primary-right .image-text .image h3 {
         color: #454545; }
