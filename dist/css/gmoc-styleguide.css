@@ -15951,6 +15951,8 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
     @media (min-width: 992px) {
       .card-cit-plan-upcoming button {
         margin-top: 0px; } }
+  .card-cit-plan-upcoming .plan-title p.cit {
+    margin-bottom: 0px; }
   .card-cit-plan-upcoming .plan-status {
     margin-top: 15px; }
     @media (min-width: 768px) {
