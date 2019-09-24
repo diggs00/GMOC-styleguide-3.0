@@ -61,7 +61,7 @@
 .btn-secondary-dark-cit {
 	@include button-variant-secondary-dark-cit(
 		$cit-bg-gray, //color
-		$button-color-secondary-dark-cit, //background
+		$button-color-secondary-light-cit, //background
 		$cit-bg-gray //border
 	);
 }
