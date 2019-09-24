@@ -101,36 +101,37 @@ h3.cit35, h4.cit, h5.cit, h6.cit, h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.c
 
 
 
-.btn-link-dark-cit, .btn-link-light-cit {
-	font-family: $font-family-bold-cit;
-	white-space: normal;
-	font-weight: bold;
-	cursor: pointer;
-	padding: 0px 0px 0px 0px;
-	text-align: left;
-	vertical-align: baseline;
-	display: inline;
-	text-decoration: underline;
-	text-underline-position: under;
-	border: 1px solid transparent;
-	line-height: 1.5rem;
-	&,
-	&:active,
-	&[disabled],
-	fieldset[disabled] & {
-		background-color: transparent;
-		@include box-shadow(none);
-	}
-	&,
-	&:hover,
-	&:focus,
-	&:active {
-		border-color: transparent;
-		@include box-shadow(none);
-	}
-	&.disclaimer {
-		text-underline-position: auto;
-	}
+a {
+	&.btn-link-dark-cit, &.btn-link-light-cit {
+		font-family: $font-family-bold-cit;
+		white-space: normal;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 0px 0px 0px 0px;
+		text-align: left;
+		vertical-align: baseline;
+		display: inline;
+		text-decoration: underline !important;
+		text-underline-position: under;
+		border: 1px solid transparent;
+		line-height: 1.5rem;
+		&,
+		&:active,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: transparent;
+			@include box-shadow(none);
+		}
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			border-color: transparent;
+			@include box-shadow(none);
+		}
+		&.disclaimer {
+			text-underline-position: auto;
+		}
 }
 
 

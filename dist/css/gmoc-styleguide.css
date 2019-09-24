@@ -15476,7 +15476,7 @@ h3.cit35 .btn-link-dark-cit.disclaimer, h3.cit35 .btn-link-light-cit.disclaimer,
 h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy sup, h3.cit.heavy sup, h3.cit35.heavy sup, h4.cit.heavy sup, h5.cit.heavy sup, h6.cit.heavy sup, p sup {
   display: inline-block; }
 
-.btn-link-dark-cit, .btn-link-light-cit {
+a.btn-link-dark-cit, a.btn-link-light-cit {
   font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
   white-space: normal;
   font-weight: bold;
@@ -15489,17 +15489,17 @@ h3.cit35 sup, h4.cit sup, h5.cit sup, h6.cit sup, h1.cit.heavy sup, h2.cit.heavy
   text-underline-position: under;
   border: 1px solid transparent;
   line-height: 1.5rem; }
-  .btn-link-dark-cit, .btn-link-dark-cit:active, .btn-link-dark-cit[disabled],
-  fieldset[disabled] .btn-link-dark-cit, .btn-link-light-cit, .btn-link-light-cit:active, .btn-link-light-cit[disabled],
-  fieldset[disabled] .btn-link-light-cit {
+  a.btn-link-dark-cit, a.btn-link-dark-cit:active, a.btn-link-dark-cit[disabled],
+  fieldset[disabled] a.btn-link-dark-cit, a.btn-link-light-cit, a.btn-link-light-cit:active, a.btn-link-light-cit[disabled],
+  fieldset[disabled] a.btn-link-light-cit {
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .btn-link-dark-cit, .btn-link-dark-cit:hover, .btn-link-dark-cit:focus, .btn-link-dark-cit:active, .btn-link-light-cit, .btn-link-light-cit:hover, .btn-link-light-cit:focus, .btn-link-light-cit:active {
+  a.btn-link-dark-cit, a.btn-link-dark-cit:hover, a.btn-link-dark-cit:focus, a.btn-link-dark-cit:active, a.btn-link-light-cit, a.btn-link-light-cit:hover, a.btn-link-light-cit:focus, a.btn-link-light-cit:active {
     border-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .btn-link-dark-cit.disclaimer, .btn-link-light-cit.disclaimer {
+  a.btn-link-dark-cit.disclaimer, a.btn-link-light-cit.disclaimer {
     text-underline-position: auto; }
 
 .btn-link-dark-cit {
