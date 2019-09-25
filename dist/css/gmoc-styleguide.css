@@ -15428,7 +15428,7 @@ hr.cit {
     border-color: #343a40; }
   .btn-secondary-dark-cit:focus, .btn-secondary-dark-cit:active, .btn-secondary-dark-cit.active,
   .open .dropdown-toggle .btn-secondary-dark-cit {
-    color: transparent;
+    color: #ffffff;
     background-color: #343a40;
     border-color: #343a40;
     outline: 0; }
@@ -15485,7 +15485,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
   text-align: left;
   vertical-align: baseline;
   display: inline;
-  text-decoration: underline;
+  text-decoration: underline !important;
   text-underline-position: under;
   border: 1px solid transparent;
   line-height: 1.5rem; }
