@@ -95,9 +95,9 @@ h1.cit, h1.cit.heavy, span.h1.cit {
 h2.cit, h2.cit.heavy, span.h2.cit {
 	font-size: $h2-font-size-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 2.84375; 	//45.5px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 2.84375; 	//45.5px
+	// }
 }
 
 h3.cit, h3.cit.heavy, span.h3.cit {
