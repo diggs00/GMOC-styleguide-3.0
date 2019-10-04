@@ -439,6 +439,12 @@
 			padding-bottom:30px;
 			margin-bottom: 30px;
 			border-bottom: 1px solid $cit-divider-gray-dark;
+			li {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
 		}
 	}
 	.price {

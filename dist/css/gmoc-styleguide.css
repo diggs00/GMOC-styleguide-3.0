@@ -15907,16 +15907,10 @@ h2.cit, h2.cit.heavy, span.h2.cit {
 h3.cit, h3.cit.heavy, span.h3.cit {
   font-size: 1.875rem;
   color: #454545; }
-  @media (min-width: 768px) {
-    h3.cit, h3.cit.heavy, span.h3.cit {
-      font-size: 2.4375rem; } }
 
 h3.cit35, h3.cit35.heavy, span.h3.cit {
   font-size: 1.562rem;
   color: #454545; }
-  @media (min-width: 768px) {
-    h3.cit35, h3.cit35.heavy, span.h3.cit {
-      font-size: 2.03125rem; } }
 
 h4.cit, h4.cit.heavy, span.h4.cit {
   font-size: 1.375rem;
@@ -16567,6 +16561,10 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       padding-bottom: 30px;
       margin-bottom: 30px;
       border-bottom: 1px solid #acacac; }
+      .card-cit-plan-detail .content ul li {
+        margin-bottom: 15px; }
+        .card-cit-plan-detail .content ul li:last-child {
+          margin-bottom: 0px; }
   .card-cit-plan-detail .price {
     margin-top: auto;
     background-color: #e9e9e9;

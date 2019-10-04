@@ -103,17 +103,17 @@ h2.cit, h2.cit.heavy, span.h2.cit {
 h3.cit, h3.cit.heavy, span.h3.cit {
 	font-size: $h3-font-size-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 2.4375; 	//39px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 2.4375; 	//39px
+	// }
 }
 
 h3.cit35, h3.cit35.heavy, span.h3.cit {
 	font-size: $h35-font-size-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 2.03125; 	//32.5px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 2.03125; 	//32.5px
+	// }
 }
 
 h4.cit, h4.cit.heavy, span.h4.cit {
