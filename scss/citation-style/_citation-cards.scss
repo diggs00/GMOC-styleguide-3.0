@@ -639,9 +639,17 @@
 	}
 	&.disabled {
 			border: 1px solid $cit-divider-gray;
+			cursor: default;
+			&:hover {
+				outline: 0;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+			}
 		h6,h3,a {
 			color:$cit-divider-gray-dark;
 			font-weight: 700;
+			cursor: default;
 		}
 		.citation-bar {
 			 background-color:$cit-divider-gray-dark;
