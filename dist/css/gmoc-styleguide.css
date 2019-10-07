@@ -15859,9 +15859,6 @@ img.article-image {
 body.cit {
   font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
   color: #454545; }
-  @media (min-width: 768px) {
-    body.cit {
-      font-size: 1.35rem; } }
 
 p.cit, .p.cit {
   font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
@@ -15879,9 +15876,6 @@ p.cit.disclaimer {
   font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
   font-size: 0.875rem;
   color: #656565; }
-  @media (min-width: 768px) {
-    p.cit.disclaimer {
-      font-size: 1.18125rem; } }
 
 p.cit.tiny {
   font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
@@ -15915,9 +15909,6 @@ h3.cit35, h3.cit35.heavy, span.h3.cit {
 h4.cit, h4.cit.heavy, span.h4.cit {
   font-size: 1.375rem;
   color: #454545; }
-  @media (min-width: 768px) {
-    h4.cit, h4.cit.heavy, span.h4.cit {
-      font-size: 1.7875rem; } }
 
 h5.cit, h5.cit.heavy, span.h5.cit {
   font-size: 1.25rem;
@@ -15926,9 +15917,6 @@ h5.cit, h5.cit.heavy, span.h5.cit {
 h6.cit, h6.cit.heavy, span.h6.cit {
   font-size: 1rem;
   color: #454545; }
-  @media (min-width: 768px) {
-    h6.cit, h6.cit.heavy, span.h6.cit {
-      font-size: 1.25rem; } }
 
 .strike-through {
   text-decoration: line-through; }

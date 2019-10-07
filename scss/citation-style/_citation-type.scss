@@ -31,9 +31,9 @@
 body.cit {
 	font-family: $font-family-plain-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.35; 	//21.6px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 1.35; 	//21.6px
+	// }
 }
 
 p.cit, .p.cit {
@@ -58,9 +58,9 @@ p.cit.disclaimer {
 	font-family: $font-family-plain-cit;
 	font-size: $font-size-small-cit;
 	color: $cit-type-gray-dark;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.18125; 	//18.9px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 1.18125; 	//18.9px
+	// }
 }
 
 p.cit.tiny {
@@ -119,9 +119,9 @@ h3.cit35, h3.cit35.heavy, span.h3.cit {
 h4.cit, h4.cit.heavy, span.h4.cit {
 	font-size: $h4-font-size-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.7875; 	//28.6px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 1.7875; 	//28.6px
+	// }
 }
 
 h5.cit, h5.cit.heavy, span.h5.cit {
@@ -135,9 +135,9 @@ h5.cit, h5.cit.heavy, span.h5.cit {
 h6.cit, h6.cit.heavy, span.h6.cit {
 	font-size: $h6-font-size-cit;
 	color: $cit-type-gray-darker;
-	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.25; 		//20px
-	}
+	// @media (min-width: $screen-tablet) {
+	// 	font-size: $font-size-base-cit * 1.25; 		//20px
+	// }
 }
 
 
