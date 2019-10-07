@@ -17108,7 +17108,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.35; }
+  line-height: 1.35;
+  margin-right: 30px; }
 
 .modal-body-cit {
   position: relative;
