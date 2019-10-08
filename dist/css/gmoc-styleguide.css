@@ -16713,7 +16713,6 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
   border: 2px solid #e9e9e9;
   background-color: #ffffff;
   padding: 25px 25px 25px 25px;
-  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16990,13 +16989,15 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
         margin-right: -15px; } }
   .masthead-cit-video img {
     width: 100%; }
-  .masthead-cit-video .content .citation-bar {
-    margin-top: 15px;
-    margin-bottom: 30px; }
-  .masthead-cit-video .content h3 {
-    margin-bottom: 0px; }
-  .masthead-cit-video .content h5 {
-    margin-bottom: 30px; }
+  .masthead-cit-video .content {
+    background-color: transparent; }
+    .masthead-cit-video .content .citation-bar {
+      margin-top: 15px;
+      margin-bottom: 30px; }
+    .masthead-cit-video .content h3 {
+      margin-bottom: 0px; }
+    .masthead-cit-video .content h5 {
+      margin-bottom: 30px; }
 
 .progress-cit {
   display: flex;
