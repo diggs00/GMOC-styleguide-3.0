@@ -17234,7 +17234,13 @@ a.close-cit.disabled {
   padding: 3px 25px; }
 
 .carousel {
-  position: relative; }
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px; }
+  @media (min-width: 768px) {
+    .carousel {
+      margin-left: 0px;
+      margin-right: 0px; } }
 
 .carousel.pointer-event {
   touch-action: pan-y; }
@@ -17433,24 +17439,20 @@ a.close-cit.disabled {
 /* FEATURES - CITATION Style
    ========================================================================== */
 .feature-more-cit {
-  margin: 0px 0px 40px 0px;
   background-color: transparent;
   border: 1px solid #e9e9e9;
-  padding-bottom: 15px; }
+  padding: 15px 15px; }
   @media (min-width: 768px) {
     .feature-more-cit {
-      padding-bottom: 30px; } }
-  .feature-more-cit .feature-title {
-    padding: 15px 0px 0px 0px; }
-    @media (min-width: 768px) {
-      .feature-more-cit .feature-title {
-        text-align: center;
-        padding: 20px 0px 0px 0px; } }
+      padding: 30px 30px; } }
+  @media (min-width: 768px) {
+    .feature-more-cit .feature-title {
+      text-align: center; } }
   .feature-more-cit .feature {
-    padding: 0px 0px 15px 0px; }
+    margin-bottom: 25px; }
     @media (min-width: 768px) {
       .feature-more-cit .feature {
-        padding: 5px 15px 30px 15px; } }
+        padding: 0px; } }
 
 .feature-key-cit {
   margin: 0px 0px 25px 0px;

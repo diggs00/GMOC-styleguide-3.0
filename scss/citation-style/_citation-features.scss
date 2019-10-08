@@ -6,24 +6,21 @@
 // --------------------------------------------------
 
 .feature-more-cit {
-	margin: 0px 0px 40px 0px;
 	background-color: $transparent;
 	border: 1px solid $cit-divider-gray;
-	padding-bottom: 15px;
+	padding: 15px 15px;
 	@media (min-width: $screen-tablet) {
-		padding-bottom: 30px;
+		padding: 30px 30px;
 	}
 	.feature-title {
-		padding: 15px 0px 0px 0px;
 		@media (min-width: $screen-tablet) {
 			text-align: center;
-			padding: 20px 0px 0px 0px;
 		}
 	}
 	.feature {
-		padding: 0px 0px 15px 0px;
+		margin-bottom: 25px;
 		@media (min-width: $screen-tablet) {
-			padding:5px 15px 30px 15px;
+			padding:0px;
 		}
 	}
 }
