@@ -81,12 +81,11 @@
 	}
 
 	.content {
-		padding: 25px;
+		padding: 90px 60px;
 		background-color: $white;
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: auto;
-		padding: 30px 60px;
 		@media (min-width: $screen-tablet) {
 			flex-grow: 1;
 			flex-shrink: 1;
@@ -431,14 +430,11 @@
 	}
 	.content {
 		background-color: $cit-type-gray;
-		padding: 30px 30px 0px 30px;
+		padding: 30px 30px 30px 30px;
 		display: flex;
 		flex-direction: column;
 		ul {
-			margin-bottom:auto;
-			padding-bottom:30px;
-			margin-bottom: 30px;
-			border-bottom: 1px solid $cit-divider-gray-dark;
+			margin-bottom: 0px;
 			li {
 				margin-bottom: 15px;
 				&:last-child {
@@ -454,7 +450,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 0px 0px 30px 0px;
+		padding: 0px 30px 30px 30px;
+		hr {
+			width:100%;
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
 	}
 
 	sup a { 
