@@ -16518,9 +16518,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-    .card-cit-plan-detail.selected .price p:last-of-type {
-      color: #003e7e;
-      font-weight: 700; }
+    .card-cit-plan-detail.selected .price h5 {
+      color: #003e7e; }
   .card-cit-plan-detail .title {
     padding: 45px 30px 30px 30px;
     display: flex;
@@ -16681,9 +16680,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-    .card-cit-select.selected p:last-of-type {
-      color: #b6862d;
-      font-weight: 700; }
+    .card-cit-select.selected h2 {
+      color: #b6862d; }
   .card-cit-select.disabled {
     border: 1px solid #e9e9e9;
     cursor: default; }

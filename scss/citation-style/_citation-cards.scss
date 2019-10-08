@@ -402,9 +402,8 @@
 			box-shadow: none;
 		}
 		.price {
-			p:last-of-type {
-				color:$brand-onstar;
-				font-weight: 700;
+			h5 {
+				color: $brand-onstar;		
 			}
 		}
 	}
@@ -633,9 +632,8 @@
 			-moz-box-shadow: none;
 			box-shadow: none;
 		}
-		p:last-of-type {
-			color:$brand-primary;
-			font-weight: 700;
+		h2 {
+			color: $brand-primary;
 		}
 	}
 	&.disabled {
