@@ -15996,11 +15996,10 @@ hr.cit {
   font-weight: normal;
   padding: 15px 50px;
   border-radius: 0rem;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
   @media (min-width: 768px) {
     .btn-primary-dark-cit, .btn-primary-light-cit, .btn-secondary-dark-cit, .btn-secondary-light-cit {
-      font-size: 1.25rem;
-      letter-spacing: 2px; } }
+      letter-spacing: 0px; } }
 
 .btn-primary-dark-cit:focus, .btn-primary-dark-cit.focus, .btn-primary-light-cit:focus, .btn-primary-light-cit.focus {
   outline: 0;
@@ -16395,7 +16394,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 .card-cit-cta {
   margin-bottom: 25px;
-  background-color: #e9e9e9;
+  background-color: #f0f2f4;
   width: 100%; }
   .card-cit-cta .content {
     padding: 25px;
@@ -16447,6 +16446,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     @media (min-width: 992px) {
       .card-cit-plan-active .content {
         padding: 30px 0px 0px 0px; } }
+    .card-cit-plan-active .content .plan-content .plan-icon {
+      margin-right: 15px; }
     .card-cit-plan-active .content .plan-content .plan-name {
       margin: 0px 0px 0px 0px; }
       @media (min-width: 992px) {
@@ -16474,7 +16475,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 .card-cit-plan-detail {
   border: 1px solid #e9e9e9;
-  background-color: #e9e9e9;
+  background-color: #f8f9fa;
   cursor: pointer;
   position: relative;
   margin-bottom: 25px;
@@ -16538,7 +16539,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       margin-bottom: 15px;
       background-color: #004a8a; }
   .card-cit-plan-detail .content {
-    background-color: #e9e9e9;
+    background-color: #f8f9fa;
     padding: 30px 30px 30px 30px;
     display: flex;
     flex-direction: column; }
@@ -16550,7 +16551,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
           margin-bottom: 0px; }
   .card-cit-plan-detail .price {
     margin-top: auto;
-    background-color: #e9e9e9;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16568,9 +16569,9 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     text-align: center; }
   .card-cit-plan-detail:hover {
     outline: 0;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25); }
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2); }
 
 .card-cit-message {
   text-align: center;
@@ -16615,6 +16616,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
         margin-top: 0px; } }
   .card-cit-plan-upcoming .plan-title p.cit {
     margin-bottom: 0px; }
+  .card-cit-plan-upcoming .content .plan-icon {
+    margin-right: 15px; }
   .card-cit-plan-upcoming .plan-status {
     margin-top: 15px; }
     @media (min-width: 768px) {
@@ -16669,9 +16672,9 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     text-align: center; }
   .card-cit-select:hover {
     outline: 0;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25); }
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2); }
   .card-cit-select.selected {
     cursor: default;
     border: 4px solid #b6862d; }
@@ -16864,7 +16867,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .card-cit-product-info-left .image, .card-cit-product-info-right .image {
         flex-grow: 1;
         flex-shrink: 1;
@@ -16876,7 +16879,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .card-cit-product-info-left .content, .card-cit-product-info-right .content {
         flex-grow: 1;
         flex-shrink: 1;
@@ -16885,13 +16888,13 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 .card-cit-product-info-left .image {
   order: 1; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .card-cit-product-info-left .image {
       order: 2; } }
 
 .card-cit-product-info-left .content {
   order: 2; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .card-cit-product-info-left .content {
       order: 1; } }
 

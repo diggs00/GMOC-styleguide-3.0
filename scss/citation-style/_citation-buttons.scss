@@ -14,10 +14,10 @@
 	font-weight: normal;
 	padding: 15px 50px;
 	border-radius: 0rem;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	@media (min-width: $screen-tablet) {
-		font-size: $font-size-base-cit * 1.25; 		//20.8px
-		letter-spacing: 2px;
+		// font-size: $font-size-base-cit * 1.25; 		//20.8px
+		letter-spacing: 0px;
 	}
 }
 
