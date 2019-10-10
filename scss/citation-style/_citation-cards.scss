@@ -95,8 +95,10 @@
 			display: block;
 			margin-bottom: 30px;
 		}
-		h5 {
-
+		sup {
+			a {
+				margin-bottom: 15px;
+			}
 		}
 	}
 }
@@ -305,6 +307,7 @@
 			padding: 30px 0px 0px 0px;
 		}
 		.plan-content {
+
 			.plan-icon {
 				margin-right: 15px;
 			}
@@ -317,25 +320,44 @@
 					margin-top:5px;
 				}
 			}
-			.pricing {
-				margin: 15px 0px 0px 40px;
+			.price-bill {
+				margin-top: 25px;
 				@media (min-width: $screen-desktop) {
-					margin: 0px;
-					padding: 0px 20px;
+					margin-top: 0px;
 				}
-			}
-			.bill-date {
-				margin: 5px 0px 0px 40px;
-				@media (min-width: $screen-desktop) {
-					margin: 0px 40px 0px 0px;
-					padding: 0px 20px 0px 0px;
+				.pricing {
+					margin: 0px 0px 15px 55px;
+					@media (min-width: $screen-tablet) {
+						margin: 0px 0px 0px 55px;
+					}
+					@media (min-width: $screen-desktop) {
+						margin: 0px;
+						padding: 0px 20px;
+					}
 				}
+				.bill-date {
+					margin: 0px 0px 30px 55px;
+					@media (min-width: $screen-tablet) {
+						margin: 0px 0px 0px 55px;
+					}
+					@media (min-width: $screen-desktop) {
+						margin: 0px 40px 0px 0px;
+						padding: 0px 20px 0px 0px;
+					}
+				}
+
 			}
-		}
-		button {
-			margin-top: 25px;
-			@media (min-width: $screen-desktop) {
+
+			.cta{
 				margin-top: 0px;
+				@media (min-width: $screen-tablet) {
+					margin-top: 25px;
+					margin-left: auto;
+				}
+				@media (min-width: $screen-desktop) {
+					margin-top: 0px;
+					margin-left: auto;
+				}
 			}
 		}
 	}
