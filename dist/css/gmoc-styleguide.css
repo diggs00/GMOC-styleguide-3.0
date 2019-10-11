@@ -16885,6 +16885,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
         flex-shrink: 1;
         flex-basis: 50%;
         padding: 60px 60px 60px 60px; } }
+    .card-cit-product-info-left .content h3:not(.heavy), .card-cit-product-info-right .content h3:not(.heavy) {
+      color: #656565; }
 
 .card-cit-product-info-left .image {
   order: 1; }
