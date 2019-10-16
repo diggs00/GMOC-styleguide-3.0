@@ -62,21 +62,36 @@
 			}
 		}
 		.image {
-		    background:url(img/prototypes/customer-onboarding/phone-mobile.jpg) bottom center no-repeat;	
-			height:600px;
-			flex-grow: 1;
-			flex-shrink: 1;
-			flex-basis: auto;
-			@media (min-width: $screen-tablet) {
-		    	background:url(img/prototypes/customer-onboarding/phone-tablet.jpg) center center no-repeat;
-				height:169px;
-				background-size: cover;
+			height:100%;
+			.mobile {
+				@media (max-width: $screen-tablet) {
+		    		background:url(img/prototypes/customer-onboarding/phone-mobile.jpg) bottom center no-repeat;
+					height:600px;
+					flex-grow: 1;
+					flex-shrink: 1;
+					flex-basis: auto;
+				}
 			}
-			@media (min-width: $screen-desktop) {
-		    	background:url(img/prototypes/customer-onboarding/phone-desktop.jpg) top center no-repeat;
-		    	height: initial;
-		    	background-size: cover;
-		    }
+			.tablet {
+				@media (min-width: $screen-tablet) and (max-width: $screen-desktop){
+		    		background:url(img/prototypes/customer-onboarding/phone-tablet.jpg) center center no-repeat;
+					height:169px;
+					background-size: cover;
+					flex-grow: 1;
+					flex-shrink: 1;
+					flex-basis: auto;
+				}
+			}
+			.desktop {
+				@media (min-width: $screen-desktop) {
+			    	background:url(img/prototypes/customer-onboarding/phone-desktop.jpg) top center no-repeat;
+			    	height: 100%;
+			    	background-size: cover;
+			    	flex-grow: 1;
+					flex-shrink: 1;
+					flex-basis: auto;
+			    }				
+			}
 		}
 	}
 
@@ -248,6 +263,7 @@
 	.content {
 		padding: 25px;
 		text-align:center;
+		background-color: $cit-bg-gray-light;
 		@media (min-width: $screen-tablet) {
 			padding: 30px;
 		}
@@ -597,7 +613,7 @@
 
 .card-cit-plan-trial {
 	border: 1px solid $cit-divider-gray;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	background-color: $transparent;
 	width: 100%;
 	cursor: pointer;
