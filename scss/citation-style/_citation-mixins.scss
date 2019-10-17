@@ -34,8 +34,10 @@
     &:focus,
     &:active,
     &.active {
-      background-color: $blue-lightest;
-      border-color: $blue-lightest;
+      background-color: $cit-bg-gray;
+      border-color: $cit-bg-gray;
+      opacity: .45;
+      color: rgba( $white, .45 );
     }
   }
 }
@@ -72,8 +74,8 @@
     &:focus,
     &:active,
     &.active {
-      background-color: $blue-lightest;
-      border-color: $blue-lightest;
+      opacity: .45;
+      color: rgba( $cit-bg-gray, .45 );
     }
   }
 }
@@ -108,8 +110,9 @@
     &:focus,
     &:active,
     &.active {
-      background-color: $blue-lightest;
-      border-color: $blue-lightest;
+
+      border-color: rgba( $cit-bg-gray, .45 );
+      color: rgba( $cit-bg-gray, .45 );
     }
   }
 }
@@ -142,9 +145,28 @@
     &:focus,
     &:active,
     &.active {
-      background-color: $blue-lightest;
-      border-color: $blue-lightest;
+      background-color: none;
+      opacity: .45;
     }
+  }
+}
+
+
+
+// Alert Mixins
+// -------------------------
+
+@mixin cit-alert-variant($background, $border, $color) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+
+  .cit-alert-link {
+    color: darken($color, 10%);
   }
 }
 

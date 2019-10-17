@@ -15922,7 +15922,40 @@ h6.cit, h6.cit.heavy, span.h6.cit {
   text-decoration: line-through; }
 
 .disabled {
-  color: #acacac !important; }
+  color: #acacac; }
+
+.cit-alert {
+  position: relative;
+  padding: 13px 16px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  color: #454545; }
+  .cit-alert .icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 16px; }
+
+.cit-alert-heading {
+  color: inherit; }
+
+.cit-alert-link {
+  font-weight: bold; }
+
+.alert-danger {
+  background-color: rgba(224, 6, 27, 0.15); }
+
+.alert-success {
+  background-color: rgba(27, 133, 6, 0.15); }
+
+.cit-alert-dismissible {
+  padding-right: 4rem; }
+  .cit-alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit; }
 
 /* DIVIDER/CITATION BAR - CITATION Style
    ========================================================================== */
@@ -16035,8 +16068,10 @@ hr.cit {
   fieldset[disabled] .btn-primary-dark-cit:focus,
   fieldset[disabled] .btn-primary-dark-cit:active,
   fieldset[disabled] .btn-primary-dark-cit.active {
-    background-color: #bdd0f2;
-    border-color: #bdd0f2; }
+    background-color: #343a40;
+    border-color: #343a40;
+    opacity: .45;
+    color: rgba(255, 255, 255, 0.45); }
 
 .btn-primary-light-cit {
   color: #343a40;
@@ -16061,8 +16096,8 @@ hr.cit {
   fieldset[disabled] .btn-primary-light-cit:focus,
   fieldset[disabled] .btn-primary-light-cit:active,
   fieldset[disabled] .btn-primary-light-cit.active {
-    background-color: #bdd0f2;
-    border-color: #bdd0f2; }
+    opacity: .45;
+    color: rgba(52, 58, 64, 0.45); }
 
 .btn-secondary-dark-cit {
   color: #343a40;
@@ -16085,8 +16120,8 @@ hr.cit {
   fieldset[disabled] .btn-secondary-dark-cit:focus,
   fieldset[disabled] .btn-secondary-dark-cit:active,
   fieldset[disabled] .btn-secondary-dark-cit.active {
-    background-color: #bdd0f2;
-    border-color: #bdd0f2; }
+    border-color: rgba(52, 58, 64, 0.45);
+    color: rgba(52, 58, 64, 0.45); }
 
 .btn-secondary-light-cit {
   color: #ffffff;
@@ -16108,8 +16143,8 @@ hr.cit {
   fieldset[disabled] .btn-secondary-light-cit:focus,
   fieldset[disabled] .btn-secondary-light-cit:active,
   fieldset[disabled] .btn-secondary-light-cit.active {
-    background-color: #bdd0f2;
-    border-color: #bdd0f2; }
+    background-color: none;
+    opacity: .45; }
 
 /* LINKS
 	 ========================================================================== */
