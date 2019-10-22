@@ -28,7 +28,15 @@ $spacers: map-merge(
     9: ($spacer * 9), //45px
     10: ($spacer * 10), //50px
     11: ($spacer * 11), //55px
-    12: ($spacer * 12) //60px
+    12: ($spacer * 12), //60px
+    13: ($spacer * 13), //65px
+    14: ($spacer * 14), //70px
+    15: ($spacer * 15), //75px
+    16: ($spacer * 16), //80px
+    17: ($spacer * 17), //85px
+    18: ($spacer * 18), //90px
+    19: ($spacer * 19), //95px
+    20: ($spacer * 20) //100px
   ),
   $spacers
 );

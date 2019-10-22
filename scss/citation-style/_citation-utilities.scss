@@ -17,3 +17,19 @@
 	border: 1px solid $cit-divider-gray;
 }
 
+.container-cit-h100 {
+	background-color: $white;
+	padding:30px;
+	border-top: none;
+	border-bottom: none;
+ 	height: 100vh;
+	@media (min-width: $screen-tablet) {
+		border-left: 1px solid $cit-divider-gray;
+		border-right: 1px solid $cit-divider-gray;
+	}
+}
+
+
+.hv-100 {
+ height: 100vh;
+}

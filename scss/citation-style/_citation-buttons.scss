@@ -85,7 +85,7 @@
 
 h1.cit, h2.cit, h3.cit, h3.cit35, h4.cit, h5.cit, h6.cit, h1.cit.heavy, h2.cit.heavy, h3.cit.heavy, h3.cit35.heavy, h4.cit.heavy, h5.cit.heavy, h6.cit.heavy {
 	.btn-link-dark-cit, .btn-link-light-cit {
-		font-family: inherit !important;
+		font-family: $font-family-bold-cit !important;
 	}
 }
 
@@ -197,21 +197,24 @@ a {
 /* LINKS - TELEPHONE
 	 ========================================================================== */
 @media (max-width: $screen-md) {
-  a.cit[href^="tel:"]:before {
+  a.btn.btn-link-dark-cit[href^="tel:"]:before {
     content: none;
     font-size: $font-size-xlarge;
     display: inline-block;
     margin-right: 0.5em;
   }
-  a.cit[href^="tel:"]{
+  a.btn.btn-link-dark-cit[href^="tel:"]{
     font-size: inherit;
   }
 }
 @media (min-width: $screen-md) {
-  a.cit[href^="tel:"]{
+  a.btn.btn-link-dark-cit[href^="tel:"]{
      pointer-events: none;
      cursor: default;
      color: inherit;
+     text-decoration: none !important;
+     font-family: $font-family-plain-cit;
+     font-weight: normal;
    }
  }
 

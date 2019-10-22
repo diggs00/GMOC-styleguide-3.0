@@ -64,7 +64,7 @@
 		.image {
 			height:100%;
 			.mobile {
-				@media (max-width: $screen-tablet) {
+				@media (max-width: 767px) {
 		    		background:url(img/prototypes/customer-onboarding/phone-mobile.jpg) bottom center no-repeat;
 					height:600px;
 					flex-grow: 1;

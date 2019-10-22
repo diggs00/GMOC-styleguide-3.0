@@ -9,12 +9,7 @@
   margin-bottom: $alert-margin-bottom;
   border-radius: 8px;
   color: $cit-type-gray-darker;
-  .icon {
-  		display: flex;
- 		width:30px;
-  		height:30px;
-  		margin-right: 16px;
-  }
+
 }
 
 
@@ -32,11 +27,24 @@
 
 .alert-danger {
   background-color: rgba($cit-red, .15);
-
+  .icon {
+    display: flex;
+    width:30px;
+    height:30px;
+    margin-right: 16px;
+  }
 }
 
 .alert-success {
   background-color: rgba($cit-green, .15);
+  .icon {
+    display: flex;
+    span {
+      font-size: 30px;
+      margin-right: 16px; 
+      color: $cit-green;
+    }
+  }
 
 }
 

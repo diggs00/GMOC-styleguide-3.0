@@ -1,0 +1,87 @@
+//
+// FORMS - CITATION Style
+// --------------------------------------------------
+
+ul.cit-password-instruction {
+    margin-bottom: 0px;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-top: 32px;
+    }
+    h6 {
+      display: inline;
+      &.weak {
+        color: $cit-red;
+      }
+      &.strong {
+        color: $cit-green;
+      }
+    }
+    p {
+      margin-bottom: 0px;
+      color: $cit-bg-gray-lightest;
+    }
+    &.default {
+      p {
+        color: $cit-type-gray-dark;
+      }
+    }
+    &.error {
+      p {
+        color: $cit-red;
+      }
+    }
+    &.success {
+      .check-mark__wrapper {
+        background-color: $cit-green;
+      }
+      .check-mark::before {
+        background-color: $cit-green;
+      }
+      p.cit {
+        color: $cit-green;
+      }
+    }
+  }
+}
+
+.check-mark__wrapper {
+  width: 15px;
+  height: 15px;
+  margin: 0px 8px 1px 0px;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $cit-type-gray;
+}
+
+.check-mark {
+  position: relative;
+  width: 5px;
+  height: 9px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  background-color: $white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.check-mark::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: 2px;
+  z-index: 10;
+  width: 3px;
+  height: 8px;
+  background-color: $cit-type-gray;
+}
+
