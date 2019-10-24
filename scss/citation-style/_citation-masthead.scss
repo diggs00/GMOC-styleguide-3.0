@@ -2,6 +2,24 @@
    ========================================================================== */
 
 
+// MASTHEAD - STATIC
+// -------------------------------------------------
+
+.masthead-cit-static {
+	height: 134px;
+	overflow: hidden;
+	@media (min-width: $screen-tablet) {
+		height: 206px;
+	}
+	@media (min-width: $screen-desktop) {
+		height: 266px;
+	}
+	@media (min-width: $screen-lg-desktop) {
+		height: 350px;
+	}
+}
+
+
 
 // MASTHEAD - PROMO
 // --------------------------------------------------

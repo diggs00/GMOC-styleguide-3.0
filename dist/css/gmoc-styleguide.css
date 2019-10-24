@@ -18831,6 +18831,19 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 /* MASTHEAD - CITATION Style
    ========================================================================== */
+.masthead-cit-static {
+  height: 134px;
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .masthead-cit-static {
+      height: 206px; } }
+  @media (min-width: 992px) {
+    .masthead-cit-static {
+      height: 266px; } }
+  @media (min-width: 1200px) {
+    .masthead-cit-static {
+      height: 350px; } }
+
 .masthead-cit-promo .mobile-view {
   padding-bottom: 25px;
   margin-bottom: 25px;
