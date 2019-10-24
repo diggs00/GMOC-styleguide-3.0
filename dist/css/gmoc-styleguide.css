@@ -19359,9 +19359,9 @@ a.close-cit.disabled {
       color: #ffffff;
       font-size: 14px;
       margin-bottom: 5px; }
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         .carousel-caption .carousel-text h5 {
-          font-size: 1.25rem;
+          font-size: 1.875rem;
           margin-bottom: 10px; } }
     .carousel-caption .carousel-text p {
       color: #ffffff;

@@ -256,8 +256,8 @@
       color: $white;
       font-size: 14px;
       margin-bottom: 5px;
-      @media (min-width: $screen-tablet) {
-        font-size: $h5-font-size-cit;
+      @media (min-width: $screen-desktop) {
+        font-size: $h3-font-size-cit;
         margin-bottom: 10px;
       }
     }
