@@ -17645,7 +17645,7 @@ img.article-image {
   padding: 30px;
   border-top: none;
   border-bottom: none;
-  height: 100vh; }
+  min-height: 100vh; }
   @media (min-width: 768px) {
     .container-cit-h100 {
       border-left: 1px solid #e9e9e9;

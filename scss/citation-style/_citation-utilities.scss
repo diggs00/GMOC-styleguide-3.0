@@ -22,7 +22,7 @@
 	padding:30px;
 	border-top: none;
 	border-bottom: none;
- 	height: 100vh;
+ 	min-height: 100vh;
 	@media (min-width: $screen-tablet) {
 		border-left: 1px solid $cit-divider-gray;
 		border-right: 1px solid $cit-divider-gray;
