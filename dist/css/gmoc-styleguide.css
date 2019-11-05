@@ -19492,6 +19492,35 @@ a.close-cit.disabled {
   .feature-oc-cit li {
     margin-bottom: 15px; }
 
+.nav-signin-card {
+  margin-left: -12px;
+  margin-right: -12px;
+  position: relative;
+  padding: 0px 0px 40px 40px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.27);
+  border: solid 1px #e9e9e9;
+  background-color: #ffffff; }
+  @media (min-width: 768px) {
+    .nav-signin-card {
+      position: absolute;
+      right: 0px;
+      top: 80px;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 400px;
+      box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.27);
+      border: solid 1px #e9e9e9;
+      background-color: #ffffff; } }
+  .nav-signin-card button {
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 5px; }
+    .nav-signin-card button span {
+      font-size: 21px; }
+  .nav-signin-card .text {
+    clear: right;
+    margin-right: 60px; }
+
 .background-dark {
   background-color: black;
   padding: 20px 20px; }
