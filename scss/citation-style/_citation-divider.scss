@@ -63,7 +63,7 @@ hr.cit	{
     height:4px;
     background-color:$brand-primary;
     width:120px;
-    display: block;
+    display: inline-block;
 	@media (min-width: $screen-tablet) {
 	    margin-top: 15px;
 	    margin-bottom: 25px;

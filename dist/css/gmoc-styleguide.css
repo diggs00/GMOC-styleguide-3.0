@@ -17884,7 +17884,7 @@ hr.cit {
   height: 4px;
   background-color: #b6862d;
   width: 120px;
-  display: block; }
+  display: inline-block; }
   @media (min-width: 768px) {
     .citation-bar {
       margin-top: 15px;
@@ -19462,6 +19462,35 @@ a.close-cit.disabled {
     @media (min-width: 768px) {
       .feature-att-cit svg {
         margin-bottom: 15px; } }
+
+.feature-oc-cit {
+  text-align: center;
+  border: 1px solid #e9e9e9;
+  flex-grow: 1;
+  width: 100%;
+  flex-basis: 100%;
+  padding: 30px 30px 60px 30px;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 25px; }
+  @media (min-width: 768px) {
+    .feature-oc-cit {
+      margin-right: 0px;
+      margin-left: 0px; } }
+  @media (min-width: 992px) {
+    .feature-oc-cit {
+      margin-bottom: 0px; } }
+  .feature-oc-cit svg {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .feature-oc-cit svg {
+        margin-bottom: 15px; } }
+  .feature-oc-cit .citation-bar {
+    margin-bottom: 30px; }
+  .feature-oc-cit li {
+    margin-bottom: 15px; }
 
 .background-dark {
   background-color: black;
