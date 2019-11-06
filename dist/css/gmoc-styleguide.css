@@ -19472,7 +19472,8 @@ a.close-cit.disabled {
   padding: 30px 30px 60px 30px;
   margin-right: -15px;
   margin-left: -15px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  background-color: #ffffff; }
   @media (min-width: 768px) {
     .feature-oc-cit {
       margin-right: 0px;
