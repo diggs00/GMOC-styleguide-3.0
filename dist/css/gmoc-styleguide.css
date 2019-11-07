@@ -18935,6 +18935,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
   .masthead-cit-video img {
     width: 100%; }
   .masthead-cit-video .content {
+    text-align: center;
     background-color: transparent; }
     .masthead-cit-video .content .citation-bar {
       margin-top: 15px;
