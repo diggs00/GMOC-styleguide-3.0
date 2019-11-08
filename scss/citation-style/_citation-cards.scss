@@ -327,6 +327,11 @@
 				@media (min-width: $screen-desktop) {
 					margin: 0px 40px 0px 0px;
 				}
+				h5 {
+					a{
+						font-family: $font-family-plain-cit !important;
+					}
+				}
 				p {
 					margin-top:5px;
 				}
@@ -473,7 +478,9 @@
 	margin-bottom: 25px;
 	display: flex;
 	flex-direction: column;
-	width:100%;
+	width:100%;			
+	box-shadow: none;
+	padding: 4px;
 	&.disabled {
 		cursor: default;
 		background-color: $transparent;
@@ -516,16 +523,20 @@
 	}
 	&.selected {
 		cursor: default;
-		border: 4px solid $brand-onstar;
+		-webkit-box-shadow: inset 0 0 0 4px $brand-onstar;
+		-moz-box-shadow: inset 0 0 0 4px $brand-onstar;
+		box-shadow: inset 0 0 0 4px $brand-onstar;
+		// border: 4px solid $brand-onstar;
 		&:hover {
-			outline: 0;
-			-webkit-box-shadow: none;
-			-moz-box-shadow: none;
-			box-shadow: none;
+			box-shadow: inset 0 0 0 4px $brand-onstar;
 		}
 		.price {
 			h5 {
-				color: $brand-onstar;		
+				color: $brand-onstar;
+				span {
+					font-size: $font-size-base-cit;
+					margin-right: 10px;
+				}
 			}
 		}
 	}
@@ -551,7 +562,7 @@
 	}
 	.content {
 		background-color: $cit-bg-gray-lighter;
-		padding: 30px 30px 30px 30px;
+		padding: 30px 26px 30px 26px;
 		display: flex;
 		flex-direction: column;
 		ul {
@@ -571,7 +582,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 0px 30px 30px 30px;
+		padding: 0px 26px 30px 26px;
 		hr {
 			width:100%;
 			margin-top: 0px;
@@ -750,15 +761,16 @@
 	}
 	&.selected {
 		cursor: default;
-		border: 4px solid $brand-primary;
+		box-shadow: inset 0 0 0 4px $brand-primary;
 		&:hover {
-			outline: 0;
-			-webkit-box-shadow: none;
-			-moz-box-shadow: none;
-			box-shadow: none;
+			box-shadow: inset 0 0 0 4px $brand-primary;
 		}
 		h5 {
 			color: $brand-primary;
+			span {
+				font-size: $font-size-base-cit;
+				margin-right: 10px;
+			}
 		}
 	}
 	&.disabled {

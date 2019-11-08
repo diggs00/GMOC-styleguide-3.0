@@ -267,14 +267,21 @@
 
 .modal-content-cit {
 	.modal-title {
-		.icon-svg-inline svg{
-			margin-right:15px;
-			top: 0em;
-			font-size: $font-size-base-cit * 2.03; //32.5px
-			@media (min-width: $screen-tablet) {
-				font-size: $font-size-base-cit * 2.5; //40px
-			}
-		}
+    .icon-svg-inline {
+      display: flex;
+      align-items: center;
+      svg {
+        top: 0em;
+        margin-right:15px;
+        font-size: $font-size-base-cit * 2.5; //40px
+        // @media (min-width: $screen-tablet) {
+        //  font-size: $font-size-base-cit * 2.5; //40px
+        // }
+      }
+      .icon-svg-text {
+        width: 100%;
+      }
+    }
 	}
 }
 

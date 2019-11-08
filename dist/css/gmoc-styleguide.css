@@ -18382,6 +18382,8 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       @media (min-width: 992px) {
         .card-cit-plan-active .content .plan-content .plan-name {
           margin: 0px 40px 0px 0px; } }
+      .card-cit-plan-active .content .plan-content .plan-name h5 a {
+        font-family: "GMGlobalSans_Plain", "Arial", sans-serif !important; }
       .card-cit-plan-active .content .plan-content .plan-name p {
         margin-top: 5px; }
     .card-cit-plan-active .content .plan-content .pricing {
@@ -18410,7 +18412,9 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  box-shadow: none;
+  padding: 4px; }
   .card-cit-plan-detail.disabled {
     cursor: default;
     background-color: transparent; }
@@ -18442,14 +18446,16 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
         cursor: default; }
   .card-cit-plan-detail.selected {
     cursor: default;
-    border: 4px solid #003e7e; }
+    -webkit-box-shadow: inset 0 0 0 4px #003e7e;
+    -moz-box-shadow: inset 0 0 0 4px #003e7e;
+    box-shadow: inset 0 0 0 4px #003e7e; }
     .card-cit-plan-detail.selected:hover {
-      outline: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: inset 0 0 0 4px #003e7e; }
     .card-cit-plan-detail.selected .price h5 {
       color: #003e7e; }
+      .card-cit-plan-detail.selected .price h5 span {
+        font-size: 1rem;
+        margin-right: 10px; }
   .card-cit-plan-detail .title {
     padding: 45px 30px 30px 30px;
     display: flex;
@@ -18469,7 +18475,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
       background-color: #004a8a; }
   .card-cit-plan-detail .content {
     background-color: #f8f9fa;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 26px 30px 26px;
     display: flex;
     flex-direction: column; }
     .card-cit-plan-detail .content ul {
@@ -18485,7 +18491,7 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px 30px 30px; }
+    padding: 0px 26px 30px 26px; }
     .card-cit-plan-detail .price hr {
       width: 100%;
       margin-top: 0px;
@@ -18606,14 +18612,14 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2); }
   .card-cit-select.selected {
     cursor: default;
-    border: 4px solid #b6862d; }
+    box-shadow: inset 0 0 0 4px #b6862d; }
     .card-cit-select.selected:hover {
-      outline: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: inset 0 0 0 4px #b6862d; }
     .card-cit-select.selected h5 {
       color: #b6862d; }
+      .card-cit-select.selected h5 span {
+        font-size: 1rem;
+        margin-right: 10px; }
   .card-cit-select.disabled {
     border: 1px solid #e9e9e9;
     cursor: default; }
@@ -19128,13 +19134,15 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
 
 /* CITATION SPECIFIC
    ========================================================================== */
-.modal-content-cit .modal-title .icon-svg-inline svg {
-  margin-right: 15px;
-  top: 0em;
-  font-size: 2.03rem; }
-  @media (min-width: 768px) {
-    .modal-content-cit .modal-title .icon-svg-inline svg {
-      font-size: 2.5rem; } }
+.modal-content-cit .modal-title .icon-svg-inline {
+  display: flex;
+  align-items: center; }
+  .modal-content-cit .modal-title .icon-svg-inline svg {
+    top: 0em;
+    margin-right: 15px;
+    font-size: 2.5rem; }
+  .modal-content-cit .modal-title .icon-svg-inline .icon-svg-text {
+    width: 100%; }
 
 /* CLOSE - CITATION Style
    ========================================================================== */
@@ -19465,6 +19473,7 @@ a.close-cit.disabled {
         margin-bottom: 15px; } }
 
 .feature-oc-cit {
+  z-index: 2;
   text-align: center;
   border: 1px solid #e9e9e9;
   flex-grow: 1;
