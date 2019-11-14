@@ -1,3 +1,38 @@
+<script>
+$(document).ready(function() {
+    
+    $('.cit-input-field.password button').on('click', function() {
+        
+        if ($('.cit-input-field.password input').attr('password-shown') == 'false') {
+            
+            $('.cit-input-field.password input').removeAttr('type');
+            $('.cit-input-field.password input').attr('type', 'text');
+            
+            $('.cit-input-field.password input').removeAttr('password-shown');
+            $('.cit-input-field.password input').attr('password-shown', 'true');
+            
+            // $('.cit-input-field.password button').html('Hide');
+            
+        }else {
+            
+            $('.cit-input-field.password input').removeAttr('type');
+            $('.cit-input-field.password input').attr('type', 'password');
+            
+            $('.cit-input-field.password input').removeAttr('password-shown');
+            $('.cit-input-field.password input').attr('password-shown', 'false');
+            
+            // $('.cit-input-field.password button').html('Show');
+            
+        }
+        
+    });
+    
+});
+</script>
+
+
+
+
 <div class="container sg-title">
 
 		<div class="row">
@@ -5,7 +40,25 @@
 						<h1>Forms</h1>
 						<hr>
 				</div>
+
+
 		</div>
+
+
+
+		<div class="row mb-6">
+				<div class="col-sm-6">
+						<h1><small>Text Input</small></h1>
+				</div>
+		</div>
+
+		<form class="mb-6" action="">
+			<div class="cit-input-field">
+				<input type="text" id="name" required />
+				 <span class="bar"></span>
+				<label for="name">Email</label>
+			</div>
+		</form>
 
 
 		<div class="row mb-6">
@@ -14,9 +67,22 @@
 				</div>
 		</div>
 
+		<div class="row mb-6">
+			<div class="col-12">
+
+				<div class="cit-input-field password mb-0">
+			      <input id="password" type="password" password-shown="false" required>
+						<span class="bar"></span>
+				    <label for="password">Password</label>
+				    <button class="secondary-button" type="button"><span aria-hidden="true" class="icon-ui-view"></span></button>
+				</div>
+
+			</div>
+		</div>		
 
 		<div class="row mb-6">
 			<div class="col-12">
+
 				<ul class="cit-password-instruction">
 					<li>
 						<h6 class="cit heavy mb-0 mr-1">Password Strength</h6><h6 class="cit heavy weak mb-0">Weak</h6>
@@ -46,82 +112,12 @@
 
 
 
-		<div class="row">
-				<div class="col-sm-6">
-						<h1><small>Text Input</small></h1>
-				</div>
-		</div>
-
-		<form role="form">
-				<div class="row">
-						<div class="col-12 margin-bottom-medium clearfix">
-								<label class="margin-bottom-none">Field Label</label>
-								<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<div class="form-group">
-										<input type="text" class="form-control" placeholder="Text input">
-								</div>
-						</div>
-				</div>
-
-				<div class="row">
-						<div class="col-12 margin-bottom-medium">
-								<label class="margin-bottom-none">Field Label with Error:</label>
-								<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<div class="form-group has-error">
-										<input type="text" class="form-control on-error" placeholder="Text input" value="asl@#dkfj3338">
-								</div>
-								<p class="help-block-below red-text">No special characters allowed</p>
-						</div>
-				</div>
-		</form>
 
 
-		<div class="row">
-				<div class="col-12">
-						<h1><small>Text Area</small></h1>
-				</div>
-		</div>
-
-		<form role="form">
-				<div class="row">
-						<div class="col-12 margin-bottom-medium">
-								<div class="form-link-right">
-										<label>Field Label</label>
-										<p><strong><a hred="#">Open in new window</a></strong></p>
-								</div>
-
-								<div class="form-group">
-										<textarea class="form-control" rows="4" readonly>
-A. By using and/or visiting this Website, you agree to and accept (1) these terms and conditions (the "Terms of Service"), and (2) the privacy notice found at http://www.gm.com/privacy/. If you do not agree to any of these terms, or the privacy notice, please do not use the Web site.  The Web site is operated by General Motors LLC ("GM"), through various agencies and service providers.
-										</textarea>
-								</div>
-						</div>
-				</div>
-		</form>
 
 
-		<div class="row">
-				<div class="col-12">
-						<h1><small>Pin Input</small></h1>
-				</div>
-		</div>
 
-		<form role="form">
-				<div class="row">
-						<div class="col-4 margin-bottom-medium">
-								<label>Field Label</label>
-								<div class="form-group">
-										<input type="text" class="form-control-pin">
-										<input type="text" class="form-control-pin">
-										<input type="text" class="form-control-pin">
-										<input type="text" class="form-control-pin">
-								</div>
-						</div>
-				</div>
-		</form>
-
-
-		<div class="row">
+		<div class="row mb-6">
 				<div class="col-12">
 						<h1><small>Checkboxes</small></h1>
 				</div>
@@ -166,7 +162,7 @@ A. By using and/or visiting this Website, you agree to and accept (1) these term
 
 
 
-		<div class="row">
+		<div class="row mb-6">
 				<div class="col-12">
 						<h1><small>Radio Buttons - Vertical</small></h1>
 				</div>
@@ -177,37 +173,35 @@ A. By using and/or visiting this Website, you agree to and accept (1) these term
 		<form role="form">
 				<div class="row">
 						<div class="col-12 margin-bottom-medium">
-								<label class="margin-bottom-none">Field Label</label>
-								<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 								<div class="form-group">
 										<div class="row">
 												<div class="col-12">
-														<ul class="radio-list margin-bottom-none">
+														<ul class="cit-radio-list margin-bottom-none">
 																<li>
 																	<label>
-																		<span class="radio">
-																			<input type="radio" name="foo" value="2">
-																			<span class="radio-value" aria-hidden="true"></span>
+																		<span class="cit-radio">
+																			<input type="radio" name="foo" value="1">
+																			<span class="cit-radio-value" aria-hidden="true"></span>
 																		</span>
-																		<div class="margin-left-xl">Option 1</div>
+																		<h6 class="cit heavy">Option 1</h6>
 																	</label>
 																</li>
 																<li>
 																	<label>
-																		<span class="radio">
+																		<span class="cit-radio">
 																			<input type="radio" name="foo" value="2">
-																			<span class="radio-value" aria-hidden="true"></span>
+																			<span class="cit-radio-value" aria-hidden="true"></span>
 																		</span>
-																		<div class="margin-left-xl">Option 2</div>
+																		<h6 class="cit heavy">Option 2</h6>
 																	</label>
 																</li>
 																<li>
 																	<label class="disabled">
-																		<span class="radio" disabled>
-																			<input type="radio" name="foo" value="2" disabled>
-																			<span class="radio-value" aria-hidden="true"></span>
+																		<span class="cit-radio" disabled>
+																			<input type="radio" name="foo" value="3" disabled>
+																			<span class="cit-radio-value" aria-hidden="true"></span>
 																		</span>
-																		<div class="margin-left-xl">Disabled</div>
+																		<h6 class="cit heavy">Disabled</h6>
 																	</label>
 																</li>
 														</ul>
@@ -457,4 +451,6 @@ A. By using and/or visiting this Website, you agree to and accept (1) these term
 
 
 </div>
+
+
 

@@ -91,8 +91,7 @@
 // Left/right controls for nav
 //
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev {
   display:none;
   @media (min-width: $screen-tablet) {
     position: absolute;
@@ -102,8 +101,11 @@
     // Use flex for alignment (1-3)
     display: flex; // 1. allow flex styles
     align-items: center; // 2. vertically center contents
-    justify-content: center; // 3. horizontally center contents
-    width: $carousel-control-width;
+    // justify-content: center; // 3. horizontally center contents
+    // // width: $carousel-control-width;
+    justify-content: flex-end; // 3. horizontally center contents
+    // width: $carousel-control-width;
+    width: 45px;
     color: $carousel-control-color;
     text-align: center;
     // opacity: $carousel-control-opacity;
@@ -119,6 +121,40 @@
     }
   }
 }
+
+
+.carousel-control-next {
+  display:none;
+  @media (min-width: $screen-tablet) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    // Use flex for alignment (1-3)
+    display: flex; // 1. allow flex styles
+    align-items: center; // 2. vertically center contents
+    // justify-content: center; // 3. horizontally center contents
+    // // width: $carousel-control-width;
+    justify-content: flex-start; // 3. horizontally center contents
+    // width: $carousel-control-width;
+    width: 45px;
+    color: $carousel-control-color;
+    text-align: center;
+    // opacity: $carousel-control-opacity;
+    opacity: 1;
+    @include transition($carousel-control-transition);
+
+    // Hover/focus state
+    @include hover-focus {
+      color: $carousel-control-color;
+      text-decoration: none;
+      outline: 0;
+      opacity: $carousel-control-hover-opacity;
+    }
+  }
+}
+
+
 .carousel-control-prev {
   left: 0;
   @if $enable-gradients {
@@ -167,7 +203,8 @@
   position: absolute;
   right: 0;
   // bottom: 0;
-  bottom: -30px;
+  margin-bottom: 15px;
+  bottom: 0px;
   left: 0;
   z-index: 15;
   display: flex;
@@ -178,8 +215,9 @@
   margin-left: $carousel-control-width;
   list-style: none;
   @media (min-width: $screen-tablet) {
-    bottom: -20px;
+    margin-bottom: 30px;
   }
+
 
   li {
     box-sizing: content-box;
@@ -203,6 +241,7 @@
     border-width: 2px;
     border-color: $white;
     opacity: 1;
+    margin-bottom: 0px;
     @include transition($carousel-indicator-transition);
     @media (min-width: $screen-tablet) {
       width: 14px;
