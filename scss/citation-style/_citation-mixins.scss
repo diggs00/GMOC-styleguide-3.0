@@ -97,8 +97,8 @@
   &:active,
   &.active,
   .open .dropdown-toggle & {
-    color: $white;
-    background-color: $color;
+    color: $color;
+    background-color: $background;
     border-color: $border;
     outline: 0;
   }

@@ -18129,8 +18129,8 @@ hr.cit {
     border-color: #343a40; }
   .btn-secondary-dark-cit:focus, .btn-secondary-dark-cit:active, .btn-secondary-dark-cit.active,
   .open .dropdown-toggle .btn-secondary-dark-cit {
-    color: #ffffff;
-    background-color: #343a40;
+    color: #343a40;
+    background-color: transparent;
     border-color: #343a40;
     outline: 0; }
   .btn-secondary-dark-cit.disabled, .btn-secondary-dark-cit.disabled:hover, .btn-secondary-dark-cit.disabled:focus, .btn-secondary-dark-cit.disabled:active, .btn-secondary-dark-cit.disabled.active, .btn-secondary-dark-cit[disabled], .btn-secondary-dark-cit[disabled]:hover, .btn-secondary-dark-cit[disabled]:focus, .btn-secondary-dark-cit[disabled]:active, .btn-secondary-dark-cit[disabled].active,
