@@ -17937,6 +17937,61 @@ input:checked + .cit-radio-value:after {
   top: 2px;
   left: 2px; }
 
+/* CHECKBOX
+   ========================================================================== */
+.cit-checkbox {
+  margin-right: 10px;
+  display: flex; }
+
+ul.cit-checkbox-list li {
+  margin-bottom: 20px; }
+
+ul.cit-checkbox-list li:last-child {
+  margin-bottom: 0px; }
+
+ul.cit-checkbox-list label {
+  display: inline-flex;
+  cursor: pointer;
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-size: 16px; }
+  ul.cit-checkbox-list label p small {
+    color: #343a40;
+    margin-bottom: 0px;
+    line-height: 16px;
+    vertical-align: top; }
+
+.cit-checkbox input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* style the "fake" checkbox */
+.cit-checkbox-value {
+  background-color: #ffffff;
+  border: 1px solid #acacac;
+  box-shadow: none;
+  border-radius: 2px;
+  position: relative;
+  width: 16px;
+  height: 16px; }
+
+/* style the "fake CHECKED" checkbox */
+input:checked + .cit-checkbox-value:before {
+  font-family: 'icon-ui';
+  font-weight: normal;
+  content: "\e915";
+  font-size: 16px;
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  color: #343a40; }
+
 .cit-alert {
   position: relative;
   padding: 13px 16px;
