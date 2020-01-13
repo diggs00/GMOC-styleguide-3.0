@@ -19716,6 +19716,12 @@ a.close-cit.disabled {
   .feature-oc-cit li {
     margin-bottom: 15px; }
 
+/* GLOBAL NAVIGATION - DESKTOP
+   ========================================================================== */
+.g-nav-desktop {
+  background-color: #ed211b;
+  padding: 0px 40px; }
+
 .nav-signin-card {
   z-index: 2;
   margin-left: -12px;
