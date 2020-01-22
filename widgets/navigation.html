@@ -1,4 +1,3 @@
-
 <div class="container sg-title">
     <div class="row">
         <div class="col-12">
@@ -7,6 +6,8 @@
         </div>
     </div>
 </div>
+
+
 
 <div class="container">
     <div class="row margin-bottom-xl">
@@ -17,10 +18,935 @@
 </div>
 
 
+
+
+
+
+
+<!-- /* START: GLOBAL NAVIGATION - MOBILE
+   ========================================================================== */ -->
+<div class="g-nav-mobile">
+    <div class="g-nav-menu">
+        <!--START: GARAGE/Vehicle -->
+        <div class="garage dropdown">
+            <a class="btn-link-g-nav" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="current-vehicle">
+                    <img src="img/nav/chevy-equinox-2019-34-profile-orange.png">
+                </div>
+                <div class="arrow"></div>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item selected" href="#">
+                        <div>
+                            <img src="img/nav/chevy-equinox-2019-34-profile-orange.png">
+                        </div>
+                        <p class="cit">2019 Chevy Equinox</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-volt-2019-34-profile-mint.png">
+                        <p class="cit">2018 Chevrolet Malibu</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                </div>
+
+                <a class="dropdown-item-controls" href="#">
+                    <p class="cit">Manage Vehicle</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+        <!--END: GARAGE/Vehicle -->
+
+    <ul class="g-nav-menu-right">
+        <!--START: SEARCH -->
+        <li class="search dropdown">
+            <span class="icon-global-nav-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+            <div class="dropdown-menu">
+                <div class="dropdown-item-container">
+                    <div class="cit-search">
+                        <input type="text" id="" class="" placeholder="Search">
+                        <button class="secondary-button" type="button">Go</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--END: SEARCH -->
+
+        <!--START: CART -->
+        <li class="cart">
+            <span class="icon-global-nav-cart"></span>
+            <div class="count">
+                <p>3</p>
+            </div>
+        </li>
+        <!--END: CART -->
+
+
+<script>
+    // Toggle nav
+    $('li.notification.toggle-nav').click(function (e) {
+        if ($('li.toggle-nav').hasClass('active')) {
+            $('li.toggle-nav').removeClass('active');
+        } else {
+            $('li.toggle-nav').addClass('active');
+        }
+        $('div.toggle-content').toggle();
+        e.stopPropagation();
+    });
+    $('html').click(function () {
+        $('div.toggle-content').hide();
+        $('li.toggle-nav').removeClass('active');
+    });
+
+    // Toggle nav
+    $('li.menu.toggle-nav-menu').click(function (e) {
+        if ($('li.toggle-nav-menu').hasClass('active')) {
+            $('li.toggle-nav-menu').removeClass('active');
+        } else {
+            $('li.toggle-nav-menu').addClass('active');
+        }
+        $('div.toggle-content-menu').toggle();
+        e.stopPropagation();s
+    });
+    $('html').click(function () {
+        $('div.toggle-content-menu').hide();
+        $('li.toggle-nav-menu').removeClass('active');
+    });
+
+</script>
+
+        <!--START: NOTES -->
+        <li class="notification toggle-nav">
+            <span class="icon-global-nav-notification"></span>
+            <div class="count"><p>3</p></div>
+        
+            <div class="toggle-content">
+                <div class="container">
+                    <div class="container-title">
+                        <p class="cit">3 New Notifications</p>
+                        <button type="button" class="close-cit" data-dismiss="" aria-label="Close">
+                            <span aria-hidden="true" class="icon-ui-close"></span>
+                        </button>         
+                    </div>
+                    <div class="item unread">
+                        <div class="note">
+                            <div class="content">
+                                <p class="cit title">Your connected services are about to expire!</p>
+                                <p class="cit">You have at least one plan expiring soon.</p>
+                                <a href="#">Renew now</a>
+                            </div>
+                            <div class="delete">
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item unread">
+                        <div class="note">
+                            <div class="content">
+                                <p class="cit title">Product recall header for your car that you should read.</p>
+                                <p class="cit">Supporting information about said header, and possibly some steps for the user to follow so that they feel good about it.</p>
+                                <a href="#">Renew now</a>
+                            </div>
+                            <div class="delete">
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item unread">
+                        <div class="note">
+                            <div class="content">
+                                <p class="cit title">Your connected services are about to expire!</p>
+                                <p class="cit">You have at least one plan expiring soon.</p>
+                                <a href="#">Renew now</a>
+                            </div>
+                            <div class="delete">
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="note">
+                            <div class="content">
+                                <p class="cit title">Your connected services are about to expire!</p>
+                                <p class="cit">You have at least one plan expiring soon.</p>
+                                <a href="#">Renew now</a>
+                            </div>
+                            <div class="delete">
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+        </li>
+        <!--END: NOTES -->
+
+        <!--START: MENU/HAMBURGER -->
+        <li class="menu toggle-nav-menu">
+            <span class="bar">|</span>
+            <span class="icon-global-nav-menu"></span>
+
+            <div class="toggle-content-menu">
+                <div class="container">
+                    <div class="container-title">
+                        <button type="button" class="close-cit" data-dismiss="" aria-label="Close">
+                            <span aria-hidden="true" class="icon-ui-close"></span>
+                        </button> 
+                        <div class="account-name">
+                            <p class="cit">Emily Stevens</p>
+                            <p class="cit">emily.stevens@email.com</p>
+                        </div>
+                    </div>
+
+                    <a class="item" href="#">
+                        <p class="cit">Account & Payments</p>
+                    </a>
+                    <a class="item" href="#">
+                        <p class="cit">Vehicle health</p>
+                    </a>
+                    <a class="item" href="#">
+                        <p class="cit">OnStar & Connected Services</p>
+                    </a>
+                    <a class="item" href="#">
+                        <p class="cit">Support</p>
+                    </a>
+                    <div class="container-footer">
+                        <a class="item" href="#">
+                            <span class="icon-global-nav-signout"></span>
+                            <p class="cit">Sign Out</p>
+                        </a>
+                        <a class="item" href="#">
+                            <span class="icon-global-nav-globe"></span>
+                            <p class="cit">Langue: Français</p>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="backdrop"></div>
+            </div>
+        </li>
+        <!--END: MENU/HAMBURGER -->
+    </ul>
+</div>
+<!-- /* END: GLOBAL NAVIGATION - MOBILE
+   ========================================================================== */ -->
+
+
+
+
+
+<!-- /* START: GLOBAL NAVIGATION - DESKTOP
+   ========================================================================== */ -->
 <div class="g-nav-desktop">
-    <img class="img-responsive" src="img/nav/logo-chevrolet_dave.png" srcset="img/nav/logo-chevrolet_dave.png, img/nav/logo-chevrolet@2x.png 2x, img/nav/logo-chevrolet@3x.png 3x" alt="Responsive image">
+    <div class="brand-logo">
+        <img src="img/nav/logo-chevrole.png" srcset="img/nav/logo-chevrolet.png, img/nav/logo-chevrolet@2x.png 2x, img/nav/logo-chevrolet@3x.png 3x" alt="Responsive image">
+    </div>
+    <div class="g-nav-menu">
+        <!--START: GARAGE/Vehicle -->
+        <div class="garage dropdown">
+
+            <a class="btn-link-g-nav selected" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2019 Chevy Equinox</a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item selected" href="#">
+                        <img src="img/nav/chevy-equinox-2019-34-profile-orange.png">
+                        <p class="cit">2019 Chevy Equinox</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-volt-2019-34-profile-mint.png">
+                        <p class="cit">2018 Chevrolet Malibu</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                </div>
+
+                <a class="dropdown-item-controls" href="#">
+                    <p class="cit">Manage Vehicle</p>
+                </a>
+
+            </div>
+        </div>
+        <!--END: GARAGE/Vehicle -->
+
+
+        <!--START: VEHICLE HEALTH -->
+        <div class="vehicle-health dropdown">
+            <a class="btn-link-g-nav" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vehicle Health</a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Vehicle Health/Diagnostics</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Maintenance & Service</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">EV Status & Statistics</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Recalls</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Warranty</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Smart Driver</p>
+                    </a>
+                    <a class="dropdown-item selected" href="#">
+                        <p class="cit">Request Service Appointment</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--END: VEHICLE HEALTH -->
+
+        <!--START: ONSTAR -->
+        <div class="onstar dropdown">
+            <a class="btn-link-g-nav" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onstar & Connected Services</a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item selected" href="#">
+                        <p class="cit">My Plans</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Shop Plans</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Payment History</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Settings</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Activate Onstar</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Link Account</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--END: ONSTAR -->
+
+        <!--START: SUPPORT -->
+        <div class="support dropdown">
+            <a class="btn-link-g-nav" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item-top selected" href="#">
+                        <p class="cit">How-to and Support Overview</p>
+                    </a>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="title">
+                                <p class="cit">Vehicle Support</p>
+                                <div class="citation-bar-subnav"></div>
+                            </div>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Entertainment & Connections</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">OnStar & Connected Services</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Driving & Performance</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Exterior</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Interior</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Under the Hood</p>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="title">
+                                <p class="cit">More Support</p>
+                                <div class="citation-bar-subnav"></div>
+                            </div>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Getting Started</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Recommended</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Safety</p>
+                            </a>
+                            <a class="dropdown-item selected" href="#">
+                                <p class="cit">Maintenance</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Bluetooth</p>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <p class="cit">Account & Site Help</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END: SUPPORT -->
+    </div>
+
+    <ul class="g-nav-menu-right">
+        <!--START: SEARCH -->
+        <li class="search dropdown">
+            <span class="icon-global-nav-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+            <div class="dropdown-menu">
+                <div class="dropdown-item-container">
+                    <div class="cit-search">
+                        <input type="text" id="" class="" placeholder="Search">
+                        <button class="secondary-button" type="button">Go</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--END: SEARCH -->
+
+        <!--START: CART -->
+        <li class="cart">
+            <span class="icon-global-nav-cart"></span>
+            <div class="count">
+                <p>3</p>
+            </div>
+        </li>
+        <!--END: CART -->
+
+        <!--START: NOTES -->
+        <li class="notification dropdown selected">
+            <span class="icon-global-nav-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+            <div class="count">
+                <p>3</p>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <div class="dropdown-item-top">
+                        <p class="cit">3 New Notifications</p>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Product recall header for your car that you should read.</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">Supporting information about said header, and possibly some steps for the user to follow so that they feel good about it.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--END: NOTES -->
+
+        <!--START: LANGUAGE -->
+        <li class="language">
+            <span class="icon-global-nav-globe"></span>
+            <p class="cit">FR</p>
+        </li>
+        <!--END: LANGUAGE -->
+
+        <!--START: SIGNIN -->
+        <li class="sign-in dropdown">
+            <span class="bar">|</span>
+            <span class="icon-global-nav-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <div class="dropdown-item-top">
+                        <p class="cit">Emily Stevens</p>
+                        <p class="cit">emily.stevens@email.com</p>
+                    </div>
+
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Account & Payments</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">My Brand Rewards</p>
+                    </a>
+                    <a class="dropdown-item selected" href="#">
+                        <p class="cit">Sirius XM</p>
+                    </a>
+                    
+                    <a class="dropdown-item-bottom" href="#">
+                        <span class="icon-global-nav-signout"></span>
+                        <p class="cit">Sign Out</p>
+                    </a>
+
+                </div>
+            </div>
+        </li>
+        <!--END: SIGNIN -->
+    </ul>
+
+</div>
+<!-- /* END: GLOBAL NAVIGATION - DESKTOP
+   ========================================================================== */ -->
+
+
+
+<!-- /* START: GLOBAL NAVIGATION - TABLET
+   ========================================================================== */ -->
+<div class="g-nav-tablet">
+    <div class="g-nav-menu">
+        <!--START: GARAGE/Vehicle -->
+        <div class="garage dropdown">
+            <a class="btn-link-g-nav" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="current-vehicle">
+                    <img src="img/nav/chevy-equinox-2019-34-profile-orange.png">
+                    <p class="cit">2019 Chevy Equinox</p>
+                </div>
+                <div class="arrow"></div>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <a class="dropdown-item selected" href="#">
+                        <div>
+                            <img src="img/nav/chevy-equinox-2019-34-profile-orange.png">
+                        </div>
+                        <p class="cit">2019 Chevy Equinox</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-volt-2019-34-profile-mint.png">
+                        <p class="cit">2018 Chevrolet Malibu</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="img/nav/chevy-silverado-3500-2019-34-profile-darkred.png">
+                        <p class="cit">Chevrolet Silverado 3500</p>
+                    </a>
+                </div>
+
+                <a class="dropdown-item-controls" href="#">
+                    <p class="cit">Manage Vehicle</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+        <!--END: GARAGE/Vehicle -->
+
+    <ul class="g-nav-menu-right">
+        <!--START: SEARCH -->
+        <li class="search dropdown">
+            <span class="icon-global-nav-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+            <div class="dropdown-menu">
+                <div class="dropdown-item-container">
+                    <div class="cit-search">
+                        <input type="text" id="" class="" placeholder="Search">
+                        <button class="secondary-button" type="button">Go</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--END: SEARCH -->
+
+        <!--START: CART -->
+        <li class="cart">
+            <span class="icon-global-nav-cart"></span>
+            <div class="count">
+                <p>3</p>
+            </div>
+        </li>
+        <!--END: CART -->
+
+        <!--START: NOTES -->
+        <li class="notification dropdown selected">
+            <span class="icon-global-nav-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+            <div class="count">
+                <p>3</p>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <div class="dropdown-item-top">
+                        <p class="cit">3 New Notifications</p>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Product recall header for your car that you should read.</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">Supporting information about said header, and possibly some steps for the user to follow so that they feel good about it.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item unread">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <div class="note">
+                            <div class="title">
+                                <p class="cit">Your connected services are about to expire!</p>
+                                <span class="icon-global-nav-trash"></span>
+                            </div>
+                            <p class="cit">You have at least one plan expiring soon.</p>
+                            <a href="#">Renew now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--END: NOTES -->
+
+        <!--START: LANGUAGE -->
+        <li class="language">
+            <span class="icon-global-nav-globe"></span>
+            <p class="cit">FR</p>
+        </li>
+        <!--END: LANGUAGE -->
+
+        <!--START: MENU/HAMBURGER -->
+        <li class="menu dropdown">
+            <span class="bar">|</span>
+            <span class="icon-global-nav-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></span>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="dropdown-item-container">
+                    <div class="dropdown-item-top">
+                        <p class="cit">Emily Stevens</p>
+                        <p class="cit">emily.stevens@email.com</p>
+                    </div>
+
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Account & Payments</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Vehicle health</p>
+                    </a>
+                    <a class="dropdown-item selected" href="#">
+                        <p class="cit">OnStar & Connected Services</p>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <p class="cit">Support</p>
+                    </a>
+                    <a class="dropdown-item-bottom" href="#">
+                        <span class="icon-global-nav-signout"></span>
+                        <p class="cit">Sign Out</p>
+                    </a>
+
+                </div>
+            </div>
+        </li>
+        <!--END: MENU/HAMBURGER -->
+    </ul>
+</div>
+<!-- /* END: GLOBAL NAVIGATION - TABLET
+   ========================================================================== */ -->
+
+
+
+
+
+
+<!-- 
+/* START: GLOBAL NAVIGATION - 2nd Tier Menus MOBILE ONLY
+   ========================================================================== */ -->
+
+<div class="container">
+    <div class="row mt-10">
+        <div class="col-12">
+            <h1><small>Global Nav Mobile - 2nd Tier Menu</small></h1>
+        </div>
+    </div>
 </div>
 
+
+<div class="second-tier-menu">
+    <div class="container">
+        <div class="container-title">
+            <a class="back" href="#">
+                <span aria-hidden="true" class="icon-ui-arrowleft"></span>
+                <p class="cit">Back</p>
+            </a>
+            <button type="button" class="close-cit" data-dismiss="" aria-label="Close">
+                <span aria-hidden="true" class="icon-ui-close"></span>
+            </button>         
+        </div>
+        <a class="item" href="#">
+            <p class="cit">Account & Payments</p>
+        </a>
+        <a class="item" href="#">
+            <p class="cit">My Brand Rewards</p>
+        </a>
+        <a class="item" href="#">
+            <p class="cit">Sirius XM</p>
+        </a>
+    </div>
+    <div class="backdrop"></div>
+</div>
+
+
+
+<div class="container">
+    <div class="row mt-10">
+        <div class="col-12">
+            <h1><small>Global Nav Mobile - 2nd Tier Menu - Support</small></h1>
+        </div>
+    </div>
+</div>
+
+<div class="second-tier-menu-support">
+    <div class="container">
+        <div class="container-title">
+            <a class="back" href="#">
+                <span aria-hidden="true" class="icon-ui-arrowleft"></span>
+                <p class="cit">Back</p>
+            </a>
+            <button type="button" class="close-cit" data-dismiss="" aria-label="Close">
+                <span aria-hidden="true" class="icon-ui-close"></span>
+            </button>         
+        </div>
+        <a class="item-top" href="#">
+            <p class="cit">How-to and Support Overview</p>
+        </a>
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-column">
+                <div class="title">
+                    <p class="cit">Vehicle Support</p>
+                    <div class="citation-bar-subnav"></div>
+                </div>
+                <a class="item" href="#">
+                    <p class="cit">Entertainment & Connections</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">OnStar & Connected Services</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Driving & Performance</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Exterior</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Interior</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Under the Hood</p>
+                </a>
+            </div>
+            <div class="d-flex flex-column">
+                <div class="title">
+                    <p class="cit">More Support</p>
+                    <div class="citation-bar-subnav"></div>
+                </div>
+                <a class="item" href="#">
+                    <p class="cit">Getting Started</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Recommended</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Safety</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Maintenance</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Bluetooth</p>
+                </a>
+                <a class="item" href="#">
+                    <p class="cit">Account & Site Help</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+</div>
+<!-- /* END: GLOBAL NAVIGATION - 2nd Tier Menus - MOBILE ONLY
+   ========================================================================== */ -->
+
+
+
+
+<!-- /* START: GLOBAL NAVIGATION - 2nd Tier Menus - TABLET ONLY
+   ========================================================================== */ -->
+
+
+<div class="container">
+    <div class="row mt-10">
+        <div class="col-12">
+            <h1><small>Global Nav TABLET - 2nd Tier Menu</small></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="dropdown-menu-styleguide-use-only">
+    <div class="dropdown-item-container">
+        <a class="back" href="#">
+            <span aria-hidden="true" class="icon-ui-arrowleft"></span>
+            <p class="cit">Back</p>
+        </a>
+        <a class="dropdown-item" href="#">
+            <p class="cit">Account & Payments</p>
+        </a>
+        <a class="dropdown-item" href="#">
+            <p class="cit">Vehicle health</p>
+        </a>
+        <a class="dropdown-item selected" href="#">
+            <p class="cit">OnStar & Connected Services</p>
+        </a>
+        <a class="dropdown-item" href="#">
+            <p class="cit">Support</p>
+        </a>
+
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row mt-10">
+        <div class="col-12">
+            <h1><small>Global Nav TABLET - 2nd Tier Menu - Support</small></h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="support">
+<div class="dropdown-menu-styleguide-use-only">
+    <div class="dropdown-item-container">
+        <a class="back" href="#">
+            <span aria-hidden="true" class="icon-ui-arrowleft"></span>
+            <p class="cit">Back</p>
+        </a>
+        <a class="dropdown-item-top" href="#">
+            <p class="cit">How-to and Support Overview</p>
+        </a>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column">
+                <div class="title">
+                    <p class="cit">Vehicle Support</p>
+                    <div class="citation-bar-subnav"></div>
+                </div>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Entertainment & Connections</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">OnStar & Connected Services</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Driving & Performance</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Exterior</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Interior</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Under the Hood</p>
+                </a>
+            </div>
+            <div class="d-flex flex-column">
+                <div class="title">
+                    <p class="cit">More Support</p>
+                    <div class="citation-bar-subnav"></div>
+                </div>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Getting Started</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Recommended</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Safety</p>
+                </a>
+                <a class="dropdown-item selected" href="#">
+                    <p class="cit">Maintenance</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Bluetooth</p>
+                </a>
+                <a class="dropdown-item" href="#">
+                    <p class="cit">Account & Site Help</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- /* END: GLOBAL NAVIGATION - 2nd Tier Menus - TABLET ONLY
+   ========================================================================== */ -->
 
 
 

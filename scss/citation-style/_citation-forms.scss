@@ -102,6 +102,63 @@
 
 }
 
+
+/* SEARCH
+   ========================================================================== */
+.cit-search {
+  display: flex;
+  flex-wrap: wrap;
+  input {
+    border:none;
+    margin-bottom: 0px;
+    flex: 0 0 88%;
+    height: 40px;
+    border-radius: 0px;
+    background-color: $cit-bg-gray-lightest-2;
+    padding: 0px 16px;
+    font-family: $font-family-plain-cit;
+    &:focus{
+      outline: none;
+    }
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $cit-type-gray-darkest;
+    opacity: 0.5;
+  }
+  :-ms-input-placeholder {
+    color: $cit-type-gray-darkest;
+    opacity: 0.5;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $cit-type-gray-darkest;
+    opacity: 0.5;
+  }
+  button {
+    flex: 0 0 12%;
+    margin-bottom:0px;
+    height: 40px;
+    border: none;
+    background-color: $cit-bg-gray;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    color: $white;
+    font-family: $font-family-plain-cit;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: $brand-primary;
+    }
+  }
+  small a, small p {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 0 0 100%;
+  }
+}
+
+
 /* PASSWORD
    ========================================================================== */
 .cit-input-field {
