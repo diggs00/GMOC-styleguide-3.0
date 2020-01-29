@@ -18412,6 +18412,34 @@ a.btn-link-dark-cit, a.btn-link-light-cit {
     font-family: "GMGlobalSans_Plain", "Arial", sans-serif;
     font-weight: normal; } }
 
+/* LINKS - Blue
+	 ========================================================================== */
+a.btn-link-blue-bold {
+  font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
+  white-space: normal;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  vertical-align: baseline;
+  display: inline;
+  text-decoration: none;
+  border: none;
+  line-height: 1.5rem;
+  color: #2371e7; }
+  a.btn-link-blue-bold, a.btn-link-blue-bold:active, a.btn-link-blue-bold[disabled],
+  fieldset[disabled] a.btn-link-blue-bold {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  a.btn-link-blue-bold, a.btn-link-blue-bold:hover, a.btn-link-blue-bold:focus, a.btn-link-blue-bold:active {
+    color: #2371e7;
+    border-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  a.btn-link-blue-bold.disclaimer {
+    text-underline-position: auto; }
+
 /* CARDS - CITATION Style
    ========================================================================== */
 .card-cit-primary-left, .card-cit-primary-right {
@@ -22151,6 +22179,71 @@ a.close-cit.disabled {
   .nav-signin-card .text {
     clear: right;
     margin-right: 60px; }
+
+.global-footer {
+  min-height: 100%;
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 16px; }
+  @media (min-width: 768px) {
+    .global-footer {
+      padding-top: 28px;
+      padding-bottom: 28px; } }
+  @media (min-width: 992px) {
+    .global-footer {
+      padding-top: 28px;
+      padding-bottom: 28px; } }
+  .global-footer .footer-links .mobile {
+    display: block; }
+    @media (min-width: 768px) {
+      .global-footer .footer-links .mobile {
+        display: none; } }
+    .global-footer .footer-links .mobile ul {
+      margin: 0px;
+      padding: 0px; }
+      .global-footer .footer-links .mobile ul li {
+        margin-bottom: 16px; }
+        .global-footer .footer-links .mobile ul li:last-child {
+          margin-bottom: 0px; }
+  .global-footer .footer-links .tablet {
+    display: none; }
+    @media (min-width: 768px) {
+      .global-footer .footer-links .tablet {
+        display: flex;
+        justify-content: space-between; } }
+    @media (min-width: 992px) {
+      .global-footer .footer-links .tablet {
+        display: none; } }
+    .global-footer .footer-links .tablet ul {
+      margin: 0px;
+      padding: 0px; }
+      .global-footer .footer-links .tablet ul li {
+        margin-bottom: 0px; }
+        .global-footer .footer-links .tablet ul li:last-child {
+          margin-bottom: 0px; }
+        .global-footer .footer-links .tablet ul li a {
+          line-height: 1.8rem;
+          margin-bottom: 0px; }
+  .global-footer .footer-links .desktop {
+    display: none; }
+    @media (min-width: 992px) {
+      .global-footer .footer-links .desktop {
+        display: block; } }
+    .global-footer .footer-links .desktop ul {
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      justify-content: space-between; }
+      .global-footer .footer-links .desktop ul li {
+        margin-bottom: 0px; }
+        .global-footer .footer-links .desktop ul li:last-child {
+          margin-bottom: 0px; }
+        .global-footer .footer-links .desktop ul li a {
+          line-height: 1.8rem;
+          margin-bottom: 0px; }
+  .global-footer .brand-logo {
+    align-self: flex-end;
+    text-align: right; }
 
 .background-dark {
   background-color: black;

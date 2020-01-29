@@ -218,3 +218,41 @@ a {
    }
  }
 
+
+/* LINKS - Blue
+	 ========================================================================== */
+a {
+	&.btn-link-blue-bold {
+		font-family: $font-family-bold-cit;
+		white-space: normal;
+		font-weight: normal;
+		cursor: pointer;
+		padding: 0px 0px 0px 0px;
+		text-align: left;
+		vertical-align: baseline;
+		display: inline;
+		text-decoration: none;
+		border: none;
+		line-height: 1.5rem;
+		color: $blue-gm;
+		&,
+		&:active,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: transparent;
+			@include box-shadow(none);
+		}
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			color: $blue-gm;
+			border-color: none;
+			@include box-shadow(none);
+		}
+		&.disclaimer {
+			text-underline-position: auto;
+		}
+	}
+}
+
