@@ -17864,7 +17864,7 @@ h6.cit, h6.cit.heavy, span.h6.cit {
   .cit-search input {
     border: none;
     margin-bottom: 0px;
-    flex: 0 0 88%;
+    flex-grow: 1;
     height: 40px;
     border-radius: 0px;
     background-color: #f4f4f4;
@@ -17884,10 +17884,11 @@ h6.cit, h6.cit.heavy, span.h6.cit {
     color: #343a40;
     opacity: 0.5; }
   .cit-search button {
-    flex: 0 0 12%;
+    flex-grow: 1;
     margin-bottom: 0px;
     height: 40px;
     border: none;
+    padding: 0px;
     background-color: #343a40;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

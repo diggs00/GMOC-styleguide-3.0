@@ -111,7 +111,8 @@
   input {
     border:none;
     margin-bottom: 0px;
-    flex: 0 0 88%;
+    // flex: 0 0 88%;
+    flex-grow: 1;
     height: 40px;
     border-radius: 0px;
     background-color: $cit-bg-gray-lightest-2;
@@ -134,10 +135,11 @@
     opacity: 0.5;
   }
   button {
-    flex: 0 0 12%;
+    flex-grow: 1;
     margin-bottom:0px;
     height: 40px;
     border: none;
+    padding:0px;
     background-color: $cit-bg-gray;
     border-top-right-radius:5px;
     border-bottom-right-radius:5px;
