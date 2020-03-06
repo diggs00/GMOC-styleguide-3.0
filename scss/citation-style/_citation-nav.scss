@@ -38,21 +38,13 @@
             width: 80px;
           }
         }
-        .arrow {
-          width: 80px;
-          position: relative;
-          // Arrow
-          &::before {
-            content:'';
-            position: absolute;
-            top: -5px;
-            left: 50%;
-            margin: 0 auto;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 5px 0 5px;
-            border-color: $cit-type-gray-dark transparent transparent transparent;
+        .nav-dropdown-arrow {
+            position: relative;
+          & img.arrow {
+              position: absolute;
+              top: -7px;
+              left: 36px;
+              margin: 0 auto;
           }
         }
         p.cit {
@@ -227,7 +219,7 @@
     li {
       display: flex;
       align-items: center;
-      margin: 0px 24px 0px 0px;
+      margin: 0px 13px 0px 0px;
       position: relative;
       padding-bottom:0px;
       border-bottom: none;
@@ -308,7 +300,7 @@
       margin-right: 0px;
       span.bar {
         cursor: default;
-        margin-right: 24px;
+        margin-right: 13px;
         padding-bottom: 3px;
       }
       span.icon-global-nav-menu {
@@ -1189,7 +1181,7 @@
     li {
       display: flex;
       align-items: center;
-      margin: 0px 24px 0px 0px;
+      margin: 0px 13px 0px 0px;
       position: relative;
       padding-bottom:0px;
       border-bottom: none;
@@ -1270,7 +1262,7 @@
       margin-right: 0px;
       span.bar {
         cursor: default;
-        margin-right: 24px;
+        margin-right: 13px;
         padding-bottom: 3px;
       }
       span.icon-global-nav-account {
@@ -1657,21 +1649,13 @@
             width: 80px;
           }
         }
-        .arrow {
-          width: 80px;
-          position: relative;
-          // Arrow
-          &::before {
-            content:'';
-            position: absolute;
-            top: -5px;
-            left: 41%;
-            margin: 0 auto;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 5px 0 5px;
-            border-color: $cit-type-gray-dark transparent transparent transparent;
+        .nav-dropdown-arrow {
+            position: relative;
+          & img.arrow {
+              position: absolute;
+              top: -7px;
+              left: 32px;
+              margin: 0 auto;
           }
         }
         p.cit {
@@ -1848,7 +1832,7 @@
     li {
       display: flex;
       align-items: center;
-      margin: 0px 24px 0px 0px;
+      margin: 0px 13px 0px 0px;
       position: relative;
       padding-bottom:0px;
       border-bottom: none;
@@ -1929,7 +1913,7 @@
       margin-right: 0px;
       span.bar {
         cursor: default;
-        margin-right: 24px;
+        margin-right: 13px;
         padding-bottom: 3px;
       }
       span.icon-global-nav-menu {
