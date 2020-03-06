@@ -1,8 +1,6 @@
 /* CARDS - CITATION Style
    ========================================================================== */
 
-
-
 // PRIMARY CARDS:
 // --------------------------------------------------
 
@@ -605,6 +603,245 @@
 		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
 	}
 }
+
+
+
+// PLAN LINEUP CARDS:
+// --------------------------------------------------
+.card-cit-plan-lineup-mobile {
+	display: block;
+	@media (min-width: $screen-tablet) {
+		display: none;
+	}
+	.carousel {
+		margin-left: 0px;
+		margin-right: 0px;
+		.carousel-indicators {
+		  position: absolute;
+		  right: 0;
+		  // bottom: 0;
+		  margin-bottom: 0px;
+		  bottom: 0px;
+		  left: 0;
+		  z-index: 15;
+		  display: flex;
+		  justify-content: center;
+		  padding-left: 0; // override <ol> default
+		  // Use the .carousel-control's width as margin so we don't overlay those
+		  margin-right: $carousel-control-width;
+		  margin-left: $carousel-control-width;
+		  list-style: none;
+		  @media (min-width: $screen-tablet) {
+		    margin-bottom: 30px;
+		  }
+
+
+		  li {
+		    box-sizing: content-box;
+		    flex: 0 1 auto;
+		    // width: $carousel-indicator-width;
+		    // height: $carousel-indicator-height;
+		    width: 8px;
+		    height: 8px;
+		    margin-right: $carousel-indicator-spacer;
+		    margin-left: $carousel-indicator-spacer;
+		    padding-left: 0px;
+		    text-indent: -999px;
+		    cursor: pointer;
+		    background-color: $transparent;
+		    background-clip: padding-box;
+		    // Use transparent borders to increase the hit area by 10px on top and bottom.
+		    // border-top: $carousel-indicator-hit-area-height solid transparent;
+		    // border-bottom: $carousel-indicator-hit-area-height solid transparent;
+		    border-radius: 50%;
+		    border-style: solid;
+		    border-width: 2px;
+		    border-color: $cit-bg-gray;
+		    opacity: 1;
+		    margin-bottom: 0px;
+		    @include transition($carousel-indicator-transition);
+		    @media (min-width: $screen-tablet) {
+		      width: 14px;
+		      height: 14px;
+		    }
+		  }
+
+		  .active {
+		    opacity: 1;
+		    background-color: $cit-bg-gray;
+		    border-style: none;
+		    border-width: 0px;
+		    border-color: $cit-bg-gray;
+		    width: 12px;
+		    height: 12px;
+		    @media (min-width: $screen-tablet) {
+		      width: 18px;
+		      height: 18px;
+		    }
+		  }
+		}
+		.carousel-inner {
+			.carousel-item {
+				.card-cit-plan-lineup {
+					cursor: default;
+					display: flex;
+					height: 509px !important;
+					&:hover {
+						outline: 0;
+						-webkit-box-shadow: none;
+						-moz-box-shadow: none;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.card-cit-plan-lineup-desktop {
+	display: none;
+	@media (min-width: $screen-tablet) {
+		display: flex;
+	}
+}
+
+
+.card-cit-plan-lineup {
+	border: 1px solid $cit-divider-gray;
+	background-color: $cit-bg-gray-lighter;
+	cursor: pointer;
+	position: relative;
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	width:100%;			
+	box-shadow: none;
+	&.disabled {
+		cursor: default;
+		background-color: $transparent;
+		&:hover {
+			outline: 0;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		}
+		.title {
+			color: $cit-divider-gray-dark;
+			h4 {
+				color: $cit-divider-gray-dark;
+			}
+			.citation-bar {
+				background-color: $cit-divider-gray-dark;
+			}
+		}
+		.content {
+			color: $cit-divider-gray-dark;
+			background-color: $transparent;
+			ul {
+				border-color: $cit-divider-gray;
+			}
+			h6{
+				color: $cit-divider-gray-dark;
+			}
+		}
+		.price {
+			color: $cit-divider-gray-dark;
+			background-color: $transparent;
+			h3 {
+				color: $cit-divider-gray-dark;
+			}
+			a {
+				color: $cit-divider-gray-dark;
+				cursor: default;
+			}
+		}
+	}
+	&.selected {
+		cursor: default;
+		-webkit-box-shadow: inset 0 0 0 4px $brand-onstar;
+		-moz-box-shadow: inset 0 0 0 4px $brand-onstar;
+		box-shadow: inset 0 0 0 4px $brand-onstar;
+		// border: 4px solid $brand-onstar;
+		&:hover {
+			box-shadow: inset 0 0 0 4px $brand-onstar;
+		}
+		.price {
+			h5 {
+				color: $brand-onstar;
+				span {
+					font-size: $font-size-base-cit;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.title {
+		padding: 45px 30px 30px 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $white;
+		position: relative;
+		.citation-tag {
+			background-color: $onstar;
+	  		position: absolute;
+	        top: 14px;
+	        left: 50%;
+	        margin-right: -50%;
+	        transform: translate(-50%, -50%);
+		}
+		.citation-bar {
+			margin-bottom: 15px;
+			background-color: $onstar;
+		}
+	}
+	.content {
+		background-color: $cit-bg-gray-lighter;
+		padding: 30px 26px 30px 26px;
+		display: flex;
+		flex-direction: column;
+		ul {
+			margin-bottom: 0px;
+			li {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+	.price {
+		margin-top: auto;
+		background-color: $cit-bg-gray-lighter;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 26px 30px 26px;
+		hr {
+			width:100%;
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
+	}
+
+	sup a { 
+		display: inline;
+		text-align: left;
+	}
+	a {
+		display: inline-block;
+		text-align: center;
+	}
+	&:hover {
+		outline: 0;
+		-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+	}
+}
+
+
 
 
 
