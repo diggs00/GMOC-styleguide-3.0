@@ -1544,7 +1544,7 @@
               p.cit {
                 margin: 0px;
                 font-size: 14px;
-                word-break: break-all;
+                overflow-wrap: break-word;
                 &:first-child {
                   font-size: 18px;
                   font-family: $font-family-bold-cit;
