@@ -20907,6 +20907,7 @@ a.close-cit.disabled {
               color: #343a40;
               text-decoration: underline; }
             .g-nav-desktop .g-nav-menu .support.dropdown .dropdown-menu .dropdown-item-container a.dropdown-item-top p.cit {
+              overflow-wrap: break-word;
               margin: 0px; }
             .g-nav-desktop .g-nav-menu .support.dropdown .dropdown-menu .dropdown-item-container a.dropdown-item-top.selected {
               background-color: #f4f4f4; }
@@ -21254,7 +21255,8 @@ a.close-cit.disabled {
             text-decoration: none; }
           .g-nav-desktop ul.g-nav-menu-right .sign-in.dropdown .dropdown-menu .dropdown-item-container .dropdown-item-top p.cit {
             margin: 0px;
-            font-size: 14px; }
+            font-size: 14px;
+            word-break: break-all; }
             .g-nav-desktop ul.g-nav-menu-right .sign-in.dropdown .dropdown-menu .dropdown-item-container .dropdown-item-top p.cit:first-child {
               font-size: 18px;
               font-family: "GMGlobalSans_Bold", "Arial", sans-serif; }
@@ -21760,7 +21762,8 @@ a.close-cit.disabled {
             text-decoration: none; }
           .g-nav-tablet ul.g-nav-menu-right .menu.dropdown .dropdown-menu .dropdown-item-container .dropdown-item-top p.cit {
             margin: 0px;
-            font-size: 14px; }
+            font-size: 14px;
+            overflow-wrap: break-word; }
             .g-nav-tablet ul.g-nav-menu-right .menu.dropdown .dropdown-menu .dropdown-item-container .dropdown-item-top p.cit:first-child {
               font-size: 18px;
               font-family: "GMGlobalSans_Bold", "Arial", sans-serif; }
