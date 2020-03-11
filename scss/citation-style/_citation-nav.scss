@@ -1091,6 +1091,7 @@
                 text-decoration: underline;
               }
               p.cit {
+                  overflow-wrap: break-word;
                   margin: 0px;
                 }
               &.selected {
@@ -2193,6 +2194,7 @@
               p.cit {
                 margin: 0px;
                 font-size: 14px;
+                overflow-wrap: break-word;
                 &:first-child {
                   font-size: 18px;
                   font-family: $font-family-bold-cit;
