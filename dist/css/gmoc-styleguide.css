@@ -20540,6 +20540,8 @@ a.close-cit.disabled {
   @media (min-width: 992px) {
     .g-nav-desktop {
       display: flex; } }
+  .g-nav-desktop .brand-logo img {
+    width: 80px; }
   .g-nav-desktop .g-nav-menu {
     display: flex;
     align-items: center;
