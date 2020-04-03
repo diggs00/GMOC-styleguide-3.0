@@ -16431,6 +16431,49 @@ ul.switch-list-inline label {
   border-style: solid;
   border-width: 1px; }
 
+/* PHONE INPUT WITH AREA CODE BOX
+   ========================================================================== */
+.phone-input-areacode {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible; }
+  .phone-input-areacode .has-error {
+    color: red; }
+  .phone-input-areacode .area-code {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    margin-bottom: 0px;
+    height: 43px;
+    border-left: 1px solid #acacac;
+    border-top: 1px solid #acacac;
+    border-bottom: 1px solid #acacac;
+    padding: 10px;
+    background-color: #ddd; }
+  .phone-input-areacode input {
+    margin-bottom: 0px;
+    width: auto;
+    flex-grow: 1;
+    height: 43px;
+    border-radius: 0px;
+    border-color: #acacac;
+    padding: 0px 16px;
+    box-shadow: none;
+    color: #454545; }
+    .phone-input-areacode input:focus {
+      box-shadow: none; }
+  .phone-input-areacode p.help-block-below {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background-color: pink;
+    height: 0; }
+
 @font-face {
   font-family: 'icon-graphic';
   src: url("../../fonts/icon-graphic.eot?3atqj1");
