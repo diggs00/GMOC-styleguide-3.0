@@ -248,6 +248,7 @@
         }
       }
       &.search {
+        position: static;
         span.icon-global-nav-search {
           padding-bottom:2px;
           cursor: pointer;

@@ -20288,12 +20288,14 @@ a.close-cit.disabled {
           font-family: "GMGlobalSans_Bold", "Arial", sans-serif;
           color: #ffffff;
           margin: 0px; }
-      .g-nav-mobile ul.g-nav-menu-right li.search span.icon-global-nav-search {
-        padding-bottom: 2px;
-        cursor: pointer;
-        border-bottom: 1px solid transparent; }
-        .g-nav-mobile ul.g-nav-menu-right li.search span.icon-global-nav-search:hover {
-          border-bottom: 1px solid #343a40; }
+      .g-nav-mobile ul.g-nav-menu-right li.search {
+        position: static; }
+        .g-nav-mobile ul.g-nav-menu-right li.search span.icon-global-nav-search {
+          padding-bottom: 2px;
+          cursor: pointer;
+          border-bottom: 1px solid transparent; }
+          .g-nav-mobile ul.g-nav-menu-right li.search span.icon-global-nav-search:hover {
+            border-bottom: 1px solid #343a40; }
       .g-nav-mobile ul.g-nav-menu-right li.cart span.icon-global-nav-cart {
         padding-bottom: 2px;
         cursor: pointer;
