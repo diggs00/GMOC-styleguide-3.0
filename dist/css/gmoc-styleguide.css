@@ -16476,10 +16476,11 @@ ul.switch-list-inline label {
 
 @font-face {
   font-family: 'icon-graphic';
-  src: url("../../fonts/icon-graphic.eot?3atqj1");
-  src: url("../../fonts/icon-graphic.eot?3atqj1#iefix") format("embedded-opentype"), url("../../fonts/icon-graphic.woff?3atqj1") format("woff"), url("../../fonts/icon-graphic.ttf?3atqj1") format("truetype"), url("../../fonts/icon-graphic.svg?3atqj1#icon-graphic") format("svg");
+  src: url("../../fonts/icon-graphic.eot?4t6f3e");
+  src: url("../../fonts/icon-graphic.eot?4t6f3e#iefix") format("embedded-opentype"), url("../../fonts/icon-graphic.ttf?4t6f3e") format("woff"), url("../../fonts/icon-graphic.woff?4t6f3e") format("truetype"), url("../../fonts/icon-graphic.svg?4t6f3e#icon-graphic") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: block; }
 
 @font-face {
   font-family: 'icon-ui';
@@ -16518,9 +16519,9 @@ ul.switch-list-inline label {
   font-style: normal;
   font-display: block; }
 
-[class^="icon-onstar"], [class*=" icon-onstar"] {
+[class^="icon-graphic"], [class*=" icon-graphic"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icon-onstar' !important;
+  font-family: 'icon-graphic' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -16531,66 +16532,323 @@ ul.switch-list-inline label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-onstar-gaurdian:before {
+/* ICONOGRAPHY GRAPHIC
+ * -------------------------- */
+.icon-graphic-addvehicle:before {
   content: "\e900"; }
 
-[class^="icon-global-nav"], [class*=" icon-global-nav"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icon-global-nav' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-global-nav-account:before {
-  content: "\e90f"; }
-
-.icon-global-nav-cart:before {
-  content: "\e910"; }
-
-.icon-global-nav-globe:before {
-  content: "\e911"; }
-
-.icon-global-nav-signout:before {
-  content: "\e912"; }
-
-.icon-global-nav-menu:before {
-  content: "\e913"; }
-
-.icon-global-nav-notification:before {
-  content: "\e914"; }
-
-.icon-global-nav-search:before {
-  content: "\e915"; }
-
-.icon-global-nav-trash:before {
-  content: "\e916"; }
-
-[class^="icon-carousel"], [class*=" icon-carousel"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icon-carousel' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-carousel-dot:before {
-  content: "\e900"; }
-
-.icon-carousel-dotselected:before {
+.icon-graphic-android-home:before {
   content: "\e901"; }
 
-[class^="icon-ui-"], [class*=" icon-ui-"] {
+.icon-graphic-apps:before {
+  content: "\e902"; }
+
+.icon-graphic-bluetooth:before {
+  content: "\e903";
+  color: #737373; }
+
+.icon-graphic-buick:before {
+  content: "\e904"; }
+
+.icon-graphic-cadillac:before {
+  content: "\e905"; }
+
+.icon-graphic-car:before {
+  content: "\e906"; }
+
+.icon-graphic-carwifi:before {
+  content: "\e907"; }
+
+.icon-graphic-cellphone:before {
+  content: "\e908";
+  color: #7e7e7e; }
+
+.icon-graphic-chargedelayed:before {
+  content: "\e909"; }
+
+.icon-graphic-chargeimmediate:before {
+  content: "\e90a"; }
+
+.icon-graphic-chargeratedelayed:before {
+  content: "\e90b"; }
+
+.icon-graphic-checkbox:before {
+  content: "\e90c";
+  color: #737373; }
+
+.icon-graphic-chevrolet:before {
+  content: "\e90d"; }
+
+.icon-graphic-clipboard:before {
+  content: "\e90e";
+  color: #7e7e7e; }
+
+.icon-graphic-coffee:before {
+  content: "\e90f"; }
+
+.icon-graphic-dashboard:before {
+  content: "\e910"; }
+
+.icon-graphic-document:before {
+  content: "\e911"; }
+
+.icon-graphic-documentoutline:before {
+  content: "\e912"; }
+
+.icon-graphic-electric:before {
+  content: "\e913"; }
+
+.icon-graphic-featurearticles:before {
+  content: "\e914"; }
+
+.icon-graphic-garage:before {
+  content: "\e915"; }
+
+.icon-graphic-gm:before {
+  content: "\e916"; }
+
+.icon-graphic-gmc:before {
+  content: "\e917"; }
+
+.icon-graphic-graph:before {
+  content: "\e918"; }
+
+.icon-graphic-graphchart:before {
+  content: "\e919"; }
+
+.icon-graphic-keys:before {
+  content: "\e91a"; }
+
+.icon-graphic-learnabout:before {
+  content: "\e91b"; }
+
+.icon-graphic-location:before {
+  content: "\e91c"; }
+
+.icon-graphic-map:before {
+  content: "\e91d";
+  color: #7e7e7e; }
+
+.icon-graphic-maps:before {
+  content: "\e91e"; }
+
+.icon-graphic-message:before {
+  content: "\e91f"; }
+
+.icon-graphic-messages:before {
+  content: "\e920"; }
+
+.icon-graphic-messagesopen:before {
+  content: "\e921"; }
+
+.icon-graphic-mileage:before {
+  content: "\e922"; }
+
+.icon-graphic-mobile:before {
+  content: "\e923";
+  color: #737373; }
+
+.icon-graphic-music:before {
+  content: "\e924"; }
+
+.icon-graphic-myplans:before {
+  content: "\e925"; }
+
+.icon-graphic-nav:before {
+  content: "\e926";
+  color: #737373; }
+
+.icon-graphic-notifications:before {
+  content: "\e927"; }
+
+.icon-graphic-number1:before {
+  content: "\e928";
+  color: #134c9b; }
+
+.icon-graphic-number2:before {
+  content: "\e929";
+  color: #134c9b; }
+
+.icon-graphic-number3:before {
+  content: "\e92a";
+  color: #134c9b; }
+
+.icon-graphic-number4:before {
+  content: "\e92b";
+  color: #134c9b; }
+
+.icon-graphic-number5:before {
+  content: "\e92c";
+  color: #134c9b; }
+
+.icon-graphic-number6:before {
+  content: "\e92d";
+  color: #134c9b; }
+
+.icon-graphic-offers:before {
+  content: "\e92e"; }
+
+.icon-graphic-oillife:before {
+  content: "\e92f"; }
+
+.icon-graphic-oillifemeter:before {
+  content: "\e930"; }
+
+.icon-graphic-onStar-authorizeddrivers:before {
+  content: "\e931"; }
+
+.icon-graphic-onstar-average-speed:before {
+  content: "\e932"; }
+
+.icon-graphic-onStar-brand:before {
+  content: "\e933"; }
+
+.icon-graphic-onstar-distance-driven:before {
+  content: "\e934"; }
+
+.icon-graphic-onstar-driver-score:before {
+  content: "\e935"; }
+
+.icon-graphic-onStar-emergency:before {
+  content: "\e936"; }
+
+.icon-graphic-onStar-familylink:before {
+  content: "\e937"; }
+
+.icon-graphic-onstar-fuel-economy:before {
+  content: "\e938"; }
+
+.icon-graphic-onStar-gmcard:before {
+  content: "\e939"; }
+
+.icon-graphic-onStar-handsfree:before {
+  content: "\e93a"; }
+
+.icon-graphic-onstar-hard-acceleration:before {
+  content: "\e93b"; }
+
+.icon-graphic-onstar-hard-braking:before {
+  content: "\e93c"; }
+
+.icon-graphic-onstar-idle-time:before {
+  content: "\e93d"; }
+
+.icon-graphic-onStar-insurance:before {
+  content: "\e93e"; }
+
+.icon-graphic-onstar-late-night-driving:before {
+  content: "\e93f"; }
+
+.icon-graphic-onStar-nav:before {
+  content: "\e940"; }
+
+.icon-graphic-onStar-paymethod:before {
+  content: "\e941"; }
+
+.icon-graphic-onStar-pin:before {
+  content: "\e942"; }
+
+.icon-graphic-onStar-profile:before {
+  content: "\e943"; }
+
+.icon-graphic-onStar-roadsideassist:before {
+  content: "\e944"; }
+
+.icon-graphic-onStar-security:before {
+  content: "\e945"; }
+
+.icon-graphic-onStar-siriusxm:before {
+  content: "\e946"; }
+
+.icon-graphic-onstar-speed-above-80:before {
+  content: "\e947"; }
+
+.icon-graphic-onStar-vehiclemanager:before {
+  content: "\e948"; }
+
+.icon-graphic-onStar-wifihotspot:before {
+  content: "\e949"; }
+
+.icon-graphic-onstar:before {
+  content: "\e94a"; }
+
+.icon-graphic-onstar2:before {
+  content: "\e94b";
+  color: #f3bb2f; }
+
+.icon-graphic-phone:before {
+  content: "\e94c"; }
+
+.icon-graphic-pluggedin:before {
+  content: "\e94d"; }
+
+.icon-graphic-profile:before {
+  content: "\e94e"; }
+
+.icon-graphic-pulse:before {
+  content: "\e94f"; }
+
+.icon-graphic-pulsefill:before {
+  content: "\e950"; }
+
+.icon-graphic-recalls:before {
+  content: "\e951"; }
+
+.icon-graphic-secure:before {
+  content: "\e952"; }
+
+.icon-graphic-service:before {
+  content: "\e953"; }
+
+.icon-graphic-settings:before {
+  content: "\e954"; }
+
+.icon-graphic-shop:before {
+  content: "\e955"; }
+
+.icon-graphic-shopbag:before {
+  content: "\e956";
+  color: #7d7d7d; }
+
+.icon-graphic-star:before {
+  content: "\e957"; }
+
+.icon-graphic-tcpsaccepts:before {
+  content: "\e958"; }
+
+.icon-graphic-tcpsclock:before {
+  content: "\e959"; }
+
+.icon-graphic-tcpspencil:before {
+  content: "\e95a"; }
+
+.icon-graphic-time:before {
+  content: "\e95b"; }
+
+.icon-graphic-tools:before {
+  content: "\e95c"; }
+
+.icon-graphic-truck:before {
+  content: "\e95d"; }
+
+.icon-graphic-unplugged:before {
+  content: "\e95e"; }
+
+.icon-graphic-vehicles:before {
+  content: "\e95f"; }
+
+.icon-graphic-voice:before {
+  content: "\e960"; }
+
+.icon-graphic-warranty:before {
+  content: "\e961"; }
+
+.icon-graphic-wifi:before {
+  content: "\e962"; }
+
+/* ICONOGRAPHY UI
+ * -------------------------- */
+[class^="icon-ui"], [class*=" icon-ui"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icon-ui';
   speak: none;
@@ -16603,65 +16861,6 @@ ul.switch-list-inline label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-[class^="icon-graphic-"], [class*=" icon-graphic-"] {
-  font-family: 'icon-graphic';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-[class^="icon-newnav"], [class*=" icon-newnav"] {
-  font-family: 'icon-newnav';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-newnav-search:before {
-  content: "\e800"; }
-
-.icon-newnav-account:before {
-  content: "\e801"; }
-
-.icon-newnav-clipboard:before {
-  content: "\e601"; }
-
-.icon-newnav-help:before {
-  content: "\e602"; }
-
-.icon-newnav-home:before {
-  content: "\e603"; }
-
-.icon-newnav-key:before {
-  content: "\e604"; }
-
-.icon-newnav-map:before {
-  content: "\e605"; }
-
-.icon-newnav-notification:before {
-  content: "\e606"; }
-
-.icon-newnav-onstar:before {
-  content: "\e607"; }
-
-.icon-newnav-shop:before {
-  content: "\e608"; }
-
-.icon-newnav-vehicle:before {
-  content: "\e609"; }
-
-/* ICONOGRAPHY UI
- * -------------------------- */
 .icon-ui-account:before {
   content: "\e900"; }
 
@@ -16842,301 +17041,122 @@ ul.switch-list-inline label {
 .icon-ui-view:before {
   content: "\e93b"; }
 
-/* ICONOGRAPHY GRAPHIC
- * -------------------------- */
-.icon-graphic-addvehicle:before {
+[class^="icon-newnav"], [class*=" icon-newnav"] {
+  font-family: 'icon-newnav';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-newnav-search:before {
+  content: "\e800"; }
+
+.icon-newnav-account:before {
+  content: "\e801"; }
+
+.icon-newnav-clipboard:before {
+  content: "\e601"; }
+
+.icon-newnav-help:before {
+  content: "\e602"; }
+
+.icon-newnav-home:before {
+  content: "\e603"; }
+
+.icon-newnav-key:before {
+  content: "\e604"; }
+
+.icon-newnav-map:before {
+  content: "\e605"; }
+
+.icon-newnav-notification:before {
+  content: "\e606"; }
+
+.icon-newnav-onstar:before {
+  content: "\e607"; }
+
+.icon-newnav-shop:before {
+  content: "\e608"; }
+
+.icon-newnav-vehicle:before {
+  content: "\e609"; }
+
+[class^="icon-carousel"], [class*=" icon-carousel"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-carousel' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-carousel-dot:before {
   content: "\e900"; }
 
-.icon-graphic-android-home:before {
+.icon-carousel-dotselected:before {
   content: "\e901"; }
 
-.icon-graphic-apps:before {
-  content: "\e902"; }
+[class^="icon-global-nav"], [class*=" icon-global-nav"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-global-nav' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.icon-graphic-bluetooth:before {
-  content: "\e903"; }
-
-.icon-graphic-buick:before {
-  content: "\e904"; }
-
-.icon-graphic-cadillac:before {
-  content: "\e905"; }
-
-.icon-graphic-car:before {
-  content: "\e906"; }
-
-.icon-graphic-carwifi:before {
-  content: "\e907"; }
-
-.icon-graphic-cellphone:before {
-  content: "\e908"; }
-
-.icon-graphic-chargedelayed:before {
-  content: "\e909"; }
-
-.icon-graphic-chargeimmediate:before {
-  content: "\e90a"; }
-
-.icon-graphic-chargeratedelayed:before {
-  content: "\e90b"; }
-
-.icon-graphic-checkbox:before {
-  content: "\e90c"; }
-
-.icon-graphic-chevrolet:before {
-  content: "\e90d"; }
-
-.icon-graphic-clipboard:before {
-  content: "\e90e"; }
-
-.icon-graphic-coffee:before {
+.icon-global-nav-account:before {
   content: "\e90f"; }
 
-.icon-graphic-dashboard:before {
+.icon-global-nav-cart:before {
   content: "\e910"; }
 
-.icon-graphic-document:before {
+.icon-global-nav-globe:before {
   content: "\e911"; }
 
-.icon-graphic-documentoutline:before {
+.icon-global-nav-signout:before {
   content: "\e912"; }
 
-.icon-graphic-electric:before {
+.icon-global-nav-menu:before {
   content: "\e913"; }
 
-.icon-graphic-featurearticles:before {
+.icon-global-nav-notification:before {
   content: "\e914"; }
 
-.icon-graphic-garage:before {
+.icon-global-nav-search:before {
   content: "\e915"; }
 
-.icon-graphic-gm:before {
+.icon-global-nav-trash:before {
   content: "\e916"; }
 
-.icon-graphic-gmc:before {
-  content: "\e917"; }
-
-.icon-graphic-graph:before {
-  content: "\e918"; }
-
-.icon-graphic-graphchart:before {
-  content: "\e919"; }
-
-.icon-graphic-keys:before {
-  content: "\e91a"; }
-
-.icon-graphic-learnabout:before {
-  content: "\e91b"; }
-
-.icon-graphic-location:before {
-  content: "\e91c"; }
-
-.icon-graphic-map:before {
-  content: "\e91d"; }
-
-.icon-graphic-maps:before {
-  content: "\e91e"; }
-
-.icon-graphic-message:before {
-  content: "\e91f"; }
-
-.icon-graphic-messages:before {
-  content: "\e920"; }
-
-.icon-graphic-messagesopen:before {
-  content: "\e921"; }
-
-.icon-graphic-mileage:before {
-  content: "\e922"; }
-
-.icon-graphic-mobile:before {
-  content: "\e923"; }
-
-.icon-graphic-music:before {
-  content: "\e924"; }
-
-.icon-graphic-nav:before {
-  content: "\e925"; }
-
-.icon-graphic-notifications:before {
-  content: "\e926"; }
-
-.icon-graphic-number1:before {
-  content: "\e927"; }
-
-.icon-graphic-number2:before {
-  content: "\e928"; }
-
-.icon-graphic-number3:before {
-  content: "\e929"; }
-
-.icon-graphic-number4:before {
-  content: "\e92a"; }
-
-.icon-graphic-number5:before {
-  content: "\e92b"; }
-
-.icon-graphic-number6:before {
-  content: "\e92c"; }
-
-.icon-graphic-offers:before {
-  content: "\e92d"; }
-
-.icon-graphic-oillife:before {
-  content: "\e92e"; }
-
-.icon-graphic-oillifemeter:before {
-  content: "\e92f"; }
-
-.icon-graphic-onStar-authorizeddrivers:before {
-  content: "\e930"; }
-
-.icon-graphic-onstar-average-speed:before {
-  content: "\e931"; }
-
-.icon-graphic-onStar-brand:before {
-  content: "\e932"; }
-
-.icon-graphic-onstar-distance-driven:before {
-  content: "\e933"; }
-
-.icon-graphic-onstar-driver-score:before {
-  content: "\e934"; }
-
-.icon-graphic-onStar-emergency:before {
-  content: "\e935"; }
-
-.icon-graphic-onStar-familylink:before {
-  content: "\e936"; }
-
-.icon-graphic-onstar-fuel-economy:before {
-  content: "\e937"; }
-
-.icon-graphic-onStar-gmcard:before {
-  content: "\e938"; }
-
-.icon-graphic-onStar-handsfree:before {
-  content: "\e939"; }
-
-.icon-graphic-onstar-hard-acceleration:before {
-  content: "\e93a"; }
-
-.icon-graphic-onstar-hard-braking:before {
-  content: "\e93b"; }
-
-.icon-graphic-onstar-idle-time:before {
-  content: "\e93c"; }
-
-.icon-graphic-onStar-insurance:before {
-  content: "\e93d"; }
-
-.icon-graphic-onstar-late-night-driving:before {
-  content: "\e93e"; }
-
-.icon-graphic-onStar-nav:before {
-  content: "\e93f"; }
-
-.icon-graphic-onStar-paymethod:before {
-  content: "\e940"; }
-
-.icon-graphic-onStar-pin:before {
-  content: "\e941"; }
-
-.icon-graphic-onStar-profile:before {
-  content: "\e942"; }
-
-.icon-graphic-onStar-roadsideassist:before {
-  content: "\e943"; }
-
-.icon-graphic-onStar-security:before {
-  content: "\e944"; }
-
-.icon-graphic-onStar-siriusxm:before {
-  content: "\e945"; }
-
-.icon-graphic-onstar-speed-above-80:before {
-  content: "\e946"; }
-
-.icon-graphic-onStar-vehiclemanager:before {
-  content: "\e947"; }
-
-.icon-graphic-onStar-wifihotspot:before {
-  content: "\e948"; }
-
-.icon-graphic-onstar:before {
-  content: "\e949"; }
-
-.icon-graphic-onstar2:before {
-  content: "\e94a"; }
-
-.icon-graphic-phone:before {
-  content: "\e94b"; }
-
-.icon-graphic-pluggedin:before {
-  content: "\e94c"; }
-
-.icon-graphic-profile:before {
-  content: "\e94d"; }
-
-.icon-graphic-pulse:before {
-  content: "\e94e"; }
-
-.icon-graphic-pulsefill:before {
-  content: "\e94f"; }
-
-.icon-graphic-recalls:before {
-  content: "\e950"; }
-
-.icon-graphic-secure:before {
-  content: "\e951"; }
-
-.icon-graphic-service:before {
-  content: "\e952"; }
-
-.icon-graphic-settings:before {
-  content: "\e953"; }
-
-.icon-graphic-shop:before {
-  content: "\e954"; }
-
-.icon-graphic-shopbag:before {
-  content: "\e955"; }
-
-.icon-graphic-star:before {
-  content: "\e956"; }
-
-.icon-graphic-tcpsaccepts:before {
-  content: "\e957"; }
-
-.icon-graphic-tcpsclock:before {
-  content: "\e958"; }
-
-.icon-graphic-tcpspencil:before {
-  content: "\e959"; }
-
-.icon-graphic-time:before {
-  content: "\e95a"; }
-
-.icon-graphic-tools:before {
-  content: "\e95b"; }
-
-.icon-graphic-truck:before {
-  content: "\e95c"; }
-
-.icon-graphic-unplugged:before {
-  content: "\e95d"; }
-
-.icon-graphic-vehicles:before {
-  content: "\e95e"; }
-
-.icon-graphic-voice:before {
-  content: "\e95f"; }
-
-.icon-graphic-warranty:before {
-  content: "\e960"; }
-
-.icon-graphic-wifi:before {
-  content: "\e961"; }
+[class^="icon-onstar"], [class*=" icon-onstar"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-onstar' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-onstar-gaurdian:before {
+  content: "\e900"; }
 
 button.btn > span,
 button.btn-link > span,
