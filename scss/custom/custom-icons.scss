@@ -90,7 +90,9 @@
 
 /* ICONOGRAPHY GRAPHIC
  * -------------------------- */
-
+.icon-graphic-family-sharing:before {
+  content: "\e963";
+}
 .icon-graphic-addvehicle:before {
   content: "\e900";
 }
