@@ -22479,7 +22479,7 @@ a.close-cit.disabled {
       .global-footer .footer-links .desktop ul:last-child {
         margin-right: 0px; }
       .global-footer .footer-links .desktop ul li {
-        margin-bottom: 20px; }
+        margin-bottom: 0px; }
         .global-footer .footer-links .desktop ul li:last-child {
           margin-bottom: 0px; }
         .global-footer .footer-links .desktop ul li a {
@@ -22489,6 +22489,52 @@ a.close-cit.disabled {
     @media (min-width: 992px) {
       .global-footer .brand-logo {
         margin-top: 0px; } }
+
+.global-footer-new {
+  min-height: 100%;
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 16px; }
+  @media (min-width: 768px) {
+    .global-footer-new {
+      padding-top: 28px;
+      padding-bottom: 28px; } }
+  @media (min-width: 992px) {
+    .global-footer-new {
+      padding-top: 28px;
+      padding-bottom: 28px; } }
+  .global-footer-new .footer-links .mobile {
+    display: block; }
+    @media (min-width: 992px) {
+      .global-footer-new .footer-links .mobile {
+        display: none; } }
+    .global-footer-new .footer-links .mobile ul {
+      margin: 0px;
+      padding: 0px; }
+      .global-footer-new .footer-links .mobile ul li {
+        margin-bottom: 16px; }
+        .global-footer-new .footer-links .mobile ul li:last-child {
+          margin-bottom: 0px; }
+    .global-footer-new .footer-links .mobile .brand-logo {
+      margin-top: 20px; }
+      @media (min-width: 992px) {
+        .global-footer-new .footer-links .mobile .brand-logo {
+          margin-top: 0px; } }
+  .global-footer-new .footer-links .desktop {
+    display: none; }
+    @media (min-width: 992px) {
+      .global-footer-new .footer-links .desktop {
+        display: block; } }
+    .global-footer-new .footer-links .desktop ul {
+      margin: 0px;
+      padding: 0px; }
+      .global-footer-new .footer-links .desktop ul li {
+        margin-bottom: 10px;
+        margin-right: 40px; }
+        .global-footer-new .footer-links .desktop ul li:last-child {
+          margin-right: 0px; }
+        .global-footer-new .footer-links .desktop ul li a {
+          line-height: 1.2rem; }
 
 .background-dark {
   background-color: black;
