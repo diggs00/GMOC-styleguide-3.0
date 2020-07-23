@@ -18188,6 +18188,14 @@ input:checked + .cit-checkbox-value:before {
 .cit-alert-link {
   font-weight: bold; }
 
+.alert-attention {
+  background-color: rgba(207, 165, 61, 0.15); }
+  .alert-attention .icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 16px; }
+
 .alert-danger {
   background-color: rgba(224, 6, 27, 0.15); }
   .alert-danger .icon {
