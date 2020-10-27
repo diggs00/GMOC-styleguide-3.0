@@ -20654,6 +20654,15 @@ a.close-cit.disabled {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 160px; }
+        .g-nav-desktop .g-nav-menu .garage.dropdown a.btn-link-g-nav:after {
+          display: inline-block;
+          margin-left: 5px;
+          vertical-align: middle;
+          content: "";
+          border-top: 0.3em solid;
+          border-right: 0.3em solid transparent;
+          border-bottom: 0;
+          border-left: 0.3em solid transparent; }
       .g-nav-desktop .g-nav-menu .garage.dropdown .dropdown-menu.show {
         display: flex; }
       .g-nav-desktop .g-nav-menu .garage.dropdown .dropdown-menu {
