@@ -21064,6 +21064,8 @@ a.close-cit.disabled {
       border-bottom: none; }
       .g-nav-desktop ul.g-nav-menu-right li span {
         cursor: pointer; }
+        .g-nav-desktop ul.g-nav-menu-right li span.icon-global-nav-cart {
+          color: #454545; }
       .g-nav-desktop ul.g-nav-menu-right li.selected {
         color: #cd9834; }
       .g-nav-desktop ul.g-nav-menu-right li .count {

@@ -1205,6 +1205,9 @@
       border-bottom: none;
       span {
         cursor: pointer;
+        &.icon-global-nav-cart {
+          color:$cit-type-gray-darker;
+        }
       }
       &.selected {
         color: $brand-primary;
