@@ -1,0 +1,15 @@
+@use '../utils/generate-vertical-spacing' as vs;
+
+@include vs.generate-vertical-spacing(
+	1.25rem,
+	2.5rem,
+	5rem,
+	5rem
+);
+
+// Chevy has a specific xlarge margin override for small only viewports
+@media print,only screen and (min-width:420px) {
+	.gb-xlarge-margin {
+		margin-bottom: 7.5rem !important;
+	}
+}

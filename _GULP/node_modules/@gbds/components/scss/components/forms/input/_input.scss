@@ -1,0 +1,50 @@
+// Mixins, variables, etc. for common component styling go in here
+
+@mixin base-label(
+	$font-family,
+	$font-size,
+	$letter-spacing,
+	$line-height,
+	$margin
+) {
+	display: block;
+	font-family: $font-family;
+	font-size: $font-size;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	margin: $margin;
+}
+
+@mixin base-input(
+	$background-color,
+	$border,
+	$color,
+	$disabled-opacity,
+	$font-family,
+	$font-size,
+	$padding,
+	$focus-border: $border,
+) {
+	&[type],
+	textarea {
+		background-color: $background-color;
+		border: $border;
+		color: $color;
+		font-family: $font-family;
+		font-size: $font-size;
+		height: auto;
+		margin: 0;
+		padding: $padding;
+		width: 100%;
+
+		&:focus {
+			border: $focus-border;
+			outline: none;
+		}
+
+		&[disabled] {
+			background-color: $background-color;
+			opacity: $disabled-opacity;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+// Mixins, variables, etc. for common component styling go in here
+
+@mixin base-toggle-input(
+	$height,
+	$width
+) {
+	appearance: none;
+	cursor: pointer;
+	display: inline-block;
+	height: $height;
+	margin: 0;
+	width: $width;
+}
+
+@mixin base-toggle-label(
+	$color,
+	$font-family,
+	$font-size,
+	$line-height,
+	$margin,
+) {
+	color: $color;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	margin: $margin;
+	position: relative;
+}
+
+@mixin outer-toggle(
+	$background-color,
+	$border,
+	$border-radius,
+	$height,
+	$transition,
+	$width
+) {
+	background-color: $background-color;
+	border: $border;
+	border-radius: $border-radius;
+	content: '';
+	display: block;
+	height: $height;
+	position: relative;
+	transition: $transition;
+	width: $width;
+}
+
+@mixin inner-toggle(
+	$background-color,
+	$border-radius,
+	$height,
+	$transition,
+	$width
+) {
+	background-color: $background-color;
+	border-radius: $border-radius;
+	content: '';
+	display: block;
+	height: $height;
+	position: relative;
+	transition: $transition;
+	width: $width;
+}

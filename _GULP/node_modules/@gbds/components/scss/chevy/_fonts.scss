@@ -1,0 +1,40 @@
+$font-family-louis: Louis, Tahoma, sans-serif;
+$font-family-roboto: Roboto, Helvetica, sans-serif;
+
+$base-font-sm: 17px;
+$base-font-med: 20px;
+$base-font-lg: 23px;
+
+// Base font url for font files
+$base-font-url-path: 'https://brands.gm-cdn.com/gbds/chevrolet/fonts/';
+
+$font-weight-lighter: 100;
+$font-weight-light: 200;
+$font-weight-book: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+$font-weight-ultra: 800;
+$font-weight-xbold: 900;
+
+$font-list: (
+	'Louis': (
+		('louis-bolditalic-webfont', italic, $font-weight-bold),
+		('louis-bold-webfont', normal, $font-weight-bold),
+		('louis-heavyitalic-webfont', italic, $font-weight-xbold),
+		('louis-heavy-webfont', normal, $font-weight-xbold),
+		('louis-italic-webfont', italic, $font-weight-normal),
+		('louis-regular-webfont', normal, $font-weight-normal)
+	),
+	'Roboto': (
+		('roboto-bolditalic-webfont', italic, $font-weight-bold),
+		('roboto-bold-webfont', normal, $font-weight-bold),
+		('roboto-italic-webfont', italic, $font-weight-normal),
+		('roboto-lightitalic-webfont', italic, $font-weight-lighter),
+		('roboto-light-webfont', normal, $font-weight-lighter),
+		('roboto-mediumitalic-webfont', italic, $font-weight-medium),
+		('roboto-medium-webfont', normal, $font-weight-medium),
+		('roboto-regular-webfont', normal, $font-weight-normal)
+	)
+);
