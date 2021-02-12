@@ -1,0 +1,16 @@
+//
+// LISTS - CITATION Style 2
+// --------------------------------------------------
+
+// Bullet List
+ul.cit2-list-bullet {
+  list-style: disc;
+  margin: 0px;
+  padding-left: 20px;
+  li {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

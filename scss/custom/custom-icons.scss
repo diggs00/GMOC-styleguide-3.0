@@ -1,25 +1,26 @@
 @font-face {
-    font-family: 'icon-graphic';
-    src:url('../../fonts/icon-graphic.eot?4t6f3e');
-    src:url('../../fonts/icon-graphic.eot?4t6f3e#iefix') format('embedded-opentype'),
-        url('../../fonts/icon-graphic.ttf?4t6f3e') format('truetype'),
-        url('../../fonts/icon-graphic.woff?4t6f3e') format('woff'),
-        url('../../fonts/icon-graphic.svg?4t6f3e#icon-graphic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: 'icon-graphic';
+  src:url('../../fonts/icon-graphic.eot?4t6f3e');
+  src:url('../../fonts/icon-graphic.eot?4t6f3e#iefix') format('embedded-opentype'),
+      url('../../fonts/icon-graphic.ttf?4t6f3e') format('truetype'),
+      url('../../fonts/icon-graphic.woff?4t6f3e') format('woff'),
+      url('../../fonts/icon-graphic.svg?4t6f3e#icon-graphic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 
 @font-face {
-    font-family: 'icon-ui';
-    src:url('../../fonts/icon-ui.eot?6pg1tv');
-    src:url('../../fonts/icon-ui.eot?6pg1tv#iefix') format('embedded-opentype'),
-        url('.../../fonts/icon-ui.ttf?6pg1tv') format('woff'),
-        url('../../fonts/icon-ui.woff?6pg1tv') format('truetype'),
-        url('../../fonts/icon-ui.svg?6pg1tv#icon-ui') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'icon-ui';
+  src:url('../../fonts/icon-ui.eot?1n824l');
+  src:url('../../fonts/icon-ui.eot?1n824l#iefix') format('embedded-opentype'),
+      url('../../fonts/icon-ui.ttf?1n824l') format('truetype'),
+      url('../../fonts/icon-ui.woff?1n824l') format('woff'),
+      url('../../fonts/icon-ui.svg?1n824l#icon-ui') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -412,23 +413,24 @@
  * -------------------------- */
 
 [class^="icon-ui"], [class*=" icon-ui"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icon-ui';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-ui' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
 .icon-ui-account:before {
   content: "\e900";
+  color: #7d7d7d;
 }
 .icon-ui-add:before {
   content: "\e901";
@@ -552,61 +554,70 @@
 }
 .icon-ui-notification:before {
   content: "\e929";
+  color: #7d7d7d;
 }
-.icon-ui-preferreddealer:before {
+.icon-ui-offer-tag:before {
   content: "\e92a";
 }
-.icon-ui-print:before {
+.icon-ui-preferreddealer:before {
   content: "\e92b";
 }
-.icon-ui-refresh:before {
+.icon-ui-print:before {
   content: "\e92c";
 }
-.icon-ui-save:before {
+.icon-ui-refresh:before {
   content: "\e92d";
 }
-.icon-ui-search:before {
+.icon-ui-save:before {
   content: "\e92e";
 }
-.icon-ui-swoop:before {
+.icon-ui-search:before {
   content: "\e92f";
 }
-.icon-ui-table:before {
+.icon-ui-swoop:before {
   content: "\e930";
 }
-.icon-ui-trash:before {
+.icon-ui-table:before {
   content: "\e931";
 }
-.icon-ui-upload:before {
+.icon-ui-trash:before {
   content: "\e932";
+  color: #7e7e7e;
 }
-.icon-ui-video:before {
+.icon-ui-upload:before {
   content: "\e933";
 }
-.icon-ui-videofullscreen:before {
+.icon-ui-video:before {
   content: "\e934";
 }
-.icon-ui-videominimize:before {
+.icon-ui-videofullscreen:before {
   content: "\e935";
 }
-.icon-ui-videooutline:before {
+.icon-ui-videominimize:before {
   content: "\e936";
 }
-.icon-ui-videopause:before {
+.icon-ui-videooutline:before {
   content: "\e937";
 }
-.icon-ui-videoplay:before {
+.icon-ui-videopause:before {
   content: "\e938";
 }
-.icon-ui-videovolume:before {
+.icon-ui-videoplay:before {
   content: "\e939";
 }
-.icon-ui-view-document:before {
+.icon-ui-videovolume:before {
   content: "\e93a";
 }
-.icon-ui-view:before {
+.icon-ui-view-document:before {
   content: "\e93b";
 }
+.icon-ui-view:before {
+  content: "\e93c";
+}
+
+
+
+
 
 
 
@@ -807,13 +818,20 @@ a.btn > span {
 // Used for svg icons inline with text
 .icon-svg-inline {
   display: inline-flex;
+  align-items: center;
   svg {
     width: 1em;
     height: 1em;
-    margin-right: 5px;
-    top: .125em;
+    margin-right: 10px;
     position: relative;
   }
+  &.medium-icon {
+    svg {
+      width: 3em;
+      height: 3em;
+    }
+  }
+
 }
 
 

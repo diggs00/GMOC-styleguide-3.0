@@ -4,6 +4,20 @@
 }
 
 
+.container {
+  .sg-subtitle{
+    background-color: aqua;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    height: 100%;
+    h1 {
+      line-height: 0px;
+    }
+  }
+}
+
+
 body {
   margin-bottom: 70px;
 }

@@ -1,0 +1,23 @@
+
+//
+// STATUS BAR - CITATION Style 2
+// --------------------------------------------------
+
+
+.status-cit2 {
+  display: flex;
+  height: 8px;
+  background-color: $grey-light;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.status-bar-cit2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $green;
+  border-radius: 5px;
+}
