@@ -30356,7 +30356,13 @@ ul.cit2-list-bullet li:last-child {
   left: -40px;
   padding: 0px;
   width: 24px;
-  height: 50px;
+  height: 43px;
+}
+
+.plan-timeline-item {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
 }
 
 .plan-timeline-item-second {
@@ -30369,11 +30375,11 @@ ul.cit2-list-bullet li:last-child {
   content: "";
   display: block;
   position: absolute;
-  bottom: 0;
+  top: 0px;
   left: -40px;
-  padding: 0px;
+  padding: 10px 0px 0px 0px;
   width: 24px;
-  height: 30px;
+  height: 100%;
 }
 .plan-timeline-item-second:after {
   color: #262626;
@@ -30382,12 +30388,119 @@ ul.cit2-list-bullet li:last-child {
   font-family: "icon-ui";
   line-height: 1em;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: -40px;
   font-size: 24px;
 }
 
 .plan-timeline-end {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
+}
+
+.plan-timeline-3items {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  position: relative;
+}
+.plan-timeline-3items .vertical-line:before {
+  content: "";
+  border-right: 2px dashed #262626;
+  padding: 0px;
+  width: 13px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.plan-timeline-3items .plan-timeline-item-first {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
+}
+.plan-timeline-3items .plan-timeline-item-first:after {
+  color: #262626;
+  content: "";
+  display: block;
+  font-family: "icon-ui";
+  line-height: 1em;
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  font-size: 24px;
+}
+.plan-timeline-3items .plan-timeline-item-first:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  padding: 0px;
+  width: 24px;
+  height: 43px;
+}
+.plan-timeline-3items .plan-timeline-item {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
+}
+.plan-timeline-3items .plan-timeline-item-second {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
+}
+.plan-timeline-3items .plan-timeline-item-second:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  padding: 10px 0px 0px 0px;
+  width: 24px;
+  height: 24px;
+}
+.plan-timeline-3items .plan-timeline-item-second:after {
+  color: #262626;
+  content: "";
+  display: block;
+  font-family: "icon-ui";
+  line-height: 1em;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 24px;
+}
+.plan-timeline-3items .plan-timeline-item-third {
+  margin: 0 0 0 40px;
+  padding: 0px;
+  position: relative;
+}
+.plan-timeline-3items .plan-timeline-item-third:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  padding: 10px 0px 0px 0px;
+  width: 24px;
+  height: 100%;
+}
+.plan-timeline-3items .plan-timeline-item-third:after {
+  color: #262626;
+  content: "";
+  display: block;
+  font-family: "icon-ui";
+  line-height: 1em;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 24px;
+}
+.plan-timeline-3items .plan-timeline-end {
   margin: 0 0 0 40px;
   padding: 0px;
   position: relative;

@@ -20,6 +20,8 @@ $timeline-size: 32px;
 }
 
 
+
+
 .vertical-line {
   &:before {
       content: "";
@@ -57,8 +59,16 @@ $timeline-size: 32px;
       left: -40px;
       padding: 0px;
       width:24px;
-      height:50px;
+      height:43px;
   }
+    
+}
+
+.plan-timeline-item {
+  margin: 0 0 0 40px; 
+  padding: 0px;
+  position: relative;
+
     
 }
 
@@ -73,11 +83,11 @@ $timeline-size: 32px;
     content: "";
     display: block;
     position: absolute;
-    bottom: 0;
+    top: 0px;
     left: -40px;
-    padding: 0px;
+    padding: 10px 0px 0px 0px;
     width:24px;
-    height:30px;
+    height: 100%;
   }
 
   &:after {
@@ -87,7 +97,7 @@ $timeline-size: 32px;
     font-family: "icon-ui";
     line-height: 1em;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: -40px;
     font-size: 24px;
   }
@@ -101,5 +111,138 @@ $timeline-size: 32px;
   position: relative;
     
 }
+
+
+
+.plan-timeline-3items {
+  list-style: none;
+  // margin: 0px 0 22px 0px; 
+  margin: 0px;
+  padding: 0;
+  position: relative;
+  // background-color: $white;
+  .vertical-line {
+    &:before {
+        content: "";
+        border-right: 2px dashed $grey-dark;
+        padding: 0px;
+        width: 13px;
+        height: 100%;
+        position: absolute;
+        // background-color: pink;
+        top:0;
+    }
+  }
+
+  .plan-timeline-item-first {
+    margin: 0 0 0 40px; 
+    padding: 0px;
+    position: relative;
+    &:after{
+      color: $grey-dark;
+      content: "\e918"; //icon-ui-clock
+      display: block;
+      font-family: "icon-ui";
+      line-height: 1em;
+      position: absolute;
+      top: 20px;
+      left: -40px;
+      font-size: 24px;
+    }
+    &:before{
+        background-color: $white;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -40px;
+        padding: 0px;
+        width:24px;
+        height:43px;
+    }
+      
+  }
+
+  .plan-timeline-item {
+    margin: 0 0 0 40px; 
+    padding: 0px;
+    position: relative;
+      
+  }
+
+
+  .plan-timeline-item-second {
+    margin: 0 0 0 40px; 
+    padding: 0px;
+    position: relative;
+      
+    &:before {
+      background-color: $white;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: -40px;
+      padding: 10px 0px 0px 0px;
+      width:24px;
+      height: 24px;
+    }
+
+    &:after {
+      color: $grey-dark;
+      content: "\e918"; //icon-ui-clock
+      display: block;
+      font-family: "icon-ui";
+      line-height: 1em;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      font-size: 24px;
+    }
+      
+  }
+
+  .plan-timeline-item-third {
+    margin: 0 0 0 40px; 
+    padding: 0px;
+    position: relative;
+      
+    &:before {
+      background-color: $white;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: -40px;
+      padding: 10px 0px 0px 0px;
+      width:24px;
+      height: 100%;
+    }
+
+    &:after {
+      color: $grey-dark;
+      content: "\e914";// icon-ui-checkcircle
+      display: block;
+      font-family: "icon-ui";
+      line-height: 1em;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      font-size: 24px;
+    }
+      
+  }
+
+
+  .plan-timeline-end {
+    margin: 0 0 0 40px; 
+    padding: 0px;
+    position: relative;
+      
+  }
+}
+
+
+
 
 
