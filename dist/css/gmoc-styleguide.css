@@ -31118,6 +31118,31 @@ a.close-cit2.disabled {
   padding: 0px 20px 75px 0px;
 }
 
+.cit2-alert {
+  position: relative;
+  padding: 16px 25px 16px 22px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-left: 4px solid #262626;
+  background-color: #f0f0f0;
+}
+.cit2-alert.alert-danger {
+  border-color: #e25959;
+}
+.cit2-alert.alert-danger .content {
+  display: flex;
+}
+.cit2-alert.alert-danger .content .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+@media (min-width: 600px) {
+  .cit2-alert.alert-danger .content .icon {
+    margin-top: 3px;
+  }
+}
+
 .container.sg-title {
   margin-top: 80px;
 }
