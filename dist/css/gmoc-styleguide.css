@@ -30365,7 +30365,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-first.pause:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30433,7 +30433,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-second.pause:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
