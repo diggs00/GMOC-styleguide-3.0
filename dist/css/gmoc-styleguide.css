@@ -22674,8 +22674,8 @@ ul.switch-list-inline label.disabled {
 }
 @font-face {
   font-family: "icon-ui";
-  src: url("../../fonts/icon-ui.eot?1n824l");
-  src: url("../../fonts/icon-ui.eot?1n824l#iefix") format("embedded-opentype"), url("../../fonts/icon-ui.ttf?1n824l") format("truetype"), url("../../fonts/icon-ui.woff?1n824l") format("woff"), url("../../fonts/icon-ui.svg?1n824l#icon-ui") format("svg");
+  src: url("../../fonts/icon-ui.eot?t5ixe9");
+  src: url("../../fonts/icon-ui.eot?t5ixe9#iefix") format("embedded-opentype"), url("../../fonts/icon-ui.ttf?t5ixe9") format("truetype"), url("../../fonts/icon-ui.woff?t5ixe9") format("woff"), url("../../fonts/icon-ui.svg?t5ixe9#icon-ui") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -23157,13 +23157,24 @@ ul.switch-list-inline label.disabled {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ui-account:before {
-  content: "";
-  color: #7d7d7d;
+.icon-ui-caution:before {
+  content: "";
+}
+
+.icon-ui-info:before {
+  content: "";
+}
+
+.icon-ui-pause:before {
+  content: "";
 }
 
 .icon-ui-add:before {
-  content: "";
+  content: "";
+}
+
+.icon-ui-account:before {
+  content: "";
 }
 
 .icon-ui-adddot:before {
@@ -23294,10 +23305,6 @@ ul.switch-list-inline label.disabled {
   content: "";
 }
 
-.icon-ui-info:before {
-  content: "";
-}
-
 .icon-ui-infofill:before {
   content: "";
 }
@@ -23324,7 +23331,6 @@ ul.switch-list-inline label.disabled {
 
 .icon-ui-notification:before {
   content: "";
-  color: #7d7d7d;
 }
 
 .icon-ui-offer-tag:before {
@@ -23361,7 +23367,6 @@ ul.switch-list-inline label.disabled {
 
 .icon-ui-trash:before {
   content: "";
-  color: #7e7e7e;
 }
 
 .icon-ui-upload:before {
@@ -30358,6 +30363,29 @@ ul.cit2-list-bullet li:last-child {
   width: 24px;
   height: 43px;
 }
+.plan-timeline-item-first.pause:after {
+  color: #262626;
+  content: "";
+  display: block;
+  font-family: "icon-ui";
+  line-height: 1em;
+  position: absolute;
+  top: 2px;
+  left: -40px;
+  font-size: 24px;
+}
+.plan-timeline-item-first.pause:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  padding: 0px;
+  width: 24px;
+  height: 30px;
+  color: #000;
+}
 
 .plan-timeline-item {
   margin: 0 0 0 40px;
@@ -30384,6 +30412,28 @@ ul.cit2-list-bullet li:last-child {
 .plan-timeline-item-second:after {
   color: #262626;
   content: "";
+  display: block;
+  font-family: "icon-ui";
+  line-height: 1em;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 24px;
+}
+.plan-timeline-item-second.pause:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  padding: 10px 0px 0px 0px;
+  width: 24px;
+  height: 100%;
+}
+.plan-timeline-item-second.pause:after {
+  color: #262626;
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -31135,12 +31185,256 @@ a.close-cit2.disabled {
 .cit2-alert.alert-danger .content .icon {
   width: 24px;
   height: 24px;
-  margin-right: 16px;
+  margin-right: 15px;
 }
 @media (min-width: 600px) {
   .cit2-alert.alert-danger .content .icon {
     margin-top: 3px;
   }
+}
+
+.cit2-alert {
+  position: relative;
+  padding: 16px 25px 16px 22px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-left: 4px solid #262626;
+  background-color: #f0f0f0;
+}
+.cit2-alert.alert-success {
+  border-color: #61af71;
+}
+.cit2-alert.alert-success .content {
+  display: flex;
+}
+.cit2-alert.alert-success .content .icon {
+  color: #61af71;
+  margin-right: 15px;
+}
+.cit2-alert.alert-success .content .icon span {
+  margin-right: 0px;
+  font-size: 24px;
+}
+@media (min-width: 600px) {
+  .cit2-alert.alert-success .content .icon {
+    margin-top: 0px;
+  }
+}
+
+/* PILL TABS
+	 ========================================================================== */
+.gb-secondary-button :not(:disabled):not(.disabled):active, .gb-secondary-button:not(:disabled):not(.disabled).active {
+  background-color: #b3b3b3;
+}
+
+.btn-group.btn-group-toggle .btn.gb-secondary-button {
+  border-radius: 0px;
+  padding: 10px 20px;
+  width: unset;
+}
+
+/* TABS
+	 ========================================================================== */
+.cit2-tab-container {
+  width: 100%;
+}
+.cit2-tab-container .state {
+  position: absolute;
+  left: -10000px;
+}
+.cit2-tab-container .cit2-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.cit2-tab-container .cit2-tabs .tab-labels {
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+  margin-bottom: 32px;
+}
+@media (min-width: 992px) {
+  .cit2-tab-container .cit2-tabs .tab-labels {
+    margin-bottom: 65px;
+  }
+}
+.cit2-tab-container .cit2-tabs .tab-labels label {
+  margin: 0px 1rem 0px 0px;
+}
+.cit2-tab-container .cit2-tabs .tab-labels label:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.cit2-tab-container .cit2-tabs .tab {
+  flex-grow: 1;
+  padding: 11px 0px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+}
+.cit2-tab-container .cit2-tabs .tab:first-child {
+  border-right: none;
+}
+.cit2-tab-container .cit2-tabs .tab:hover {
+  background-color: #fff;
+}
+.cit2-tab-container .cit2-tabs .panel {
+  background-color: #fff;
+  padding: 0px;
+  display: none;
+  width: 100%;
+  flex-basis: auto;
+}
+
+#tab-one:checked ~ .cit2-tabs #tab-one-label,
+#tab-two:checked ~ .cit2-tabs #tab-two-label {
+  background-color: #fff;
+  cursor: default;
+  border-bottom: 4px solid #000;
+}
+
+#tab-one:checked ~ .cit2-tabs #tab-one-content,
+#tab-two:checked ~ .cit2-tabs #tab-two-content {
+  display: inline-block;
+}
+
+/* DESKTOP TABLE
+	 ========================================================================== */
+table.cit2-desktop {
+  display: none;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  table.cit2-desktop {
+    display: block;
+  }
+}
+table.cit2-desktop a {
+  position: relative;
+}
+table.cit2-desktop tbody tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+table.cit2-desktop tbody tr td {
+  padding: 16px 25px;
+}
+table.cit2-desktop tbody tr td.selected {
+  position: relative;
+}
+table.cit2-desktop tbody tr td.selected:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 0px;
+  z-index: 0;
+}
+table.cit2-desktop tbody tr td .selected-pill {
+  position: absolute;
+  top: -13px;
+  border-radius: 20px;
+  background-color: #000;
+  padding: 3px 10px;
+  display: inline-flex;
+  z-index: 1;
+}
+table.cit2-desktop tbody tr td .selected-pill span.icon-ui-check {
+  margin-right: 5px;
+}
+table.cit2-desktop tbody tr td.cat {
+  padding: 16px 25px;
+}
+table.cit2-desktop tbody tr td.cat .gb-icon-button {
+  padding: 0px 0px 0px 5px;
+}
+table.cit2-desktop tbody tr td.cat .tag-and-plan-name {
+  display: flex;
+  flex-direction: column;
+}
+table.cit2-desktop tbody tr td:not(.cat) {
+  padding: 16px 60px;
+}
+table.cit2-desktop tbody tr.controls {
+  background-color: #fff;
+  border-top: 1px solid #b3b3b3;
+}
+table.cit2-desktop tbody tr.controls td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+table.cit2-desktop tbody tr.controls td.selected {
+  position: relative;
+}
+table.cit2-desktop tbody tr.controls td.selected:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  border: 2px solid #000;
+  border-top: 0px;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 0;
+}
+table.cit2-desktop tbody tr.first-row {
+  background-color: #fff;
+  border-bottom: 1px solid #b3b3b3;
+}
+table.cit2-desktop tbody tr.first-row td {
+  vertical-align: bottom;
+}
+table.cit2-desktop tbody tr.first-row td:first-child {
+  width: 30%;
+}
+table.cit2-desktop tbody tr.first-row td.selected {
+  position: relative;
+  padding-top: 30px !important;
+}
+table.cit2-desktop tbody tr.first-row td.selected:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  border: 2px solid #000;
+  border-bottom: 0px;
+  border-radius: 20px 20px 0px 0px;
+  z-index: 0;
+}
+table.cit2-desktop tbody tr.second-row {
+  background-color: #fff;
+}
+table.cit2-desktop tbody tr.second-row td.price {
+  vertical-align: top;
+}
+table.cit2-desktop tbody tr.cat-title-first td {
+  padding: 4px 25px 10px 25px;
+  background-color: #fff;
+}
+table.cit2-desktop tbody tr.cat-title td {
+  padding: 50px 25px 10px 25px;
+  background-color: #fff;
+}
+
+.pricing-large .price .gb-bold1.sup {
+  font-size: 1.25em;
+  line-height: 1em;
+}
+.pricing-large .price :not(.gb-bold1.sup) {
+  line-height: 1em;
 }
 
 .container.sg-title {
