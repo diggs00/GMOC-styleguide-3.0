@@ -1,0 +1,58 @@
+@use 'radio' as r;
+@use '../../../chevy/colors' as c;
+@use '../../../chevy/fonts' as f;
+
+.gb-radio {
+	input[type='radio'] {
+		@include r.base-radio-input(
+			40px,
+			0,
+			40px,
+		);
+
+		&::before {
+			background: c.$white;
+			border: 1px solid c.$grey;
+			border-radius: .5rem;
+			content: '';
+			display: inline-block;
+			height: 1rem;
+			left: 9px;
+			margin: auto;
+			position: relative;
+			top: 9px;
+			width: 1rem;
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$grey,
+				f.$font-family-roboto,
+				.6rem,
+				1.5,
+				0,
+			);
+			font-weight: f.$font-weight-bold;
+		}
+
+		&:checked {
+			&::before {
+				background: c.$grey;
+				box-shadow: inset 0 0 0 0.25rem c.$white;
+			}
+		}
+	}
+
+	&.disabled {
+		opacity: 30%;
+	}
+}
+
+html[dir='rtl'] {
+	input[type='radio'] {
+		&::before {
+			left: 0;
+			right: 9px;
+		}
+	}
+}

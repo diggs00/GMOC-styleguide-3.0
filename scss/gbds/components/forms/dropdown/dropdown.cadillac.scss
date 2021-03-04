@@ -1,0 +1,73 @@
+@use 'dropdown' as d;
+@use '../../../cadillac/colors' as c;
+@use '../../../cadillac/fonts' as f;
+
+.gb-dropdown {
+	label {
+		@include d.base-label(
+			f.$cadillac-sans,
+			.875rem,
+			.071rem,
+			1,
+			0 0 .625rem 0
+		);
+		font-weight: f.$font-weight-book;
+	}
+
+	select {
+		@include d.base-select(
+			c.$white,
+			linear-gradient(to right, c.$grey-darker, c.$grey-darker),
+			linear-gradient(to right, c.$grey-light, c.$grey-light),
+			100% 0,
+			3rem 100%,
+			1px solid #252f32,
+			f.$cadillac-sans,
+			1rem,
+			0,
+			calc(.85rem + 1px) 4rem calc(.85rem + 1px) calc(.85rem + 1px),
+			100%
+		);
+		font-weight: f.$font-weight-book;
+		letter-spacing: .071rem;
+		line-height: 1;
+	}
+
+	.select-container {
+		&::after {
+			border-bottom: 2px solid c.$white;
+			border-right: 2px solid c.$white;
+			bottom: 2rem;
+			content: '';
+			display: flex;
+			height: 11px;
+			margin: 0 0 0 auto;
+			pointer-events: none;
+			position: relative;
+			right: 1.1rem;
+			transform: rotate(45deg);
+			width: 11px;
+		}
+
+		&:hover {
+			&::after {
+				border-bottom: 2px solid c.$grey-darker;
+				border-right: 2px solid c.$grey-darker;
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-dropdown {
+		select {
+			background-position: 0 0;
+			padding: calc(.85rem + 1px) calc(.85rem + 1px) calc(.85rem + 1px) 4rem;
+		}
+
+		&::after {
+			margin: 0 auto 0 0;
+			right: -1.2rem;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+//
+// PRICING - CITATION2 Style
+// --------------------------------------------------
+
+.pricing-large {
+  .price {
+    .gb-bold1.sup {
+      font-size: 1.25em;
+      line-height: 1em;
+    }
+    :not(.gb-bold1.sup) {
+      line-height: 1em;
+    }
+  }
+}
+
+

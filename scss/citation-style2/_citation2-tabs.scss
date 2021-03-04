@@ -1,0 +1,101 @@
+//
+// TABS - CITATION2 Style
+// --------------------------------------------------
+
+
+
+/* PILL TABS
+	 ========================================================================== */
+
+.gb-secondary-button :not(:disabled):not(.disabled):active, .gb-secondary-button:not(:disabled):not(.disabled).active {
+    background-color: $grey-mid;
+
+}
+
+
+.btn-group.btn-group-toggle {
+	.btn.gb-secondary-button {
+		border-radius: 0px;
+		padding: 10px 20px;
+		width: unset;
+	}
+}
+
+
+
+
+/* TABS
+	 ========================================================================== */
+.cit2-tab-container {
+  width: 100%;
+
+  .state{
+    position: absolute;
+    left: -10000px;
+  }
+
+  .cit2-tabs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    .tab-labels {
+   		border-bottom: 1px solid $grey-light;
+   		width: 100%;
+   		margin-bottom:32px;
+		@media (min-width: $screen-desktop) {
+   			margin-bottom:65px;
+   		}
+    	label {
+    		margin:0px 1rem 0px 0px;
+    		&:last-child {
+    			margin:0px 0px 0px 0px;
+    		}
+    	}
+    }
+      
+    .tab{
+      flex-grow: 1;
+      padding: 11px 0px;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: top;
+      background-color: $white;
+
+      &:first-child {
+        border-right: none;
+      }
+      &:hover{
+        background-color: $white;
+      }
+    }
+    
+    .panel {
+      background-color: $white;
+      padding: 0px;
+      display: none;
+      width: 100%;
+      flex-basis: auto;
+    }
+  }
+}
+
+#tab-one:checked ~ .cit2-tabs #tab-one-label,
+#tab-two:checked ~ .cit2-tabs #tab-two-label{
+    background-color: $white;
+    cursor: default;
+    border-bottom: 4px solid $black;
+}
+
+#tab-one:checked ~ .cit2-tabs #tab-one-content,
+#tab-two:checked ~ .cit2-tabs #tab-two-content{
+    display: inline-block;
+}
+
+
+

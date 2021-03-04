@@ -1,0 +1,87 @@
+@use 'toggle' as t;
+@use '../../../buick/colors' as c;
+@use '../../../buick/fonts' as f;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include t.base-toggle-input(
+			48px,
+			48px
+		);
+
+		&::before {
+			@include t.outer-toggle(
+				c.$white,
+				2px solid c.$grey-mid,
+				29px,
+				22px,
+				.4s,
+				36px
+			);
+			left: 6px;
+			top: 14px;
+		}
+
+		&::after {
+			@include t.inner-toggle(
+				c.$grey-dark,
+				50%,
+				14px,
+				.4s,
+				14px
+			);
+			bottom: 4px;
+			left: 10px;
+		}
+
+		&:checked {
+			&::before {
+				background-color: c.$grey-dark;
+				border-color: c.$grey-dark;
+			}
+
+			&::after {
+				background-color: c.$white;
+				transform: translateX(15px);
+			}
+		}
+	}
+
+
+	label {
+		@include t.base-toggle-label(
+			c.$brand-black,
+			f.$font-family-avenir-next,
+			1.3rem,
+			1.5,
+			0 calc(1rem - 8px)
+		);
+		bottom: 17px;
+	}
+
+	&.disabled {
+		opacity: 30%;
+	}
+}
+
+html[dir='rtl'] {
+	.gb-toggle {
+		input[type='checkbox'] {
+			&::before {
+				left: 0;
+				right: 6px;
+			}
+
+			&::after {
+				left: 0;
+				right: 10px;
+			}
+
+			&:checked {
+				&::after {
+					transform: translateX(-15px);
+				}
+			}
+		}
+	}
+}

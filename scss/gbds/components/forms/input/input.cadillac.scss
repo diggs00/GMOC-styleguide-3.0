@@ -1,0 +1,62 @@
+@use 'input' as i;
+@use '../../../cadillac/colors' as c;
+@use '../../../cadillac/fonts' as f;
+
+.gb-input {
+	label {
+		@include i.base-label(
+			f.$cadillac-sans,
+			.875rem,
+			.071rem,
+			1,
+			0 0 .625rem 0
+		);
+		font-weight: f.$font-weight-book;
+	}
+
+	input {
+		@include i.base-input(
+			c.$white,
+			1px solid c.$grey-darker,
+			c.$grey-darker,
+			30%,
+			f.$cadillac-sans,
+			1rem,
+			.85rem,
+		);
+		font-weight: f.$font-weight-book;
+		letter-spacing: .071rem;
+	}
+
+	p {
+		font-family: f.$cadillac-sans;
+		font-size: 1.125rem;
+		letter-spacing: .071rem;
+		line-height: 1.625;
+		margin-top: .625rem;
+	}
+
+	&.form-error {
+		input {
+			border-color: c.$error-red;
+		}
+
+		p {
+			color: c.$error-red;
+		}
+	}
+
+	&.form-success {
+		p {
+			color: c.$success-green;
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-input {
+		direction: rtl;
+		display: flex;
+		flex-flow: column wrap;
+	}
+}
