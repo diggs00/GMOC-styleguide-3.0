@@ -31190,6 +31190,7 @@ a.close-cit2.disabled {
 }
 .cit2-alert.alert-danger .content {
   display: flex;
+  background-color: transparent;
 }
 .cit2-alert.alert-danger .content .icon {
   width: 24px;
@@ -31215,6 +31216,7 @@ a.close-cit2.disabled {
 }
 .cit2-alert.alert-success .content {
   display: flex;
+  background-color: transparent;
 }
 .cit2-alert.alert-success .content .icon {
   color: #61af71;
@@ -31226,7 +31228,36 @@ a.close-cit2.disabled {
 }
 @media (min-width: 600px) {
   .cit2-alert.alert-success .content .icon {
-    margin-top: 0px;
+    margin-top: 2px;
+  }
+}
+
+.cit2-alert {
+  position: relative;
+  padding: 16px 25px 16px 22px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-left: 4px solid #262626;
+  background-color: #f0f0f0;
+}
+.cit2-alert.alert-info {
+  border-color: #2b2b2b;
+}
+.cit2-alert.alert-info .content {
+  display: flex;
+  background-color: transparent;
+}
+.cit2-alert.alert-info .content .icon {
+  color: #2b2b2b;
+  margin-right: 15px;
+}
+.cit2-alert.alert-info .content .icon span {
+  margin-right: 0px;
+  font-size: 24px;
+}
+@media (min-width: 600px) {
+  .cit2-alert.alert-info .content .icon {
+    margin-top: 2px;
   }
 }
 
