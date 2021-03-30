@@ -12,7 +12,7 @@ $font-formats: woff2, woff;
 				$font-urls: '#{$font-urls}url(\"#{$base-font-url-path}#{$filename}.#{$ext}\") format(\"#{$format}\"), ';
 			}
 
-			// Trim off ", " at the end of $font-urls
+			/* Trim off ", " at the end of $font-urls*/
 			$font-urls: str-slice($font-urls, 0, str-length($font-urls) - 2);
 
 			@font-face {

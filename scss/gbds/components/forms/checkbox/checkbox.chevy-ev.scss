@@ -1,6 +1,6 @@
 @use 'checkbox';
-@use '../../../chevy/colors';
-@use '../../../chevy/fonts';
+@use '../../../chevy-ev/colors';
+@use '../../../chevy-ev/fonts';
 
 .gb-checkbox {
 	position: relative;
@@ -10,13 +10,11 @@
 		@include checkbox.base-label(
 			colors.$grey,
 			fonts.$font-family-roboto,
-			1rem,
+			.6rem,
 			fonts.$font-weight-bold,
 			normal,
-			1.375
+			1.5
 		);
-
-		vertical-align: middle;
 	}
 
 	label + input[type='checkbox'] {

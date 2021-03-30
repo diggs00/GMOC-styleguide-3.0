@@ -1,5 +1,7 @@
 @mixin base-box($size) {
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	cursor: pointer;
 	font-size: initial;
 	height: $size;
@@ -19,12 +21,14 @@
 ) {
 	color: $color;
 	cursor: pointer;
-	display: inline; // Override for Quantum label style for labels
+	display: inline; /* Override for Quantum label style for labels*/
 	font-family: $font-family;
 	font-size: $font-size;
 	font-weight: $font-weight;
 	letter-spacing: $letter-spacing;
 	line-height: $line-height;
 	margin: 0;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
 }

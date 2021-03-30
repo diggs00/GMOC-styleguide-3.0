@@ -1,0 +1,102 @@
+//
+// STEPPER - CITATION2 Style
+// --------------------------------------------------
+
+
+.stepper {
+  display: flex;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0px;
+    padding:0px;
+    z-index: 0;
+    position: relative;
+    &:after {
+      content: '';
+      height: 2px;
+      width: 216px;
+      left: 40px;
+      top: 12px;
+      border-top: 2px dashed $grey-light;
+      position: absolute;
+      z-index: -1;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom:0px;
+      position: relative;
+      margin-right:20px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      &.active {
+        .circle-graphic {
+          border: 1px solid $brand-black;
+          color: $brand-black;
+        }
+        .title {
+          div {
+            p.step-title {
+              color: $brand-black;
+            }
+          }
+        }
+      }
+      &.checked {
+        .circle-graphic {
+          border: 1px solid $brand-black;
+          background-color:$brand-black;
+          color: $white;
+          .gb-body3 {
+            display: none;
+          }
+          &:before {
+            content: "\e913";
+            font-family: 'icon-ui';
+          }
+        }
+        .title {
+          div {
+            p.step-title {
+              color: $brand-black;
+            }
+          }
+        }
+      }
+      .circle-graphic {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid $grey-light;
+        position: relative;
+        background: $white;
+        color: $grey-mid-dark;
+        .gb-body3 {
+          margin-bottom: 2px;
+        }
+      }
+      .title {
+        div {
+          p.step-title {
+            text-align: center;
+            overflow-wrap: break-word;
+            width: 84px;
+            margin-bottom: 0px;
+            margin-top: 2px;
+            color: $grey-mid-dark;
+          }
+        }
+      }
+    }
+  }
+}
+

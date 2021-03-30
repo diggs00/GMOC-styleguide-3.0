@@ -1,0 +1,48 @@
+@use 'radio' as r;
+@use '../../../fleet/colors' as c;
+@use '../../../fleet/fonts' as f;
+
+.gb-radio {
+	input[type='radio'] {
+		@include r.base-radio-input(
+			1.625rem,
+			0 1rem,
+			1.625rem,
+		);
+
+		&::before {
+			background: c.$white;
+			border: 1px solid c.$grey;
+			border-radius: 50%;
+			content: '';
+			display: inline-block;
+			height: 1.625rem;
+			margin: auto;
+			position: relative;
+			width: 1.625rem;
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$grey-very-dark,
+				f.$font-family-gotham,
+				1rem,
+				2,
+				0,
+			);
+			
+			padding-bottom: 1rem;
+		}
+
+		&:checked {
+			&::before {
+				background: c.$brand-blue;
+				box-shadow: inset 0 0 0 0.45rem c.$white;
+			}
+		}
+	}
+
+	&.disabled {
+		opacity: 30%;
+	}
+}

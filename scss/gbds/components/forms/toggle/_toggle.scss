@@ -1,10 +1,12 @@
-// Mixins, variables, etc. for common component styling go in here
+/* Mixins, variables, etc. for common component styling go in here*/
 
 @mixin base-toggle-input(
 	$height,
 	$width
 ) {
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	cursor: pointer;
 	display: inline-block;
 	height: $height;

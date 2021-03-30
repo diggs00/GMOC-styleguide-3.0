@@ -1,6 +1,6 @@
 @use 'radio' as r;
-@use '../../../chevy/colors' as c;
-@use '../../../chevy/fonts' as f;
+@use '../../../chevy-ev/colors' as c;
+@use '../../../chevy-ev/fonts' as f;
 
 .gb-radio {
 	input[type='radio'] {
@@ -28,12 +28,11 @@
 			@include r.base-radio-label(
 				c.$grey,
 				f.$font-family-roboto,
-				1rem,
-				1.375,
+				.6rem,
+				1.5,
 				0,
 			);
 			font-weight: f.$font-weight-bold;
-			vertical-align: middle;
 		}
 
 		&:checked {

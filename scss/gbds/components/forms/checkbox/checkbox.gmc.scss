@@ -5,7 +5,7 @@
 .gb-checkbox {
 	position: relative;
 
-	label, // Override Legacy Quantum Style
+	label, /* Override Legacy Quantum Style*/
 	input[type='checkbox'] + label {
 		@include checkbox.base-label(
 			colors.$font,
@@ -41,5 +41,9 @@
 			top: -.2rem;
 			width: $box-size;
 		}
+	}
+
+	&.disabled {
+		opacity: 30%;
 	}
 }

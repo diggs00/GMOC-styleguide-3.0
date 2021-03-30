@@ -50,12 +50,13 @@
 		@include t.base-toggle-label(
 			c.$grey-dark,
 			f.$font-family-roboto,
-			.6rem,
-			1.5,
+			1rem,
+			1.375,
 			0 10px
 		);
 		bottom: 19px;
 		font-weight: f.$font-weight-bold;
+		vertical-align: middle;
 	}
 
 	&.disabled {

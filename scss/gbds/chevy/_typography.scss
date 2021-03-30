@@ -46,8 +46,8 @@
 		null,
 		null,
 		2px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -79,8 +79,8 @@
 		null,
 		null,
 		3px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -112,8 +112,8 @@
 		null,
 		null,
 		3px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -145,8 +145,8 @@
 		null,
 		null,
 		1px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -178,8 +178,8 @@
 		null,
 		null,
 		1px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -211,8 +211,8 @@
 		null,
 		null,
 		1px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -244,8 +244,8 @@
 		null,
 		null,
 		3px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -277,8 +277,8 @@
 		null,
 		null,
 		3px,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -300,6 +300,76 @@
 	@extend %gb-descriptive2;
 }
 
+%gb-descriptive3 {
+	@include gbt.gb-typography(
+		c.$grey-mid-dark,
+		f.$font-family-louis,
+		0.7rem,
+		null,
+		null,
+		f.$font-weight-normal,
+		1,
+		null,
+		null,
+		3px,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
+
+	a {
+		@extend %headline-link;
+
+		color: c.$grey-mid-dark;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+	}
+}
+
+.gb-descriptive3 {
+	@extend %gb-descriptive3;
+}
+
+%gb-descriptive-section {
+	@include gbt.gb-typography(
+		c.$grey-mid-dark,
+		f.$font-family-louis,
+		1rem,
+		null,
+		null,
+		f.$font-weight-normal,
+		1.5,
+		null,
+		null,
+		3px,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
+
+	a {
+		@extend %headline-link;
+
+		color: c.$grey-mid-dark;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+	}
+}
+
+.gb-descriptive-section {
+	@extend %gb-descriptive-section;
+}
+
 %gb-bold1 {
 	@include gbt.gb-typography(
 		c.$grey-dark,
@@ -312,8 +382,8 @@
 		null,
 		null,
 		normal,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -341,8 +411,8 @@
 		null,
 		null,
 		normal,
-		null, // No Override so no need to pass again
-		null // No Override so no need to pass again
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -356,6 +426,64 @@
 
 .gb-bold2 {
 	@extend %gb-bold2;
+}
+
+%gb-retail-numeral {
+	@include gbt.gb-typography(
+		c.$gold,
+		f.$font-family-louis,
+		1.75rem,
+		null,
+		null,
+		f.$font-weight-bold,
+		1.75,
+		null,
+		null,
+		normal,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+}
+
+.gb-retail-numeral {
+	@extend %gb-retail-numeral;
+}
+
+%gb-retail-label {
+	@include gbt.gb-typography(
+		c.$grey-dark,
+		f.$font-family-louis,
+		1rem,
+		null,
+		null,
+		f.$font-weight-bold,
+		1.3,
+		null,
+		null,
+		normal,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+}
+
+.gb-retail-label {
+	@extend %gb-retail-label;
 }
 
 /********************BODY STYLES********************/
@@ -395,7 +523,7 @@
 		null,
 		null,
 		null,
-		null // No Override so no need to pass again
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -432,7 +560,7 @@
 		null,
 		null,
 		null,
-		null // No Override so no need to pass again
+		null /* No Override so no need to pass again*/
 	);
 
 	a {

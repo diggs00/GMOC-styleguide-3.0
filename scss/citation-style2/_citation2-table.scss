@@ -1,8 +1,61 @@
 //
 // TABLES - CITATION2 Style
 // --------------------------------------------------
-
-
+.cit2-mobile-table {
+  display: block;
+  width: 100%;
+  color: red;
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
+  .plan {
+    padding:49px 30px 50px 30px;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    border: 2px solid $grey-light;
+    border-radius: 20px;
+    color: $grey-dark;
+    &.current {
+      padding:20px 30px 50px 30px;
+    }
+    &.selected {
+      border: 2px solid #000;
+      border-radius: 20px;
+      .selected-pill {
+        position: absolute;
+        top: -13px;
+        border-radius: 20px;
+        background-color: $black;
+        padding: 3px 10px;
+        display: inline-flex;
+        z-index: 2;
+        span.icon-ui-check {
+          margin-right: 5px;
+        }
+      }
+    }
+    ul.category {
+      li {
+        padding: 15px 20px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        &:nth-child(even) {
+          background-color: $grey-light;
+        }
+        .gb-icon-button {
+          margin-left: 5px;
+          padding:0px;
+          span {
+            vertical-align: middle;
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* DESKTOP TABLE
 	 ========================================================================== */

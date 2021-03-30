@@ -1,7 +1,7 @@
-// Mixin for generating vertical spacing styles
-// Vertical spacing is used to create space between components by adding a bottom margin
-// to the element being applied to.  The use of !important is needed to make sure if any
-// other classes are applied that have a bottom margin to override.
+/* Mixin for generating vertical spacing styles*/
+/* Vertical spacing is used to create space between components by adding a bottom margin*/
+/* to the element being applied to.  The use of !important is needed to make sure if any*/
+/* other classes are applied that have a bottom margin to override.*/
 @mixin generate-vertical-spacing(
 	$small-margin,
 	$medium-margin,

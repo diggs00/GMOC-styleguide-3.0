@@ -1,4 +1,4 @@
-// Mixins, variables, etc. for common component styling go in here
+/* Mixins, variables, etc. for common component styling go in here*/
 
 @mixin base-label(
 	$font-family,
@@ -28,7 +28,9 @@
 	$padding,
 	$width
 ) {
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	background-color: $background-color;
 	background-image: $background-image;
 	background-position: $background-position;
