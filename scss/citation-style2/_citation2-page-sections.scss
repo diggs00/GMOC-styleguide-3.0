@@ -1,0 +1,64 @@
+
+//
+// PAGE SECTIONS - CITATION Style 2
+// --------------------------------------------------
+
+
+.cit2-grey-section{
+  background-color: $grey-very-light;
+  padding:50px 0px;
+}
+
+
+.cit2-grey-section {
+  background-color: $grey-very-light;
+  padding:50px 0px;
+  .tool-container {   // Vehicle profile page Tools
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media (min-width: $screen-desktop) {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  } 
+  .tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-basis: 50%;
+    text-align:center;
+    @media (min-width: $screen-desktop) {
+      margin-bottom: 0px;
+      margin: 0px 60px;
+      flex-basis: 100%;
+    }
+    img {
+      width: 150px;
+      margin-bottom: 10px;
+      @media (min-width: $screen-desktop) {
+        margin-bottom: 20px;
+      }
+    }
+    div.gb-descriptive2 {
+      &.red {
+        color:red;
+        background-color: transparent;
+        a {
+          color: $red;
+          background-color: transparent;
+          font-weight: 600;
+        }
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+

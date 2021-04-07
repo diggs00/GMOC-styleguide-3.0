@@ -2,6 +2,71 @@
 // ALERTS - CITATION2 Style
 // --------------------------------------------------
 
+.cit2-alert-fullscreen {
+  position: relative;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid $red;
+  background-color: rgba( $red , .05 );
+  &.alert-danger {
+    border-color: $red;
+    .content {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $screen-desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .title {
+        display: flex;
+        background-color: transparent;
+        flex-wrap: wrap;
+        .icon {
+          color: $red;
+          margin-right: 15px;
+          span {
+            margin-right: 0px;
+            font-size: 24px;
+            &:before {
+              vertical-align: middle;
+            }
+          }
+        }
+        .heading {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 1;
+          flex-grow: 1;
+          flex-basis: 0;
+          .description {
+            margin-top: 30px;
+          }
+        }
+      }
+      ul.links {
+        display: inline-flex;
+        align-self: flex-end;
+        margin-top: 10px;
+        flex-shrink: 0;
+        flex-grow: 1;
+        @media (min-width: $screen-desktop) {
+          align-self: auto;
+          margin-top: 0px;
+        }
+        li {
+          display: inline;
+          padding-left: 15px;
+          margin-bottom: 0px;
+          &:first-child {
+            padding-left: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .cit2-alert {
   position: relative;
@@ -16,11 +81,14 @@
       display: flex;
       background-color: transparent;
       .icon {
-        width:24px;
-        height:24px;
+        color: $red;
         margin-right: 15px;
+        span {
+          margin-right: 0px;
+          font-size: 24px;
+        }
         @media (min-width: 600px) {
-          margin-top: 3px;
+          margin-top: 2px;
         }
       }
     }
@@ -74,6 +142,7 @@
       .icon {
         color: $brand-black;
         margin-right: 15px;
+
         span {
           margin-right: 0px;
           font-size: 24px;

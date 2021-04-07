@@ -1,0 +1,31 @@
+//
+// ALERTS - CITATION2 Style
+// --------------------------------------------------
+
+.cit2-page-heading {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0px 20px 0px;
+  background-color: $white;
+  border-bottom: 1px solid rgba( $grey-mid , .4 );
+  margin-bottom: 15px;
+  @media (min-width: $screen-desktop) {
+    padding: 40px 0px 50px 0px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .title {
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  .control {
+    margin-top: 10px;
+    @media (min-width: $screen-desktop) {
+      margin-top: 0px;
+      margin-left: auto;
+      padding-left: 30px;
+    }
+  }
+}
