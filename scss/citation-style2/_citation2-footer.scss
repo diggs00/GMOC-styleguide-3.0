@@ -1,0 +1,64 @@
+/* FOOTER - CITATION2 Style
+   ========================================================================== */
+
+.footer-snackbar-mobile-wrapper {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding:0px 0px 40px 0px;
+	display: flex;
+	justify-content: center;
+	.footer-snackbar-mobile {
+		background-color: $grey-dark;
+		border-radius: 14px;
+		padding: 15px 15px;
+		color: $white;
+		box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  	@media (min-width: $screen-desktop) {
+	  		display: none;
+		}
+		.title {
+			display: flex;
+			flex-direction: column;
+		}
+		.price {
+			display: inline-flex;
+		}
+		.cta {
+			width: 35%;
+		}
+	}
+}
+
+
+
+
+.footer-snackbar-desktop {
+	display: none;
+	background-color: $grey-dark;
+	padding: 30px 0px;
+	color: $white;
+  	@media (min-width: $screen-desktop) {
+  		display: block;
+  	}
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-bottom: 0px;
+		li {
+			margin:0px;
+			padding-right: 60px;
+			&:last-child {
+				width:20%;
+				padding-right: 0px;
+			}
+		}
+	}
+}
+
+

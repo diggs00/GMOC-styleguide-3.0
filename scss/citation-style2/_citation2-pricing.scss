@@ -3,7 +3,10 @@
 // --------------------------------------------------
 
 .pricing-large {
+	display: flex;
+    flex-direction: column;
   .price {
+  	display: flex;
     .gb-bold1.sup {
       font-size: 1.25em;
       line-height: 1em;

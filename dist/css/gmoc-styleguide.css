@@ -31499,6 +31499,13 @@ table.cit2-desktop tbody tr.cat-title td {
   background-color: #fff;
 }
 
+.pricing-large {
+  display: flex;
+  flex-direction: column;
+}
+.pricing-large .price {
+  display: flex;
+}
 .pricing-large .price .gb-bold1.sup {
   font-size: 1.25em;
   line-height: 1em;
@@ -32171,6 +32178,69 @@ hr.cit2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* FOOTER - CITATION2 Style
+   ========================================================================== */
+.footer-snackbar-mobile-wrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0px 0px 40px 0px;
+  display: flex;
+  justify-content: center;
+}
+.footer-snackbar-mobile-wrapper .footer-snackbar-mobile {
+  background-color: #262626;
+  border-radius: 14px;
+  padding: 15px 15px;
+  color: #fff;
+  box-shadow: 0px 28px 35px -28px #6e6e6e;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .footer-snackbar-mobile-wrapper .footer-snackbar-mobile {
+    display: none;
+  }
+}
+.footer-snackbar-mobile-wrapper .footer-snackbar-mobile .title {
+  display: flex;
+  flex-direction: column;
+}
+.footer-snackbar-mobile-wrapper .footer-snackbar-mobile .price {
+  display: inline-flex;
+}
+.footer-snackbar-mobile-wrapper .footer-snackbar-mobile .cta {
+  width: 35%;
+}
+
+.footer-snackbar-desktop {
+  display: none;
+  background-color: #262626;
+  padding: 30px 0px;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .footer-snackbar-desktop {
+    display: block;
+  }
+}
+.footer-snackbar-desktop ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.footer-snackbar-desktop ul li {
+  margin: 0px;
+  padding-right: 60px;
+}
+.footer-snackbar-desktop ul li:last-child {
+  width: 20%;
+  padding-right: 0px;
 }
 
 .container.sg-title {
