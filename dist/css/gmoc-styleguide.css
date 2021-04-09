@@ -32080,6 +32080,14 @@ table.cit2-desktop tbody tr.cat-title td {
   width: 100%;
 }
 
+.fixed-header-top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .cit2-page-heading {
   display: flex;
   flex-direction: column;

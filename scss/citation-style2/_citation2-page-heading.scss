@@ -2,6 +2,15 @@
 // ALERTS - CITATION2 Style
 // --------------------------------------------------
 
+.fixed-header-top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+
 .cit2-page-heading {
   display: flex;
   flex-direction: column;
