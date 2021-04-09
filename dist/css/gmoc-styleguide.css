@@ -32112,6 +32112,12 @@ table.cit2-desktop tbody tr.cat-title td {
   }
 }
 
+.cit2-page-heading-stepper {
+  padding: 15px 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 /* DIVIDER - CITATION2 Style
    ========================================================================== */
 hr.cit2 {
