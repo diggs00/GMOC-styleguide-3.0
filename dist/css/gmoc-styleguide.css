@@ -31526,16 +31526,6 @@ table.cit2-desktop tbody tr.cat-title td {
   z-index: 0;
   position: relative;
 }
-.stepper ul:after {
-  content: "";
-  height: 2px;
-  width: 216px;
-  left: 40px;
-  top: 12px;
-  border-top: 2px dashed #e6e6e6;
-  position: absolute;
-  z-index: -1;
-}
 .stepper ul li {
   display: flex;
   justify-content: center;
@@ -31545,15 +31535,52 @@ table.cit2-desktop tbody tr.cat-title td {
   position: relative;
   margin-right: 20px;
 }
+.stepper ul li:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  left: 50px;
+  top: 12px;
+  border-top: 1px dashed #b3b3b3;
+  position: absolute;
+  z-index: -1;
+}
 .stepper ul li:last-child {
   margin-right: 0px;
 }
+.stepper ul li:last-child:after {
+  content: "";
+  border-top: 0px;
+  width: 0px;
+}
+.stepper ul li.checked {
+  cursor: pointer;
+}
+.stepper ul li.checked:last-child {
+  margin-right: 0px;
+}
+.stepper ul li.checked:last-child:after {
+  content: "";
+  border-top: 0px;
+  width: 0px;
+}
 .stepper ul li.active .circle-graphic {
   border: 1px solid #2b2b2b;
-  color: #2b2b2b;
+  color: #fff;
+  background-color: #2b2b2b;
 }
 .stepper ul li.active .title div p.step-title {
   color: #2b2b2b;
+}
+.stepper ul li.checked:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  left: 50px;
+  top: 12px;
+  border-top: 2px solid #2b2b2b;
+  position: absolute;
+  z-index: -1;
 }
 .stepper ul li.checked .circle-graphic {
   border: 1px solid #2b2b2b;
@@ -31571,14 +31598,13 @@ table.cit2-desktop tbody tr.cat-title td {
   color: #2b2b2b;
 }
 .stepper ul li .circle-graphic {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #b3b3b3;
   position: relative;
   background: #fff;
   color: #6e6e6e;

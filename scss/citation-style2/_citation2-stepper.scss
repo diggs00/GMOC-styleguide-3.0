@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+
+
+
 .stepper {
   display: flex;
   ul {
@@ -13,16 +16,7 @@
     padding:0px;
     z-index: 0;
     position: relative;
-    &:after {
-      content: '';
-      height: 2px;
-      width: 216px;
-      left: 40px;
-      top: 12px;
-      border-top: 2px dashed $grey-light;
-      position: absolute;
-      z-index: -1;
-    }
+
     li {
       display: flex;
       justify-content: center;
@@ -31,13 +25,40 @@
       margin-bottom:0px;
       position: relative;
       margin-right:20px;
+      &:after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        left: 50px;
+        top: 12px;
+        border-top: 1px dashed $grey-mid;
+        position: absolute;
+        z-index: -1;
+      }
       &:last-child {
         margin-right: 0px;
+        &:after {
+          content: '';
+          border-top: 0px;
+          width: 0px;
+        }
       }
+      &.checked { 
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0px;
+          &:after {
+          content: '';
+          border-top: 0px;
+          width: 0px;
+          }
+        }
+       }
       &.active {
         .circle-graphic {
           border: 1px solid $brand-black;
-          color: $brand-black;
+          color: $white;
+          background-color: $brand-black;
         }
         .title {
           div {
@@ -48,6 +69,16 @@
         }
       }
       &.checked {
+        &:after {
+          content: '';
+          height: 2px;
+          width: 100%;
+          left: 50px;
+          top: 12px;
+          border-top: 2px solid $brand-black;
+          position: absolute;
+          z-index: -1;
+        }
         .circle-graphic {
           border: 1px solid $brand-black;
           background-color:$brand-black;
@@ -69,14 +100,13 @@
         }
       }
       .circle-graphic {
-        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        border: 1px solid $grey-light;
+        border: 1px solid $grey-mid;
         position: relative;
         background: $white;
         color: $grey-mid-dark;
@@ -99,4 +129,5 @@
     }
   }
 }
+
 
