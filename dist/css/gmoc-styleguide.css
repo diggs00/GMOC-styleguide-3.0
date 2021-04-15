@@ -30375,7 +30375,7 @@ ul.cit2-badge-familyshare li.child:before {
   line-height: 1em;
 }
 .card-cit2 .content .pricing .price :not(.gb-bold1.sup) {
-  line-height: 1em;
+  line-height: 0.9em;
 }
 .card-cit2 .cta {
   margin-top: auto;
@@ -30436,7 +30436,7 @@ ul.cit2-badge-familyshare li.child:before {
   line-height: 1em;
 }
 .card-byo-cit2 .pricing .price :not(.gb-bold1.sup) {
-  line-height: 1em;
+  line-height: 0.9em;
 }
 .card-byo-cit2 .cta {
   margin-top: auto;
@@ -31244,6 +31244,34 @@ a.close-cit2.disabled {
   width: unset;
 }
 
+.btn-group.btn-group-toggle.three-items {
+  width: 100%;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .btn-group.btn-group-toggle.three-items {
+    flex-direction: row;
+    width: unset;
+  }
+}
+.btn-group.btn-group-toggle.three-items .btn.gb-secondary-button {
+  border-radius: 0px;
+  padding: 10px 20px;
+  width: unset;
+}
+.btn-group > .btn:not(:first-child), .btn-group > .btn-group:not(:first-child) {
+  margin-left: 0px !important;
+}
+@media (min-width: 992px) {
+  .btn-group > .btn:not(:first-child), .btn-group > .btn-group:not(:first-child) {
+    margin-left: -2px !important;
+  }
+}
+
+.btn-group-toggle > .btn, .btn-group-toggle > .btn-group > .btn {
+  margin-bottom: -2px;
+}
+
 /* TABS
 	 ========================================================================== */
 .cit2-tab-container {
@@ -31383,6 +31411,9 @@ table.cit2-desktop {
 table.cit2-desktop a {
   position: relative;
 }
+table.cit2-desktop tbody {
+  vertical-align: top;
+}
 table.cit2-desktop tbody tr:nth-child(even) {
   background-color: #e6e6e6;
 }
@@ -31508,7 +31539,7 @@ table.cit2-desktop tbody tr.cat-title td {
   line-height: 1em;
 }
 .pricing-large .price :not(.gb-bold1.sup) {
-  line-height: 1em;
+  line-height: 0.9em;
 }
 
 .stepper {

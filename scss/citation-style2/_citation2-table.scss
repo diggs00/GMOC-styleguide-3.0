@@ -72,6 +72,7 @@ table.cit2-desktop {
     position: relative;
   }
   tbody {
+    vertical-align: top;
     tr:nth-child(even) {
       background-color: $grey-light;
     }

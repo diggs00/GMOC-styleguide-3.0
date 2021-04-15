@@ -12,16 +12,43 @@
 
 }
 
-
 .btn-group.btn-group-toggle {
+  .btn.gb-secondary-button {
+    border-radius: 0px;
+    padding: 10px 20px;
+    width: unset;
+  }
+}
+
+
+
+.btn-group.btn-group-toggle.three-items {
+  width: 100%;
+  flex-direction: column;
+  @media (min-width: $screen-desktop) {
+    flex-direction: row;
+    width: unset;
+  }
 	.btn.gb-secondary-button {
 		border-radius: 0px;
 		padding: 10px 20px;
 		width: unset;
+    @media (min-width: $screen-desktop) {
+    }
 	}
 }
 
+.btn-group > .btn:not(:first-child), .btn-group > .btn-group:not(:first-child) {
+  margin-left: 0px !important;
+  @media (min-width: $screen-desktop) {
+    margin-left: -2px !important;
+  }
+}
 
+
+.btn-group-toggle > .btn, .btn-group-toggle > .btn-group > .btn {
+    margin-bottom: -2px;
+}
 
 
 /* TABS
