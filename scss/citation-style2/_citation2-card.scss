@@ -41,9 +41,11 @@
   background-color: $white;
   border-radius: 0px 0px 14px 14px;
   position: relative; 
-  padding: 0px;
   border: 2px solid $grey-light;
   border-radius: 20px;
+  padding:40px;
+  display: flex;
+  flex-direction: column;
   &.selected {
     border: 2px solid #000;
     .selected-pill {
@@ -60,42 +62,38 @@
       }
     }
   }
-  .content{
-    padding:40px;
-    display: flex;
-    flex-direction: column;
-    ul.category {
-      margin-bottom: 0px;
-      li {
+  ul.category {
+    margin-bottom: 0px;
+    li {
 
-        padding:10px 0px;
-        margin: 0px;
-        border-bottom: 1px solid $grey-light;
-        &:first-child {
-          padding-top: 0px;
-        }
-        .gb-icon-button {
-          margin-left: 5px;
-          padding:0px;
-          span {
-            vertical-align: middle;
-            margin-top: -2px;
-          }
-        }
+      padding:10px 0px;
+      margin: 0px;
+      border-bottom: 1px solid $grey-light;
+      &:first-child {
+        padding-top: 0px;
       }
-    }
-    .pricing {
-      .price {
-        .gb-bold1.sup {
-          font-size: 1.25em;
-          line-height: 1em;
-        }
-        :not(.gb-bold1.sup) {
-            line-height: 1em;
+      .gb-icon-button {
+        margin-left: 5px;
+        padding:0px;
+        span {
+          vertical-align: middle;
+          margin-top: -2px;
         }
       }
     }
   }
+  .pricing {
+    .price {
+      .gb-bold1.sup {
+        font-size: 1.25em;
+        line-height: 1em;
+      }
+      :not(.gb-bold1.sup) {
+          line-height: 1em;
+      }
+    }
+  }
+
   .cta {
     margin-top: auto;
     display: flex;

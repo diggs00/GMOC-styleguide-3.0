@@ -2,10 +2,6 @@
 // STEPPER - CITATION2 Style
 // --------------------------------------------------
 
-
-
-
-
 .stepper {
   display: flex;
   ul {
@@ -57,8 +53,10 @@
       &.active {
         .circle-graphic {
           border: 1px solid $brand-black;
-          color: $white;
           background-color: $brand-black;
+          div {
+            color: $white;
+          }
         }
         .title {
           div {
@@ -83,7 +81,7 @@
           border: 1px solid $brand-black;
           background-color:$brand-black;
           color: $white;
-          .gb-body3 {
+          .gb-body2 {
             display: none;
           }
           &:before {
@@ -110,7 +108,7 @@
         position: relative;
         background: $white;
         color: $grey-mid-dark;
-        .gb-body3 {
+        .gb-body2 {
           margin-bottom: 2px;
         }
       }

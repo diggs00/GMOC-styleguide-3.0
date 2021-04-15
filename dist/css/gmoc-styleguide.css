@@ -30390,9 +30390,11 @@ ul.cit2-badge-familyshare li.child:before {
   background-color: #fff;
   border-radius: 0px 0px 14px 14px;
   position: relative;
-  padding: 0px;
   border: 2px solid #e6e6e6;
   border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .card-byo-cit2.selected {
   border: 2px solid #000;
@@ -30410,35 +30412,30 @@ ul.cit2-badge-familyshare li.child:before {
 .card-byo-cit2.selected .selected-pill span.icon-ui-check {
   margin-right: 5px;
 }
-.card-byo-cit2 .content {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-}
-.card-byo-cit2 .content ul.category {
+.card-byo-cit2 ul.category {
   margin-bottom: 0px;
 }
-.card-byo-cit2 .content ul.category li {
+.card-byo-cit2 ul.category li {
   padding: 10px 0px;
   margin: 0px;
   border-bottom: 1px solid #e6e6e6;
 }
-.card-byo-cit2 .content ul.category li:first-child {
+.card-byo-cit2 ul.category li:first-child {
   padding-top: 0px;
 }
-.card-byo-cit2 .content ul.category li .gb-icon-button {
+.card-byo-cit2 ul.category li .gb-icon-button {
   margin-left: 5px;
   padding: 0px;
 }
-.card-byo-cit2 .content ul.category li .gb-icon-button span {
+.card-byo-cit2 ul.category li .gb-icon-button span {
   vertical-align: middle;
   margin-top: -2px;
 }
-.card-byo-cit2 .content .pricing .price .gb-bold1.sup {
+.card-byo-cit2 .pricing .price .gb-bold1.sup {
   font-size: 1.25em;
   line-height: 1em;
 }
-.card-byo-cit2 .content .pricing .price :not(.gb-bold1.sup) {
+.card-byo-cit2 .pricing .price :not(.gb-bold1.sup) {
   line-height: 1em;
 }
 .card-byo-cit2 .cta {
@@ -31566,8 +31563,10 @@ table.cit2-desktop tbody tr.cat-title td {
 }
 .stepper ul li.active .circle-graphic {
   border: 1px solid #2b2b2b;
-  color: #fff;
   background-color: #2b2b2b;
+}
+.stepper ul li.active .circle-graphic div {
+  color: #fff;
 }
 .stepper ul li.active .title div p.step-title {
   color: #2b2b2b;
@@ -31587,7 +31586,7 @@ table.cit2-desktop tbody tr.cat-title td {
   background-color: #2b2b2b;
   color: #fff;
 }
-.stepper ul li.checked .circle-graphic .gb-body3 {
+.stepper ul li.checked .circle-graphic .gb-body2 {
   display: none;
 }
 .stepper ul li.checked .circle-graphic:before {
@@ -31609,7 +31608,7 @@ table.cit2-desktop tbody tr.cat-title td {
   background: #fff;
   color: #6e6e6e;
 }
-.stepper ul li .circle-graphic .gb-body3 {
+.stepper ul li .circle-graphic .gb-body2 {
   margin-bottom: 2px;
 }
 .stepper ul li .title div p.step-title {
