@@ -1,0 +1,171 @@
+
+
+<div class="container sg-title">
+    <div class="row">
+        <div class="col-12">
+            <h1>EXPANDER</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+<div class="container ">
+    <div class="row mt-0 mb-10 sg-subtitle">
+        <div class="col-12">
+            <h1><small>Expander - Offers</small></h1>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+    <div class="expand">
+        <div class="expand-heading" id="something" style="background-color: rgb(149, 149, 149);">
+            <span data-toggle="collapse" href="#collapseSmallOne" aria-hidden="true" class="icon-ui-arrowdown" style="display: none;" aria-expanded="true"></span>
+            <span data-toggle="collapse" href="#collapseSmallOne" aria-hidden="true" class="icon-ui-arrowup" style="color: rgb(255, 255, 255);" aria-expanded="true"></span>
+            <p class="expand-title" style="color: rgb(255, 255, 255);">Category 1</p>
+        </div>
+
+        <div id="collapseSmallOne" class="collapse in" aria-expanded="true" style="">
+            <div class="expand-body">
+                <ul class="margin-bottom-none">
+                    <li>
+                        <a href="" class="btn btn-link">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-link">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-link">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+         </div>
+    </div> -->
+    
+<!-- var expand = document.querySelector('.expand-cit2');
+var toggle = document.querySelector('#overlay-toggle');
+
+
+toggle.addEventListener('click', () => {
+    expand.classList.toggle("overlay");
+})
+ -->
+
+
+
+                <div class="expand-cit2">
+                    <div class="expand-heading">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 title">
+                                    <div class="gb-body2 invert heavy"><p class="mb-0">Available Offers Inside (1)</p></div>
+                                    <span data-toggle="collapse" href="#collapseSmallTwo" aria-hidden="true" class="icon-ui-add"></span>
+                                    <span data-toggle="collapse" href="#collapseSmallTwo" aria-hidden="true" class="icon-ui-minus" style="display: none"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="collapseSmallTwo" class="collapse">
+                        <div class="expand-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="margin-bottom-none">
+                                            <li>
+                                                <a href="" class="btn btn-link">Link 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="btn btn-link">Link 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="btn btn-link">Link 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+<script>
+
+    $( document ).ready( function(){
+
+        var bodyVisible = false;
+        var clicked = false;
+
+        $(".expand-heading").click(function(event) {
+
+            //prevent double action on click
+            if(!clicked){
+                var myOverlay = $(this).parent().find(".expand-cit2");
+                var myBody = $(this).parent().find(".collapse");
+                var myIcon = $(this).parent().find(".icon-ui-minus");
+                // var myTitle = $(this).parent().find(".expand-title");
+                // var checkBox = $(this).parent().find(".icon-ui-checkfill");
+                // var alertArrow = $(this).parent().find(".icon-ui-attentionfill");
+                // var attentionOutline = $(this).parent().find(".icon-ui-attentionoutline");
+                var plusBox = $(this).parent().find(".icon-ui-add");
+                var minusBox = $(this).parent().find(".icon-ui-minus");
+                var myHead = $(this);
+
+
+
+                bodyVisible = $(myBody).is(':visible');
+
+                if(bodyVisible){
+
+                    $(minusBox).hide();
+                    $(plusBox).show();
+                    $(plusBox).first().css("color","#4178da");
+                    // $(checkBox).first().css("color","#7fb306");
+                    // $(attentionOutline).first().css("color","#bf2828");
+                    // $(alertArrow).first().css("color","#bf2828");
+                    // $(myTitle).first().css("color","#454545");
+                    // $(myHead).css("background-color","#ffffff");
+
+                }else{
+                    $(plusBox).hide();
+                    $(minusBox).show();
+                    $(minusBox).first().css("color","#ffffff");
+                    // $(checkBox).first().css("color","#fff");
+                    // $(alertArrow).first().css("color","bf2828");
+                    // $(attentionOutline).first().css("color","#bf2828");
+                    // $(myTitle).first().css("color","#ffffff");
+                    // $(myHead).css("background-color","#959595");
+
+                }
+
+                console.log("-- "+myIcon)
+
+
+                clicked = true;
+
+                $(myIcon).click();
+
+                setTimeout(function(){
+                    clicked = false;
+                },500);
+            }
+
+        });
+
+
+    });
+
+
+
+
+
+</script>
+
+

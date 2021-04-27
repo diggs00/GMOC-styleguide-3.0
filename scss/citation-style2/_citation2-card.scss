@@ -4,6 +4,78 @@
 // --------------------------------------------------
 
 
+.card-offer-small-cit2 {
+  background-color: $white;
+  border-radius: 14px;
+  position: relative; 
+  box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  margin-bottom: 25px;
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 0px;
+  }
+  .content{
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    .pricing {
+      .price {
+        .gb-bold1.sup {
+          font-size: 1.25em;
+          line-height: 1em;
+        }
+        :not(.gb-bold1.sup) {
+            line-height: .9em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.card-offer-large-cit2 {
+  background-color: $white;
+  border-radius: 0px 0px 14px 14px;
+  position: relative; 
+  box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+  padding-bottom: 0px;
+  .content{
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    .pricing {
+      .price {
+        .gb-bold1.sup {
+          font-size: 1.25em;
+          line-height: 1em;
+        }
+        :not(.gb-bold1.sup) {
+            line-height: .9em;
+        }
+      }
+    }
+  }
+  .cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px 0px 40px; 
+  }
+}
+
+
+
 .card-cit2 {
   background-color: $white;
   border-radius: 0px 0px 14px 14px;

@@ -1,0 +1,218 @@
+//
+// BUNDLES - CITATION2 Style
+// --------------------------------------------------
+
+
+/* MOBILE BUNDLE
+   ========================================================================== */
+
+
+// 3 bundles
+.cit2-mobile-bundle {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
+  .title-price {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    .three-up {}
+    .bundle {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: 0px 10px;
+      padding-top: 30px;
+      &.current {
+        padding-top: 0px;
+      }
+      .tag-and-plan-name {
+        margin-bottom: 10px;
+        .selected-pill {
+          margin-bottom: 5px;
+          border-radius: 20px;
+          background-color: $black;
+          padding: 3px 10px;
+          align-self: flex-start;
+          display: inline-block;
+        }
+      }
+      .pricing {
+        border-top: 1px solid $grey-mid;
+        padding-top: 10px;
+        margin-top: auto;
+      }
+    }
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 135%;
+    .service-title{
+      padding: 0px 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    .values {
+      .service-category{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        &:nth-child(odd){
+          background-color: $grey-light;
+        }
+        .title {
+          border-bottom: 1px solid $grey-mid;
+          margin-bottom: 5px;
+          padding: 0px 0px 5px 10px;
+          .gb-icon-button {
+            padding: 0px 0px 0px 5px;
+          }
+        }
+        .bundle-value {
+          display: flex;
+          .gb-body1 {
+            padding: 0px 10px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            font-size: 24px;
+            line-height: 0px;
+          }
+        }
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    width: 135%;
+    border-top: 1px solid $grey-mid;
+    padding-top: 15px;
+    .gb-body1 {
+      padding: 0px 10px;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+}
+
+
+
+// 2 bundles
+.cit2-mobile-bundle.two-up {
+  .bundle {
+    width: 50%;
+  }
+  .services {
+    width: 100%;
+  }
+  .controls {
+    width: 100%;
+    .gb-body1 {
+      padding: 0px 10px;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+}
+
+
+
+
+
+
+/* DESKTOP BUNDLE
+	 ========================================================================== */
+
+
+table.cit2-desktop-bundle {
+  width: 100%;
+  display: none;
+  @media (min-width: $screen-desktop) {
+    display: block;
+  }
+  a {
+    position: relative;
+  }
+  tbody {
+    vertical-align: top;
+    tr:nth-child(even) {
+      background-color: $grey-light;
+    }
+    tr {
+      td {
+        padding: 16px 25px;
+        .icon-ui-checkcircle,.icon-ui-minus {
+          font-size: 24px;
+        }
+        .selected-pill {
+          margin-bottom: 5px;
+          border-radius: 20px;
+          background-color: $black;
+          padding: 3px 10px;
+          display: inline-flex;
+          // margin-left: -10px;
+        }
+        &.cat {
+          padding: 16px 25px;
+          .gb-icon-button {
+            padding:0px 0px 0px 5px;
+          }
+          .tag-and-plan-name {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        &:not(.cat){
+          padding: 16px 60px;
+        }
+      }
+      &.controls {
+        background-color: $white;
+        border-top: 1px solid $grey-mid;
+        td {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+      &.first-row {
+        background-color: $white;
+        border-bottom: 1px solid $grey-mid;
+        td {
+          vertical-align: bottom;
+          &:first-child {
+            width: 30%;
+          }
+        }
+      }
+      &.second-row {
+        background-color: $white;
+        td {
+          .price {
+            vertical-align: top;
+          }
+        }
+      }
+    }
+    tr.cat-title-first {
+      td {
+        padding: 4px 25px 10px 25px;
+        background-color: $white;
+      }
+    }
+    tr.cat-title {
+      td {
+        padding: 50px 25px 10px 25px;
+        background-color: $white;
+      }
+    }
+
+  }
+}
