@@ -72,19 +72,25 @@ toggle.addEventListener('click', () => {
                     <div id="collapseSmallTwo" class="collapse">
                         <div class="expand-body">
                             <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <ul class="margin-bottom-none">
-                                            <li>
-                                                <a href="" class="btn btn-link">Link 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn btn-link">Link 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="" class="btn btn-link">Link 3</a>
-                                            </li>
-                                        </ul>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-12 col-lg-10">
+                                        <div class="card-offer-large-cit2">
+                                            <div class="d-flex flex-column flex-lg-row">
+                                                <img class="img-fluid" src="img/prototypes/cit-style/card-cit2-image.jpg" alt="Responsive image">
+
+                                                <div class="content">
+                                                    <div class="gb-body1 heavy mb-2"><p class="mb-0">Get the App Access Plan</p></div>
+                                                    <div class="gb-body1 mb-6"><p class="mb-0">Bring your In-Vehicle Apps to life with the Chevrolet App Access Plan. With just a tap on your infotainment screen, you can access your music, news, audiobooks and more. Plus, with Alexa Built-In, you can ask to stream your favorite playlist, find and listen to popular podcasts, get directions on the go, and more — all from inside your vehicle.</p></div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a class="gb-primary-button">View details</a>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -126,23 +132,15 @@ toggle.addEventListener('click', () => {
 
                     $(minusBox).hide();
                     $(plusBox).show();
-                    $(plusBox).first().css("color","#4178da");
-                    // $(checkBox).first().css("color","#7fb306");
-                    // $(attentionOutline).first().css("color","#bf2828");
-                    // $(alertArrow).first().css("color","#bf2828");
-                    // $(myTitle).first().css("color","#454545");
-                    // $(myHead).css("background-color","#ffffff");
+                    $(plusBox).first().css("color","#ffffff");
+                    $(".expand-cit2").toggleClass("overlay");
+
 
                 }else{
                     $(plusBox).hide();
                     $(minusBox).show();
                     $(minusBox).first().css("color","#ffffff");
-                    // $(checkBox).first().css("color","#fff");
-                    // $(alertArrow).first().css("color","bf2828");
-                    // $(attentionOutline).first().css("color","#bf2828");
-                    // $(myTitle).first().css("color","#ffffff");
-                    // $(myHead).css("background-color","#959595");
-
+                    $(".expand-cit2").toggleClass("overlay");
                 }
 
                 console.log("-- "+myIcon)

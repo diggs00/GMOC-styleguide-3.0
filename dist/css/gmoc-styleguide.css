@@ -32410,7 +32410,7 @@ hr.cit2 {
   height: 100%;
 }
 .expand-cit2.overlay {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .expand-cit2 .expand-heading {
   padding: 15px 0px;
@@ -32434,8 +32434,8 @@ hr.cit2 {
   color: #fff;
 }
 .expand-cit2 .expand-body {
-  padding: 40px 20px;
-  background-color: #fff;
+  padding: 40px 0px;
+  background-color: #f2f2f2;
 }
 
 /* MOBILE BUNDLE
