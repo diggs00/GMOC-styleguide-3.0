@@ -1,5 +1,7 @@
 %button-base {
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0;
@@ -125,7 +127,7 @@
 
 	&::after {
 		color: $color;
-		content: '\0078'; // Unicode for x
+		content: '\0078'; /* Unicode for x*/
 		font-size: $icon-font-size;
 		font-weight: $icon-font-weight;
 		line-height: 0;
@@ -239,15 +241,15 @@
 		padding: $padding-lg;
 	}
 
+	&.active {
+		background-color: $active-background-color;
+		border-left: $active-border-left;
+	}
+
 	&:hover {
 		background-color: $hover-background-color;
 		border-left: $hover-border-left;
 
-	}
-
-	&.active {
-		background-color: $active-background-color;
-		border-left: $active-border-left;
 	}
 }
 

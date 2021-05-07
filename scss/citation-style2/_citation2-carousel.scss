@@ -281,6 +281,9 @@
   .carousel-text {
     align-self: center;
     width: 100%;
+    &.text-center {
+      text-align: center;
+    }
   }
 
 }
@@ -581,6 +584,86 @@
 
 
 
+
+.carousel-social {
+  .carousel-item {
+    padding:0px 20px 70px 20px;
+    background-color: $white;
+    @media (min-width: $screen-desktop) {
+      padding:0px 200px 100px 200px;
+    }
+  }
+  .carousel-caption-cit2 {
+    display: flex !important;
+    padding: 0px 45px 0px 45px;
+    height:100%;
+    z-index: 10;
+    margin: 0px;
+    color: $carousel-caption-color;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    .quote-graphic {
+      color: $gold;
+      margin-bottom: 20px;
+      @media (min-width: $screen-desktop) {
+        margin-bottom: 30px;
+      }
+        &:before {
+          content: '';
+          height: 2px;
+          width: 300px;
+          left: 50%;
+          margin-left: -150px;
+          top: 16px;
+          border-top: 1px solid $grey-light;
+          position: absolute;
+          z-index: 0;
+          @media (min-width: $screen-desktop) {
+            width: 600px;
+            margin-left: -300px;
+          }
+        }
+        span {
+          z-index: 1;
+          position: relative;
+          font-size: 32px;
+          &:after {
+            content: '';
+            height: 32px;
+            width: 50px;
+            left: -10px;
+            right:0px;
+            top: 0px;
+            background-color: $white;
+            position: absolute;
+            z-index: -9999999999;
+          }
+        }
+    }
+    .carousel-text {
+      width: 100%;
+      margin-bottom: 20px;
+      @media (min-width: $screen-desktop) {
+        margin-bottom: 40px;
+      }
+    }
+    .author {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 72px;
+        height:72px;
+        margin-right: 20px;
+      }
+      .name {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
 
 
 

@@ -1,3 +1,19 @@
+.sg-mobile-show {
+  display: block;
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
+}
+
+
+.sg-desktop-show {
+  display: none;
+  @media (min-width: $screen-desktop) {
+    display: block;
+  }
+}
+
+
 
 .container.sg-title {
   margin-top: 80px;

@@ -1,485 +1,55 @@
-@use '../utils/gb_typography' as gbt;
-
-@use 'colors' as c;
-@use 'fonts' as f;
-
-%headline-link {
-	color: c.$grey-dark;
-	cursor: pointer;
-
-	&:hover {
-		color: c.$gold;
-		text-decoration: none;
-	}
-}
-
-%headline-link-invert {
-	color: c.$white;
-
-	&:hover {
-		color: c.$gold;
-		text-decoration: none;
-	}
-}
-
-%headline-invert {
-	color: c.$white;
-
-	a {
-		@extend %headline-link-invert;
-	}
-}
-
-%headline-heavy {
-	font-weight: f.$font-weight-ultra;
-}
-
-%gb-display1 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		3rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1,
-		null,
-		null,
-		2px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-}
+@use 'placeholders';
 
 .gb-display1 {
 	@extend %gb-display1;
-}
-
-%gb-display2 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		2.25rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
 }
 
 .gb-display2 {
 	@extend %gb-display2;
 }
 
-%gb-display3 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1.5rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-}
-
 .gb-display3 {
 	@extend %gb-display3;
-}
-
-%gb-headline1 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1.5rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.3,
-		null,
-		null,
-		1px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
 }
 
 .gb-headline1 {
 	@extend %gb-headline1;
 }
 
-%gb-headline2 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1.25rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.2,
-		null,
-		null,
-		1px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-}
-
 .gb-headline2 {
 	@extend %gb-headline2;
-}
-
-%gb-headline3 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.5,
-		null,
-		null,
-		1px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
 }
 
 .gb-headline3 {
 	@extend %gb-headline3;
 }
 
-%gb-descriptive1 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.5,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-}
-
 .gb-descriptive1 {
 	@extend %gb-descriptive1;
-}
-
-%gb-descriptive2 {
-	@include gbt.gb-typography(
-		c.$grey-mid-dark,
-		f.$font-family-louis,
-		0.8rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.6,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-
-		color: c.$grey-mid-dark;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
 }
 
 .gb-descriptive2 {
 	@extend %gb-descriptive2;
 }
 
-%gb-descriptive3 {
-	@include gbt.gb-typography(
-		c.$grey-mid-dark,
-		f.$font-family-louis,
-		0.7rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-
-		color: c.$grey-mid-dark;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-}
-
 .gb-descriptive3 {
 	@extend %gb-descriptive3;
-}
-
-%gb-descriptive-section {
-	@include gbt.gb-typography(
-		c.$grey-mid-dark,
-		f.$font-family-louis,
-		1rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.5,
-		null,
-		null,
-		3px,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-
-		color: c.$grey-mid-dark;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
 }
 
 .gb-descriptive-section {
 	@extend %gb-descriptive-section;
 }
 
-%gb-bold1 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		2rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1.25,
-		null,
-		null,
-		normal,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-}
-
 .gb-bold1 {
 	@extend %gb-bold1;
-}
-
-%gb-bold2 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1.333rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1.2,
-		null,
-		null,
-		normal,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
 }
 
 .gb-bold2 {
 	@extend %gb-bold2;
 }
 
-%gb-retail-numeral {
-	@include gbt.gb-typography(
-		c.$gold,
-		f.$font-family-louis,
-		1.75rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1.75,
-		null,
-		null,
-		normal,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
-}
-
 .gb-retail-numeral {
 	@extend %gb-retail-numeral;
-}
-
-%gb-retail-label {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
-		1rem,
-		null,
-		null,
-		f.$font-weight-bold,
-		1.3,
-		null,
-		null,
-		normal,
-		null, /* No Override so no need to pass again*/
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %headline-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-	}
 }
 
 .gb-retail-label {
@@ -487,103 +57,9 @@
 }
 
 /********************BODY STYLES********************/
-%body-link {
-	color: c.$grey-dark;
-	cursor: pointer;
-	text-decoration: underline;
-
-	&:active,
-	&:hover {
-		color: c.$gold;
-	}
-}
-
-%body-link-invert {
-	color: c.$white;
-	text-decoration: underline;
-
-	&:hover,
-	&:visited,
-	&:active {
-		color: c.$gold;
-		text-decoration: underline;
-	}
-}
-
-%gb-body1 {
-	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-roboto,
-		.9rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.5,
-		null,
-		null,
-		null,
-		null,
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %body-link;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-
-		a {
-			@extend %body-link-invert;
-		}
-	}
-
-	&.heavy {
-		font-weight: f.$font-weight-xbold;
-	}
-}
 
 .gb-body1 {
 	@extend %gb-body1;
-}
-
-%gb-body2 {
-	@include gbt.gb-typography(
-		c.$grey-mid-dark,
-		f.$font-family-roboto,
-		0.8rem,
-		null,
-		null,
-		f.$font-weight-normal,
-		1.4,
-		null,
-		null,
-		null,
-		null,
-		null /* No Override so no need to pass again*/
-	);
-
-	a {
-		@extend %body-link;
-
-		color: c.$grey-mid-dark;
-	}
-
-	&.invert {
-		@extend %headline-invert;
-
-		a {
-			@extend %body-link-invert;
-		}
-	}
-
-	&.heavy {
-		font-weight: f.$font-weight-xbold;
-	}
-
-	li {
-		margin-bottom: 20px;
-	}
 }
 
 .gb-body2 {
