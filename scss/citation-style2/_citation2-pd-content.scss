@@ -113,13 +113,15 @@
 // STAT SECTION-- START
 .stat {
     display: flex !important;
-    padding: 0px 45px 0px 45px;
     height:100%;
     z-index: 10;
     margin: 0px;
     text-align: left;
     flex-direction: column;
     align-items: center;
+    // @media (min-width: $screen-desktop) {
+    //       padding: 0px 45px 0px 45px;
+    // }
   .stat-graphic {
     margin-bottom: 10px;
     @media (min-width: $screen-desktop) {
@@ -128,35 +130,68 @@
     &:before {
       content: '';
       height: 2px;
-      width: 150px;
       left: 0;
-      margin-left: 50px;
       top: 16px;
       border-top: 1px solid $grey-mid;
       position: absolute;
       z-index: 0;
-      // @media (min-width: $screen-desktop) {
-      //   width: 600px;
-      //   margin-left: -300px;
-      // }
+      width: 25%;
+      margin-left: 40px;
+      @media (min-width: 320px) {
+        width: 25%;
+        margin-left: 50px;
+      }
+      @media (min-width: 500px) {
+        width: 25%;
+        margin-left: 80px;
+      }
+      @media (min-width: $screen-tablet) {
+        width: 25%;
+        margin-left: 150px;
+      }
+      @media (min-width: $screen-desktop) {
+        width: 25%;
+        margin-left: 50px;
+      }
+      @media (min-width: $screen-lg-desktop) {
+        width: 25%;
+        margin-left: 70px;
+      }
     }
     &:after {
       content: '';
       height: 2px;
-      width: 150px;
       right: 0;
-      margin-right: 50px;
       top: 16px;
       border-top: 1px solid $grey-mid;
       position: absolute;
       z-index: 0;
-      // @media (min-width: $screen-desktop) {
-      //   width: 600px;
-      //   margin-left: -300px;
-      // }
+      margin-right: 40px;
+      width: 25%;
+      @media (min-width: 320px) {
+        margin-right: 50px;
+        width: 25%;
+      }
+      @media (min-width: 500px) {
+        width: 25%;
+        margin-right: 80px;
+      }
+      @media (min-width: $screen-tablet) {
+        margin-right: 150px;
+        width: 25%;
+      }
+      @media (min-width: $screen-desktop) {
+        width: 25%;
+        margin-right: 50px;
+      }
+      @media (min-width: $screen-lg-desktop) {
+        width: 25%;
+        margin-right: 70px;
+      }
+
     }
     span {
-      z-index: 99999999;
+      // z-index: 99999999999;
       position: relative;
       font-size: 42px;
       color: $grey;
@@ -169,7 +204,7 @@
         top: 0px;
         background-color: inherit;
         position: absolute;
-        z-index: -9999999999;
+        // z-index: -9999999999;
       }
     }
   }

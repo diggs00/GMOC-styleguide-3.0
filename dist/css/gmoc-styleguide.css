@@ -31303,6 +31303,7 @@ a.close-cit2.disabled {
 .cit2-alert-fullscreen.alert-danger .content {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 @media (min-width: 992px) {
   .cit2-alert-fullscreen.alert-danger .content {
@@ -31341,7 +31342,7 @@ a.close-cit2.disabled {
   align-self: flex-end;
   margin-top: 10px;
   flex-shrink: 0;
-  flex-grow: 1;
+  margin-left: auto;
 }
 @media (min-width: 992px) {
   .cit2-alert-fullscreen.alert-danger .content ul.links {
@@ -33110,7 +33111,6 @@ table.cit2-desktop-bundle tbody tr.cat-title td {
 
 .stat {
   display: flex !important;
-  padding: 0px 45px 0px 45px;
   height: 100%;
   z-index: 10;
   margin: 0px;
@@ -33129,27 +33129,86 @@ table.cit2-desktop-bundle tbody tr.cat-title td {
 .stat .stat-graphic:before {
   content: "";
   height: 2px;
-  width: 150px;
   left: 0;
-  margin-left: 50px;
   top: 16px;
   border-top: 1px solid #b3b3b3;
   position: absolute;
   z-index: 0;
+  width: 25%;
+  margin-left: 40px;
+}
+@media (min-width: 320px) {
+  .stat .stat-graphic:before {
+    width: 25%;
+    margin-left: 50px;
+  }
+}
+@media (min-width: 500px) {
+  .stat .stat-graphic:before {
+    width: 25%;
+    margin-left: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .stat .stat-graphic:before {
+    width: 25%;
+    margin-left: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .stat .stat-graphic:before {
+    width: 25%;
+    margin-left: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .stat .stat-graphic:before {
+    width: 25%;
+    margin-left: 70px;
+  }
 }
 .stat .stat-graphic:after {
   content: "";
   height: 2px;
-  width: 150px;
   right: 0;
-  margin-right: 50px;
   top: 16px;
   border-top: 1px solid #b3b3b3;
   position: absolute;
   z-index: 0;
+  margin-right: 40px;
+  width: 25%;
+}
+@media (min-width: 320px) {
+  .stat .stat-graphic:after {
+    margin-right: 50px;
+    width: 25%;
+  }
+}
+@media (min-width: 500px) {
+  .stat .stat-graphic:after {
+    width: 25%;
+    margin-right: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .stat .stat-graphic:after {
+    margin-right: 150px;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .stat .stat-graphic:after {
+    width: 25%;
+    margin-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .stat .stat-graphic:after {
+    width: 25%;
+    margin-right: 70px;
+  }
 }
 .stat .stat-graphic span {
-  z-index: 99999999;
   position: relative;
   font-size: 42px;
   color: #808080;
@@ -33163,7 +33222,6 @@ table.cit2-desktop-bundle tbody tr.cat-title td {
   top: 0px;
   background-color: inherit;
   position: absolute;
-  z-index: -9999999999;
 }
 .stat .stat-content {
   display: flex;
