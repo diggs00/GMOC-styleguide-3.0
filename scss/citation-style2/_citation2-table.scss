@@ -14,14 +14,14 @@
     z-index: 0;
     width: 100%;
     border: 2px solid $grey-light;
-    border-radius: 20px;
+    border-radius: 0px;
     color: $grey-dark;
     &.current {
       padding:20px 30px 50px 30px;
     }
     &.selected {
       border: 2px solid #000;
-      border-radius: 20px;
+      border-radius: 0px;
       .selected-pill {
         position: absolute;
         top: -13px;
@@ -98,7 +98,7 @@ table.cit2-desktop {
         .selected-pill {
           position: absolute;
           top: -13px;
-          border-radius: 20px;
+          border-radius: 0px;
           background-color: $black;
           padding: 3px 10px;
           display: inline-flex;
@@ -139,7 +139,7 @@ table.cit2-desktop {
               left:0px;
               border: 2px solid $black;
               border-top: 0px;
-              border-radius: 0px 0px 20px 20px;
+              border-radius: 0px 0px 0px 0px;
               z-index: 0;
             }
           }
@@ -166,7 +166,7 @@ table.cit2-desktop {
               left:0px;
               border: 2px solid $black;
               border-bottom: 0px;
-              border-radius: 20px 20px 0px 0px;
+              border-radius: 0px 0px 0px 0px;
               z-index: 0;
             }
           }

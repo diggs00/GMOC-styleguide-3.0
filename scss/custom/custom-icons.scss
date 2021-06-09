@@ -853,7 +853,7 @@ a.btn > span {
 
 // Used for svg icons inline with text
 .icon-svg-inline {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   svg {
     width: 1em;

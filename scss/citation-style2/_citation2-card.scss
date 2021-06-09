@@ -6,9 +6,10 @@
 
 .card-offer-small-cit2 {
   background-color: $white;
-  border-radius: 14px;
+  border: 2px solid $grey-light;
+  border-radius: 0px;
   position: relative; 
-  box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+  // box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
   padding-bottom: 0px;
   display: flex;
   flex-direction: column;
@@ -44,9 +45,10 @@
 
 .card-offer-large-cit2 {
   background-color: $white;
-  border-radius: 0px 0px 14px 14px;
+  border: 2px solid $grey-light;
+  border-radius: 0px;
   position: relative; 
-  box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+  // box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
   padding-bottom: 0px;
   .content{
     padding:40px;
@@ -78,9 +80,10 @@
 
 .card-cit2 {
   background-color: $white;
-  border-radius: 0px 0px 14px 14px;
+  border: 2px solid $grey-light;
+  border-radius: 0px;
   position: relative; 
-  box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+  // box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
   padding-bottom: 40px;
   .content{
     padding:40px;
@@ -111,10 +114,9 @@
 
 .card-byo-cit2 {
   background-color: $white;
-  border-radius: 0px 0px 14px 14px;
-  position: relative; 
   border: 2px solid $grey-light;
-  border-radius: 20px;
+  border-radius: 0px;
+  position: relative; 
   padding:40px;
   display: flex;
   flex-direction: column;
@@ -182,11 +184,12 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
-  border-radius: 14px;
-  border-top: 1px solid $grey-mid;
-  border-right: 1px solid $grey-mid;
-  border-bottom: 1px solid $grey-mid;
-  border-left: 1px solid $grey-mid;
+  border: 1px solid $grey-mid;
+  border-radius: 0px;
+  // border-top: 1px solid $grey-mid;
+  // border-right: 1px solid $grey-mid;
+  // border-bottom: 1px solid $grey-mid;
+  // border-left: 1px solid $grey-mid;
   @media (min-width: $screen-desktop) {
     flex-direction: row;
   }
@@ -196,10 +199,10 @@
       width: 290px;
     }
     img {
-      border-radius: 14px 14px 0px 0px;
+      border-radius: 0px 0px 0px 0px;
       @media (min-width: $screen-desktop) {
         height: 100%;
-        border-radius: 14px 0px 0px 14px;
+        border-radius: 0px 0px 0px 0px;
       }
     }
   }
@@ -269,3 +272,80 @@
   }
 }
 // USED ON PRODUCT DETAILS PAGE - END
+
+
+
+
+
+.card-payment-cit2 {
+  background-color: $white;
+  border: 2px solid $grey-light;
+  border-radius: 0px;
+  position: relative; 
+  padding:40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  &.selected {
+    border: 2px solid #000;
+    // box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+    .selected-pill {
+      position: absolute;
+      left:40px;
+      top: -13px;
+      border-radius: 20px;
+      background-color: $black;
+      padding: 3px 10px;
+      display: inline-flex;
+      z-index: 2;
+      span.icon-ui-check {
+        margin-right: 5px;
+      }
+    }
+  }
+  &.disabled {
+    background-color: $grey-very-light;
+  }
+  ul.category {
+    margin-bottom: 0px;
+    li {
+
+      padding:10px 0px;
+      margin: 0px;
+      border-bottom: 1px solid $grey-light;
+      &:first-child {
+        padding-top: 0px;
+      }
+      .gb-icon-button {
+        margin-left: 5px;
+        padding:0px;
+        span {
+          vertical-align: middle;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+  .pricing {
+    .price {
+      .gb-bold1.sup {
+        font-size: 1.25em;
+        line-height: 1em;
+      }
+      :not(.gb-bold1.sup) {
+          line-height: .9em;
+      }
+    }
+  }
+
+  .cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px 0px 40px; 
+  }
+}
+

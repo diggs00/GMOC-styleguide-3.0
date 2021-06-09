@@ -81,6 +81,7 @@ $brand-orange:  #f26522;
 // Family Sharing Badge - Used on vehicle profile page
 ul.cit2-badge-familyshare{
   margin-bottom: 0px;
+  display: flex;
   li {
     margin-bottom: 0px;
     background-color: white;
@@ -88,10 +89,8 @@ ul.cit2-badge-familyshare{
     border: 2px solid $gold;
     width: 28px;
     height: 28px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     display: inline-flex;
     position: relative;
     div.gb-body1 {
@@ -107,8 +106,7 @@ ul.cit2-badge-familyshare{
     justify-content: center;
     align-items: center;
     position: relative;
-    // left: 40px;
-    margin-left: -7px;
+    margin-left: -4px;
     div.gb-body1 {
       color: $brand-orange !important;
       font-size: 10px;
