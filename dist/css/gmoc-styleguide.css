@@ -30682,7 +30682,7 @@ ul.cit2-badge-familyshare li.child:before {
 .card-payment-cit2.selected .selected-pill span.icon-ui-check {
   margin-right: 5px;
 }
-.card-payment-cit2.disabled {
+.card-payment-cit2.expired {
   background-color: #f2f2f2;
 }
 .card-payment-cit2 ul.category {
