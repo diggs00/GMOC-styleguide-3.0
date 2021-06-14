@@ -23451,6 +23451,10 @@ ul.switch-list-inline label.disabled {
   content: "";
 }
 
+.icon-ui-editdots:before {
+  content: "";
+}
+
 [class^=icon-newnav], [class*=" icon-newnav"] {
   font-family: "icon-newnav";
   speak: none;
@@ -30662,7 +30666,6 @@ ul.cit2-badge-familyshare li.child:before {
   position: relative;
   padding: 40px;
   display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -30685,39 +30688,18 @@ ul.cit2-badge-familyshare li.child:before {
 .card-payment-cit2.expired {
   background-color: #f2f2f2;
 }
-.card-payment-cit2 ul.category {
-  margin-bottom: 0px;
-}
-.card-payment-cit2 ul.category li {
-  padding: 10px 0px;
-  margin: 0px;
-  border-bottom: 1px solid #e6e6e6;
-}
-.card-payment-cit2 ul.category li:first-child {
-  padding-top: 0px;
-}
-.card-payment-cit2 ul.category li .gb-icon-button {
-  margin-left: 5px;
-  padding: 0px;
-}
-.card-payment-cit2 ul.category li .gb-icon-button span {
-  vertical-align: middle;
-  margin-top: -2px;
-}
-.card-payment-cit2 .pricing .price .gb-bold1.sup {
-  font-size: 1.25em;
-  line-height: 1em;
-}
-.card-payment-cit2 .pricing .price :not(.gb-bold1.sup) {
-  line-height: 0.9em;
-}
-.card-payment-cit2 .cta {
-  margin-top: auto;
+.card-payment-cit2 .info-area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+.card-payment-cit2 .edit-area {
+  display: flex;
   align-items: center;
-  padding: 0px 40px 0px 40px;
+  padding-left: 15px;
+  margin-left: auto;
+}
+.card-payment-cit2 .edit-area span.icon-ui-editdots {
+  font-size: 20px;
 }
 
 ul.cit2-list-bullet {

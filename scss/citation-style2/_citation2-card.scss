@@ -284,7 +284,6 @@
   position: relative; 
   padding:40px;
   display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
   &.selected {
@@ -307,45 +306,19 @@
   &.expired{
     background-color: $grey-very-light;
   }
-  ul.category {
-    margin-bottom: 0px;
-    li {
-
-      padding:10px 0px;
-      margin: 0px;
-      border-bottom: 1px solid $grey-light;
-      &:first-child {
-        padding-top: 0px;
-      }
-      .gb-icon-button {
-        margin-left: 5px;
-        padding:0px;
-        span {
-          vertical-align: middle;
-          margin-top: -2px;
-        }
-      }
-    }
-  }
-  .pricing {
-    .price {
-      .gb-bold1.sup {
-        font-size: 1.25em;
-        line-height: 1em;
-      }
-      :not(.gb-bold1.sup) {
-          line-height: .9em;
-      }
-    }
-  }
-
-  .cta {
-    margin-top: auto;
+  .info-area {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+  .edit-area {
+    display: flex;
     align-items: center;
-    padding: 0px 40px 0px 40px; 
+    padding-left:15px;
+    margin-left: auto;
+    span.icon-ui-editdots {
+      font-size: 20px;
+    }
+
   }
 }
 
