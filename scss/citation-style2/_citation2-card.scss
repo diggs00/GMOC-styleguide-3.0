@@ -303,7 +303,30 @@
       }
     }
   }
-  &.expired{
+  &.expired {
+    border: 2px solid $red;
+    // box-shadow: 0px 28px 35px -28px $grey-mid-dark; 
+    .selected-pill {
+      position: absolute;
+      left:40px;
+      top: -13px;
+      border-radius: 20px;
+      background-color: $red;
+      padding: 3px 10px;
+      display: inline-flex;
+      z-index: 2;
+      span.icon-ui-caution {
+        margin-right: 5px;
+      }
+    }
+    .expiration-date {
+      .gb-body1,.gb-body2 {
+        color:$red !important;
+      }
+
+    }
+  }
+  &.inept{
     background-color: $grey-very-light;
   }
   .info-area {

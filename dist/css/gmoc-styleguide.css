@@ -30686,6 +30686,25 @@ ul.cit2-badge-familyshare li.child:before {
   margin-right: 5px;
 }
 .card-payment-cit2.expired {
+  border: 2px solid #e25959;
+}
+.card-payment-cit2.expired .selected-pill {
+  position: absolute;
+  left: 40px;
+  top: -13px;
+  border-radius: 20px;
+  background-color: #e25959;
+  padding: 3px 10px;
+  display: inline-flex;
+  z-index: 2;
+}
+.card-payment-cit2.expired .selected-pill span.icon-ui-caution {
+  margin-right: 5px;
+}
+.card-payment-cit2.expired .expiration-date .gb-body1, .card-payment-cit2.expired .expiration-date .gb-body2 {
+  color: #e25959 !important;
+}
+.card-payment-cit2.inept {
   background-color: #f2f2f2;
 }
 .card-payment-cit2 .info-area {
