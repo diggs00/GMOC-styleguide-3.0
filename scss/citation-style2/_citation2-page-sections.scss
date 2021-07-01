@@ -7,6 +7,9 @@
 .cit2-grey-section{
   background-color: $grey-very-light;
   padding:50px 0px;
+  &.black-gmc {
+    background-color: $black;
+  }
 }
 
 
@@ -15,11 +18,10 @@
   padding:50px 0px;
   .tool-container {   // Vehicle profile page Tools
     display: flex;
-    justify-content: flex-start;
+      justify-content: center;
     flex-wrap: wrap;
     @media (min-width: $screen-desktop) {
       flex-wrap: nowrap;
-      justify-content: center;
     }
   } 
   .tool {
