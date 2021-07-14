@@ -31578,6 +31578,9 @@ a.close-cit2.disabled {
 .cit2-tab-container .cit2-tabs .tab-labels label:last-child {
   margin: 0px 0px 0px 0px;
 }
+.cit2-tab-container .cit2-tabs .tab-labels label:focus {
+  outline-style: solid;
+}
 .cit2-tab-container .cit2-tabs .tab {
   flex-grow: 1;
   padding: 11px 0px;
