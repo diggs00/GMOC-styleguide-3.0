@@ -5,75 +5,109 @@
 .gb-radio {
 	input[type='radio'] {
 		@include r.base-radio-input(
-			48px,
+			20px,
 			0,
-			48px,
+			20px,
 		);
 		align-items: center;
+		position: absolute;
 
 		&::before {
 			background: c.$white;
-			border: 1px solid c.$grey-50;
-			border-radius: .625rem;
+			border: 2px solid c.$font;
+			border-radius: 10px;
 			content: '';
 			display: inline-block;
-			height: 1.25rem;
-			left: 14px;
-			position: relative;
-			top: 14px;
-			width: 1.25rem;
+			height: 20px;
+			left: 6px;
+			position: absolute;
+			top: 6px;
+			width: 20px;
+		}
+
+		&:hover {
+			background: c.$font-tint-10;
+			border-radius: 16px;
+			height: 32px;
+			width: 32px;
+
+			&::before {
+				left: 6px;
+				top: 6px;
+			}
 		}
 
 		+label {
 			@include r.base-radio-label(
-				c.$grey-medium,
-				f.$font-family-gmglobal-sans,
-				1rem,
-				1.5,
-				0,
+				c.$font,
+				f.$font-family-overpass,
+				16px,
+				normal,
+				5px 0 6px 2.25rem,
 			);
-			padding-left: calc(1rem - 8px);
-			top: 1px;
+			top: 3px;
+			vertical-align: super;
 		}
 
 		&:checked {
 			&::before {
-				background: c.$grey;
-				box-shadow: inset 0 0 0 0.15rem c.$white;
+				background: c.$font;
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M12.667%202.667l-6.667%208L3.333%208%202%2010l4%204%208.667-10-2-1.333z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 			}
 		}
 	}
 
 	&.disabled {
 		input[type='radio'] {
+			position: relative;
+
+			&:hover {
+				background: c.$white;
+				border: 2px solid c.$grey-almost;
+				border-radius: 10px;
+				content: '';
+				display: inline-block;
+				height: 20px;
+				left: 6px;
+				top: 6px;
+				width: 20px;
+
+				&::before {
+					left: -2px;
+					top: -2px;
+				}
+			}
+
 			&::before {
-				border: 1px solid c.$grey-20;
+				border: 2px solid c.$grey-almost;
 			}
 
 			+label {
-				color: c.$grey-medium;
+				color: c.$font;
+				margin-left: 10px;
+				vertical-align: sub;
 			}
 
 			&:checked {
 				&::before {
-					background: c.$grey-20;
-					box-shadow: inset 0 0 0 0.15rem c.$white;
+					background: c.$grey-almost;
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M12.667%202.667l-6.667%208L3.333%208%202%2010l4%204%208.667-10-2-1.333z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 				}
 			}
 		}
 	}
-}
 
-html[dir='rtl'] {
-	input[type='radio'] {
-		&::before {
-			left: 0;
-			right: 14px;
-		}
-
-		label {
-			padding-left: 0;
-			padding-right: calc(1rem - 8px);
+	@media print,only screen and (min-width:800px) {
+		input[type='radio'] + label {
+			@include r.base-radio-label(
+				c.$font,
+				f.$font-family-overpass,
+				18px,
+				normal,
+				0 0 0 2.25rem,
+			);
+			top: 3px;
+			vertical-align: super;
 		}
 	}
 }

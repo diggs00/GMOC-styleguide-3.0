@@ -1,0 +1,79 @@
+
+@mixin base-content-button-group() {
+	width: 100%;
+}
+
+@mixin base-content-button() {
+	display: inline-block;
+}
+
+@mixin base-content-container() {
+	display: none;
+	height: 100%;
+	width: 100%;
+
+	/*
+		Visible class used on regular layout so stacked content containers 
+		are not open if the view changes from regular to stacked. Last-opened
+		class is used to ensure the last tab opened displays when a stacked 
+		tab is closed and the view switches from stacked to regular view. 
+		Otherwise no content containers would be visible.
+	*/
+	&.visible, 
+	&.last-opened {
+		display: block;
+	}
+}
+
+@mixin base-compact-content-button-container-parent() {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+@mixin base-compact-content-button-group() {
+	padding: 0;
+	width: 100%;
+}
+
+@mixin base-compact-content-button() {
+	align-items: center;
+	display: flex;
+	width: 100%;
+}
+
+@mixin base-compact-content-container() {
+	display: block;
+	height: 100%;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+}
+
+@mixin base-compact-content-container-back-button(
+	$background-color,
+	$border,
+	$color,
+	$font-size,
+	$font-weight,
+	$height,
+	$label-padding,
+
+) {
+	background-color: $background-color;
+	border: $border;
+	color: $color;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	height: $height;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	.back-button-label {
+		padding: $label-padding;
+		text-align: left;
+	}
+}

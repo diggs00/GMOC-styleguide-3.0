@@ -1,0 +1,143 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../gm-generic/colors' as c;
+@use '../../gm-generic/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			c.$very-light-pink,
+		);
+
+		font-family: f.$font-family-overpass;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			c.$white,
+			c.$black-one,
+			.6rem,
+			f.$font-weight-bold,
+			50px,
+			0 15px,
+		);
+
+		margin-top: 0;
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0,
+		);
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$very-light-pink,
+				none,
+				c.$black-two,
+				.6rem,
+				f.$font-weight-bold,
+				50px,
+				0 30px 0 30px,
+			);
+
+			display: none;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			@include tn.base-tab-button(
+				c.$white,
+				c.$black-two,
+				.6rem,
+				f.$font-weight-bold,
+				auto,
+				20px,
+			);
+
+			border-bottom: 1px solid c.$brownish-grey;
+
+			&::after {
+				border-bottom: .2625rem solid transparent;
+				border-left: .4075rem solid c.$brownish-grey;
+				border-top: .2625rem solid transparent;
+				content: '';
+				position: absolute;
+				right: 1.875rem;
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			.back-button {
+				display: block;
+
+				&::before {
+					border-bottom: 5px solid transparent;
+					border-right: 8px solid c.$black;
+					border-top: 5px solid transparent;
+					content: '';
+					left: .875rem;
+					position: absolute;
+					top: 20px;
+				}
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$black-one;
+					font-size: 12px;
+					line-height: 1.125;
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open, &.opening, &.closing {
+				position: fixed;
+				z-index: 1;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

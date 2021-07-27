@@ -1,0 +1,172 @@
+@use 'separator' as s;
+@use '../../fleet/colors' as c;
+@use '../../fleet/fonts' as f;
+
+.gb-separator {
+	.separator-invisible {
+		@include s.base-separator(
+		);
+	}
+
+	.separator-primary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$grey-almost,
+			solid
+		);
+	}
+
+	.separator-secondary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$grey-very-dark,
+			solid
+		);
+	}
+
+	.separator-tertiary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$brand-blue,
+			solid
+		);
+	}
+
+	.separator-join-vertical {
+		@include s.base-separator-join(
+			3rem 0
+		);
+		height: 152px;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-gotham,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$grey-very-dark
+			);
+
+			&::before {
+				@include s.base-separator(
+					0 0 0 1px,
+					c.$grey-almost,
+					solid
+				);
+
+				bottom: 100%;
+				content: '';
+				height: 3rem;
+				left: 50%;
+				position: absolute;
+			}
+
+			&::after {
+				@include s.base-separator(
+					0 0 0 1px,
+					c.$grey-almost,
+					solid
+				);
+
+				content: '';
+				height: 3rem;
+				left: 50%;
+				position: absolute;
+				top: 100%;
+			}
+		}
+	}
+
+	.separator-join-horizontal {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-gotham,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$grey-very-dark
+			);
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-almost,
+					solid
+				);
+
+				content: '';
+				position: absolute;
+				right: calc(100% + 1rem);
+				top: 50%;
+				width: 48rem;
+
+			}
+
+			&::after {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-almost,
+					solid
+				);
+
+				content: '';
+				left: calc(100% + 1rem);
+				position: absolute;
+				top: 50%;
+				width: 48rem;
+			}
+		}
+	}
+
+	.separator-join-combined {
+		@include s.base-separator-join(
+			3rem 0
+		);
+		height: 152px;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-gotham,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$grey-very-dark
+			);
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-almost,
+					solid
+				);
+
+				content: '';
+				position: absolute;
+				right: calc(100% + 1rem);
+				top: 50%;
+				width: 48rem;
+
+			}
+
+			&::after {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-almost,
+					solid
+				);
+
+				content: '';
+				left: calc(100% + 1rem);
+				position: absolute;
+				top: 50%;
+				width: 48rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+/* Mixins, variables, etc. for common component styling go in here*/
+@use 'sass:map';
+@use '../../utils/breakpoints' as bp;
+
+@mixin base-tab-button-group(
+	$background-color,
+) {
+	background-color: $background-color;
+	display: inline-block;
+	margin: 0;
+}
+
+@mixin base-tab-button(
+	$active-background-color,
+	$color,
+	$font-size,
+	$font-weight,
+	$height,
+	$padding,
+) {
+	list-style: none;
+
+	button {
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+		background-color: transparent;
+		border: 0;
+		color: $color;
+		font-size: $font-size;
+		font-weight: $font-weight;
+		height: $height;
+		margin: 0;
+		padding: $padding;
+		text-align: left;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	&.active {
+		background-color: $active-background-color;
+	}
+}
+
+@mixin base-tab-content-container(
+	$background-color,
+	$padding,
+) {
+	background-color: $background-color;
+	padding: $padding;
+}
+
+.gb-tab-nav {
+    display: block;
+    padding: 0 32px;
+
+	@include bp.small-only {
+		padding: 0;
+	}
+}

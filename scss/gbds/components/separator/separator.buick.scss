@@ -1,0 +1,167 @@
+@use 'separator' as s;
+@use '../../buick/colors' as c;
+@use '../../buick/fonts' as f;
+
+.gb-separator {
+	.separator-invisible {
+		@include s.base-separator(
+		);
+	}
+
+	.separator-primary {
+		@include s.base-separator(
+			0 0 1px 0,
+			c.$grey-very-light,
+			solid
+		);
+	}
+
+	.separator-secondary {
+		@include s.base-separator(
+			0 0 1px 0,
+			c.$grey-mid,
+			solid
+		);
+	}
+
+	.separator-tertiary {
+		@include s.base-separator(
+			0 0 1px 0,
+			c.$brand-black,
+			solid
+		);
+	}
+
+	.separator-join-vertical {
+		@include s.base-separator(
+			$height: 90px
+		);
+		background: linear-gradient(90deg, c.$grey-mid 1px, transparent 1px);
+		background-position: 100% 0;
+		background-repeat: repeat-y;
+		background-size: 50%;
+		position: relative;
+		text-align: center;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-avenir-next,
+				1.154rem,
+				f.$font-weight-normal,
+				0,
+				1.5,
+				c.$brand-black,
+			);
+			background-color: c.$white;
+			padding: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+
+	.separator-join-horizontal {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-avenir-next,
+				1.154rem,
+				f.$font-weight-normal,
+				0,
+				1.5,
+				c.$brand-black,
+			);
+			background-color: c.$white;
+			padding: 2rem;
+			position: static;
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-mid,
+					solid
+				);
+
+				bottom: 0;
+				content: '';
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				z-index: -1;
+			}
+		}
+	}
+
+	.separator-join-combined {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-avenir-next,
+				1.154rem,
+				f.$font-weight-normal,
+				0,
+				1.5,
+				c.$brand-black,
+			);
+			background-color: c.$white;
+			padding: 1rem;
+			position: static;
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-mid,
+					solid
+				);
+
+				bottom: 0;
+				content: '';
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				z-index: -1;
+			}
+		}
+	}
+
+	@media (min-width: 960px) {
+		.separator-join-combined {
+			@include s.base-separator(
+				$height: 90px
+			);
+			background: linear-gradient(90deg, c.$grey-mid 1px, transparent 1px);
+			background-position: 100% 0;
+			background-repeat: repeat-y;
+			background-size: 50%;
+			position: relative;
+			text-align: center;
+
+			.separator-copy {
+				@include s.base-separater-copy(
+					f.$font-family-avenir-next,
+					1.154rem,
+					f.$font-weight-normal,
+					0,
+					1.5,
+					c.$brand-black,
+				);
+				background-color: c.$white;
+				padding: 1rem;
+				top: 50%;
+				transform: translateY(-50%);
+
+				&::before {
+					border-width: 0;
+				}
+			}
+		}
+	}
+}

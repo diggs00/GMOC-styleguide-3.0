@@ -1,0 +1,190 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../gmc/colors' as c;
+@use '../../gmc/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			c.$white,
+		);
+
+		border-bottom: 1px solid c.$font-light;
+		font-family: f.$font-family-muli;
+		padding: 0;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			c.$white,
+			c.$font,
+			16px,
+			f.$font-weight-normal,
+			56px,
+			0,
+		);
+
+		margin-top: 0;
+		padding: 0 26px 0 0;
+
+		button {
+			font-family: f.$font-family-muli;
+			letter-spacing: 0;
+			line-height: 1.375;
+		}
+
+		&.active, &:hover, &:focus {
+			button {
+				border-bottom: 2px solid c.$brand-red;
+				color: c.$brand-red;
+                font-weight: f.$font-weight-bold;
+				margin-bottom: -1px;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0,
+		);
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$grey-extra-light,
+				none,
+				c.$brand-black,
+				15px,
+				f.$font-weight-bold,
+				51px,
+				0 43px,
+			);
+
+            border-bottom: 1px solid c.$font-light;
+			display: none;
+			font-family: f.$font-family-muli;
+			letter-spacing: 2px;
+			line-height: 1.5;
+		}
+
+		.stacked-content-title {
+			align-items: center;
+			background: c.$brand-black;
+            border-bottom: 2px solid c.$brand-red;
+			color: c.$white;
+			display: none;
+            font-size: 22px;
+			font-family: f.$font-family-stratum;
+            font-weight: f.$font-weight-xbold;
+			height: 47px;
+			letter-spacing: 1px;
+			line-height: 1.75;
+            padding: 0 16px;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+
+			border-bottom: none;
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			border-bottom: 1px solid c.$font-light;
+            height: 47px;
+            padding: 0 15px;
+
+            button {
+                color: c.$brand-black;
+                font-weight: f.$font-weight-bold;
+                height: 47px;
+            }
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2231%22%20height%3D%2231%22%20viewBox%3D%220%200%2031%2031%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23C00%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M11.209%2020.674L16.937%2014.945%2011.209%209.216%2012.952%207.472%2020.424%2014.945%2012.952%2022.417z%22%20transform%3D%22translate(-324%20-120)%20translate(0%20112)%20translate(324.613%208.471)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				position: relative;
+				right: 0;
+				top: 6px;
+			}
+
+			&.active, &:hover, &:focus {
+				button {
+					border-bottom: none;
+					color: c.$brand-black;
+                    font-weight: f.$font-weight-bold;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			.back-button {
+				display: block;
+
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2239%22%20height%3D%2235%22%20viewBox%3D%220%200%2039%2035%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23000%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M11.213%2023.635L18.581%2017.086%2011.213%2010.536%2013.455%208.543%2023.066%2017.086%2013.455%2025.629z%22%20transform%3D%22translate(-7%20-119)%20translate(0%20111)%20translate(7.051%208.414)%20rotate(180%2017.14%2017.086)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					left: 4px;
+					position: absolute;
+					top: 8px;
+				}
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$brand-black;
+					font-size: 15px;
+					line-height: 1.5;
+					padding: 0 43px;
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open, &.opening, &.closing {
+				position: fixed;
+				z-index: 1;
+			}
+
+			.stacked-content-title {
+				display: flex;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

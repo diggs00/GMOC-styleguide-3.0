@@ -20,13 +20,13 @@
 	letter-spacing: $letter-spacing-sm;
 	line-height: $line-height-sm;
 
-	@media (min-width: 600px) and (max-width: 959px) {
+	@media (min-width: 800px) and (max-width: 1199px) {
 		font-size: $font-size-med;
 		letter-spacing: $letter-spacing-med;
 		line-height: $line-height-med;
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: 1200px) {
 		font-size: $font-size-lg;
 		letter-spacing: $letter-spacing-lg;
 		line-height: $line-height-lg;

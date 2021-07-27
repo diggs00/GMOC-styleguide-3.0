@@ -1,0 +1,179 @@
+@use 'separator' as s;
+@use '../../cadillac/colors' as c;
+@use '../../cadillac/fonts' as f;
+
+.gb-separator {
+	.separator-invisible {
+		@include s.base-separator(
+		);
+	}
+
+	.separator-left {
+		@include s.base-separator(
+			0 0 2px 0,
+			c.$gold-dark,
+			solid
+		);
+
+		max-width: 5.625rem;
+		min-width: 3.333rem;
+		width: 10vw;
+	}
+
+	.separator-center {
+		@include s.base-separator(
+			0 0 2px 0,
+			c.$gold-dark,
+			solid
+		);
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 5.625rem;
+		min-width: 3.333rem;
+		width: 10vw;
+	}
+
+	.separator-primary {
+		@include s.base-separator(
+			0 0 1px 0,
+			c.$grey-tint-30,
+			solid
+		);
+	}
+
+	.separator-join-vertical {
+		@include s.base-separator(
+			$height: 90px
+		);
+		background: linear-gradient(90deg, c.$grey-tint-30 1px, transparent 1px);
+		background-position: 100% 0;
+		background-repeat: repeat-y;
+		background-size: 50%;
+		margin: 2rem 0;
+		position: relative;
+		text-align: center;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$cadillac-sans,
+				.875rem,
+				f.$font-weight-book,
+				.071rem,
+				1.375,
+				c.$grey,
+			);
+			background-color: c.$white;
+			padding: .6rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.separator-join-horizontal {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$cadillac-sans,
+				1.75rem,
+				f.$font-weight-book,
+				.214rem,
+				2.5,
+				c.$grey,
+			);
+			background-color: c.$white;
+			padding: 1.3rem;
+			position: static;
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-tint-30,
+					solid
+				);
+
+				bottom: 0;
+				content: '';
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				z-index: -1;
+			}
+		}
+	}
+
+	.separator-join-combined {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$cadillac-sans,
+				.875rem,
+				f.$font-weight-book,
+				.071rem,
+				1.375,
+				c.$grey,
+			);
+			background-color: c.$white;
+			padding: 1.3rem;
+			position: static;
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$grey-tint-30,
+					solid
+				);
+
+				bottom: 0;
+				content: '';
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				z-index: -1;
+			}
+		}
+	}
+
+	@media (min-width: 960px) {
+		.separator-join-combined {
+			@include s.base-separator(
+				$height: 90px
+			);
+			background: linear-gradient(90deg, c.$grey-tint-30 1px, transparent 1px);
+			background-position: 100% 0;
+			background-repeat: repeat-y;
+			background-size: 50%;
+			margin: 2rem 0;
+			position: relative;
+			text-align: center;
+
+			.separator-copy {
+				@include s.base-separater-copy(
+					f.$cadillac-sans,
+					.875rem,
+					f.$font-weight-book,
+					.071rem,
+					1.375,
+					c.$grey,
+				);
+				background-color: c.$white;
+				padding: .6rem;
+				top: 50%;
+				transform: translateY(-50%);
+
+				&::before {
+					border-width: 0;
+				}
+			}
+		}
+	}
+}
+

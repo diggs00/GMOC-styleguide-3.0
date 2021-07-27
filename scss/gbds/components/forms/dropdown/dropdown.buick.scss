@@ -1,61 +1,174 @@
 @use 'dropdown' as d;
 @use '../../../buick/colors' as c;
 @use '../../../buick/fonts' as f;
+@use '../../../utils/breakpoints' as bp;
 
 .gb-dropdown {
-	label {
-		@include d.base-label(
-			f.$font-family-futura,
-			1.167rem,
-			2px,
-			1.5,
-			0 0 .5rem 0
-		);
-	}
+	.gb-select-container {
+		position: relative;
 
-	select {
-		@include d.base-select(
-			c.$white,
-			linear-gradient(to right, c.$black-light, c.$black-light),
-			linear-gradient(to right, c.$brand-black, c.$brand-black),
-			100% 0,
-			3.538rem 100%,
-			1px solid c.$grey,
-			f.$font-family-avenir-next,
-			1.3rem,
-			0,
-			1.08rem 1.846rem,
-			100%
-		);
-	}
+		label {
+			@include d.base-label(
+				f.$font-family-avenir-next,
+				16px,
+				normal,
+				1.5,
+				0
+			);
+			color: c.$brand-black;
+			left: 16px;
+			pointer-events: none;
+			position: absolute;
+			top: 15px;
+			transition: all .1s ease;
+		}
 
-	.select-container {
+		select {
+			@include d.base-select(
+				c.$white,
+				none,
+				none,
+				100% 0,
+				70px 100%,
+				1px solid c.$grey-very-light,
+				f.$font-family-avenir-next,
+				16px,
+				0,
+				24px 19px 4px 16px,
+				100%
+			);
+			border-bottom: 1px solid #b3b3b3;
+			color: c.$brand-black;
+			line-height: 1.5;
+	
+			&:hover {
+				border-bottom: 2px solid #262626;
+			}
+		
+			&:focus {
+				border: 1px solid c.$grey-dark;
+				border-bottom: 2px solid #1a1a1a;
+				box-shadow: 0 0 3px 3px rgba(102, 102, 102, 0.2);
+			}
+
+			&[disabled] {
+				border: 1px solid c.$grey-light;
+				background-color: c.$grey-light;
+				opacity: 1;
+			}
+		}
+
 		&::after {
-			border-bottom: 2px solid c.$white;
-			border-right: 2px solid c.$white;
-			bottom: 2.6rem;
-			content: '';
+			content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%232B2B2B%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M8.781%2010.667L16.637%2018.492%2024.571%2010.727%2026.667%2012.831%2016.619%2022.667%206.667%2012.752z%22%20transform%3D%22translate(-625%20-226)%20translate(338%20213)%20translate(287%2013)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 			display: flex;
-			height: 11px;
 			margin: 0 0 0 auto;
 			pointer-events: none;
-			position: relative;
-			right: 1.45rem;
-			transform: rotate(45deg);
-			width: 11px;
+			position: absolute;
+			right: 20px;
+			top: 12px;
+			width: 32px;
+		}
+
+		@include bp.medium-and-above {
+			label {
+				font-size: 18px;
+				line-height: 1.875;
+				top: 14px;
+			}
+
+			select {
+				font-size: 18px;
+				line-height: 1.875;
+			}
+
+			&::after {
+				top: 18px;
+			}
 		}
 	}
-}
 
-html[dir='rtl'] {
-	.gb-dropdown {
-		select {
-			background-position: 0 0;
+	.gb-helper-text {
+		color: c.$grey-dark;
+		font-size: 12px;
+		line-height: 1;
+		margin: 7px 19px 3px 16px;
+		position: relative;
+
+		@include bp.medium-and-above {
+			font-size: 14px;
+			line-height: 1.125;
+			margin: 9px 19px 3px 16px;
+		}
+	}
+
+	&.gb-option-selected {
+		.gb-select-container {
+			label {
+				@include d.base-label(
+					f.$font-family-avenir-next,
+					12px,
+					normal,
+					1.33,
+					0
+				);
+				color: c.$grey-dark;
+				pointer-events: none;
+				position: absolute;
+				top: 8px;
+				transition: all .1s ease;
+			}
 		}
 
-		&::after {
-			margin: 0 auto 0 0;
-			right: -1.45rem;
+		@include bp.medium-and-above {
+			.gb-select-container{
+				label {
+					font-size: 14px;
+					line-height: 1.125;
+					top: 8px;
+				}
+			}
+		}
+	}
+
+	&.form-error {
+		select {
+			border-bottom: 2px solid c.$error-red;
+			padding: 23px 19px 4px 16px;
+
+			&:hover {
+				border-bottom: 2px solid c.$error-red;
+			}
+		
+			&:focus {
+				border-bottom: 2px solid c.$error-red;
+			}
+		}
+
+		.gb-helper-text {
+			color: c.$error-red;
+			margin: 7px 0 0 40px;
+
+			&::before {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23B50000%22%20d%3D%22M7.207%202.017c.551-.46.79-.48%201.007-.42.216.062.408.206.526.417h0l6.163%2011.046c.073.13.112.278.112.427%200%20.243-.099.462-.257.62-.16.16-.378.258-.62.258h0H1.86c-.149%200-.295-.038-.425-.11-.212-.117-.356-.31-.418-.525-.062-.216-.042-.455.075-.667h0z%22%20transform%3D%22translate(-354%20-1743)%20translate(338%201679)%20translate(16%2064)%22%2F%3E%3Cpath%20fill%3D%22%23B50000%22%20d%3D%22M8%2011c.368%200%20.667.298.667.667%200%20.368-.299.666-.667.666-.368%200-.667-.298-.667-.666%200-.369.299-.667.667-.667zm.667-4l-.154%203.333H7.51L7.333%207h1.334z%22%20transform%3D%22translate(-354%20-1743)%20translate(338%201679)%20translate(16%2064)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				height: 16px;
+				left: -25px;
+				position: absolute;
+				top: -2px;
+				width: 16px;
+			}
+		}
+
+		@include bp.medium-and-above {
+	
+			.gb-helper-text {
+				margin: 9px 0 0 44px;
+	
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23B50000%22%20d%3D%22M9.2%201.918c.55-.459.79-.48%201.006-.419.216.062.409.205.527.417h0l8.291%2014.86c.073.13.111.278.111.428%200%20.242-.098.461-.257.62-.158.159-.378.257-.62.257h0H1.741c-.149%200-.295-.038-.425-.11-.212-.117-.356-.31-.418-.525-.062-.216-.042-.455.075-.667h0z%22%20transform%3D%22translate(-850%20-1747)%20translate(834%201679)%20translate(16%2068)%22%2F%3E%3Cpath%20fill%3D%22%23B50000%22%20d%3D%22M10%2013.75c.46%200%20.833.373.833.833%200%20.46-.373.834-.833.834-.46%200-.833-.373-.833-.834%200-.46.373-.833.833-.833zm.833-5l-.192%204.167H9.39L9.167%208.75h1.666z%22%20transform%3D%22translate(-850%20-1747)%20translate(834%201679)%20translate(16%2068)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					height: 20px;
+					width: 20px;
+				}
+			}
 		}
 	}
 }

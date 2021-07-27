@@ -1,0 +1,207 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../cadillac/colors' as c;
+@use '../../cadillac/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+    padding: 0;
+
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			transparent,
+		);
+
+        background-image: linear-gradient(to top, c.$white, c.$grey-very-light);
+		font-family: f.$cadillac-sans;
+		padding: 0 32px;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			transparent,
+			c.$grey-darker,
+			14px,
+			f.$font-weight-book,
+			auto,
+			0,
+		);
+
+        height: 70px;
+		margin-top: 0;
+		padding: 32px 16px 0 0;
+
+		button {
+			font-family: f.$cadillac-sans;
+			letter-spacing: .88px;
+			line-height: 1.375;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+		}
+
+		&.active, &:hover, &:focus {
+			button {
+				border-bottom: 2px solid c.$gold-dark;
+                font-weight: f.$font-weight-demi;
+				margin-bottom: -1px;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0 32px,
+		);
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$grey-extra-light,
+				none,
+				#343a40,
+				16px,
+				f.$font-weight-book,
+				51px,
+				0 43px,
+			);
+
+			display: none;
+			font-family: f.$cadillac-sans;
+			letter-spacing: 1.3px;
+			line-height: 1.375;
+		}
+
+		.stacked-content-title {
+			align-items: center;
+			background: c.$blue;
+			color: c.$white;
+			display: none;
+            font-size: 20px;
+			font-family: f.$cadillac-sans;
+            font-weight: f.$font-weight-book;
+			height: 48px;
+            justify-content: center;
+			letter-spacing: 1.08px;
+			line-height: 1.75;
+            padding-bottom: 2px;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+
+			border-bottom: none;
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			border-bottom: 1px solid c.$grey-tint-30;
+            height: 47px;
+            padding: 0 16px;
+
+            button {
+                color: c.$grey-darker;
+                font-size: 16px;
+                font-weight: f.$font-weight-book;
+                height: 47px;
+                letter-spacing: 1.3px;
+                line-height: 1.375;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+			&::after {
+                border-bottom: 2px solid #343a40;
+                border-right: 2px solid #343a40;
+                content: '';
+                height: 8px;
+                transform: rotate(-45deg);
+                width: 8px;
+			}
+
+			&.active, &:hover, &:focus {
+				button {
+					border-bottom: none;
+					color: c.$grey-darker;
+                    font-weight: f.$font-weight-book;
+				}
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+            padding: 0;
+
+			.back-button {
+				display: block;
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: #343a40;
+					font-size: 16px;
+                    letter-spacing: 1.3px;
+					line-height: 1.375;
+					padding: 0 0 4px 38px;
+
+                    &::before {
+                        border-bottom: 2px solid c.$gold-dark;
+                        border-right: 2px solid c.$gold-dark;
+                        content: '';
+                        height: 8px;
+                        left: 17px;
+                        position: absolute;
+                        top: 22px;
+                        transform: rotate(-225deg);
+                        width: 8px;
+                    }
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open, &.opening, &.closing {
+				position: fixed;
+				z-index: 1;
+			}
+
+			.stacked-content-title {
+				display: flex;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

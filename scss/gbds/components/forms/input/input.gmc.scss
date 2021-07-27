@@ -3,50 +3,495 @@
 @use '../../../gmc/fonts' as f;
 
 .gb-input {
-	label {
-		@include i.base-label(
-			f.$font-family-muli,
-			1.2rem,
-			1px,
-			1.5,
-			0
-		);
+	position: relative;
+
+	%gb-datetime-indicators-visible {
+		&::-webkit-datetime-edit {
+			opacity: 1;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 1;
+		}
+
 	}
 
-	input {
-		@include i.base-input(
-			c.$white,
-			2px solid c.$brand-black,
-			c.$font,
-			30%,
-			f.$font-family-muli,
-			1.6rem,
-			1rem,
-			2px solid c.$brand-black,
-		);
-		line-height: 2;
+	%gb-datetime-indicators-hidden {
+		&::-webkit-datetime-edit {
+			opacity: 0;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+		}
+
 	}
 
-	p {
+	%gb-text-container {
+		align-items: baseline;
+		display: flex;
+		flex-direction: row;
+	}
+
+	%gb-pw-info-item {
+		align-items: center;
+		color: c.$font-light;
+		display: flex;
+		flex-direction: row;
 		font-family: f.$font-family-muli;
-		font-size: 1.2rem;
+		font-size: 12px;
+		line-height: 1.33;
+		margin: 10px auto 5px 16px;
+
+		.gb-pw-info-text {
+			margin-left: 10px;
+		}
+
+		.gb-pw-info-icon-check {
+			border-bottom: solid 1px c.$white;
+			border-right: solid 1px c.$white;
+			display: none;
+			height: 6px;
+			margin: 2px 4px;
+			transform: rotate(45deg);
+			width: 3px;
+		}
+
+		.gb-pw-info-icon {
+			background-color: c.$white;
+			border: solid 1px c.$grey-medium;
+			border-radius: 50%;
+			display: inline-block;
+			height: 14px;
+			width: 14px;
+
+
+			&.valid {
+				background-color: c.$grey-medium;
+
+				/* stylelint-disable-next-line*/
+				.gb-pw-info-icon-check {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	label {
+		@include i.base-label(f.$font-family-muli,
+		16px,
+		normal,
+		1.5,
+		auto);
+
+		color: c.$font;
+	}
+
+	.clear-input,
+	.show-password {
+		display: none;
+		font-size: 12px;
+		line-height: 1.29;
+		position: absolute;
+		right: 17px;
+		text-transform: uppercase;
+		top: 20px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.gb-input-label {
+		color: c.$font;
+		font-size: 16px;
+		left: 16px;
 		line-height: 1.5;
-		margin-top: 1rem;
+		position: absolute;
+		top: 12px;
+
+		&.hover {
+			color: c.$font-light;
+			display: block;
+			font-size: 12px;
+			left: 16px;
+			line-height: 1.33;
+			top: 8px;
+		}
+	}
+
+	&:focus{
+		&input {
+			&[type=date] {
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	&.form-error {
-		input {
-			border-color: c.$error-red;
+		.gb-input-label {
+			color: c.$error-red;
 		}
 
-		p {
+		.gb-helper-text-container {
+			display: none;
+		}
+
+		.gb-pw-info-container {
+			display: none;
+		}
+
+		input {
+			&[type],
+			textarea {
+
+				&:focus {
+					~ .gb-input-label {
+						color: c.$error-red;
+					}
+				}
+
+				border-bottom: c.$error-red solid 2px;
+
+				&:focus {
+					border-bottom: c.$error-red solid 2px;
+				}
+
+				&:hover {
+					border-bottom: c.$error-red solid 2px;
+				}
+			}
+		}
+
+		.gb-error-text-container {
+			@extend %gb-text-container;
+		}
+	}
+
+	.gb-error-text-container {
+		display: none;
+		margin: 0;
+		padding: 12px 19px 14px 16px;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-error-text {
 			color: c.$error-red;
+			font-family: f.$font-family-muli;
+			font-size: 12px;
+			line-height: 1.33;
+		}
+	}
+
+	.gb-pw-info-container {
+		.gb-pw-label {
+			color: c.$font;
+			display: block;
+			font-family: f.$font-family-muli;
+			font-size: 14px;
+			font-weight: f.$font-weight-bold;
+			line-height: 1.43;
+			margin: 15px auto 5px 16px;
+		}
+
+		.gb-pw-str-indicator {
+			border-radius: 25px;
+			border-top: solid 4px c.$success-green;
+			margin: 0 16px 10px;
+
+			&.good-pw {
+				border-top-color: c.$amber;
+			}
+
+			&.weak-pw {
+				border-top-color: c.$error-red;
+			}
+
+		}
+
+		.gb-pw-info-item {
+			@extend %gb-pw-info-item;
+		}
+	}
+
+	.gb-helper-text-icon-container {
+		display: inline-block;
+		height: 16px;
+		margin: 0;
+		padding: 0;
+		width: 16px;
+
+		.gb-helper-text-icon-image {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+
+	input {
+
+		&::-moz-placeholder {
+			color: c.$font;
+			font-family: f.$font-family-muli;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 3px 0;
+			opacity: .5;
+		}
+
+		&::placeholder {
+			color: c.$font;
+			font-family: f.$font-family-muli;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 3px 0;
+			opacity: .5;
+		}
+
+		@include i.base-input(c.$white,
+		1px solid c.$grey-extra-light,
+		c.$font,
+		30%,
+		f.$font-family-muli,
+		16px,
+		26px 50px 4px 16px,
+		1px solid c.$grey-light);
+
+
+		&[type],
+		textarea {
+			border-bottom-color: c.$font;
+			border-radius: 0;
+			line-height: 1.5;
+
+
+			&:focus {
+				border-bottom: solid 1px c.$brand-black;
+
+				~ .gb-input-label {
+					color: c.$font-light;
+					display: block;
+					font-size: 14px;
+					left: 16px;
+					line-height: 1.33;
+					top: 5px;
+				}
+
+				~ .clear-input {
+					display: inline-block;
+				}
+
+				~ .show-password {
+					display: inline-block;
+				}
+			}
+
+			&:hover {
+				border-bottom-color: c.$brand-black;
+				cursor: text;
+
+			}
+
+		}
+		/*IOS  This is to override IOS appearance for date input types.*/
+		&[type=date] {
+			display: block;
+			text-transform: uppercase;
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			min-height: 52px;
+
+
+			&::-webkit-datetime-edit-text {
+				padding: 0 6px;
+
+			}
+
+			&::-webkit-datetime-edit-day-field {
+				padding-left: 6px;
+			}
+
+			&::-webkit-datetime-edit-year-field {
+				padding-left: 6px;
+			}
+
+			@extend %gb-datetime-indicators-hidden;
+
+			&:focus {
+				@extend %gb-datetime-indicators-visible;
+			}
+
+			&.valid {
+				&:focus {
+
+					&::-webkit-calendar-picker-indicator {
+						opacity: 1;
+					}
+				}
+
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 0;
+				}
+			}
+
+		}
+	}
+
+	.gb-helper-text-container {
+		margin: 0;
+		padding: 5px 19px 14px 16px;
+
+		@extend %gb-text-container;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-helper-text {
+			color: c.$font-light;
+			font-family: f.$font-family-muli;
+			font-size: 12px;
+			line-height: 1.33;
+		}
+	}
+
+	&.disabled {
+		input {
+			border: 1px solid c.$grey-extra-light;
+
+			&[type],
+			textarea {
+				&[disabled] {
+					background-color: c.$grey-extra-light;
+					color: c.$font;
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				border: 1px solid c.$grey-extra-light;
+
+			}
+		}
+
+		.gb-helper-text-container {
+			visibility: hidden;
 		}
 	}
 
 	&.form-success {
-		p {
-			color: c.$success-green;
+		.gb-helper-text-container {
+			.gb-helper-text {
+				color: c.$success-green;
+			}
+		}
+	}
+
+
+	@media (min-width: 800px) {
+		.clear-input,
+		.show-password {
+			font-size: 14px;
+			line-height: 1.29;
+			right: 20px;
+			top: 20px;
+		}
+
+		.gb-input-label {
+			font-size: 18px;
+			line-height: 1.67;
+			top: 14px;
+
+			&.hover {
+				font-size: 14px;
+				line-height: 1.29;
+				top: 8px;
+			}
+		}
+
+
+		input {
+			&::-moz-placeholder {
+				font-size: 18px;
+				line-height: 1.67;
+			}
+			&::placeholder {
+				font-size: 18px;
+				line-height: 1.67;
+			}
+
+			&[type],
+			textarea {
+				font-size: 18px;
+				line-height: 1.67;
+				padding: 24px 65px 4px 16px;
+
+				&:focus {
+					~ .gb-input-label {
+						top: 12px;
+					}
+				}
+			}
+
+			&[type=date] {
+				min-height: 57px;
+			}
+		}
+
+		.gb-helper-text-container {
+			padding: 10px 12px 12px 16px;
+
+			.gb-helper-text-icon-container {
+				height: 20px;
+				margin-right: 8px;
+				width: 20px;
+			}
+
+			.gb-helper-text {
+				font-size: 14px;
+				line-height: 1.43;
+			}
+		}
+
+		.gb-error-text-container {
+			.gb-error-text {
+				font-size: 14px;
+				line-height: 1.29;
+			}
+		}
+
+		.gb-pw-info-container {
+			.gb-pw-info-item {
+				font-size: 14px;
+				line-height: 1.29;
+				margin: 5px auto 5px 16px;
+			}
+
+			.gb-pw-label {
+				font-size: 16px;
+				line-height: 1.38;
+				margin: 18px auto 10px 16px;
+			}
+
+			.gb-pw-str-indicator {
+				margin: 0 16px 18px;
+			}
 		}
 	}
 }

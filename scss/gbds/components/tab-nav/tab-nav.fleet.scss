@@ -1,0 +1,209 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../fleet/colors' as c;
+@use '../../fleet/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+    padding: 0;
+
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			c.$grey-very-light,
+		);
+
+		border-bottom: 1px solid c.$grey-almost;
+		font-family: f.$font-family-gotham;
+		padding: 0 32px;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			transparent,
+			c.$grey-very-dark,
+			14px,
+			f.$font-weight-book,
+			auto,
+			0,
+		);
+
+		margin-top: 0;
+		padding: 16px 16px 0 0;
+
+		button {
+			font-family: f.$font-family-gotham;
+			letter-spacing: normal;
+			line-height: 1.125;
+            padding-bottom: 16px;
+		}
+
+		&.active, &:hover, &:focus {
+			button {
+				color: c.$brand-blue;
+				border-bottom: 2px solid c.$brand-blue;
+                font-weight: f.$font-weight-bold;
+				margin-bottom: -1px;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0 32px,
+		);
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$white,
+				none,
+				c.$grey-very-dark,
+				16px,
+				f.$font-weight-bold,
+				51px,
+				0 43px,
+			);
+
+			border-bottom: 1px solid c.$grey-almost;
+			display: none;
+			font-family: f.$font-family-gotham;
+			letter-spacing: 1.3px;
+			line-height: 1.375;
+		}
+
+		.stacked-content-title {
+			align-items: center;
+			background: c.$grey-very-dark;
+			color: c.$white;
+			display: none;
+            font-size: 18px;
+			font-family: f.$font-family-gotham;
+            font-weight: f.$font-weight-book;
+			height: 54px;
+			letter-spacing: normal;
+			line-height: 1.375;
+            padding: 0 2px 0 16px;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+
+			border-bottom: none;
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			border-bottom: 1px solid c.$grey-almost;
+            height: 47px;
+            padding: 0 16px;
+
+            button {
+                color: c.$grey-very-dark;
+                font-size: 16px;
+                font-weight: f.$font-weight-bold;
+                height: 47px;
+                letter-spacing: 1.3px;
+                line-height: 1.375;
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+			&::after {
+                box-sizing: border-box;
+				content: '';
+				height: 13px;
+				width: 13px;
+				border-top: 2.5px solid c.$brand-blue;
+				border-right: 2.5px solid c.$brand-blue;
+				transform: rotate(45deg);
+			}
+
+			&.active, &:hover, &:focus {
+				background-color: c.$grey-light;
+
+				button {
+					border-bottom: none;
+					font-weight: f.$font-weight-bold;
+				}
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+            padding: 0;
+
+			.back-button {
+				display: block;
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$grey-very-dark;
+					font-size: 16px;
+                    letter-spacing: normal;
+					line-height: 1.25;
+					padding: 0 0 0 38px;
+
+                    &::before {
+						border-top: 2.5px solid c.$brand-blue;
+						border-right: 2.5px solid c.$brand-blue;
+                        box-sizing: border-box;
+						content: '';
+						height: 13px;
+						left: 17px;
+						position: absolute;
+						top: 18px;
+						transform: rotate(225deg);
+						width: 13px;
+                    }
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open, &.opening, &.closing {
+				position: fixed;
+				z-index: 1;
+			}
+
+			.stacked-content-title {
+				display: flex;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

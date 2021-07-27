@@ -1,73 +1,182 @@
 @use 'dropdown' as d;
 @use '../../../cadillac/colors' as c;
 @use '../../../cadillac/fonts' as f;
+@use '../../../utils/breakpoints' as bp;
 
 .gb-dropdown {
-	label {
-		@include d.base-label(
-			f.$cadillac-sans,
-			.875rem,
-			.071rem,
-			1,
-			0 0 .625rem 0
-		);
-		font-weight: f.$font-weight-book;
-	}
+	.gb-select-container {
+		position: relative;
 
-	select {
-		@include d.base-select(
-			c.$white,
-			linear-gradient(to right, c.$grey-darker, c.$grey-darker),
-			linear-gradient(to right, c.$grey-light, c.$grey-light),
-			100% 0,
-			3rem 100%,
-			1px solid #252f32,
-			f.$cadillac-sans,
-			1rem,
-			0,
-			calc(.85rem + 1px) 4rem calc(.85rem + 1px) calc(.85rem + 1px),
-			100%
-		);
-		font-weight: f.$font-weight-book;
-		letter-spacing: .071rem;
-		line-height: 1;
-	}
-
-	.select-container {
-		&::after {
-			border-bottom: 2px solid c.$white;
-			border-right: 2px solid c.$white;
-			bottom: 2rem;
-			content: '';
-			display: flex;
-			height: 11px;
-			margin: 0 0 0 auto;
+		label {
+			@include d.base-label(
+				f.$cadillac-sans,
+				16px,
+				.99px,
+				1.5,
+				0
+			);
+			color: c.$grey-darker;
+			font-weight: f.$font-weight-book;
+			left: 16px;
 			pointer-events: none;
-			position: relative;
-			right: 1.1rem;
-			transform: rotate(45deg);
-			width: 11px;
+			position: absolute;
+			top: 15px;
+			transition: all .1s ease;
 		}
 
-		&:hover {
-			&::after {
+		select {
+			@include d.base-select(
+				c.$white,
+				none,
+				none,
+				100% 0,
+				70px 100%,
+				1px solid c.$grey-extra-light,
+				f.$cadillac-sans,
+				16px,
+				0,
+				24px 19px 4px 16px,
+				100%
+			);
+			border-bottom: 1px solid c.$grey-darker;
+			color: c.$grey-darker;
+			font-weight: f.$font-weight-book;
+			letter-spacing: .99px;
+			line-height: 1.5;
+	
+			&:hover {
 				border-bottom: 2px solid c.$grey-darker;
-				border-right: 2px solid c.$grey-darker;
+			}
+		
+			&:focus {
+				border: 1px solid c.$grey;
+				border-bottom: 2px solid c.$grey-darker;
+				box-shadow: 0 0 3px 3px rgba(121, 119, 118, 0.4);
+			}
+
+			&[disabled] {
+				border: 1px solid c.$grey-extra-light;
+				background-color: c.$grey-extra-light;
+				opacity: 1;
+			}
+		}
+
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%234B4B4B%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M13.5%2027.858L14.537%2028.5%2021%2019.5%2014.565%2010.5%2013.527%2011.14%2019.503%2019.499z%22%20transform%3D%22translate(-624%20-1524)%20translate(338%201513)%20translate(286%2011)%20rotate(90%2017.25%2019.5)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+			display: flex;
+			margin: 0 0 0 auto;
+			pointer-events: none;
+			position: absolute;
+			right: 20px;
+			top: 8px;
+			width: 32px;
+		}
+
+		@include bp.medium-and-above {
+			label {
+				font-size: 18px;
+				letter-spacing: 1.14px;
+				line-height: 1.875;
+				top: 14px;
+			}
+
+			select {
+				font-size: 18px;
+				letter-spacing: 1.14px;
+				line-height: 1.875;
+			}
+
+			&::after {
+				top: 14px;
 			}
 		}
 	}
-}
 
-html[dir='rtl'] {
-	.gb-dropdown {
-		select {
-			background-position: 0 0;
-			padding: calc(.85rem + 1px) calc(.85rem + 1px) calc(.85rem + 1px) 4rem;
+	.gb-helper-text {
+		color: c.$grey-dark;
+		font-size: 12px;
+		letter-spacing: .76px;
+		line-height: 1.125;
+		margin: 7px 19px 3px 16px;
+		position: relative;
+
+		@include bp.medium-and-above {
+			font-size: 14px;
+			letter-spacing: .88px;
+			line-height: 1.25;
+			margin: 9px 19px 3px 16px;
+		}
+	}
+
+	&.gb-option-selected {
+		.gb-select-container {
+			label {
+				@include d.base-label(
+					f.$cadillac-sans,
+					12px,
+					normal,
+					1.125,
+					0
+				);
+				color: c.$grey-dark;
+				letter-spacing: .76px;
+				pointer-events: none;
+				position: absolute;
+				top: 8px;
+				transition: all .1s ease;
+			}
 		}
 
-		&::after {
-			margin: 0 auto 0 0;
-			right: -1.2rem;
+		@include bp.medium-and-above {
+			.gb-select-container{
+				label {
+					font-size: 14px;
+					letter-spacing: .88px;
+					line-height: 1.25;
+					top: 8px;
+				}
+			}
+		}
+	}
+
+	&.form-error {
+		select {
+			border-bottom: 2px solid c.$error-red;
+			padding: 23px 19px 4px 16px;
+
+			&:hover {
+				border-bottom: 2px solid c.$error-red;
+			}
+		
+			&:focus {
+				border-bottom: 2px solid c.$error-red;
+			}
+		}
+
+		.gb-helper-text {
+			color: c.$error-red;
+			margin: 7px 0 0 40px;
+
+			&::before {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23B50000%22%20d%3D%22M7.216%201.912c.523-.437.762-.464.979-.407.217.056.413.196.535.404h0L14.833%2012.3c.08.135.121.288.121.444%200%20.242-.098.462-.257.62-.159.16-.378.257-.62.257h0H1.92c-.155%200-.308-.04-.442-.119-.21-.122-.35-.317-.406-.534-.058-.217-.032-.456.09-.665h0z%22%20transform%3D%22translate(-354%20-1694)%20translate(338%201631)%20translate(16%2062)%20translate(0%201)%22%2F%3E%3Cpath%20fill%3D%22%23B50000%22%20d%3D%22M8%2010.45c.368%200%20.667.284.667.633%200%20.35-.299.634-.667.634-.368%200-.667-.284-.667-.634%200-.35.299-.633.667-.633zm.667-3.8l-.154%203.167H7.51L7.333%206.65h1.334z%22%20transform%3D%22translate(-354%20-1694)%20translate(338%201631)%20translate(16%2062)%20translate(0%201)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				height: 16px;
+				left: -25px;
+				position: absolute;
+				width: 16px;
+			}
+		}
+
+		@include bp.medium-and-above {
+	
+			.gb-helper-text {
+				margin: 9px 0 0 44px;
+	
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2218%22%20viewBox%3D%220%200%2020%2018%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23B50000%22%20d%3D%22M9.22%201.72c.49-.414.728-.447.947-.395.218.05.417.186.545.391h0l8.163%2013.167c.086.14.132.3.132.463%200%20.242-.099.461-.257.62-.159.158-.378.257-.62.257h0H1.867c-.162%200-.321-.045-.46-.13-.206-.127-.341-.326-.393-.544-.052-.218-.021-.457.106-.663h0z%22%20transform%3D%22translate(-850%20-1701)%20translate(834%201631)%20translate(16%2070)%22%2F%3E%3Cpath%20fill%3D%22%23B50000%22%20d%3D%22M10%2012.375c.46%200%20.833.336.833.75s-.373.75-.833.75c-.46%200-.833-.336-.833-.75s.373-.75.833-.75zm.833-4.5l-.192%203.75H9.39l-.222-3.75h1.666z%22%20transform%3D%22translate(-850%20-1701)%20translate(834%201631)%20translate(16%2070)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					height: 20px;
+					width: 20px;
+				}
+			}
 		}
 	}
 }

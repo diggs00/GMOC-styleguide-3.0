@@ -114,6 +114,7 @@
 	line-height: $line-height;
 	margin: $margin;
 	padding: $padding;
+	width: 100%;
 
 	&:hover,
 	&:focus {
@@ -174,6 +175,7 @@
 	padding: $padding;
 	text-align: inherit;
 	text-decoration: none;
+  	width: 100%;
 
 	&:hover {
 		color: $hover-color;

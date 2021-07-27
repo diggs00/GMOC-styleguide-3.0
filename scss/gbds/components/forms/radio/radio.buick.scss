@@ -5,43 +5,112 @@
 .gb-radio {
 	input[type='radio'] {
 		@include r.base-radio-input(
-			1.7rem,
-			0.5rem 1rem,
-			1.7rem,
+			20px,
+			5px 10px 35px 0,
+			20px,
 		);
+		align-items: center;
+		position: absolute;
 
 		&::before {
 			background: c.$white;
 			border: 2px solid c.$grey-mid;
-			border-radius: 1rem;
+			border-radius: 10px;
 			content: '';
 			display: inline-block;
-			height: 1.7rem;
-			margin: 0;
-			position: relative;
-			width: 1.7rem;
+			height: 20px;
+			left: 6px;
+			position: absolute;
+			top: 6px;
+			width: 20px;
+		}
+
+		&:hover {
+			background: c.$grey;
+			border-radius: 16px;
+			height: 32px;
+			width: 32px;
+
+			&::before {
+				left: 6px;
+				top: 6px;
+			}
 		}
 
 		+label {
 			@include r.base-radio-label(
 				c.$brand-black,
 				f.$font-family-avenir-next,
-				1.3rem,
-				1.8,
-				0,
+				16px,
+				normal,
+				5px 0 6px 2.5rem,
 			);
 			top: 3px;
+			vertical-align: middle;
 		}
 
 		&:checked {
 			&::before {
-				background: c.$grey;
-				box-shadow: inset 0 0 0 1rem c.$grey-dark;
+				background: c.$black-light;
+				border-color: c.$black-light;
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M12.667%202.667l-6.667%208L3.333%208%202%2010l4%204%208.667-10-2-1.333z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 			}
 		}
 	}
 
 	&.disabled {
-		opacity: 30%;
+		input[type='radio'] {
+			cursor: default;
+			margin: 0;
+			position: relative;
+
+			&:hover {
+				background: c.$white;
+				border: 2px solid c.$grey-light;
+				border-radius: 10px;
+				content: '';
+				display: inline-block;
+				height: 20px;
+				left: 6px;
+				top: 6px;
+				width: 20px;
+
+				&::before {
+					left: -2px;
+					top: -2px;
+				}
+			}
+
+			&::before {
+				border: 2px solid c.$grey-light;
+			}
+
+			+label {
+				color: c.$brand-black;
+				margin-left: 10px;
+			}
+
+			&:checked {
+				&::before {
+					background: c.$grey-light;
+					border-color: c.$grey-light;
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M12.667%202.667l-6.667%208L3.333%208%202%2010l4%204%208.667-10-2-1.333z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
+				}
+			}
+		}
+	}
+
+	@media print,only screen and (min-width:800px) {
+		input[type='radio'] + label {
+			@include r.base-radio-label(
+				c.$brand-black,
+				f.$font-family-avenir-next,
+				18px,
+				normal,
+				0 0 0 2.5rem,
+			);
+			top: 3px;
+			vertical-align: middle;
+		}
 	}
 }

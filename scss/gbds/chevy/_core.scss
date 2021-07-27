@@ -1,5 +1,5 @@
 /* Common (global) cross-brand styles*/
-// @use '../common/common';
+@use '../common/common';
 
 /* Generic utilities*/
 @use '../utils/generate_font_faces' as gff;

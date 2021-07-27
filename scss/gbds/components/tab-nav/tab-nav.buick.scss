@@ -1,0 +1,182 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../buick/colors' as c;
+@use '../../buick/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			c.$white,
+		);
+
+		border-bottom: 1px solid c.$grey-tint-30;
+		font-family: f.$font-family-futura;
+		padding: 0;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			c.$white,
+			c.$grey-dark,
+			15px,
+			f.$font-weight-book,
+			56px,
+			0,
+		);
+
+		margin-top: 0;
+		padding: 0 32px 0 0;
+
+		button {
+			font-family: f.$font-family-futura;
+			letter-spacing: 3px;
+			line-height: 1.375;
+		}
+
+		&.active, &:hover, &:focus {
+			button {
+				border-bottom: 2px solid c.$brand-black;
+				color: c.$brand-black;
+				margin-bottom: -1px;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0,
+		);
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$brand-white,
+				none,
+				c.$brand-black,
+				15px,
+				f.$font-weight-book,
+				50px,
+				0 30px 0 30px,
+			);
+
+			display: none;
+			font-family: f.$font-family-futura;
+			letter-spacing: 3px;
+			line-height: 1.375;
+		}
+
+		.stacked-content-title {
+			align-items: center;
+			background: c.$black-light;
+			color: c.$white;
+			display: none;
+			font-family: f.$font-family-futura;
+			height: 48px;
+			justify-content: center;
+			letter-spacing: 3px;
+			line-height: 1.375;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+
+			border-bottom: none;
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			border-bottom: 1px solid c.$grey-tint-30;
+			height: 47px;
+			padding: 0 15px;
+
+			button {
+				height: 47px;
+			}
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M6.138%207.457L11.63%2012.927%2017.176%207.499%2018.641%208.97%2011.617%2015.845%204.66%208.915z%22%20transform%3D%22translate(-328.000000%2C%20-118.000000)%20translate(0.000000%2C%20106.000000)%20translate(328.559062%2C%2012.144361)%20translate(11.650848%2C%2011.650848)%20rotate(-90.000000)%20translate(-11.650848%2C%20-11.650848)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				position: relative;
+				left: 6px;
+				top: 3px;
+			}
+
+			&.active, &:hover, &:focus {
+				button {
+					border-bottom: none;
+					color: c.$brand-black;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			.back-button {
+				display: block;
+
+				&::before {
+					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M5.206%207.457L10.698%2012.927%2016.245%207.499%2017.71%208.97%2010.686%2015.845%203.728%208.915z%22%20transform%3D%22translate(-9.000000%2C%20-118.000000)%20translate(0.000000%2C%20106.000000)%20translate(9.069171%2C%2012.569900)%20translate(10.718958%2C%2011.651042)%20rotate(90.000000)%20translate(-10.718958%2C%20-11.651042)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					left: 9px;
+					position: absolute;
+					top: 12px;
+				}
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$brand-black;
+					font-size: 15px;
+					line-height: 1.125;
+					padding: 0 37px;
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open, &.opening, &.closing {
+				position: fixed;
+				z-index: 1;
+			}
+
+			.stacked-content-title {
+				display: flex;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

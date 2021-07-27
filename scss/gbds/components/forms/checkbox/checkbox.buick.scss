@@ -1,6 +1,7 @@
 @use 'checkbox';
 @use '../../../buick/colors';
 @use '../../../buick/fonts';
+@use '../../../utils/breakpoints' as bp;
 
 .gb-checkbox {
 	position: relative;
@@ -10,42 +11,89 @@
 		@include checkbox.base-label(
 			colors.$brand-black,
 			fonts.$font-family-avenir-next,
-			1.3rem,
+			16px,
 			fonts.$font-weight-normal,
-			1.8,
-			normal
+			0,
+			1.5
 		);
-	}
 
-	label + input[type='checkbox'] {
-		margin: .5rem 0 .5rem 1rem;
+		margin: 0 5px;
+		position: relative;
+		top: 2px;
+
+		@include bp.medium-and-above {
+			font-size: 18px;
+			line-height: 1.875;
+		}
 	}
 
 	input[type='checkbox'] {
-		@include checkbox.base-box(1.7rem);
+		$box-size: 20px;
 
-		background: colors.$white;
+		@include checkbox.base-box(20px);
+
+		background: none;
 		border: 2px solid colors.$grey-mid;
-		margin: .5rem 1rem .5rem 0;
+		margin: 3px;
 		position: relative;
-		top: -3px;
 
 		&:checked {
-			background-color: colors.$grey-dark;
-			border-color: colors.$grey-dark;
+			background: colors.$black-light;
+			border: 2px solid colors.$black-light;
 
 			&::after {
-				content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20preserveAspectRatio='xMidYMid'%20viewBox='3%208%2015%2012'%3E%3Cpolygon%20id='Path-3'%20stroke='%23FFFFFF'%20stroke-width='1'%20fill='%23FFFFFF'%20fill-rule='evenodd'%20points='3.78027344%2015.4143035%204.70467765%2014.649531%207.52055453%2017.5598716%2016.0096244%209.15619696%2016.7802734%209.761101%207.52055453%2019.156197'%3E%3C/polygon%3E%3C/svg%3E");
-				height: 1.5rem;
-				left: .5px;
+				border: none;
+				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M18.23%206L8.981%2014.737%205.93%2011.729%204%2013.251%208.973%2018%2020%207.325z%22%20transform%3D%22translate(-336%20-211)%20translate(336%20201)%20translate(0%2010)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				height: $box-size;
+				left: -4px;
 				position: absolute;
-				top: 1px;
-				width: 1.4rem;
+				top: -5px;
+				width: $box-size;
+			}
+		}
+	}
+
+	&:hover {
+		input[type='checkbox'] {
+			background: colors.$grey-very-light;
+			border-radius: 0;
+			box-shadow: 0 0 0 5px colors.$grey-very-light;
+
+			&:checked {
+				background: colors.$black-light;
 			}
 		}
 	}
 
 	&.disabled {
-		opacity: 30%;
+		input[type='checkbox'] {
+			background: none;
+			border: 2px solid colors.$grey-very-light;
+
+			&:checked {
+				background: colors.$grey-very-light;
+			}
+		}
+
+		&:hover {
+			input[type='checkbox'] {
+				border-radius: 0;
+				box-shadow: none;
+
+				&:checked {
+					background: colors.$grey-very-light;
+				}
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-checkbox {
+		input[type='checkbox'] {
+			&:checked::after {
+				left: 0;
+			}
+		}
 	}
 }

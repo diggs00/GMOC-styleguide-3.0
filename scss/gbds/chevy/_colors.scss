@@ -1,3 +1,4 @@
+/* Colors*/
 $black: #000;
 $white: #fff;
 
@@ -12,5 +13,113 @@ $grey-very-light: #f2f2f2;
 $gold: #cd9834;
 $gold-light: #e6ac39;
 
-$red: #e25959;
-$green: #61af71;
+$success: #61af71;
+$error: #e25959;
+$error-light: #b82d33;
+$grey-medium: #656565;
+
+/* Border*/
+@mixin gbds-color-border (
+  $size,
+  $color
+) {
+  border: $size solid $color;
+}
+
+
+/* Unified color variables*/
+/*----------------------------------//*/
+/*--------- Colors - Start ---------//*/
+/*----------------------------------//*/
+
+$black: #000;
+$white: #fff;
+
+/*----------------------------------//*/
+/*--------- Colors - End -----------//*/
+/*----------------------------------//*/
+
+$error-red: #b50000;         /* $error-red*/
+$error-red-light: #FF0124;   /* $error-red-light*/
+$success-green: #0a7305;       /* $success-green*/
+$warning-amber: #F16100;       /* $success-green*/
+
+/*----------------------------------//*/
+/*--------- Colors - Start ---------//*/
+/*----------------------------------//*/
+
+/*---------- Gray - Start ----------//*/
+
+$gray-50: #f6f6f6;       /* $gray-very-light */
+$gray-100: #f6f6f6;      /* $gray-very-light */
+$gray-200: #F2F2F2;       /* $gray-very-light*/
+$gray-300: #E6E6E6;       /* $gray-light*/
+$gray-400: #B3B3B3;       /* $gray-mid*/
+$gray-500: #808080;       /* $gray*/
+$gray-600: #6E6E6E;       /* $gray-mid-darker*/
+$gray-700: #262626;       /* $gray-dark*/
+$gray-800: #191919;       /* $gray-very-dark*/
+$gray-900: #181818;      /* $gray-very-dark */
+
+$gray-cool-50:  #fefefe;  /* $gray-tint-50 */
+$gray-cool-100: #fafafa;  /* $gray-tint-10 */
+$gray-cool-200: #d3d5d6;  /* $gray-tint-20 */
+$gray-cool-300: #bdc0c1;  /* $gray-tint-30 */
+$gray-cool-400: #a8acad;  /* $gray-tint-40 */
+$gray-cool-500: #929798;  /* $gray-tint-50 */
+$gray-cool-600: #7c8284;  /* $gray-tint-60 */
+$gray-cool-700: #666d6f;  /* $gray-tint-70 */
+$gray-cool-800: #51595b;  /* $gray-tint-80 */
+$gray-cool-900: #3a4346;  /* $gray-tint-90 */
+
+$gray-warm-50:  #fefefe; 
+$gray-warm-100: #fafafa; 
+$gray-warm-200: #d3d5d6; 
+$gray-warm-300: #bdc0c1; 
+$gray-warm-400: #a8acad; 
+$gray-warm-500: #929798; 
+$gray-warm-600: #7c8284; 
+$gray-warm-700: #666d6f; 
+$gray-warm-800: #51595b; 
+$gray-warm-900: #3a4346; 
+
+/*---------- Gray - End ----------//*/
+
+/*---------- Brand - Start ----------//*/
+
+$brand-primary: $gold;
+$brand-secondary: $grey;
+$brand-tertiary: $grey-dark;
+$brand-auxiliary: $grey-mid-dark;
+
+$brand-accent-primary: $gold-light;
+$brand-accent-secondary: $grey-very-dark;
+$brand-accent-tertiary: $grey-very-dark;
+
+$brand-primary-darker: $gold;
+$brand-primary-light: $gold-light;
+
+/*---------- Brand - End ----------//*/
+
+/*---------- Font - Start ----------//*/
+
+$font-color-primary: $gray-700;
+$font-color-secondary: $gray-600;
+$font-color-tertiary: $brand-primary;
+$font-color-auxiliary: $brand-auxiliary;
+$font-color-error: $error;
+$font-hover-state: $font-color-secondary;
+
+/*---------- Font - End ----------//*/
+
+/*---------- Form - Start ----------//*/
+
+$error: $error-red;         /* $error-red*/
+$success: $success-green;   /* $success-green*/
+$warning: $warning-amber;    /* $warning-amber*/
+
+/*---------- Form - End ----------//*/
+
+/*----------------------------------//*/
+/*--------- Colors - End -----------//*/
+/*----------------------------------//*/

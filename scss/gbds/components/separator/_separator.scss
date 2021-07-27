@@ -1,0 +1,46 @@
+/* Mixins, variables, etc. for common component styling go in here*/
+@mixin base-separator(
+	$border-width: 0,
+	$border-color: unset,
+	$border-style: none,
+	$height: 0,
+	$background-color: unset,
+) {
+	background-color: $background-color;
+	border-color: $border-color;
+	border-style: $border-style;
+	border-width: $border-width;
+	height: $height;
+	width: 100%;
+}
+
+@mixin base-separator-join(
+	$padding: 0
+) {
+	overflow: hidden;
+	padding: $padding;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+@mixin base-separater-copy(
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$color,
+) {
+	color: $color;
+	display: inline-block;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: 1rem;
+	position: relative;
+	text-transform: uppercase;
+}

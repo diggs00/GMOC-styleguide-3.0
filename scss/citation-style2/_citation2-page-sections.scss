@@ -45,10 +45,10 @@
     }
     div.gb-descriptive2 {
       &.red {
-        color:red;
+        color:$error;
         background-color: transparent;
         a {
-          color: $red;
+          color: $error;
           background-color: transparent;
           font-weight: 600;
         }

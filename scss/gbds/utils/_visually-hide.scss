@@ -1,0 +1,47 @@
+/*
+	Visually hides an element while still allowing it to receive keyboard focus.
+*/
+@mixin visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+	Visually hides an element while still allowing it to receive keyboard focus and
+	shows it upon focus.
+*/
+@mixin visually-hide-show(
+	$show-height: auto,
+	$show-width: auto,
+	$show-border: 0,
+	$show-margin: 0,
+	$show-padding: 0,
+	$show-position: static,
+	$show-overflow: visible,
+) {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&:active, &:focus {
+		border: $show-border;
+		clip: auto;
+		height: $show-height;
+		margin: $show-margin;
+		overflow: $show-overflow;
+		padding: $show-padding;
+		position: $show-position;
+		width: $show-width;
+	}
+}

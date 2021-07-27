@@ -1,0 +1,158 @@
+/* Note: this styling does NOT account for body overflow-x so a horizontal scrollbar will likely appear unless you account for it.*/
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$timing-scale-up-down: $timing-function !default;
+$timing-slide-left-right: $timing-function !default;
+
+$scale-down-time: 450ms !default;
+$scale-up-time: 200ms !default;
+
+$slide-left-time: 350ms !default;
+$slide-right-time: 200ms !default;
+
+/* Adds styles to scale an element down and back up absolutely positioned with its parent without*/
+/* squishing the contents of the element. Intended to be used on container elements.*/
+@mixin scale-up-down($width) {
+	top: 100%;
+	width: $width;
+	max-height: 0;
+	overflow: hidden;
+
+	/* Fixed position so the element doesn't impact document flow while hidden,*/
+	/* alternative to display: none;*/
+	position: fixed;
+	visibility: hidden;
+
+	@-webkit-keyframes gb-scale-down {
+		from {
+			max-height: 0;
+		}
+
+		to {
+			max-height: 100vh;
+		}
+	}
+
+	@keyframes gb-scale-down {
+		from {
+			max-height: 0;
+		}
+
+		to {
+			max-height: 100vh;
+		}
+	}
+
+	@-webkit-keyframes gb-scale-up {
+		from {
+			max-height: 100vh;
+		}
+
+		to {
+			max-height: 0;
+		}
+	}
+
+	@keyframes gb-scale-up {
+		from {
+			max-height: 100vh;
+		}
+
+		to {
+			max-height: 0;
+		}
+	}
+
+	&.opening {
+		-webkit-animation: gb-scale-down $scale-down-time $timing-scale-up-down;
+		        animation: gb-scale-down $scale-down-time $timing-scale-up-down;
+	}
+
+	&.closing {
+		-webkit-animation: gb-scale-up $scale-up-time $timing-scale-up-down;
+		        animation: gb-scale-up $scale-up-time $timing-scale-up-down;
+		overflow: hidden;
+	}
+
+	&.open {
+		@content;
+
+		overflow-y: auto;
+	}
+
+	&.opening, &.closing, &.open {
+		display: inline-block;
+		visibility: visible;
+		position: absolute;
+	}
+}
+
+/* Adds styles to slide an element left and right absolutely positioned to its parent.*/
+/* Intended to be used on container elements.*/
+@mixin slide-left-right($top) {
+	position: fixed;
+	top: $top;
+	left: 100%;
+	width: 100%;
+	visibility: hidden;
+
+	@-webkit-keyframes gb-slide-left {
+		from {
+			left: 100%;
+		}
+
+		to {
+			left: 0;
+		}
+	}
+
+	@keyframes gb-slide-left {
+		from {
+			left: 100%;
+		}
+
+		to {
+			left: 0;
+		}
+	}
+
+	@-webkit-keyframes gb-slide-right {
+		from {
+			left: 0;
+		}
+
+		to {
+			left: 100%;
+		}
+	}
+
+	@keyframes gb-slide-right {
+		from {
+			left: 0;
+		}
+
+		to {
+			left: 100%;
+		}
+	}
+
+	&.opening {
+		-webkit-animation: gb-slide-left $slide-left-time $timing-slide-left-right;
+		        animation: gb-slide-left $slide-left-time $timing-slide-left-right;
+	}
+
+	&.closing {
+		-webkit-animation: gb-slide-right $slide-right-time $timing-slide-left-right;
+		        animation: gb-slide-right $slide-right-time $timing-slide-left-right;
+	}
+
+	&.open {
+		left: 0;
+	}
+
+	&.opening, &.closing, &.open {
+		display: inline-block;
+		visibility: visible;
+		position: absolute;
+	}
+}
