@@ -1,0 +1,83 @@
+@use 'sass:map';
+
+/**/
+/* Breakpoint definitions*/
+/**/
+
+$small: 799px;
+$medium: (
+	"min": 800px,
+	"max": 1199px,
+);
+$large: 1200px;
+
+$screen: 'only screen';
+
+/**/
+/* Helper functions*/
+/**/
+
+@function min($min) {
+	@return '#{$screen} and (min-width: #{$min})';
+}
+
+@function max($max) {
+	@return '#{$screen} and (max-width: #{$max})';
+}
+
+@function range($min, $max) {
+	@return '#{$screen} and (min-width: #{$min}) and (max-width: #{$max})';
+}
+
+/**/
+/* Breakpoint Mixins*/
+/**/
+
+/* Breakpoint only*/
+
+/* Note: a "large-only" mixin is unnecessary here because "large-only" and*/
+/* "large-and-above" are the same thing and "large-only" is a bit of a misnomer.*/
+
+
+@mixin small-only {
+	@media #{max($small)} {
+		@content;
+	}
+}
+
+@mixin medium-only {
+	@media #{range(map.get($medium, "min"), map.get($medium, "max"))} {
+		@content;
+	}
+}
+
+/* Breakpoint and every size below it*/
+
+/* Note: a "large-and-below" mixin is unnecessary here because a class defined*/
+/* without a breakpoint is by default all viewports, i.e. large-and-below.*/
+
+/* Note: a "small-and-below" mixin is unnecessary here because "small-only" and*/
+/* "small-and-below" are the same thing.*/
+
+@mixin medium-and-below {
+	@media #{max(map.get($medium, "max"))} {
+		@content;
+	}
+}
+
+/* Breakpoint and every size above it*/
+
+/* Note: a "small-and-above" mixin is unnecessary here as anything from 0px wide and above is*/
+/* just a class without a media query.*/
+
+@mixin medium-and-above {
+	@media #{min(map.get($medium, "min"))} {
+		@content;
+	}
+}
+
+@mixin large-and-above {
+	@media #{min($large)} {
+		@content;
+	}
+}

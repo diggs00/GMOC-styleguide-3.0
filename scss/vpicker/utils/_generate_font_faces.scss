@@ -1,0 +1,27 @@
+$font-file-ext: woff2, woff;
+$font-formats: woff2, woff;
+
+@mixin generate-font-faces($font-list, $base-font-url-path) {
+	@each $family-name, $variations in $font-list {
+		@each $filename, $style, $weight in $variations {
+			$font-urls: '';
+
+			@each $ext in $font-file-ext {
+				$index: index($font-file-ext, $ext);
+				$format: nth($font-formats, $index);
+				$font-urls: '#{$font-urls}url(\"#{$base-font-url-path}#{$filename}.#{$ext}\") format(\"#{$format}\"), ';
+			}
+
+			/* Trim off ", " at the end of $font-urls*/
+			$font-urls: str-slice($font-urls, 0, str-length($font-urls) - 2);
+
+			@font-face {
+				font-display: fallback;
+				font-family: $family-name;
+				font-style: $style;
+				font-weight: $weight;
+				src: unquote($font-urls);
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/* Common (global) styles that all brands need*/
+
+/* font smoothing across the site*/
+body {
+	-webkit-font-smoothing: antialiased; /* sass-lint:disable-line no-vendor-prefixes*/
+}
+
+/* For elements that set a specific height and width, include padding and border in calculation*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

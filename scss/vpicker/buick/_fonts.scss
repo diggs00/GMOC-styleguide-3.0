@@ -1,0 +1,34 @@
+$font-family-futura: Futura, Helvetica, Arial, sans-serif;
+$font-family-avenir-next: AvenirNext, Helvetica, Arial, sans-serif;
+$font-family-harriet-text: Harriet Text, Times New Roman, serif;
+
+$base-font-sm: 12px;
+$base-font-med: 12.5px;
+$base-font-lg: 13px;
+
+/* Base font url for font files*/
+$base-font-url-path: 'https://brands.gm-cdn.com/gbds/buick/fonts/';
+
+$font-weight-lighter: 100;
+$font-weight-light: 200;
+$font-weight-book: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+$font-weight-ultra: 800;
+$font-weight-xbold: 900;
+
+$font-list: (
+	'Futura': (
+		('Futura-Book-webfont', normal, $font-weight-book),
+		('Futura-Bold-webfont', normal, $font-weight-bold)
+	),
+	'AvenirNext': (
+		('AvenirNext-Regular-webfont', normal, $font-weight-normal),
+		('AvenirNext-Demi-webfont', normal, $font-weight-demi)
+	),
+	'Harriet Text': (
+		('HarrietText-Regular-webfont', normal, $font-weight-normal),
+	)
+);

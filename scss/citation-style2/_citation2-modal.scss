@@ -172,6 +172,9 @@
   .modal-dialog {
     max-width: 615px;
     margin: $modal-dialog-margin-y-sm-up auto;
+    &.v-picker {
+      max-width: 615px;
+    }
   }
 
   .modal-dialog-scrollable {
@@ -203,7 +206,10 @@
   .modal-dialog {
     max-width: 615px;
     margin: $modal-dialog-margin-y-sm-up auto;
-        position: relative;
+    position: relative;
+    &.v-picker {
+      max-width: 615px;
+    }
   }
 
   .modal-lg,
@@ -217,7 +223,10 @@
   .modal-dialog {
     max-width: 615px;
     margin: $modal-dialog-margin-y-sm-up auto;
-        position: relative;
+    position: relative;
+    &.v-picker {
+      max-width: 940px;
+    }
   }
 
   .modal-lg,
@@ -403,17 +412,61 @@
 
 .modal-footer-cit2 {
   padding: 0px 20px 75px 0px;
+  &.v-picker {
+    padding: 30px 20px 30px 20px;
+    @media (min-width: $screen-desktop) {
+      padding: 50px;
+    }
+    .cta {
+      display: flex;
+      width: 100%;
+      @media (min-width: 576px) {
+        margin-left: auto;
+        width: auto;
+      }
+    }
+  }
 }
 
 
 
 
 
-
-
-
-
-
-
+/// Vehicle Picker MODAL
+ul.modal-vpicker-controls-cit2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin:0px;
+  li {
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.3);
+    margin:0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: $screen-desktop) {
+      padding: 20px 0px;
+    }
+    &:first-child {
+      border-top: 1px solid rgba(179, 179, 179, 0.3);
+      @media (min-width: $screen-desktop) {
+         border-top: 0px;
+      }
+    }
+    .img-title {
+      display: flex;
+      align-items: center;
+      img {
+        width: 130px;
+        margin-right: 20px;       
+      }
+    }
+    .status-icon {
+      padding-left: 30px;
+    }
+  }
+}
 
 

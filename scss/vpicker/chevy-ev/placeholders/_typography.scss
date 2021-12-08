@@ -1,0 +1,1159 @@
+@use '../../utils/gb_typography' as gbt;
+
+@use '../colors' as c;
+@use '../fonts' as f;
+
+/********************TEXT ALIGN STYLES********************/
+
+// .gb-align-left {
+//   	text-align: left;
+// }
+
+// .gb-align-center {
+//   	text-align: center;
+// }
+
+// .gb-align-right {
+//   	text-align: right;
+// }
+
+/********************HEADLINE STYLES********************/
+
+%headline-link {
+	color: c.$grey-dark;
+	cursor: pointer;
+
+	&:hover {
+		color: c.$gold;
+		text-decoration: none;
+	}
+}
+
+%headline-link-invert {
+	color: c.$white;
+
+	&:hover {
+		color: c.$gold;
+		text-decoration: none;
+	}
+}
+
+%headline-invert {
+	color: c.$white;
+
+	a {
+		@extend %headline-link-invert;
+	}
+}
+
+%headline-heavy {
+	font-weight: f.$font-weight-xbold;
+}
+
+// %gb-display1 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		50px,
+// 		60px,
+// 		70px,
+// 		f.$font-weight-bold,
+// 		56px,
+// 		60px,
+// 		76px,
+// 		1.67px,
+// 		2px,
+// 		2.33px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	  	line-height: 76px;
+// 	}
+// }
+
+// %gb-display2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		38px,
+// 		45px,
+// 		52px,
+// 		f.$font-weight-bold,
+// 		42px,
+// 		45px,
+// 		58px,
+// 		2.55px,
+// 		3px,
+// 		3.45px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-display3 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		32px,
+// 		30px,
+// 		36px,
+// 		f.$font-weight-bold,
+// 		38px,
+// 		30px,
+// 		40px,
+// 		3.14px,
+// 		3px,
+// 		3.55px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-display4 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		20px,
+// 		24px,
+// 		24px,
+// 		f.$font-weight-bold,
+// 		26px,
+// 		normal,
+// 		30px,
+// 		1.96px,
+// 		2.4px,
+// 		2.4px
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+
+// 		@media print, only screen and (max-width: 800px) {
+// 		  	font-size: 24px;
+// 		  	letter-spacing: 2.35px;
+// 		  	line-height: 30px;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+// }
+
+%gb-headline1 {
+	@include gbt.gb-typography(
+		c.$grey-dark,
+		f.$font-family-louis,
+		26px,
+		30px,
+		36px,
+		f.$font-weight-normal,
+		34px,
+		40px,
+		46px,
+		.68px,
+		.8px,
+		.95px
+	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+
+	  	@media print,only screen and (min-width:1200px) {
+		  	font-size: 35px;
+		  	letter-spacing: .92px;
+		}
+	}
+}
+
+// %gb-headline2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		22px,
+// 		25px,
+// 		30px,
+// 		f.$font-weight-normal,
+// 		28px,
+// 		30px,
+// 		36px,
+// 		.71px,
+// 		.8px,
+// 		.95px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+
+// 		@media print,only screen and (max-width:800px) {
+// 		  font-size: 21px;
+// 		  letter-spacing: .68px;
+// 		  line-height: 26px;
+// 		}
+
+// 	  	@media print,only screen and (min-width:1200px) {
+// 		  	font-size: 29px;
+// 		  	letter-spacing: .92px;
+// 		  	line-height: 35px;
+// 		}
+// 	}
+// }
+
+%gb-headline3 {
+	@include gbt.gb-typography(
+		c.$grey-dark,
+		f.$font-family-louis,
+		18px,
+		20px,
+		24px,
+		f.$font-weight-normal,
+		26px,
+		30px,
+		36px,
+		.72px,
+		.8px,
+		.96px
+   	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+	}
+}
+
+// %gb-headline4 {
+//   	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		16px,
+// 		16px,
+// 		16px,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		20px,
+// 		20px,
+// 		.64px,
+// 		.64px,
+// 		.64px
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+// }
+
+%gb-descriptive1 {
+	@include gbt.gb-typography(
+		c.$grey-dark,
+		f.$font-family-louis,
+		14px,
+		18px,
+		18px,
+		f.$font-weight-normal,
+		20px,
+		26px,
+		26px,
+		2.1px,
+		2.7px,
+		2.7px
+	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+	}
+
+  	&.gb-color-grey-mid-dark {
+		color: c.$grey-mid-dark;
+
+		a {
+		  	color: c.$grey-mid-dark;
+		}
+	}
+}
+
+%gb-descriptive2 {
+	@include gbt.gb-typography(
+		c.$grey-dark,
+		f.$font-family-louis,
+		12px,
+		14px,
+		14px,
+		f.$font-weight-normal,
+		18px,
+		22px,
+		22px,
+		2.19px,
+		2.68px,
+		2.68px
+	);
+
+	a {
+		@extend %headline-link;
+	}
+
+	&.invert {
+		@extend %headline-invert;
+	}
+
+	&.heavy {
+		@extend %headline-heavy;
+	}
+
+	&.gb-color-grey-mid-dark {
+		color: c.$grey-mid-dark;
+
+		a {
+		  	color: c.$grey-mid-dark;
+		}
+	}
+}
+
+// %gb-descriptive3 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-mid-dark,
+// 		f.$font-family-louis,
+// 		12px,
+// 		12px,
+// 		12px,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		20px,
+// 		20px,
+// 		1.71px,
+// 		1.71px,
+// 		1.71px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+
+// 		color: c.$grey-mid-dark;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-descriptive-section {
+// 	@include gbt.gb-typography(
+// 		c.$grey-mid-dark,
+// 		f.$font-family-louis,
+// 		1rem,
+// 		null,
+// 		null,
+// 		f.$font-weight-normal,
+// 		1.5,
+// 		null,
+// 		null,
+// 		3px,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+
+// 	  	color: c.$grey-mid-dark;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-descriptive1-3 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		15px,
+// 		20px,
+// 		20px,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		30px,
+// 		30px,
+// 		2.25px,
+// 		3px,
+// 		3px
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 		color: c.$grey-mid-dark;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-descriptive2-ch {
+//   	@include gbt.gb-typography(
+// 		c.$grey-mid-dark,
+// 		f.$font-family-louis,
+// 		12px,
+// 		14px,
+// 		14px,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		20px,
+// 		20px,
+// 		1.71px,
+// 		2px,
+// 		2px
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	  	color: c.$grey-mid-dark;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 		@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-button-label {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		14px,
+// 		14px,
+// 		18px,
+// 		f.$font-weight-bold,
+// 		23px,
+// 		28px,
+// 		32px,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+// }
+
+// %gb-primary-nav-button-label {
+// 	@include gbt.gb-typography(
+// 		c.$grey,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		16px,
+// 		16px,
+// 		f.$font-weight-bold,
+// 		normal,
+// 		22px,
+// 		22px,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+// }
+
+// %gb-bold1 {
+//   	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		2rem,
+// 		null,
+// 		null,
+// 		f.$font-weight-bold,
+// 		1.25,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+// }
+
+// %gb-bold2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		1.333rem,
+// 		null,
+// 		null,
+// 		f.$font-weight-bold,
+// 		1.2,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+// }
+
+// %gb-retail-numeral {
+// 	@include gbt.gb-typography(
+// 		c.$gold,
+// 		f.$font-family-louis,
+// 		1.75rem,
+// 		null,
+// 		null,
+// 		f.$font-weight-bold,
+// 		1.75,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+// }
+
+// %gb-retail-label {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-louis,
+// 		1rem,
+// 		null,
+// 		null,
+// 		f.$font-weight-bold,
+// 		1.3,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+// 	}
+// }
+
+// %gb-label {
+//   	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		14px,
+// 		14px,
+// 		f.$font-weight-normal,
+// 		16px,
+// 		18px,
+// 		18px,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+
+// 	&.gb-color-error {
+// 		color: c.$error;
+
+// 		a {
+// 		  	color: c.$error;
+// 		}
+// 	}
+
+// 	&.gb-color-error-light {
+// 		color: c.$error-light;
+
+// 		a {
+// 		  	color: c.$error-light;
+// 		}
+// 	}
+// }
+
+// %gb-label2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		null,
+// 		null,
+// 		f.$font-weight-normal,
+// 		14px,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+// }
+
+// %gb-disclaimer {
+//   	@include gbt.gb-typography(
+// 		c.$grey-mid-dark,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		null,
+// 		null,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+// }
+
+// %gb-form-input1 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		16px,
+// 		18px,
+// 		18px,
+// 		f.$font-weight-normal,
+// 		normal,
+// 		30px,
+// 		30px,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+
+// 	&.gb-color-grey-mid {
+// 		color: c.$grey-mid;
+
+// 		a {
+// 		  	color: c.$grey-mid;
+// 		}
+// 	}
+// }
+
+// %gb-form-input2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-mid,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		14px,
+// 		14px,
+// 		f.$font-weight-normal,
+// 		normal,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %headline-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+// 	}
+
+// 	&.heavy {
+// 	  	@extend %headline-heavy;
+// 	}
+
+// 	&.gb-color-error-light {
+// 		color: c.$error-light;
+
+// 		a {
+// 		  	color: c.$error-light;
+// 		}
+// 	}
+// }
+
+/********************BODY STYLES********************/
+// %body-link {
+// 	color: c.$grey-dark;
+// 	cursor: pointer;
+// 	text-decoration: underline;
+
+// 	&:active,
+// 	&:visited,
+// 	&:hover {
+// 	  	color: c.$gold;
+// 	}
+// }
+
+// %body-link-invert {
+// 	color: c.$white;
+// 	text-decoration: underline;
+
+// 	&:hover,
+// 	&:visited,
+// 	&:active {
+// 	  	color: c.$gold;
+// 	  	text-decoration: underline;
+// 	}
+// }
+
+// %gb-body1 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		18px,
+// 		18px,
+// 		22px,
+// 		f.$font-weight-normal,
+// 		26px,
+// 		30px,
+// 		36px,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %body-link;
+
+// 		&:hover {
+// 		  	color: c.$gold;
+// 		}
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+
+// 		a {
+// 			@extend %body-link-invert;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 	  	font-weight: f.$font-weight-bold;
+
+// 		p {
+// 		  	font-weight: f.$font-weight-bold;
+// 		}
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+// }
+
+// %gb-body2 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		16px,
+// 		16px,
+// 		18px,
+// 		f.$font-weight-normal,
+// 		24px,
+// 		25px,
+// 		30px,
+// 		normal,
+// 		null,
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %body-link;
+
+// 		&:hover {
+// 		  	color: c.$gold;
+// 		}
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+
+// 		a {
+// 			@extend %body-link-invert;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 		font-weight: f.$font-weight-bold;
+
+// 		p {
+// 		  	font-weight: f.$font-weight-bold;
+// 		}
+// 	}
+
+// 	li {
+// 		margin-bottom: 20px;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+// }
+
+// %gb-body3 {
+//   	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		14px,
+// 		14px,
+// 		16px,
+// 		f.$font-weight-normal,
+// 		20px,
+// 		15px,
+// 		22px,
+// 		normal,
+// 		null,
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %body-link;
+
+// 		&:hover {
+// 		  	color: c.$gold;
+// 		}
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+
+// 		a {
+// 		  	@extend %body-link-invert;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 	  	font-weight: f.$font-weight-bold;
+
+// 		p {
+// 		  	font-weight: f.$font-weight-bold;
+// 		}
+// 	}
+
+// 	li {
+// 	  	margin-bottom: 20px;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+
+// 			&:hover {
+// 			  	color: c.$gold;
+// 			}
+// 		}
+// 	}
+// }
+
+// %gb-body4 {
+// 	@include gbt.gb-typography(
+// 		c.$grey-dark,
+// 		f.$font-family-roboto,
+// 		14px,
+// 		null,
+// 		null,
+// 		f.$font-weight-normal,
+// 		18px,
+// 		null,
+// 		null,
+// 		normal,
+// 		null,
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 	  	@extend %body-link;
+// 	}
+
+// 	&.invert {
+// 	  	@extend %headline-invert;
+
+// 		a {
+// 		  	@extend %body-link-invert;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 	  	font-weight: f.$font-weight-bold;
+
+// 		p {
+// 		  	font-weight: f.$font-weight-bold;
+// 		}
+// 	}
+
+// 	li {
+// 	  	margin-bottom: 20px;
+// 	}
+
+// 	&.gb-color-grey {
+// 		color: c.$grey;
+
+// 		a {
+// 		  	color: c.$grey;
+// 		}
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 	  	color: c.$grey-mid-dark;
+
+// 		a {
+// 		  	color: c.$grey-mid-dark;
+// 		}
+// 	}
+// }
+
+// %gb-body5 {
+//    	@include gbt.gb-typography(
+// 		c.$grey,
+// 		f.$font-family-roboto,
+// 		12px,
+// 		null,
+// 		null,
+// 		f.$font-weight-normal,
+// 		17px,
+// 		null,
+// 		null,
+// 		normal,
+// 		null, /* No Override so no need to pass again*/
+// 		null /* No Override so no need to pass again*/
+// 	);
+
+// 	a {
+// 		@extend %body-link;
+// 		color: c.$grey;
+// 	}
+
+// 	&.invert {
+// 		@extend %headline-invert;
+
+// 		a {
+// 			@extend %body-link-invert;
+// 		}
+// 	}
+
+// 	&.heavy {
+// 		font-weight: f.$font-weight-bold;
+
+// 		p {
+// 			font-weight: f.$font-weight-bold;
+// 		}
+// 	}
+
+// 	li {
+// 		margin-bottom: 20px;
+// 	}
+
+// 	&.gb-color-grey-mid-dark {
+// 		color: c.$grey-mid-dark;
+
+// 		a {
+// 			color: c.$grey-mid-dark;
+
+// 		  	&:hover {
+// 			  	color: c.$gold;
+// 			}
+// 		}
+// 	}
+// }
+
+html[dir='rtl'] {
+	.align-left {
+	  	text-align: right;
+	}
+
+	.align-right {
+	  	text-align: left;
+	}
+}

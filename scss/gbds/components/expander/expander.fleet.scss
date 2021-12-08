@@ -1,0 +1,131 @@
+@use 'expander' as e;
+@use '../../fleet/colors' as c;
+@use '../../fleet/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			c.$grey-light,
+			c.$grey-very-dark,
+			f.$font-family-gotham,
+			1rem,
+			f.$font-weight-bold,
+			null,
+			1,
+			1.5rem 2rem,
+			24px,
+			c.$grey-very-dark,
+			f.$font-weight-xbold
+		);
+
+		border: 1px solid c.$grey-lighter;
+		margin-bottom: 1px;
+
+		&:hover {
+			@include e.expander-btn-hover(c.$grey-light, c.$grey-lighter, c.$grey-very-dark, null);
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .3s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			@include e.expander-btn-active(c.$white, c.$grey-lighter, c.$grey-very-dark, c.$grey-very-dark);
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&[data-disabled] {
+		>.gb-expander-btn {
+			@include e.expander-btn-disabled(0 0 1.25rem, inherit);
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$grey-lighter, c.$grey-very-dark, c.$grey-very-dark);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, inherit);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$grey-lighter, c.$grey-very-dark, c.$grey-very-dark);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, inherit);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$grey-lighter, c.$grey-very-dark, c.$grey-very-dark);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, inherit);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}
