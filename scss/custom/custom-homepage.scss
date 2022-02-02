@@ -461,10 +461,10 @@ h5 {
     padding-top: 0;
   }
 
-  .container {
-    // width: auto;
-    max-width: none;
-  }
+  // .container {
+  //   // width: auto;
+  //   max-width: none;
+  // }
 
   .home-page {
     .homepage-login-panel {
@@ -533,11 +533,11 @@ h5 {
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .container {
-    width: 1400px;
-  }
-}
+// @media screen and (min-width: 1600px) {
+//   .container {
+//     width: 1400px;
+//   }
+// }
 
 @media screen and (max-width: 768px) {
   .panel-card.image-with-text img {

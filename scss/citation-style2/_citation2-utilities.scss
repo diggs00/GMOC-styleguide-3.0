@@ -10,3 +10,13 @@
 .light-grey-background{
   background-color: $grey-light;
 }
+
+
+
+
+.white-narrow-container {
+	background-color: $white;
+	 @media (max-width: $screen-md) {
+	 	width: 96%;
+	 }
+}

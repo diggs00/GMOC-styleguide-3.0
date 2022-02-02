@@ -7106,6 +7106,10 @@ button.bg-dark:focus {
   width: auto !important;
 }
 
+.w-96 {
+  width: 96% !important;
+}
+
 .h-25 {
   height: 25% !important;
 }
@@ -7124,6 +7128,10 @@ button.bg-dark:focus {
 
 .h-auto {
   height: auto !important;
+}
+
+.h-96 {
+  height: 96% !important;
 }
 
 .mw-100 {
@@ -21475,10 +21483,6 @@ h5 {
     padding-top: 0;
   }
 
-  .container {
-    max-width: none;
-  }
-
   .home-page .homepage-login-panel {
     margin: -10px 5px 30px 8px;
     padding: 30px 30px 10px;
@@ -21531,11 +21535,6 @@ h5 {
 
   .panel-card.image-with-text {
     padding-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .container {
-    width: 1400px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -32695,12 +32694,13 @@ table.cit2-desktop tbody tr.cat-title td {
   margin-left: auto;
 }
 .cit2-page-heading .control .vehicle-thumb img {
-  width: 136px;
+  width: 110px;
   margin-left: 10px;
 }
 @media (min-width: 992px) {
   .cit2-page-heading .control .vehicle-thumb img {
     margin-left: 0px;
+    width: 136px;
   }
 }
 
@@ -33454,6 +33454,15 @@ table.cit2-desktop-bundle tbody tr.cat-title td {
 
 .light-grey-background {
   background-color: #e6e6e6;
+}
+
+.white-narrow-container {
+  background-color: #fff;
+}
+@media (max-width: 992px) {
+  .white-narrow-container {
+    width: 96%;
+  }
 }
 
 /*NO COMPARE - MOBILE
