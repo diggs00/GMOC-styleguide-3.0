@@ -1,3 +1,7 @@
+body {
+  background-color: $grey-very-light;
+}
+
 .sg-mobile-show {
   display: block;
   @media (min-width: $screen-desktop) {

@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-// var sass = require('gulp-sass');
 var sass = require('gulp-dart-sass');
+// var sass = require('gulp-dart-sass');
+// var sass = require('gulp-dart-sass');
 var sourcemaps = require('gulp-sourcemaps');
 // var cleanCss = require('gulp-clean-css');
 var notify = require('gulp-notify');
