@@ -5,7 +5,7 @@
 
 
 .cit2-grey-section{
-  background-color: $grey-very-light;
+  background-color:  rgba($gray-100, .4);
   padding:50px 0px;
   &.black-gmc {
     background-color: $black;
@@ -14,7 +14,7 @@
 
 
 .cit2-grey-section {
-  background-color: $grey-very-light;
+  background-color:  rgba($gray-100, .4);
   padding:50px 0px;
   .tool-container {   // Vehicle profile page Tools
     display: flex;
