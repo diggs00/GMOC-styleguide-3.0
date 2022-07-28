@@ -1,0 +1,34 @@
+@use '../../common/common' as com;
+@use '../../utils/breakpoints' as bp;
+
+@use 'separator' as s;
+@use '../../carbravo/colors' as c;
+@use '../../carbravo/fonts' as f;
+
+.gb-separator {
+	.separator-invisible {
+		@include s.base-separator(
+		);
+	}
+
+	.separator-primary {
+		@include s.base-separator(
+			$height: 1px,
+			$background-color: c.$car-bravo-midnight-accent-base
+		);
+	}
+
+	.separator-secondary {
+		@include s.base-separator(
+			$height: 1px,
+			$background-color: c.$car-bravo-midnight-accent-deep
+		);
+	}
+
+	.separator-tertiary {
+		@include s.base-separator(
+			$height: 1px,
+			$background-color: c.$car-bravo-midnight-base
+		);
+	}
+}

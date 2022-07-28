@@ -33801,6 +33801,41 @@ ul.navbar-nav li {
   background-size: 100% 100%;
 }
 
+/* Common (global) styles that all brands need*/
+/* font smoothing across the site*/
+body {
+  -webkit-font-smoothing: antialiased;
+  /* sass-lint:disable-line no-vendor-prefixes*/
+}
+
+/* For elements that set a specific height and width, include padding and border in calculation*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**/
+/* Breakpoint definitions*/
+/**/
+/**/
+/* Helper functions*/
+/**/
+/**/
+/* Breakpoint Mixins*/
+/**/
+/* Breakpoint only*/
+/* Note: a "large-only" mixin is unnecessary here because "large-only" and*/
+/* "large-and-above" are the same thing and "large-only" is a bit of a misnomer.*/
+/* Breakpoint and every size below it*/
+/* Note: a "large-and-below" mixin is unnecessary here because a class defined*/
+/* without a breakpoint is by default all viewports, i.e. large-and-below.*/
+/* Note: a "small-and-below" mixin is unnecessary here because "small-only" and*/
+/* "small-and-below" are the same thing.*/
+/* Breakpoint and every size above it*/
+/* Note: a "small-and-above" mixin is unnecessary here as anything from 0px wide and above is*/
+/* just a class without a media query.*/
+/* Base font url for font files*/
 /* Colors*/
 /* Border*/
 /* Unified color variables*/
@@ -33851,21 +33886,6 @@ ul.navbar-nav li {
 /*----------------------------------//*/
 /*--------- Colors - End -----------//*/
 /*----------------------------------//*/
-/* Common (global) styles that all brands need*/
-/* font smoothing across the site*/
-body {
-  -webkit-font-smoothing: antialiased;
-  /* sass-lint:disable-line no-vendor-prefixes*/
-}
-
-/* For elements that set a specific height and width, include padding and border in calculation*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Base font url for font files*/
 /* Common (global) cross-brand styles*/
 /* Generic utilities*/
 /* Brand utilities and variables*/
@@ -33982,22 +34002,50 @@ body {
   font-weight: 400;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/roboto-regular-webfont.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/roboto-regular-webfont.woff") format("woff");
 }
-html {
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff") format("woff");
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff") format("woff");
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff") format("woff");
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NanumGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff") format("woff");
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NanumGothic";
+  font-style: 400;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular normal.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular normal.woff") format("woff");
+}
+body {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 17px;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
 }
 
-@media screen and (min-width: 600px) {
-  html {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 1500px) {
-  html {
-    font-size: 23px;
-  }
-}
 /********************TEXT ALIGN STYLES********************/
 .gb-align-left {
   text-align: left;
@@ -34012,36 +34060,36 @@ html {
 }
 
 /********************HEADLINE STYLES********************/
-.gb-form-input2 a, .gb-form-input1 a, .gb-disclaimer a, .gb-label2 a, .gb-label a, .gb-retail-label a, .gb-retail-numeral a, .gb-bold2 a, .gb-bold1 a, .gb-primary-nav-button-label a, .gb-button-label a, .gb-descriptive2-ch a, .gb-descriptive1-3 a, .gb-descriptive-section a, .gb-descriptive3 a, .gb-descriptive2 a, .gb-descriptive1 a, .gb-headline4 a, .gb-headline3 a, .gb-headline2 a, .gb-headline1 a, .gb-display4 a, .gb-display3 a, .gb-display2 a, .gb-display1 a {
+.gb-form-input2 a, .gb-form-input1 a, .gb-disclaimer a, .gb-label2 a, .gb-label a, .gb-label1 a, .gb-retail-label a, .gb-retail-numeral a, .gb-bold2 a, .gb-bold1 a, .gb-primary-nav-button-label a, .gb-button-label a, .gb-descriptive2-ch a, .gb-descriptive1-3 a, .gb-descriptive-section a, .gb-descriptive3 a, .gb-descriptive2 a, .gb-descriptive1 a, .gb-headline4 a, .gb-headline3 a, .gb-headline2 a, .gb-headline1 a, .gb-display4 a, .gb-display3 a, .gb-display2 a, .gb-display1 a {
   color: #262626;
   cursor: pointer;
 }
 
-.gb-form-input2 a:hover, .gb-form-input1 a:hover, .gb-disclaimer a:hover, .gb-label2 a:hover, .gb-label a:hover, .gb-retail-label a:hover, .gb-retail-numeral a:hover, .gb-bold2 a:hover, .gb-bold1 a:hover, .gb-primary-nav-button-label a:hover, .gb-button-label a:hover, .gb-descriptive2-ch a:hover, .gb-descriptive1-3 a:hover, .gb-descriptive-section a:hover, .gb-descriptive3 a:hover, .gb-descriptive2 a:hover, .gb-descriptive1 a:hover, .gb-headline4 a:hover, .gb-headline3 a:hover, .gb-headline2 a:hover, .gb-headline1 a:hover, .gb-display4 a:hover, .gb-display3 a:hover, .gb-display2 a:hover, .gb-display1 a:hover {
+.gb-form-input2 a:hover, .gb-form-input1 a:hover, .gb-disclaimer a:hover, .gb-label2 a:hover, .gb-label a:hover, .gb-label1 a:hover, .gb-retail-label a:hover, .gb-retail-numeral a:hover, .gb-bold2 a:hover, .gb-bold1 a:hover, .gb-primary-nav-button-label a:hover, .gb-button-label a:hover, .gb-descriptive2-ch a:hover, .gb-descriptive1-3 a:hover, .gb-descriptive-section a:hover, .gb-descriptive3 a:hover, .gb-descriptive2 a:hover, .gb-descriptive1 a:hover, .gb-headline4 a:hover, .gb-headline3 a:hover, .gb-headline2 a:hover, .gb-headline1 a:hover, .gb-display4 a:hover, .gb-display3 a:hover, .gb-display2 a:hover, .gb-display1 a:hover {
   color: #cd9834;
   text-decoration: none;
 }
 
-.invert.gb-body5 a, .invert.gb-body4 a, .invert.gb-body3 a, .invert.gb-body2 a, .invert.gb-body1 a, .invert.gb-form-input2 a, .invert.gb-form-input1 a, .invert.gb-disclaimer a, .invert.gb-label2 a, .invert.gb-label a, .invert.gb-retail-label a, .invert.gb-retail-numeral a, .invert.gb-bold2 a, .invert.gb-bold1 a, .invert.gb-primary-nav-button-label a, .invert.gb-button-label a, .invert.gb-descriptive2-ch a, .invert.gb-descriptive1-3 a, .invert.gb-descriptive-section a, .invert.gb-descriptive3 a, .invert.gb-descriptive2 a, .invert.gb-descriptive1 a, .invert.gb-headline4 a, .invert.gb-headline3 a, .invert.gb-headline2 a, .invert.gb-headline1 a, .invert.gb-display4 a, .invert.gb-display3 a, .invert.gb-display2 a, .invert.gb-display1 a {
+.invert.gb-body5 a, .invert.gb-body4 a, .invert.gb-body3 a, .invert.gb-body2 a, .invert.gb-body1 a, .invert.gb-form-input2 a, .invert.gb-form-input1 a, .invert.gb-disclaimer a, .invert.gb-label2 a, .invert.gb-label a, .invert.gb-label1 a, .invert.gb-retail-label a, .invert.gb-retail-numeral a, .invert.gb-bold2 a, .invert.gb-bold1 a, .invert.gb-primary-nav-button-label a, .invert.gb-button-label a, .invert.gb-descriptive2-ch a, .invert.gb-descriptive1-3 a, .invert.gb-descriptive-section a, .invert.gb-descriptive3 a, .invert.gb-descriptive2 a, .invert.gb-descriptive1 a, .invert.gb-headline4 a, .invert.gb-headline3 a, .invert.gb-headline2 a, .invert.gb-headline1 a, .invert.gb-display4 a, .invert.gb-display3 a, .invert.gb-display2 a, .invert.gb-display1 a {
   color: #fff;
 }
 
-.invert.gb-body5 a:hover, .invert.gb-body4 a:hover, .invert.gb-body3 a:hover, .invert.gb-body2 a:hover, .invert.gb-body1 a:hover, .invert.gb-form-input2 a:hover, .invert.gb-form-input1 a:hover, .invert.gb-disclaimer a:hover, .invert.gb-label2 a:hover, .invert.gb-label a:hover, .invert.gb-retail-label a:hover, .invert.gb-retail-numeral a:hover, .invert.gb-bold2 a:hover, .invert.gb-bold1 a:hover, .invert.gb-primary-nav-button-label a:hover, .invert.gb-button-label a:hover, .invert.gb-descriptive2-ch a:hover, .invert.gb-descriptive1-3 a:hover, .invert.gb-descriptive-section a:hover, .invert.gb-descriptive3 a:hover, .invert.gb-descriptive2 a:hover, .invert.gb-descriptive1 a:hover, .invert.gb-headline4 a:hover, .invert.gb-headline3 a:hover, .invert.gb-headline2 a:hover, .invert.gb-headline1 a:hover, .invert.gb-display4 a:hover, .invert.gb-display3 a:hover, .invert.gb-display2 a:hover, .invert.gb-display1 a:hover {
+.invert.gb-body5 a:hover, .invert.gb-body4 a:hover, .invert.gb-body3 a:hover, .invert.gb-body2 a:hover, .invert.gb-body1 a:hover, .invert.gb-form-input2 a:hover, .invert.gb-form-input1 a:hover, .invert.gb-disclaimer a:hover, .invert.gb-label2 a:hover, .invert.gb-label a:hover, .invert.gb-label1 a:hover, .invert.gb-retail-label a:hover, .invert.gb-retail-numeral a:hover, .invert.gb-bold2 a:hover, .invert.gb-bold1 a:hover, .invert.gb-primary-nav-button-label a:hover, .invert.gb-button-label a:hover, .invert.gb-descriptive2-ch a:hover, .invert.gb-descriptive1-3 a:hover, .invert.gb-descriptive-section a:hover, .invert.gb-descriptive3 a:hover, .invert.gb-descriptive2 a:hover, .invert.gb-descriptive1 a:hover, .invert.gb-headline4 a:hover, .invert.gb-headline3 a:hover, .invert.gb-headline2 a:hover, .invert.gb-headline1 a:hover, .invert.gb-display4 a:hover, .invert.gb-display3 a:hover, .invert.gb-display2 a:hover, .invert.gb-display1 a:hover {
   color: #cd9834;
   text-decoration: none;
 }
 
-.invert.gb-body5, .invert.gb-body4, .invert.gb-body3, .invert.gb-body2, .invert.gb-body1, .invert.gb-form-input2, .invert.gb-form-input1, .invert.gb-disclaimer, .invert.gb-label2, .invert.gb-label, .invert.gb-retail-label, .invert.gb-retail-numeral, .invert.gb-bold2, .invert.gb-bold1, .invert.gb-primary-nav-button-label, .invert.gb-button-label, .invert.gb-descriptive2-ch, .invert.gb-descriptive1-3, .invert.gb-descriptive-section, .invert.gb-descriptive3, .invert.gb-descriptive2, .invert.gb-descriptive1, .invert.gb-headline4, .invert.gb-headline3, .invert.gb-headline2, .invert.gb-headline1, .invert.gb-display4, .invert.gb-display3, .invert.gb-display2, .invert.gb-display1 {
+.invert.gb-body5, .invert.gb-body4, .invert.gb-body3, .invert.gb-body2, .invert.gb-body1, .invert.gb-form-input2, .invert.gb-form-input1, .invert.gb-disclaimer, .invert.gb-label2, .invert.gb-label, .invert.gb-label1, .invert.gb-retail-label, .invert.gb-retail-numeral, .invert.gb-bold2, .invert.gb-bold1, .invert.gb-primary-nav-button-label, .invert.gb-button-label, .invert.gb-descriptive2-ch, .invert.gb-descriptive1-3, .invert.gb-descriptive-section, .invert.gb-descriptive3, .invert.gb-descriptive2, .invert.gb-descriptive1, .invert.gb-headline4, .invert.gb-headline3, .invert.gb-headline2, .invert.gb-headline1, .invert.gb-display4, .invert.gb-display3, .invert.gb-display2, .invert.gb-display1 {
   color: #fff;
 }
 
-.heavy.gb-form-input2, .heavy.gb-form-input1, .heavy.gb-disclaimer, .heavy.gb-label2, .heavy.gb-label, .heavy.gb-descriptive2-ch, .heavy.gb-descriptive1-3, .heavy.gb-descriptive-section, .heavy.gb-descriptive3, .heavy.gb-descriptive2, .heavy.gb-descriptive1, .heavy.gb-headline4, .heavy.gb-headline3, .heavy.gb-headline2, .heavy.gb-headline1, .heavy.gb-display4, .heavy.gb-display3, .heavy.gb-display2, .heavy.gb-display1 {
+.heavy.gb-form-input2, .heavy.gb-form-input1, .heavy.gb-disclaimer, .heavy.gb-label2, .heavy.gb-label, .heavy.gb-label1, .heavy.gb-descriptive2-ch, .heavy.gb-descriptive1-3, .heavy.gb-descriptive-section, .heavy.gb-descriptive3, .heavy.gb-descriptive2, .heavy.gb-descriptive1, .heavy.gb-headline4, .heavy.gb-headline3, .heavy.gb-headline2, .heavy.gb-headline1, .heavy.gb-display4, .heavy.gb-display3, .heavy.gb-display2, .heavy.gb-display1 {
   font-weight: 900;
 }
 
 .gb-display1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 1.67px;
@@ -34064,7 +34112,7 @@ html {
 }
 .gb-display2 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 38px;
   font-weight: 700;
   letter-spacing: 2.55px;
@@ -34087,7 +34135,7 @@ html {
 }
 .gb-display3 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 3.14px;
@@ -34110,7 +34158,7 @@ html {
 }
 .gb-display4 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.96px;
@@ -34140,7 +34188,7 @@ html {
 }
 .gb-headline1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 0.68px;
@@ -34169,7 +34217,7 @@ html {
 }
 .gb-headline2 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.71px;
@@ -34206,7 +34254,7 @@ html {
 }
 .gb-headline3 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.72px;
@@ -34229,7 +34277,7 @@ html {
 }
 .gb-headline4 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.64px;
@@ -34252,7 +34300,7 @@ html {
 }
 .gb-descriptive1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2.1px;
@@ -34275,7 +34323,7 @@ html {
 }
 .gb-descriptive2 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 2.19px;
@@ -34306,7 +34354,7 @@ html {
 
 .gb-descriptive3 {
   color: #6e6e6e;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 1.71px;
@@ -34333,20 +34381,30 @@ html {
 
 .gb-descriptive-section {
   color: #6e6e6e;
-  font-family: Louis, Tahoma, sans-serif;
-  font-size: 1rem;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: calc(1.0625 * 16px);
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 1.5;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gb-descriptive-section {
+    font-size: calc(1.25 * 16px);
+  }
+}
+@media (min-width: 1200px) {
+  .gb-descriptive-section {
+    font-size: calc(1.4375 * 16px);
+  }
+}
 .gb-descriptive-section a {
   color: #6e6e6e;
 }
 
 .gb-descriptive1-3 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 2.25px;
@@ -34373,7 +34431,7 @@ html {
 
 .gb-descriptive2-ch {
   color: #6e6e6e;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 1.71px;
@@ -34400,7 +34458,7 @@ html {
 
 .gb-button-label {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: normal;
@@ -34421,7 +34479,7 @@ html {
 }
 .gb-primary-nav-button-label {
   color: #808080;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: normal;
@@ -34450,43 +34508,83 @@ html {
 
 .gb-bold1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: calc(2.125 * 16px);
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.25;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gb-bold1 {
+    font-size: calc(2.5 * 16px);
+  }
+}
+@media (min-width: 1200px) {
+  .gb-bold1 {
+    font-size: calc(2.875 * 16px);
+  }
+}
 .gb-bold2 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
-  font-size: 1.333rem;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: calc(1.4163 * 16px);
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.2;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gb-bold2 {
+    font-size: calc(1.6662 * 16px);
+  }
+}
+@media (min-width: 1200px) {
+  .gb-bold2 {
+    font-size: calc(1.9161 * 16px);
+  }
+}
 .gb-retail-numeral {
   color: #cd9834;
-  font-family: Louis, Tahoma, sans-serif;
-  font-size: 1.75rem;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: calc(1.8593 * 16px);
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.75;
 }
 
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gb-retail-numeral {
+    font-size: calc(2.1875 * 16px);
+  }
+}
+@media (min-width: 1200px) {
+  .gb-retail-numeral {
+    font-size: calc(2.5156 * 16px);
+  }
+}
 .gb-retail-label {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
-  font-size: 1rem;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: calc(1.0625 * 16px);
   font-weight: 700;
   letter-spacing: normal;
   line-height: 1.3;
 }
 
-.gb-label {
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gb-retail-label {
+    font-size: calc(1.25 * 16px);
+  }
+}
+@media (min-width: 1200px) {
+  .gb-retail-label {
+    font-size: calc(1.4375 * 16px);
+  }
+}
+.gb-label, .gb-label1 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34494,32 +34592,32 @@ html {
 }
 
 @media (min-width: 800px) and (max-width: 1199px) {
-  .gb-label {
+  .gb-label, .gb-label1 {
     font-size: 14px;
     line-height: 18px;
   }
 }
 @media (min-width: 1200px) {
-  .gb-label {
+  .gb-label, .gb-label1 {
     font-size: 14px;
     line-height: 18px;
   }
 }
-.gb-color-grey-mid-dark.gb-label {
+.gb-color-grey-mid-dark.gb-label, .gb-color-grey-mid-dark.gb-label1 {
   color: #6e6e6e;
 }
 
-.gb-color-grey-mid-dark.gb-label a {
+.gb-color-grey-mid-dark.gb-label a, .gb-color-grey-mid-dark.gb-label1 a {
   color: #6e6e6e;
 }
 
 .gb-label2 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: normal;
-  line-height: 14px;
+  line-height: 18px;
 }
 
 .gb-color-grey-mid-dark.gb-label2 {
@@ -34532,7 +34630,7 @@ html {
 
 .gb-disclaimer {
   color: #6e6e6e;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34541,7 +34639,7 @@ html {
 
 .gb-form-input1 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34562,7 +34660,7 @@ html {
 }
 .gb-form-input2 {
   color: #b3b3b3;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34594,7 +34692,7 @@ html {
   text-decoration: underline;
 }
 
-.gb-body5 a:active, .gb-body4 a:active, .gb-body3 a:active, .gb-body2 a:active, .gb-body1 a:active, .gb-body5 a:visited, .gb-body4 a:visited, .gb-body3 a:visited, .gb-body2 a:visited, .gb-body1 a:visited, .gb-body5 a:hover, .gb-body4 a:hover, .gb-body3 a:hover, .gb-body2 a:hover, .gb-body1 a:hover {
+.gb-body5 a:active, .gb-body4 a:active, .gb-body3 a:active, .gb-body2 a:active, .gb-body1 a:active, .gb-body5 a:visited:not([href="#"]), .gb-body4 a:visited:not([href="#"]), .gb-body3 a:visited:not([href="#"]), .gb-body2 a:visited:not([href="#"]), .gb-body1 a:visited:not([href="#"]), .gb-body5 a:hover, .gb-body4 a:hover, .gb-body3 a:hover, .gb-body2 a:hover, .gb-body1 a:hover {
   color: #cd9834;
 }
 
@@ -34603,14 +34701,14 @@ html {
   text-decoration: underline;
 }
 
-.invert.gb-body5 a:hover, .invert.gb-body4 a:hover, .invert.gb-body3 a:hover, .invert.gb-body2 a:hover, .invert.gb-body1 a:hover, .invert.gb-body5 a:visited, .invert.gb-body4 a:visited, .invert.gb-body3 a:visited, .invert.gb-body2 a:visited, .invert.gb-body1 a:visited, .invert.gb-body5 a:active, .invert.gb-body4 a:active, .invert.gb-body3 a:active, .invert.gb-body2 a:active, .invert.gb-body1 a:active {
+.invert.gb-body5 a:hover, .invert.gb-body4 a:hover, .invert.gb-body3 a:hover, .invert.gb-body2 a:hover, .invert.gb-body1 a:hover, .invert.gb-body5 a:visited:not([href="#"]), .invert.gb-body4 a:visited:not([href="#"]), .invert.gb-body3 a:visited:not([href="#"]), .invert.gb-body2 a:visited:not([href="#"]), .invert.gb-body1 a:visited:not([href="#"]), .invert.gb-body5 a:active, .invert.gb-body4 a:active, .invert.gb-body3 a:active, .invert.gb-body2 a:active, .invert.gb-body1 a:active {
   color: #cd9834;
   text-decoration: underline;
 }
 
 .gb-body1 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34647,7 +34745,7 @@ html {
 
 .gb-body2 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34688,7 +34786,7 @@ html {
 
 .gb-body3 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34737,7 +34835,7 @@ html {
 
 .gb-body4 {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34766,7 +34864,7 @@ html {
 
 .gb-body5 {
   color: #808080;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: normal;
@@ -34809,31 +34907,15 @@ html[dir=rtl] .align-right {
   text-align: left;
 }
 
+.gb-label1 {
+  /* The correct class should be gb-label, but keeping gb-label1 so this won't break for anyone who is using gb-label1 already.*/
+}
+
 /********************BODY STYLES********************/
 .gb-expander {
   display: block;
 }
 
-/**/
-/* Breakpoint definitions*/
-/**/
-/**/
-/* Helper functions*/
-/**/
-/**/
-/* Breakpoint Mixins*/
-/**/
-/* Breakpoint only*/
-/* Note: a "large-only" mixin is unnecessary here because "large-only" and*/
-/* "large-and-above" are the same thing and "large-only" is a bit of a misnomer.*/
-/* Breakpoint and every size below it*/
-/* Note: a "large-and-below" mixin is unnecessary here because a class defined*/
-/* without a breakpoint is by default all viewports, i.e. large-and-below.*/
-/* Note: a "small-and-below" mixin is unnecessary here because "small-only" and*/
-/* "small-and-below" are the same thing.*/
-/* Breakpoint and every size above it*/
-/* Note: a "small-and-above" mixin is unnecessary here as anything from 0px wide and above is*/
-/* just a class without a media query.*/
 .gb-expander {
   /* For Open / Close Animation*/
   /*Classes if consumer wants a more control of when expander is active or disabled*/
@@ -34845,13 +34927,13 @@ html[dir=rtl] .align-right {
   color: #262626;
   cursor: pointer;
   display: flex;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
+  font-size: 15px;
   font-weight: 700;
   justify-content: space-between;
   letter-spacing: normal;
   line-height: 1.5;
-  padding: 0.875rem 1.875rem;
+  padding: calc(1.25 * 16px) 0 calc(1.25 * 16px) calc(0.938 * 16px);
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -34874,6 +34956,16 @@ html[dir=rtl] .align-right {
   color: #cd9834;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-expander > .gb-expander-btn {
+    padding: calc(1.09375 * 16px) calc(2.3437 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-expander > .gb-expander-btn {
+    padding: calc(1.2578 * 16px) calc(2.6953 * 16px);
+  }
+}
 .gb-expander > .gb-expander-content {
   height: 0;
   overflow: hidden;
@@ -34897,13 +34989,23 @@ html[dir=rtl] .align-right {
   border: 0;
   pointer-events: none;
   cursor: default;
-  padding: 0 0 1.25rem;
+  padding: 0 0 calc(1.3281 * 16px);
 }
 
 .gb-expander[data-disabled] > .gb-expander-btn::before {
   content: "";
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-expander[data-disabled] > .gb-expander-btn {
+    padding: 0 0 calc(1.5625 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-expander[data-disabled] > .gb-expander-btn {
+    padding: 0 0 calc(1.7968 * 16px);
+  }
+}
 .gb-expander[data-disabled] > .gb-expander-content {
   height: auto;
   visibility: visible;
@@ -34926,7 +35028,7 @@ html[dir=rtl] .align-right {
     border: 0;
     pointer-events: none;
     cursor: default;
-    padding: 0 0 1.25rem;
+    padding: 0 0 calc(1.3281 * 16px);
   }
 
   .gb-expander.gb-disabled-sm > .gb-expander-btn::before {
@@ -34955,7 +35057,7 @@ html[dir=rtl] .align-right {
     border: 0;
     pointer-events: none;
     cursor: default;
-    padding: 0 0 1.25rem;
+    padding: 0 0 calc(1.5625 * 16px);
   }
 
   .gb-expander.gb-disabled-med > .gb-expander-btn::before {
@@ -34984,7 +35086,7 @@ html[dir=rtl] .align-right {
     border: 0;
     pointer-events: none;
     cursor: default;
-    padding: 0 0 1.25rem;
+    padding: 0 0 calc(1.7968 * 16px);
   }
 
   .gb-expander.gb-disabled-lg > .gb-expander-btn::before {
@@ -34996,6 +35098,40 @@ html[dir=rtl] .align-right {
     visibility: visible;
   }
 }
+.gb-expander h1,
+.gb-expander h2,
+.gb-expander h3,
+.gb-expander h4,
+.gb-expander h5,
+.gb-expander h5,
+.gb-expander h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:host(gb-global-footer) > .gb-expander-btn,
+.gb-expander > .gb-expander-btn {
+  background-color: #f2f2f2;
+  border: 0 solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+:host(gb-global-footer) > .gb-expander-btn:hover,
+.gb-expander > .gb-expander-btn:hover {
+  background-color: #fff;
+  border-color: #b3b3b3;
+}
+
+:host(gb-global-footer) > .gb-expander-btn:hover::before,
+.gb-expander > .gb-expander-btn:hover::before {
+  color: #cd9834;
+}
+
+:host(gb-global-footer).active > .gb-expander-btn::before,
+.gb-expander.active > .gb-expander-btn::before {
+  color: #cd9834;
+}
+
 .gb-primary-button, .gb-secondary-button, .gb-tertiary-button, .gb-filter-button, .gb-primary-button-inline-icon, .gb-primary-button-stacked-icon, .gb-secondary-button-inline-icon, .gb-secondary-button-stacked-icon, .gb-tertiary-button-inline-icon, .gb-tertiary-button-stacked-icon {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -35069,9 +35205,51 @@ html[dir=rtl] .align-right {
 .icon-stacked.gb-primary-button-stacked-icon img,
 .icon-stacked.gb-primary-button-inline-icon img {
   display: block;
-  margin: auto auto 0.21739rem;
+  margin: auto auto calc(0.23097 * 16px);
 }
 
+@media only screen and (min-width: 800px) {
+  .icon-stacked.gb-list-item-tertiary svg, .icon-stacked.gb-list-item-inline-icon-tertiary svg, .icon-stacked.gb-list-item-secondary svg, .icon-stacked.gb-list-item-primary svg, .icon-stacked.gb-list-item-inline-icon-secondary svg, .icon-stacked.gb-list-item-inline-icon-primary svg, .icon-stacked.gb-icon-button svg, .icon-stacked.gb-tertiary-button svg, .icon-stacked.gb-tertiary-button-inline-icon svg, .icon-stacked.gb-tertiary-button-stacked-icon svg, .icon-stacked.gb-secondary-button svg, .icon-stacked.gb-secondary-button-stacked-icon svg, .icon-stacked.gb-secondary-button-inline-icon svg, .icon-stacked.gb-primary-button svg, .icon-stacked.gb-primary-button-stacked-icon svg, .icon-stacked.gb-primary-button-inline-icon svg,
+.icon-stacked.gb-list-item-tertiary img,
+.icon-stacked.gb-list-item-inline-icon-tertiary img,
+.icon-stacked.gb-list-item-secondary img,
+.icon-stacked.gb-list-item-primary img,
+.icon-stacked.gb-list-item-inline-icon-secondary img,
+.icon-stacked.gb-list-item-inline-icon-primary img,
+.icon-stacked.gb-icon-button img,
+.icon-stacked.gb-tertiary-button img,
+.icon-stacked.gb-tertiary-button-inline-icon img,
+.icon-stacked.gb-tertiary-button-stacked-icon img,
+.icon-stacked.gb-secondary-button img,
+.icon-stacked.gb-secondary-button-stacked-icon img,
+.icon-stacked.gb-secondary-button-inline-icon img,
+.icon-stacked.gb-primary-button img,
+.icon-stacked.gb-primary-button-stacked-icon img,
+.icon-stacked.gb-primary-button-inline-icon img {
+    margin: auto auto calc(0.27173 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .icon-stacked.gb-list-item-tertiary svg, .icon-stacked.gb-list-item-inline-icon-tertiary svg, .icon-stacked.gb-list-item-secondary svg, .icon-stacked.gb-list-item-primary svg, .icon-stacked.gb-list-item-inline-icon-secondary svg, .icon-stacked.gb-list-item-inline-icon-primary svg, .icon-stacked.gb-icon-button svg, .icon-stacked.gb-tertiary-button svg, .icon-stacked.gb-tertiary-button-inline-icon svg, .icon-stacked.gb-tertiary-button-stacked-icon svg, .icon-stacked.gb-secondary-button svg, .icon-stacked.gb-secondary-button-stacked-icon svg, .icon-stacked.gb-secondary-button-inline-icon svg, .icon-stacked.gb-primary-button svg, .icon-stacked.gb-primary-button-stacked-icon svg, .icon-stacked.gb-primary-button-inline-icon svg,
+.icon-stacked.gb-list-item-tertiary img,
+.icon-stacked.gb-list-item-inline-icon-tertiary img,
+.icon-stacked.gb-list-item-secondary img,
+.icon-stacked.gb-list-item-primary img,
+.icon-stacked.gb-list-item-inline-icon-secondary img,
+.icon-stacked.gb-list-item-inline-icon-primary img,
+.icon-stacked.gb-icon-button img,
+.icon-stacked.gb-tertiary-button img,
+.icon-stacked.gb-tertiary-button-inline-icon img,
+.icon-stacked.gb-tertiary-button-stacked-icon img,
+.icon-stacked.gb-secondary-button img,
+.icon-stacked.gb-secondary-button-stacked-icon img,
+.icon-stacked.gb-secondary-button-inline-icon img,
+.icon-stacked.gb-primary-button img,
+.icon-stacked.gb-primary-button-stacked-icon img,
+.icon-stacked.gb-primary-button-inline-icon img {
+    margin: auto auto calc(0.31249 * 16px);
+  }
+}
 .icon-left.gb-list-item-tertiary svg, .icon-left.gb-list-item-inline-icon-tertiary svg, .icon-left.gb-list-item-secondary svg, .icon-left.gb-list-item-primary svg, .icon-left.gb-list-item-inline-icon-secondary svg, .icon-left.gb-list-item-inline-icon-primary svg, .icon-left.gb-icon-button svg, .icon-left.gb-tertiary-button svg, .icon-left.gb-tertiary-button-inline-icon svg, .icon-left.gb-tertiary-button-stacked-icon svg, .icon-left.gb-secondary-button svg, .icon-left.gb-secondary-button-stacked-icon svg, .icon-left.gb-secondary-button-inline-icon svg, .icon-left.gb-primary-button svg, .icon-left.gb-primary-button-stacked-icon svg, .icon-left.gb-primary-button-inline-icon svg,
 .icon-left.gb-list-item-tertiary img,
 .icon-left.gb-list-item-inline-icon-tertiary img,
@@ -35164,12 +35342,12 @@ html[dir=rtl] .align-right {
   background-color: transparent;
   border: 1px solid #808080;
   color: #6e6e6e;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 2.19px;
   line-height: 18px;
-  padding: 12px 19px;
+  padding: 12px 20px 11px;
   transition: background 0.5s cubic-bezier(0, 1, 0.5, 1);
   width: 100%;
   -o-object-fit: contain;
@@ -35196,18 +35374,19 @@ html[dir=rtl] .align-right {
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 27px;
+    padding: 7px 20px;
   }
 }
 .gb-primary-button, .gb-primary-button-stacked-icon, .gb-primary-button-inline-icon {
   background-color: transparent;
   border: 2px solid #cd9834;
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 23px;
-  padding: 12px 19px;
+  padding: 9px 20px 8px;
   transition: background 0.5s cubic-bezier(0, 1, 0.5, 1);
   width: 100%;
   -o-object-fit: contain;
@@ -35222,7 +35401,7 @@ html[dir=rtl] .align-right {
 
 .gb-small-button.gb-primary-button, .gb-small-button.gb-primary-button-stacked-icon, .gb-small-button.gb-primary-button-inline-icon {
   line-height: 23px;
-  padding: 11px 0 10px;
+  padding: 2.5px;
   position: relative;
 }
 
@@ -35267,12 +35446,12 @@ html[dir=rtl] .align-right {
 }
 
 .gb-primary-button:hover:focus, .gb-primary-button-stacked-icon:hover:focus, .gb-primary-button-inline-icon:hover:focus {
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
 }
 
 .gb-primary-button:focus, .gb-primary-button-stacked-icon:focus, .gb-primary-button-inline-icon:focus {
   background-color: transparent;
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
 }
 
 .gb-primary-button:focus:active, .gb-primary-button-stacked-icon:focus:active, .gb-primary-button-inline-icon:focus:active, .gb-primary-button:focus:hover, .gb-primary-button-stacked-icon:focus:hover, .gb-primary-button-inline-icon:focus:hover {
@@ -35298,18 +35477,19 @@ html[dir=rtl] .align-right {
   .gb-primary-button, .gb-primary-button-stacked-icon, .gb-primary-button-inline-icon {
     font-size: 18px;
     line-height: 32px;
+    padding: 10px 20px;
   }
 }
 .gb-secondary-button, .gb-secondary-button-stacked-icon, .gb-secondary-button-inline-icon {
   background-color: transparent;
   border: 2px solid #b3b3b3;
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 23px;
-  padding: 12px 19px;
+  padding: 9px 20px 8px;
   transition: background 0.25s cubic-bezier(0, 1, 0.5, 1);
   width: 100%;
   -o-object-fit: contain;
@@ -35325,7 +35505,7 @@ html[dir=rtl] .align-right {
 
 .gb-small-button.gb-secondary-button, .gb-small-button.gb-secondary-button-stacked-icon, .gb-small-button.gb-secondary-button-inline-icon {
   line-height: 2;
-  padding: 11px 0 10px;
+  padding: 0;
   position: relative;
 }
 
@@ -35377,14 +35557,14 @@ html[dir=rtl] .align-right {
 .gb-secondary-button:hover:focus, .gb-secondary-button-stacked-icon:hover:focus, .gb-secondary-button-inline-icon:hover:focus {
   background-color: #6e6e6e;
   border: 2px solid #6e6e6e;
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
   color: #fff;
 }
 
 .gb-secondary-button:focus, .gb-secondary-button-stacked-icon:focus, .gb-secondary-button-inline-icon:focus {
   background-color: transparent;
   border: 2px solid #b3b3b3;
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
   color: #262626;
 }
 
@@ -35414,18 +35594,19 @@ html[dir=rtl] .align-right {
   .gb-secondary-button, .gb-secondary-button-stacked-icon, .gb-secondary-button-inline-icon {
     font-size: 18px;
     line-height: 32px;
+    padding: 10px 20px;
   }
 }
 .gb-tertiary-button, .gb-tertiary-button-inline-icon, .gb-tertiary-button-stacked-icon {
   background-color: transparent;
   border: 2px solid #fff;
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: normal;
   line-height: 23px;
-  padding: 12px 19px;
+  padding: 9px 20px 8px;
   transition: background 0.25s cubic-bezier(0, 1, 0.5, 1);
   width: 100%;
   -o-object-fit: contain;
@@ -35442,7 +35623,7 @@ html[dir=rtl] .align-right {
 
 .gb-small-button.gb-tertiary-button, .gb-small-button.gb-tertiary-button-inline-icon, .gb-small-button.gb-tertiary-button-stacked-icon {
   line-height: 2;
-  padding: 11px 0 10px;
+  padding: 0;
   position: relative;
 }
 
@@ -35473,11 +35654,11 @@ html[dir=rtl] .align-right {
 }
 
 .gb-tertiary-button:hover:focus, .gb-tertiary-button-inline-icon:hover:focus, .gb-tertiary-button-stacked-icon:hover:focus {
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
 }
 
 .gb-tertiary-button:focus, .gb-tertiary-button-inline-icon:focus, .gb-tertiary-button-stacked-icon:focus {
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
 }
 
 .gb-tertiary-button:focus.disabled, .gb-tertiary-button-inline-icon:focus.disabled, .gb-tertiary-button-stacked-icon:focus.disabled {
@@ -35500,22 +35681,23 @@ html[dir=rtl] .align-right {
   .gb-tertiary-button, .gb-tertiary-button-inline-icon, .gb-tertiary-button-stacked-icon {
     font-size: 18px;
     line-height: 32px;
+    padding: 10px 20px;
   }
 }
 .gb-link-footer {
   color: #262626;
   cursor: pointer;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: normal;
   line-height: normal;
-  padding: 12px 19px;
+  padding: 0;
   text-align: inherit;
   text-decoration: none;
   width: 100%;
-  margin: 13px 0 0;
+  margin: 0;
 }
 
 .gb-link-footer:hover {
@@ -35534,7 +35716,7 @@ html[dir=rtl] .align-right {
   color: #262626;
   cursor: pointer;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: normal;
@@ -35600,8 +35782,8 @@ html[dir=rtl] .align-right {
   color: #262626;
   cursor: pointer;
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 0.7rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(0.7437 * 16px);
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1;
@@ -35612,13 +35794,13 @@ html[dir=rtl] .align-right {
 
 @media (min-width: 600px) and (max-width: 959px) {
   .gb-list-item-secondary, .gb-list-item-primary, .gb-list-item-inline-icon-secondary, .gb-list-item-inline-icon-primary {
-    font-size: 0.7rem;
+    font-size: calc(0.875 * 16px);
     padding: 18px 30px;
   }
 }
 @media (min-width: 960px) {
   .gb-list-item-secondary, .gb-list-item-primary, .gb-list-item-inline-icon-secondary, .gb-list-item-inline-icon-primary {
-    font-size: 0.7rem;
+    font-size: calc(1.0062 * 16px);
     padding: 18px 30px;
   }
 }
@@ -35645,8 +35827,8 @@ html[dir=rtl] .align-right {
   color: #b3b3b3;
   cursor: pointer;
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 0.7rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(0.7437 * 16px);
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1;
@@ -35657,13 +35839,13 @@ html[dir=rtl] .align-right {
 
 @media (min-width: 600px) and (max-width: 959px) {
   .gb-list-item-tertiary, .gb-list-item-inline-icon-tertiary {
-    font-size: 0.7rem;
+    font-size: calc(0.875 * 16px);
     padding: 18px 30px;
   }
 }
 @media (min-width: 960px) {
   .gb-list-item-tertiary, .gb-list-item-inline-icon-tertiary {
-    font-size: 0.7rem;
+    font-size: calc(1.0062 * 16px);
     padding: 18px 30px;
   }
 }
@@ -35685,14 +35867,24 @@ html[dir=rtl] .align-right {
 .gb-list-item-inline-icon-tertiary .gb-list-item-description, .gb-list-item-inline-icon-secondary .gb-list-item-description, .gb-list-item-inline-icon-primary .gb-list-item-description, .gb-list-item-tertiary .gb-list-item-description, .gb-list-item-secondary .gb-list-item-description, .gb-list-item-primary .gb-list-item-description {
   color: #808080;
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 0.875rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(0.9296 * 16px);
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.429;
   text-decoration: none;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-list-item-inline-icon-tertiary .gb-list-item-description, .gb-list-item-inline-icon-secondary .gb-list-item-description, .gb-list-item-inline-icon-primary .gb-list-item-description, .gb-list-item-tertiary .gb-list-item-description, .gb-list-item-secondary .gb-list-item-description, .gb-list-item-primary .gb-list-item-description {
+    font-size: calc(1.0937 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-list-item-inline-icon-tertiary .gb-list-item-description, .gb-list-item-inline-icon-secondary .gb-list-item-description, .gb-list-item-inline-icon-primary .gb-list-item-description, .gb-list-item-tertiary .gb-list-item-description, .gb-list-item-secondary .gb-list-item-description, .gb-list-item-primary .gb-list-item-description {
+    font-size: calc(1.2578 * 16px);
+  }
+}
 .gb-list-item-inline-icon-primary::after {
   display: none;
 }
@@ -35830,7 +36022,13 @@ html[dir=rtl] .icon-left.gb-secondary-button-stacked-icon img {
     padding: 0;
   }
 }
-/* Note: this styling does NOT account for body overflow-x so a horizontal scrollbar will likely appear unless you account for it.*/
+/*
+	Note: this styling does NOT account for body overflow-x so a horizontal scrollbar will likely appear unless you account for it.
+
+	Important: You MUST import/use the ../../../ts/utils/container-movement.ts utility file if you're using these mixins.
+		- You don't have to use the helper functions but the file contains a JS function that runs and updates
+		  the CSS variable "--vh" on window resize (Important for iOS Safari)
+*/
 /* Adds styles to scale an element down and back up absolutely positioned with its parent without*/
 /* squishing the contents of the element. Intended to be used on container elements.*/
 /* Adds styles to slide an element left and right absolutely positioned to its parent.*/
@@ -35846,7 +36044,7 @@ gb-tab-nav .content-button-group,
   background-color: #e6e6e6;
   display: inline-block;
   margin: 0;
-  font-family: Roboto, Helvetica, sans-serif;
+  display: inline-flex;
 }
 
 gb-tab-nav .content-button,
@@ -35864,7 +36062,8 @@ gb-tab-nav .content-button button,
   background-color: transparent;
   border: 0;
   color: #6e6e6e;
-  font-size: 0.6rem;
+  cursor: pointer;
+  font-size: calc(0.6375 * 16px);
   font-weight: 700;
   height: 50px;
   margin: 0;
@@ -35879,6 +36078,34 @@ gb-tab-nav .content-button.active,
   background-color: #fff;
 }
 
+gb-tab-nav .content-button.active button,
+.gb-tab-nav .content-button.active button {
+  color: #262626;
+}
+
+gb-tab-nav .content-button:hover,
+.gb-tab-nav .content-button:hover {
+  background-color: #fff;
+}
+
+gb-tab-nav .content-button button:hover,
+.gb-tab-nav .content-button button:hover {
+  color: #262626;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  gb-tab-nav .content-button,
+.gb-tab-nav .content-button {
+    font-size: calc(0.75 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  gb-tab-nav .content-button,
+.gb-tab-nav .content-button {
+    font-size: calc(0.8624 * 16px);
+  }
+}
 gb-tab-nav .content-container,
 .gb-tab-nav .content-container {
   display: none;
@@ -35906,7 +36133,7 @@ gb-tab-nav .content-container .back-button,
   background-color: #e6e6e6;
   border: none;
   color: #262626;
-  font-size: 0.6rem;
+  font-size: calc(0.6375 * 16px);
   font-weight: 700;
   height: 50px;
   margin: 0;
@@ -35921,6 +36148,18 @@ gb-tab-nav .content-container .back-button .back-button-label,
   text-align: left;
 }
 
+@media only screen and (min-width: 800px) {
+  gb-tab-nav .content-container .back-button,
+.gb-tab-nav .content-container .back-button {
+    font-size: calc(0.75 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  gb-tab-nav .content-container .back-button,
+.gb-tab-nav .content-container .back-button {
+    font-size: calc(0.8624 * 16px);
+  }
+}
 gb-tab-nav .content-container .stacked-content-title,
 .gb-tab-nav .content-container .stacked-content-title {
   display: none;
@@ -35962,7 +36201,8 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: transparent;
     border: 0;
     color: #262626;
-    font-size: 0.6rem;
+    cursor: pointer;
+    font-size: calc(0.6375 * 16px);
     font-weight: 700;
     height: auto;
     margin: 0;
@@ -35977,16 +36217,57 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: #fff;
   }
 
-  gb-tab-nav.gb-stacked-sm .content-button::after,
-.gb-tab-nav.gb-stacked-sm .content-button::after {
-    border-bottom: 0.2625rem solid transparent;
-    border-left: 0.4075rem solid #808080;
-    border-top: 0.2625rem solid transparent;
-    content: "";
-    position: absolute;
-    right: 1.875rem;
+  gb-tab-nav.gb-stacked-sm .content-button button,
+.gb-tab-nav.gb-stacked-sm .content-button button {
+    align-items: center;
+    display: flex;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
   }
 
+  gb-tab-nav.gb-stacked-sm .content-button button::after,
+.gb-tab-nav.gb-stacked-sm .content-button button::after {
+    border-bottom: calc(0.2789 * 16px) solid transparent;
+    border-left: calc(0.4329 * 16px) solid #808080;
+    border-top: calc(0.2789 * 16px) solid transparent;
+    content: "";
+    position: absolute;
+    right: calc(1.9921 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-sm .content-button button::after,
+.gb-tab-nav.gb-stacked-sm .content-button button::after {
+    border-bottom: calc(0.3281 * 16px) solid transparent;
+    border-left: calc(0.5093 * 16px) solid #808080;
+    border-top: calc(0.3281 * 16px) solid transparent;
+    right: calc(2.3437 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-sm .content-button button::after,
+.gb-tab-nav.gb-stacked-sm .content-button button::after {
+    border-bottom: calc(0.3773 * 16px) solid transparent;
+    border-left: calc(0.5857 * 16px) solid #808080;
+    border-top: calc(0.3773 * 16px) solid transparent;
+    right: calc(2.6953 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-sm .content-button,
+.gb-tab-nav.gb-stacked-sm .content-button {
+    font-size: calc(0.75 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-sm .content-button,
+.gb-tab-nav.gb-stacked-sm .content-button {
+    font-size: calc(0.8624 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) {
   gb-tab-nav.gb-stacked-sm .content-container,
 .gb-tab-nav.gb-stacked-sm .content-container {
     position: fixed;
@@ -36073,18 +36354,33 @@ gb-tab-nav .content-container .stacked-content-title,
     border-right: 8px solid #000;
     border-top: 5px solid transparent;
     content: "";
-    left: 0.875rem;
+    left: calc(0.9296 * 16px);
     position: absolute;
-    top: 20px;
+    top: 21px;
   }
-
+}
+@media only screen and (max-width: 799px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-sm .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-sm .content-container .back-button::before {
+    left: calc(1.0937 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-sm .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-sm .content-container .back-button::before {
+    left: calc(1.2578 * 16px);
+  }
+}
+@media only screen and (max-width: 799px) {
   gb-tab-nav.gb-stacked-sm .content-container .back-button .back-button-label,
 .gb-tab-nav.gb-stacked-sm .content-container .back-button .back-button-label {
     color: #262626;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
     font-size: 12px;
-    line-height: 1.125;
+    line-height: 1.5;
   }
-
+}
+@media only screen and (max-width: 799px) {
   gb-tab-nav.gb-stacked-sm .content-container.open, gb-tab-nav.gb-stacked-sm .content-container.opening, gb-tab-nav.gb-stacked-sm .content-container.closing,
 .gb-tab-nav.gb-stacked-sm .content-container.open,
 .gb-tab-nav.gb-stacked-sm .content-container.opening,
@@ -36129,7 +36425,8 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: transparent;
     border: 0;
     color: #262626;
-    font-size: 0.6rem;
+    cursor: pointer;
+    font-size: calc(0.6375 * 16px);
     font-weight: 700;
     height: auto;
     margin: 0;
@@ -36144,16 +36441,57 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: #fff;
   }
 
-  gb-tab-nav.gb-stacked-med .content-button::after,
-.gb-tab-nav.gb-stacked-med .content-button::after {
-    border-bottom: 0.2625rem solid transparent;
-    border-left: 0.4075rem solid #808080;
-    border-top: 0.2625rem solid transparent;
-    content: "";
-    position: absolute;
-    right: 1.875rem;
+  gb-tab-nav.gb-stacked-med .content-button button,
+.gb-tab-nav.gb-stacked-med .content-button button {
+    align-items: center;
+    display: flex;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
   }
 
+  gb-tab-nav.gb-stacked-med .content-button button::after,
+.gb-tab-nav.gb-stacked-med .content-button button::after {
+    border-bottom: calc(0.2789 * 16px) solid transparent;
+    border-left: calc(0.4329 * 16px) solid #808080;
+    border-top: calc(0.2789 * 16px) solid transparent;
+    content: "";
+    position: absolute;
+    right: calc(1.9921 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-med .content-button button::after,
+.gb-tab-nav.gb-stacked-med .content-button button::after {
+    border-bottom: calc(0.3281 * 16px) solid transparent;
+    border-left: calc(0.5093 * 16px) solid #808080;
+    border-top: calc(0.3281 * 16px) solid transparent;
+    right: calc(2.3437 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-med .content-button button::after,
+.gb-tab-nav.gb-stacked-med .content-button button::after {
+    border-bottom: calc(0.3773 * 16px) solid transparent;
+    border-left: calc(0.5857 * 16px) solid #808080;
+    border-top: calc(0.3773 * 16px) solid transparent;
+    right: calc(2.6953 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-med .content-button,
+.gb-tab-nav.gb-stacked-med .content-button {
+    font-size: calc(0.75 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-med .content-button,
+.gb-tab-nav.gb-stacked-med .content-button {
+    font-size: calc(0.8624 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
   gb-tab-nav.gb-stacked-med .content-container,
 .gb-tab-nav.gb-stacked-med .content-container {
     position: fixed;
@@ -36240,24 +36578,52 @@ gb-tab-nav .content-container .stacked-content-title,
     border-right: 8px solid #000;
     border-top: 5px solid transparent;
     content: "";
-    left: 0.875rem;
+    left: calc(0.9296 * 16px);
     position: absolute;
-    top: 20px;
+    top: 21px;
   }
-
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-med .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-med .content-container .back-button::before {
+    left: calc(1.0937 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-med .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-med .content-container .back-button::before {
+    left: calc(1.2578 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
   gb-tab-nav.gb-stacked-med .content-container .back-button .back-button-label,
 .gb-tab-nav.gb-stacked-med .content-container .back-button .back-button-label {
     color: #262626;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
     font-size: 12px;
-    line-height: 1.125;
+    line-height: 1.5;
   }
-
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
   gb-tab-nav.gb-stacked-med .content-container.open, gb-tab-nav.gb-stacked-med .content-container.opening, gb-tab-nav.gb-stacked-med .content-container.closing,
 .gb-tab-nav.gb-stacked-med .content-container.open,
 .gb-tab-nav.gb-stacked-med .content-container.opening,
 .gb-tab-nav.gb-stacked-med .content-container.closing {
     position: fixed;
     z-index: 1;
+  }
+}
+@media only screen and (min-width: 800px) {
+  gb-tab-nav .content-button-group .content-button,
+.gb-tab-nav .content-button-group .content-button {
+    /* stylelint-disable-next-line*/
+  }
+
+  gb-tab-nav .content-button-group .content-button button,
+.gb-tab-nav .content-button-group .content-button button {
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+    font-size: 14px;
+    line-height: 1.29;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -36296,7 +36662,8 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: transparent;
     border: 0;
     color: #262626;
-    font-size: 0.6rem;
+    cursor: pointer;
+    font-size: calc(0.6375 * 16px);
     font-weight: 700;
     height: auto;
     margin: 0;
@@ -36311,16 +36678,57 @@ gb-tab-nav .content-container .stacked-content-title,
     background-color: #fff;
   }
 
-  gb-tab-nav.gb-stacked-lg .content-button::after,
-.gb-tab-nav.gb-stacked-lg .content-button::after {
-    border-bottom: 0.2625rem solid transparent;
-    border-left: 0.4075rem solid #808080;
-    border-top: 0.2625rem solid transparent;
-    content: "";
-    position: absolute;
-    right: 1.875rem;
+  gb-tab-nav.gb-stacked-lg .content-button button,
+.gb-tab-nav.gb-stacked-lg .content-button button {
+    align-items: center;
+    display: flex;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
   }
 
+  gb-tab-nav.gb-stacked-lg .content-button button::after,
+.gb-tab-nav.gb-stacked-lg .content-button button::after {
+    border-bottom: calc(0.2789 * 16px) solid transparent;
+    border-left: calc(0.4329 * 16px) solid #808080;
+    border-top: calc(0.2789 * 16px) solid transparent;
+    content: "";
+    position: absolute;
+    right: calc(1.9921 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-lg .content-button button::after,
+.gb-tab-nav.gb-stacked-lg .content-button button::after {
+    border-bottom: calc(0.3281 * 16px) solid transparent;
+    border-left: calc(0.5093 * 16px) solid #808080;
+    border-top: calc(0.3281 * 16px) solid transparent;
+    right: calc(2.3437 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-lg .content-button button::after,
+.gb-tab-nav.gb-stacked-lg .content-button button::after {
+    border-bottom: calc(0.3773 * 16px) solid transparent;
+    border-left: calc(0.5857 * 16px) solid #808080;
+    border-top: calc(0.3773 * 16px) solid transparent;
+    right: calc(2.6953 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-lg .content-button,
+.gb-tab-nav.gb-stacked-lg .content-button {
+    font-size: calc(0.75 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-lg .content-button,
+.gb-tab-nav.gb-stacked-lg .content-button {
+    font-size: calc(0.8624 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
   gb-tab-nav.gb-stacked-lg .content-container,
 .gb-tab-nav.gb-stacked-lg .content-container {
     position: fixed;
@@ -36407,18 +36815,33 @@ gb-tab-nav .content-container .stacked-content-title,
     border-right: 8px solid #000;
     border-top: 5px solid transparent;
     content: "";
-    left: 0.875rem;
+    left: calc(0.9296 * 16px);
     position: absolute;
-    top: 20px;
+    top: 21px;
   }
-
+}
+@media only screen and (min-width: 1200px) and (min-width: 800px) {
+  gb-tab-nav.gb-stacked-lg .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-lg .content-container .back-button::before {
+    left: calc(1.0937 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) and (min-width: 1200px) {
+  gb-tab-nav.gb-stacked-lg .content-container .back-button::before,
+.gb-tab-nav.gb-stacked-lg .content-container .back-button::before {
+    left: calc(1.2578 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
   gb-tab-nav.gb-stacked-lg .content-container .back-button .back-button-label,
 .gb-tab-nav.gb-stacked-lg .content-container .back-button .back-button-label {
     color: #262626;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
     font-size: 12px;
-    line-height: 1.125;
+    line-height: 1.5;
   }
-
+}
+@media only screen and (min-width: 1200px) {
   gb-tab-nav.gb-stacked-lg .content-container.open, gb-tab-nav.gb-stacked-lg .content-container.opening, gb-tab-nav.gb-stacked-lg .content-container.closing,
 .gb-tab-nav.gb-stacked-lg .content-container.open,
 .gb-tab-nav.gb-stacked-lg .content-container.opening,
@@ -36433,11 +36856,11 @@ gb-tab-nav .content-container .stacked-content-title,
 
 .gb-checkbox label,
 .gb-checkbox input[type=checkbox] + label {
-  color: #808080;
+  color: #262626;
   cursor: pointer;
   display: inline;
   /* Override for Quantum label style for labels*/
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: normal;
@@ -36456,11 +36879,11 @@ gb-tab-nav .content-container .stacked-content-title,
 @media print, only screen and (min-width: 800px) {
   .gb-checkbox label,
 .gb-checkbox input[type=checkbox] + label {
-    color: #808080;
+    color: #262626;
     cursor: pointer;
     display: inline;
     /* Override for Quantum label style for labels*/
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: normal;
@@ -36726,7 +37149,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-dropdown .gb-select-container label {
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   letter-spacing: normal;
   line-height: 1.5;
@@ -36735,7 +37158,7 @@ html[dir=rtl] .gb-checkbox .label-left {
   left: 16px;
   pointer-events: none;
   position: absolute;
-  top: 15px;
+  top: 16px;
   transition: all 0.1s ease;
 }
 
@@ -36750,16 +37173,17 @@ html[dir=rtl] .gb-checkbox .label-left {
   background-size: 70px 100%;
   border: 1px solid #e6e6e6;
   cursor: pointer;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   height: auto;
   margin: 0;
   outline: none;
-  padding: 24px 19px 4px 16px;
+  padding: 24px 19px 6px 16px;
   width: 100%;
   border-bottom: 1px solid #b3b3b3;
   color: #262626;
-  line-height: 1.67;
+  height: 56px;
+  line-height: 1.5;
 }
 
 .gb-dropdown .gb-select-container select:hover {
@@ -36781,18 +37205,15 @@ html[dir=rtl] .gb-checkbox .label-left {
 }
 
 .gb-dropdown .gb-select-container::after {
-  border-bottom: 9px solid #6e6e6e;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  bottom: 32px;
-  content: "";
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236E6E6E' fill-rule='nonzero'%3E%3Cg%3E%3Cg%3E%3Cpath d='M9 5.25L15 13.821 3 13.821z' transform='translate(-642 -220) translate(338 201) translate(304 19) matrix(1 0 0 -1 0 19.071)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   display: flex;
+  height: 18px;
   margin: 0 0 0 auto;
   pointer-events: none;
-  position: relative;
+  position: absolute;
   right: 15px;
-  transform: rotate(180deg);
-  width: 10px;
+  top: 20px;
+  width: 18px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -36804,6 +37225,8 @@ html[dir=rtl] .gb-checkbox .label-left {
 
   .gb-dropdown .gb-select-container select {
     font-size: 18px;
+    height: 60px;
+    padding: 22px 19px 6px 16px;
   }
 }
 .gb-dropdown .gb-helper-text {
@@ -36824,7 +37247,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 }
 .gb-dropdown.gb-option-selected .gb-select-container label {
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   letter-spacing: normal;
   line-height: 1.33;
@@ -36895,6 +37318,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input input[type=date]::-webkit-datetime-edit {
   opacity: 0;
+  overflow: visible;
 }
 
 .gb-input input[type=date]::-webkit-calendar-picker-indicator {
@@ -36911,7 +37335,7 @@ html[dir=rtl] .gb-checkbox .label-left {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   line-height: 1.33;
   margin: 12px auto 5px 16px;
@@ -36955,7 +37379,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input label {
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   letter-spacing: normal;
   line-height: 1.5;
@@ -36965,9 +37389,10 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input .clear-input,
 .gb-input .show-password {
-  display: none;
+  display: inline-block;
   font-size: 12px;
   line-height: 1.29;
+  opacity: 0;
   position: absolute;
   right: 17px;
   text-transform: uppercase;
@@ -36979,19 +37404,31 @@ html[dir=rtl] .gb-checkbox .label-left {
   cursor: pointer;
 }
 
+.gb-input .clear-input:focus,
+.gb-input .show-password:focus {
+  opacity: 1;
+}
+
+.gb-input button.clear-input, .gb-input button.show-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .gb-input .gb-input-label {
   color: #262626;
   font-size: 16px;
   left: 16px;
   line-height: 1.5;
   position: absolute;
-  top: 12px;
+  top: 16px;
 }
 
 .gb-input .gb-input-label.hover {
   color: #6e6e6e;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   left: 16px;
   line-height: 1.33;
   top: 8px;
@@ -37049,15 +37486,36 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input .gb-error-text-container .gb-error-text {
   color: #b50000;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 12px;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: 14px;
   line-height: 1.33;
+  padding-bottom: 4px;
 }
 
+.gb-input .gb-error-text-container .gb-error-text.gb-error-img::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20stroke%3D%22%23E25959%22%20stroke-width%3D%222%22%20d%3D%22M9.637%202.16c.237-.197.34-.206.433-.18a.382.382%200%200%201%20.226.18l8.291%2014.86a.375.375%200%200%201-.329.56H1.741a.38.38%200%200%201-.33-.559z%22%2F%3E%3Cpath%20fill%3D%22%23E25959%22%20d%3D%22M10%2013.75a.833.833%200%201%201%200%201.666.833.833%200%200%201%200-1.666zm.833-5-.192%204.167H9.39L9.167%208.75h1.666z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 3px;
+  width: 16px;
+}
+
+@media only screen and (min-width: 800px) {
+  .gb-input .gb-error-text-container .gb-error-text.gb-error-img::before {
+    background-size: 20px 20px;
+    height: 20px;
+    top: 4px;
+    width: 20px;
+  }
+}
 .gb-input .gb-pw-info-container .gb-pw-label {
   color: #6e6e6e;
   display: block;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.43;
@@ -37079,7 +37537,9 @@ html[dir=rtl] .gb-checkbox .label-left {
 }
 
 .gb-input .gb-helper-text-icon-container .gb-helper-text-icon-image {
+  bottom: 3px;
   display: inline-block;
+  position: relative;
   vertical-align: middle;
   width: 100%;
 }
@@ -37090,7 +37550,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input input::-moz-placeholder {
   color: #e6e6e6;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 3px 0;
@@ -37098,7 +37558,7 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input input::placeholder {
   color: #e6e6e6;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 3px 0;
@@ -37109,11 +37569,11 @@ html[dir=rtl] .gb-checkbox .label-left {
   background-color: #fff;
   border: 1px solid #e6e6e6;
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 16px;
   height: auto;
   margin: 0;
-  padding: 27px 50px 0 16px;
+  padding: 24px 50px 6px 16px;
   width: 100%;
 }
 
@@ -37133,19 +37593,21 @@ html[dir=rtl] .gb-checkbox .label-left {
 .gb-input input textarea {
   border-bottom-color: #b3b3b3;
   border-radius: 0;
+  height: 56px;
   line-height: 1.5;
 }
 
 .gb-input input[type]:focus,
 .gb-input input textarea:focus {
   border-bottom: solid 2px #262626;
+  padding-bottom: 5px;
 }
 
 .gb-input input[type]:focus ~ .gb-input-label,
 .gb-input input textarea:focus ~ .gb-input-label {
   color: #6e6e6e;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   left: 16px;
   line-height: 1.33;
   top: 8px;
@@ -37153,12 +37615,12 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input input[type]:focus ~ .clear-input,
 .gb-input input textarea:focus ~ .clear-input {
-  display: inline-block;
+  opacity: 1;
 }
 
 .gb-input input[type]:focus ~ .show-password,
 .gb-input input textarea:focus ~ .show-password {
-  display: inline-block;
+  opacity: 1;
 }
 
 .gb-input input[type]:hover,
@@ -37172,7 +37634,7 @@ html[dir=rtl] .gb-checkbox .label-left {
   text-transform: uppercase;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  min-height: 52px;
+  padding-right: 16px;
 }
 
 .gb-input input[type=date]::-webkit-datetime-edit-text {
@@ -37210,11 +37672,31 @@ html[dir=rtl] .gb-checkbox .label-left {
 
 .gb-input .gb-helper-text-container .gb-helper-text {
   color: #6e6e6e;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 12px;
   line-height: 1.33;
 }
 
+.gb-input .gb-helper-text-container .gb-helper-text.gb-caps-img::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cpath%20fill%3D%22%236E6E6E%22%20fill-rule%3D%22nonzero%22%20d%3D%22M10%20.278A9.733%209.733%200%200%201%2019.722%2010c0%205.37-4.353%209.722-9.722%209.722A9.721%209.721%200%200%201%20.278%2010%209.721%209.721%200%200%201%2010%20.278zm0%201.494a8.228%208.228%200%200%200%200%2016.456A8.239%208.239%200%200%200%2018.228%2010%208.228%208.228%200%200%200%2010%201.772zm1.426%2011.857a.47.47%200%201%201%200%20.94H8.652a.47.47%200%201%201%200-.94h2.774zm-1.015-8.47%203.74%203.991c.09.096.118.241.07.367a.318.318%200%200%201-.293.207h-2.03v2.47c0%20.39-.295.705-.66.705H8.84c-.365%200-.66-.315-.66-.704V9.724H6.15a.316.316%200%200%201-.292-.207.352.352%200%200%201%20.07-.367l3.74-3.991a.515.515%200%200%201%20.744%200z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 3px;
+  width: 16px;
+}
+
+@media only screen and (min-width: 800px) {
+  .gb-input .gb-helper-text-container .gb-helper-text.gb-caps-img::before {
+    background-size: 20px 20px;
+    height: 20px;
+    top: 4px;
+    width: 20px;
+  }
+}
 .gb-input.disabled input {
   border: 1px solid #e6e6e6;
 }
@@ -37253,9 +37735,18 @@ html[dir=rtl] .gb-checkbox .label-left {
     top: 14px;
   }
 
+  .gb-input .gb-input-label.hover {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
   .gb-input .gb-helper-text-icon-container {
     height: 20px;
     width: 20px;
+  }
+
+  .gb-input .gb-helper-text-container .gb-helper-text-icon-container .gb-helper-text-icon-image {
+    bottom: 0;
   }
 
   .gb-input input::-moz-placeholder {
@@ -37270,11 +37761,22 @@ html[dir=rtl] .gb-checkbox .label-left {
 
   .gb-input input[type],
 .gb-input input textarea {
-    padding: 27px 65px 4px 16px;
+    height: 60px;
+    padding: 23px 65px 6px 16px;
+  }
+
+  .gb-input input[type]:focus,
+.gb-input input textarea:focus {
+    padding-bottom: 5px;
+  }
+
+  .gb-input input[type]:focus ~ .gb-input-label,
+.gb-input input textarea:focus ~ .gb-input-label {
+    font-size: 14px;
   }
 
   .gb-input input[type=date] {
-    min-height: 57px;
+    padding-right: 16px;
   }
 
   .gb-input .gb-helper-text-container {
@@ -37315,7 +37817,7 @@ html[dir=rtl] .gb-input {
   align-items: center;
   color: #262626;
   cursor: pointer;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   line-height: 23px;
   margin: 10px 0;
@@ -37336,7 +37838,7 @@ html[dir=rtl] .gb-input {
     align-items: center;
     color: #262626;
     cursor: pointer;
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
     font-size: 18px;
     line-height: 32px;
     margin: 12px 0;
@@ -37640,8 +38142,8 @@ html[dir=rtl] span.gb-radio input[type=radio]:disabled + label::before, html[dir
   color: #262626;
   cursor: pointer;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(1.0625 * 16px);
   line-height: 1.375;
   margin: 0 10px;
   position: relative;
@@ -37650,6 +38152,16 @@ html[dir=rtl] span.gb-radio input[type=radio]:disabled + label::before, html[dir
   vertical-align: middle;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-toggle label {
+    font-size: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-toggle label {
+    font-size: calc(1.4375 * 16px);
+  }
+}
 .gb-toggle.disabled {
   opacity: 30%;
 }
@@ -37722,12 +38234,12 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
 .gb-separator .separator-join-vertical .separator-copy {
   color: #808080;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(1.0625 * 16px);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
-  padding: 1rem;
+  padding: calc(1.0625 * 16px);
   position: relative;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -37735,6 +38247,26 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   top: calc(50% - 15px);
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-vertical .separator-copy {
+    padding: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-vertical .separator-copy {
+    padding: calc(1.4375 * 16px);
+  }
+}
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-vertical .separator-copy {
+    font-size: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-vertical .separator-copy {
+    font-size: calc(1.4375 * 16px);
+  }
+}
 .gb-separator .separator-join-horizontal {
   overflow: hidden;
   padding: 0;
@@ -37747,12 +38279,12 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
 .gb-separator .separator-join-horizontal .separator-copy {
   color: #808080;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(1.0625 * 16px);
   font-weight: 400;
-  letter-spacing: 0.15rem;
+  letter-spacing: calc(0.1593 * 16px);
   line-height: 1.5;
-  padding: 1rem;
+  padding: calc(1.0625 * 16px);
   position: relative;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -37760,6 +38292,16 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   position: static;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-horizontal .separator-copy {
+    padding: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-horizontal .separator-copy {
+    padding: calc(1.4375 * 16px);
+  }
+}
 .gb-separator .separator-join-horizontal .separator-copy::before {
   background-color: unset;
   border-color: #b3b3b3;
@@ -37777,6 +38319,18 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   z-index: -1;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-horizontal .separator-copy {
+    font-size: calc(1.25 * 16px);
+    letter-spacing: calc(0.1875 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-horizontal .separator-copy {
+    font-size: calc(1.4375 * 16px);
+    letter-spacing: calc(0.2156 * 16px);
+  }
+}
 .gb-separator .separator-join-combined {
   overflow: hidden;
   padding: 0;
@@ -37789,12 +38343,12 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
 .gb-separator .separator-join-combined .separator-copy {
   color: #808080;
   display: inline-block;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+  font-size: calc(1.0625 * 16px);
   font-weight: 400;
-  letter-spacing: 0.15rem;
+  letter-spacing: calc(0.1593 * 16px);
   line-height: 1.5;
-  padding: 1rem;
+  padding: calc(1.0625 * 16px);
   position: relative;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -37802,6 +38356,16 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   position: static;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    padding: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    padding: calc(1.4375 * 16px);
+  }
+}
 .gb-separator .separator-join-combined .separator-copy::before {
   background-color: unset;
   border-color: #b3b3b3;
@@ -37819,6 +38383,18 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   z-index: -1;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    font-size: calc(1.25 * 16px);
+    letter-spacing: calc(0.1875 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    font-size: calc(1.4375 * 16px);
+    letter-spacing: calc(0.2156 * 16px);
+  }
+}
 @media (min-width: 960px) {
   .gb-separator .separator-join-combined {
     background-color: unset;
@@ -37838,12 +38414,12 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
   .gb-separator .separator-join-combined .separator-copy {
     color: #808080;
     display: inline-block;
-    font-family: Roboto, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-family: Roboto, Helvetica, NanumGothic, sans-serif;
+    font-size: calc(1.0625 * 16px);
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.5;
-    padding: 1rem;
+    padding: calc(1.0625 * 16px);
     position: relative;
     text-transform: uppercase;
     background-color: #f2f2f2;
@@ -37851,36 +38427,86 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
     top: calc(50% - 15px);
   }
 }
+@media only screen and (min-width: 960px) and (min-width: 800px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    padding: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 960px) and (min-width: 1200px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    padding: calc(1.4375 * 16px);
+  }
+}
+@media only screen and (min-width: 960px) and (min-width: 800px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    font-size: calc(1.25 * 16px);
+  }
+}
+@media only screen and (min-width: 960px) and (min-width: 1200px) {
+  .gb-separator .separator-join-combined .separator-copy {
+    font-size: calc(1.4375 * 16px);
+  }
+}
 /* Components*/
 /* Forms*/
-/* Mixin for generating vertical spacing styles*/
-/* Vertical spacing is used to create space between components by adding a bottom margin*/
-/* to the element being applied to.  The use of !important is needed to make sure if any*/
-/* other classes are applied that have a bottom margin to override.*/
 .gb-none-margin {
   margin-bottom: 0 !important;
 }
 
 .gb-small-margin {
-  margin-bottom: 1.25rem !important;
+  margin-bottom: calc(1.3281 * 16px) !important;
 }
 
 .gb-medium-margin {
-  margin-bottom: 2.5rem !important;
+  margin-bottom: calc(2.6562 * 16px) !important;
 }
 
 .gb-large-margin {
-  margin-bottom: 5rem !important;
+  margin-bottom: calc(5.3125 * 16px) !important;
 }
 
 .gb-xlarge-margin {
-  margin-bottom: 5rem !important;
+  margin-bottom: calc(5.3125 * 16px) !important;
 }
 
+@media only screen and (min-width: 800px) {
+  .gb-small-margin {
+    margin-bottom: calc(1.5625 * 16px) !important;
+  }
+
+  .gb-medium-margin {
+    margin-bottom: calc(3.125 * 16px) !important;
+  }
+
+  .gb-large-margin {
+    margin-bottom: calc(6.25 * 16px) !important;
+  }
+
+  .gb-xlarge-margin {
+    margin-bottom: calc(6.25 * 16px) !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .gb-small-margin {
+    margin-bottom: calc(1.7968 * 16px) !important;
+  }
+
+  .gb-medium-margin {
+    margin-bottom: calc(3.5937 * 16px) !important;
+  }
+
+  .gb-large-margin {
+    margin-bottom: calc(7.1875 * 16px) !important;
+  }
+
+  .gb-xlarge-margin {
+    margin-bottom: calc(7.1875 * 16px) !important;
+  }
+}
 /* Chevy has a specific xlarge margin override for small only viewports*/
 @media print, only screen and (min-width: 420px) {
   .gb-xlarge-margin {
-    margin-bottom: 7.5rem !important;
+    margin-bottom: calc(7.9687 * 16px) !important;
   }
 }
 /* Common (global) styles that all brands need*/

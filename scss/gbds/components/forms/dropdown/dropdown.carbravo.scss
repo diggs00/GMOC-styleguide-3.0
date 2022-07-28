@@ -1,0 +1,174 @@
+@use 'dropdown' as d;
+@use '../../../carbravo/colors' as c;
+@use '../../../carbravo/fonts' as f;
+@use '../../../utils/breakpoints' as bp;
+
+.gb-dropdown {
+	.gb-select-container {
+		position: relative;
+
+		label {
+			@include d.base-label(
+				f.$nexa-w05,
+				16px,
+				normal,
+				1.2,
+				0
+			);
+			color: c.$car-bravo-midnight-base;
+			left: 16px;
+			pointer-events: none;
+			position: absolute;
+			top: 19px;
+			transition: all .1s ease;
+		}
+
+		select {
+			@include d.base-select(
+				c.$white,
+				none,
+				none,
+				none,
+				none,
+				1px solid c.$car-bravo-midnight-accent-deep,
+				f.$nexa-w05,
+				16px,
+				0,
+				28px 25px 4px 16px,
+				100%
+			);
+			border-radius: 5px;
+			color: c.$car-bravo-midnight-base;
+			line-height: 1.4;
+
+			&[disabled] {
+				background-color: c.$car-bravo-midnight-accent-bright;
+				border: 1px solid c.$car-bravo-midnight-accent-base;
+				color: c.$car-bravo-midnight-accent-base;
+				opacity: 1;
+				pointer-events: none;
+			}
+		}
+
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%201L6%206L1%201%22%20stroke%3D%22%236A8A92%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+			display: flex;
+			margin: 0 0 0 auto;
+			pointer-events: none;
+			position: absolute;
+			right: 22px;
+			top: 20px;
+		}
+
+		&.gb-disabled {
+			label {
+				color: c.$car-bravo-midnight-accent-base;
+			}
+
+			select {
+				background-color: c.$car-bravo-midnight-accent-bright;
+				border-color: c.$car-bravo-midnight-accent-base;
+				color: c.$car-bravo-midnight-accent-base;
+			}
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%201L6%206L1%201%22%20stroke%3D%22%23CDD8DB%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+			}
+		}
+
+		&:focus-within {
+			label{
+				color: c.$car-bravo-midnight-base;
+			}
+
+			select {
+				border: 1px solid c.$car-bravo-midnight-base;
+				color: c.$car-bravo-midnight-base;
+				padding: 28px 25px 4px 16px;
+			}
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%201L6%206L1%201%22%20stroke%3D%22%23063C4A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+			}
+		}
+
+		&:hover {
+			label{
+				color: c.$car-bravo-midnight-base;
+			}
+
+			select {
+				border: 1px solid c.$car-bravo-midnight-base;
+				color: c.$car-bravo-midnight-base;
+
+				&[disabled] {
+					select {
+						color: c.$gray-80;
+					}
+				}
+			}
+
+			&.gb-disabled {
+				label {
+					color: c.$car-bravo-midnight-accent-base;
+				}
+	
+				select {
+					background-color: c.$car-bravo-midnight-accent-bright;
+					border-color: c.$car-bravo-midnight-accent-base;
+					color: c.$car-bravo-midnight-accent-base;
+				}
+			}
+		}
+	}
+
+	.gb-helper-text {
+		color: c.$car-bravo-midnight-base;
+		font-family: f.$nexa-w05;
+		font-size: 12px;
+		font-weight: f.$font-weight-book;
+		letter-spacing: -.25px;
+		line-height: 1.2;
+		margin: 6px 19px 3px 16px;
+		position: relative;
+	}
+
+	&.gb-option-selected {
+		.gb-select-container {
+			label {
+				@include d.base-label(
+					f.$nexa-w05,
+					12px,
+					-.25px,
+					20px,
+					0
+				);
+				font-weight: f.$font-weight-bold;
+				top: 8px;
+				transition: all .1s ease;
+			}
+
+			select {
+				letter-spacing: -.25px;
+			}
+		}
+	}
+
+	&.form-error {
+		.gb-select-container {
+			label {
+				color: c.$error-base;
+			}
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%201L6%206L1%201%22%20stroke%3D%22%23BB0A15%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+			}
+		}
+
+		.gb-helper-text {
+			color: c.$error-base;
+			font-weight: f.$font-weight-bold;
+			margin:  7px 0 0 16px;
+		}
+	}
+}

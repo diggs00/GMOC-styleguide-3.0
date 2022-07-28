@@ -1,0 +1,130 @@
+@use 'expander' as e;
+@use '../../carbravo/colors' as c;
+@use '../../carbravo/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			c.$white,
+			c.$grey-dark,
+			f.$font-family-roboto,
+			18px,
+			f.$font-weight-bold,
+			normal,
+			1.5,
+			.875rem 1.875rem,
+			36px,
+			c.$grey-mid,
+			f.$font-weight-xbold
+		);
+
+		border: 1px solid c.$grey-mid;
+
+		&:hover {
+			@include e.expander-btn-hover(null, null, null, c.$gold);
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .01s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			@include e.expander-btn-active(null, null, null, c.$gold);
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&[data-disabled] {
+		>.gb-expander-btn {
+			@include e.expander-btn-disabled(0 0 1.25rem, null);
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(null, null, null, c.$gold);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(null, null, null, c.$gold);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(null, null, null, c.$gold);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 1.25rem, null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}

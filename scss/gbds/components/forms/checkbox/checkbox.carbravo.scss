@@ -1,0 +1,148 @@
+@use 'checkbox';
+@use '../../../carbravo/colors';
+@use '../../../carbravo/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	display: flex;
+	position: relative;
+
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$car-bravo-midnight-base,
+			fonts.$nexa-w05,
+			14px,
+			fonts.$font-weight-normal,
+			normal,
+			1.2
+		);
+		padding-top: 5px;
+	}
+
+	label + input[type='checkbox'] {
+		margin: 0 0 0 10px;
+	}
+
+	input[type='checkbox'] {
+		@include checkbox.base-box(20px);
+
+		border: 1px solid transparent;
+		border-radius: 4px;
+		display: inline-block;
+		margin-bottom: 5px;
+		margin-left: auto;
+		order: 2;
+		position: relative;
+
+		&::before {
+			background: colors.$white;
+			border: 1px solid colors.$car-bravo-midnight-accent-deep;
+			border-radius: 4px;
+			content: '';
+			display: inline-block;
+			height: 20px;
+			order: 2;
+			position: relative;
+			width: 20px;
+		}
+
+		&:hover {
+			border: 2px solid colors.$car-bravo-midnight-accent-base-50;
+			border-radius: 6px;
+			height: 24px;
+			margin: 2px 0 2px auto;
+			width: 24px;
+		}
+
+		&:checked {
+			&::before {
+				background: colors.$car-bravo-midnight-accent-deep;
+				border: 0;
+				border-radius: 4px;
+			}
+		}
+
+		&:checked::after {
+			content: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%228%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.265%203.82a.704.704%200%200%200-1.048%200%20.84.84%200%200%200%200%201.128l2.619%202.819a.704.704%200%200%200%201.05-.003l5.9-6.406A.84.84%200%200%200%209.78.231a.704.704%200%200%200-1.048.005L3.357%206.073%201.265%203.821Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+			left: 5px;
+			position: absolute;
+			top: 0px;
+		}
+
+		@include bp.medium-and-above {
+			margin: 2px 10px 3px 1px;
+			order: 0;
+
+			&:hover {
+				margin: 1px 7px 0 0;
+			}
+		}
+	}
+
+	&.disabled {
+		label, /* Override Legacy Quantum Style*/
+		input[type='checkbox'] + label {
+			color: colors.$gray-bright;
+		}
+
+		input[type='checkbox'] {
+			border: 1px solid colors.$gray-bright;
+
+			&:checked {
+				&::before {
+					background: colors.$gray-bright;
+					border: 0;
+					border-radius: 4px;
+					left: -1px;
+				}
+			}
+
+			&::before {
+				background-color: transparent;
+				border-color: transparent;
+			}
+
+			&:hover {
+				border: 1px solid colors.$gray-bright;
+				border-radius: 4px;
+				height: 20px;
+				margin: 2px 10px 3px 1px;
+				width: 20px;
+			}
+		}
+	}
+
+	&.gb-indeterminate {
+		input {
+			&:indeterminate::after {
+				content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%222%22%20viewBox%3D%220%200%2012%202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2212%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+				left: 4px;
+				position: absolute;
+				top: -3px;
+			}
+
+			&:indeterminate {
+				&::before {
+					background: colors.$car-bravo-midnight-accent-deep;
+					border: 0;
+					border-radius: 4px;
+				}
+			}
+		}
+
+		&.disabled {
+			label {
+				color: colors.$gray-bright;
+			}
+
+			&:indeterminate {
+				&::before {
+					background: colors.$gray-bright;
+					border: 0;
+					border-radius: 4px;
+				}
+			}
+		}
+	}
+}

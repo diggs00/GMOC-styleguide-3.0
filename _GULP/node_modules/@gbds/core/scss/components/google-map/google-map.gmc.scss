@@ -1,0 +1,5 @@
+@use 'google-map' as map;
+
+.gb-map {
+	@include map.map-base;
+}

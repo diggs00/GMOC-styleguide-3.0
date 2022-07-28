@@ -1,0 +1,593 @@
+@use 'input' as i;
+@use '../../../carbravo/colors' as c;
+@use '../../../carbravo/fonts' as f;
+
+.gb-input {
+	position: relative;
+
+	label {
+		@include i.base-label(
+			f.$nexa-w05,
+			14px,
+			normal,
+			1.2,
+			auto
+		);
+		color: c.$car-bravo-midnight-base;
+	}
+
+	%gb-label-hover {
+		color: c.$car-bravo-midnight-base;
+		display: block;
+		font-size: 12px;
+		letter-spacing: -.25px;
+		line-height: 1.2;
+		top: 8px;
+	}
+
+	%gb-text-container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	%gb-pw-info-item {
+		align-items: center;
+		color: c.$gray-base;
+		display: flex;
+		flex-direction: row;
+		font-weight: f.$font-weight-normal;
+		font-family: f.$nexa-w05;
+		font-size: 14px;
+		line-height: 1.2;
+		margin: 8px auto 8px 16px;
+
+		.gb-pw-info-text {
+			color: c.$gray-base;
+			font-family: f.$nexa-w05;
+			font-size: 14px;
+			font-weight: f.$font-weight-normal;
+			line-height: 1.2;
+			margin-left: 10px;
+		}
+
+		.gb-pw-info-icon-check {
+			border-bottom: solid 1.5px c.$white;
+			border-right: solid 1.5px c.$white;
+			display: none;
+			height: 8px;
+			margin: 2px 4px;
+			transform: rotate(45deg);
+			width: 4px;
+		}
+
+		.gb-pw-info-icon {
+			background-color: c.$white;
+			border: solid 1px c.$gray-base;
+			border-radius: 50%;
+			display: inline-block;
+			height: 14px;
+			width: 14px;
+
+			&.valid {
+				background-color: c.$car-bravo-green-base;
+				border-color: c.$car-bravo-green-base;
+
+				/* stylelint-disable-next-line*/
+				.gb-pw-info-icon-check {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.gb-input-icon,
+	.gb-error-icon {
+		display: flex;
+		position: absolute;
+		right: 18px;
+		top: 21px;
+
+		.gb-icon-cont {
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+
+			.gb-icon-img-hover {
+				opacity: 0;
+			}
+
+			.gb-icon-img,
+			.gb-icon-img-hover {
+				display: block;
+				height: auto;
+				max-width: 100%;
+				position:absolute;
+				cursor:pointer;
+			}
+
+		}
+	}
+
+	.gb-input-label {
+		left: 16px;
+		position: absolute;
+		top: 20px;
+
+		&.hover {
+			@extend %gb-label-hover;
+		}
+
+		&:hover {
+			color: c.$car-bravo-midnight-base;
+		}
+	}
+
+	input {
+		&::-moz-placeholder {
+			color: c.$car-bravo-midnight-base;
+			font-family: f.$nexa-w05;
+			font-size: 16px;
+			letter-spacing: -.25px;
+			line-height: 1.4;
+			margin: 3px 0;
+		}
+		&::placeholder {
+			color: c.$car-bravo-midnight-base;
+			font-family: f.$nexa-w05;
+			font-size: 16px;
+			letter-spacing: -.25px;
+			line-height: 1.4;
+			margin: 3px 0;
+		}
+
+		@include i.base-input(
+			c.$white,
+			1px solid c.$car-bravo-midnight-accent-deep,
+			c.$car-bravo-midnight-base,
+			100%,
+			f.$nexa-w05,
+			16px,
+			26px 50px 6px 16px,
+			1px solid c.$car-bravo-midnight-accent-deep
+		);
+
+		&[type],
+		textarea {
+			border-radius: 4px;
+			line-height: 1.4;
+			letter-spacing: -.25px;
+
+			&.optional {
+				~ .gb-input-label {
+					color: c.$gray-80;
+				}
+			}
+
+			&:hover {
+				border: 1px solid c.$car-bravo-midnight-base;
+				cursor: text;
+
+				~ .gb-input-label {
+					color: c.$car-bravo-midnight-base;
+				}
+
+				~ .gb-input-icon {
+					.gb-icon-cont {
+						.gb-icon-img {
+							opacity: 0;
+						}
+
+						.gb-icon-img-hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			&:active,
+			&:focus {
+				border-color: c.$car-bravo-midnight-base;
+
+
+				~ .gb-input-label {
+					color: c.$car-bravo-midnight-base;
+					display: block;
+					font-size: 12px;
+					line-height: 1.2;
+					letter-spacing: -.25px;
+					top: 8px;
+				}
+			}
+
+			~ .gb-error-icon {
+				display: none;
+			}
+		}
+		/*IOS  This is to override IOS appearance for date input types.*/
+		&[type=date] {
+			display: block;
+			text-transform: uppercase;
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			min-height: 52px;
+			padding: 24px 40px 6px 16px;
+
+			&::-webkit-datetime-edit-text {
+				padding: 0 6px;
+
+			}
+
+			&::-webkit-datetime-edit-day-field {
+				padding-left: 6px;
+			}
+
+			&::-webkit-datetime-edit-year-field {
+				padding-left: 6px;
+			}
+
+			&.valid {
+				&:focus {
+
+					&::-webkit-calendar-picker-indicator {
+						opacity: 1;
+					}
+				}
+
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.gb-helper-text-container {
+		margin: 0;
+		padding: 6px 8px 0 16px;
+
+		@extend %gb-text-container;
+
+		.gb-helper-text-icon-container {
+			display: flex;
+			height: 16px;
+			margin-right: 8px;
+			width: 16px;
+
+			.gb-helper-text-icon-image {
+				display: inline-block;
+				position: relative;
+				vertical-align: middle;
+				width: 100%;
+			}
+		}
+
+		.gb-helper-text {
+			color: c.$gray-80;
+			font-family: f.$nexa-w05;
+			font-size: 14px;
+			font-weight: f.$font-weight-book;
+			line-height: 1.2;
+
+			&.gb-caps-img {
+				@include i.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 0C3.57333 0 0 3.57333 0 8C0 12.4267 3.57333 16 8 16C12.4267 16 16 12.4267 16 8C16 3.57333 12.4267 0 8 0Z" fill="%235F5E5F"/%3E%3Cpath d="M10.0012 8.01979H11.3543C11.7126 8.01802 12 7.73343 12 7.38482C12 7.23185 11.9436 7.086 11.8399 6.97039L8.48981 3.21745C8.25519 2.95421 7.84597 2.92575 7.5768 3.15519C7.55497 3.17476 7.53315 3.19432 7.51314 3.21745L4.16118 6.96861C3.92474 7.23185 3.95202 7.63205 4.21938 7.8615C4.3376 7.96288 4.48856 8.01802 4.64679 8.01979H5.99994V9.97631C5.99994 10.172 6.16363 10.332 6.36369 10.332H9.63744C9.8375 10.332 10.0012 10.172 10.0012 9.97631V8.01979Z" fill="white"/%3E%3Cpath d="M9.6375 11.0435H6.36375C6.16369 11.0435 6 11.2035 6 11.3992V12.6442C6 12.8399 6.16369 13 6.36375 13H9.6375C9.83757 13 10.0013 12.8399 10.0013 12.6442V11.3992C10.0013 11.2035 9.83757 11.0435 9.6375 11.0435Z" fill="white"/%3E%3C/svg%3E'),
+					16px 16px,
+					16px 16px,
+					16px,
+					16px,
+					16px,
+					16px,
+					3px,
+					4px,
+					0 8px 0 0
+				);
+			}
+		}
+
+		&:hover {
+			cursor: default;
+		}
+	}
+
+	&.form-error {
+		.gb-input-label {
+			color: c.$error-base;
+			font-weight: f.$font-weight-bold;
+		}
+
+		.gb-helper-text-container {
+			display: none;
+		}
+
+		input {
+			&[type],
+			textarea {
+				padding: 28px 50px 6px 16px;
+
+				&:focus {
+					~ .gb-input-label {
+						color: c.$error-base;
+					}
+				}
+
+				&:hover {
+					~ .gb-input-label {
+						color: c.$error-base;
+					}
+				}
+
+				~ .gb-input-icon {
+					display: none;
+				}
+
+				~ .gb-error-icon {
+					display: flex;
+				}
+			}
+		}
+
+		.gb-error-text-container {
+			@extend %gb-text-container;
+		}
+	}
+
+	.gb-error-text-container {
+		display: none;
+		margin: 0;
+		padding: 6px 8px 0 16px;
+
+		.gb-helper-text-icon-container {
+			display: flex;
+			height: 16px;
+			margin-right: 5px;
+		}
+
+		.gb-error-text {
+			color: c.$error-base;
+			font-family: f.$nexa-w05;
+			font-size: 12px;
+			font-weight: f.$font-weight-bold;
+			letter-spacing: -.25px;
+			line-height: 1.2;
+
+			&.gb-error-img {
+				@include i.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2217%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8%20.5a7.99%207.99%200%200%200-8%208c0%204.427%203.573%208%208%208s8-3.573%208-8-3.573-8-8-8Zm.996%2012.8a.983.983%200%200%201-.996.996.979.979%200%200%201-.978-.996v-.196A.99.99%200%200%201%208%2012.11c.551%200%20.996.444.996.995v.196Zm.48-9.013-.498%206.08c-.054.569-.534.96-1.085.924a.992.992%200%200%201-.906-.924l-.498-6.08c-.089-.8.658-1.583%201.458-1.583.889%200%201.6.783%201.529%201.583Z%22%20fill%3D%22%23BB0A15%22%2F%3E%3C%2Fsvg%3E'),
+					16px 16px,
+					20px 20px,
+					16px,
+					16px,
+					20px,
+					20px,
+					3px,
+					4px,
+					0 8px 0 0);
+			}
+		}
+	}
+
+	&.disabled {
+
+		input {
+			border: 1px solid c.$car-bravo-midnight-accent-base;
+
+			&[type],
+			textarea {
+				&[disabled] {
+					background-color: c.$car-bravo-midnight-accent-bright;
+					border: 1px solid c.$car-bravo-midnight-accent-base;
+					color: c.$car-bravo-midnight-accent-base;
+					box-shadow: none;
+
+					~ .gb-input-label {
+						color: c.$car-bravo-midnight-accent-base;
+					}
+				}
+
+				~ .gb-input-icon {
+					.gb-icon-cont {
+						.gb-icon-img {
+							opacity: .6;
+							cursor: not-allowed;
+						}
+
+						.gb-icon-img-hover {
+							opacity: 0;
+						}
+
+						.gb-icon-img,
+						.gb-icon-img-hover {
+							cursor:not-allowed;
+						}
+					}
+				}
+
+				&:hover {
+					~ .gb-input-label {
+						color: c.$car-bravo-midnight-accent-base;
+						cursor: not-allowed;
+					}
+				}
+			}
+
+			&:hover {
+				cursor: not-allowed;
+			}
+		}
+
+		.gb-input-label {
+			color: c.$car-bravo-midnight-accent-base;
+		}
+
+		.gb-helper-text-container {
+			opacity: .6;
+		}
+	}
+
+	&.form-success {
+		.gb-helper-text-container {
+			.gb-helper-text {
+				color: c.$success-base;
+			}
+		}
+	}
+
+	&.gb-pw {
+
+		.gb-helper-text {
+			color: c.$gray-base;
+			line-height: 1.5;
+			font-weight: f.$font-weight-normal;
+		}
+
+		input {
+			@include i.base-input(
+			c.$white,
+			1px solid c.$car-bravo-midnight-bright,
+			c.$car-bravo-midnight-base,
+			100%,
+			f.$nexa-w05,
+			18px,
+			16.5px 97px 4.5px 16px,
+			1px solid c.$car-bravo-midnight-bright
+			);
+
+			&[type],
+			textarea {
+				&:active,
+				&:focus {
+					~ .gb-input-label {
+						top: 5px;
+						font-weight:  f.$font-weight-bold;
+					}
+
+					~ .show-password {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.gb-input-label {
+			font-size: 18px;
+			line-height: 1.4;
+			letter-spacing: -0.25px;
+			top: 12px;
+
+			&.hover {
+				@extend %gb-label-hover;
+				font-weight: f.$font-weight-bold;
+				top: 5px;
+			}
+		}
+
+		.show-password {
+		color: c.$gray-base;
+		display: inline-block;
+		font-family: f.$nexa-w05;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: f.$font-weight-bold;
+		line-height: 1.4;
+		opacity: 0;
+		position: absolute;
+		right: 17px;
+		text-transform: uppercase;
+		top: 16px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+	button {
+		&.show-password {
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+		}
+	}
+
+	&.form-error {
+
+		input {
+
+			&[type],
+			textarea {
+
+				&:active,
+				&:focus {
+					~.gb-input-label {
+						font-weight: f.$font-weight-normal;
+					}
+				}
+			}
+		}
+
+		.gb-input-label {
+			font-weight: f.$font-weight-normal;
+			color: c.$error-base;
+		}
+
+		.gb-error-text-container {
+			.gb-error-text {
+				font-weight: f.$font-weight-normal;
+				font-size: 14px;
+				line-height: 1.5;
+
+				&.gb-error-img {
+					&::before {
+						background-size: 16px 16px;
+						height: 16px;
+						width: 16px;
+					}
+
+				}
+			}
+		}
+
+		.gb-pw-info-container {
+			.gb-pw-label {
+				color: c.$error-base;
+			}
+		}
+	}
+
+	.gb-pw-info-container {
+		.gb-pw-label {
+			color: c.$gray-base;
+			display: block;
+			font-family: f.$nexa-w05;
+			font-size: 14px;
+			font-style: normal;
+			line-height: 150%;
+			margin: 8px auto 8px 16px;
+		}
+
+		.gb-pw-info-item {
+			@extend %gb-pw-info-item;
+		}
+	}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-input {
+		direction: rtl;
+		display: flex;
+		flex-flow: column wrap;
+	}
+}

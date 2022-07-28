@@ -1,0 +1,8 @@
+/* Generic utilities*/
+@use '../utils/generate_font_faces' as gff;
+
+/* Brand utilities and variables*/
+@use 'fonts' as f;
+
+/* Core styling*/
+@include gff.generate_font_faces(f.$font-list, f.$base-font-url-path);

@@ -1,0 +1,115 @@
+@use 'radio' as r;
+@use '../../../carbravo/colors' as c;
+@use '../../../carbravo/fonts' as f;
+@use '../../../utils/breakpoints' as bp;
+
+.gb-radio {
+	display: flex;
+	position: relative;
+
+	/*@include bp.medium-and-above {
+		display: block;
+	}*/
+
+	input[type='radio'] {
+		@include r.base-radio-input(
+			20px,
+			2px 0 2px auto,
+			20px,
+		);
+		order: 2;
+
+		&::before {
+			background: c.$white;
+			border: 1px solid c.$car-bravo-midnight-accent-deep;
+			border-radius: 1rem;
+			content: '';
+			display: inline-block;
+			height: 20px;
+			left: -2px;
+			margin: auto;
+			position: relative;
+			top: 0;
+			width: 20px;
+		}
+
+		&:hover {
+			border: 2px solid c.$car-bravo-midnight-accent-base-50;
+			border-radius: 1rem;
+			height: 24px;
+			margin: 0 0 0 auto;
+			width: 24px;
+
+			&::before {
+				left: 0px;
+			}
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$car-bravo-midnight-base,
+				f.$nexa-w05,
+				14px,
+				1.375,
+				0 8px,
+			);
+			padding-top: 1px;
+		}
+
+		&:checked {
+			&::before {
+				background: c.$white;
+				border: 6px solid c.$car-bravo-midnight-accent-deep;
+				box-shadow: inset 0 0 0 2px c.$white;
+			}
+		}
+
+		@include bp.medium-and-above {
+			margin: 2px 10px 2px 0;
+			order: 0;
+
+			&::before {
+				left: 2px;
+			}
+
+			&:hover {
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='radio'] {
+			&::before {
+				border: 1px solid c.$gray-bright;
+			}
+
+			+label {
+				color: c.$gray-bright;
+			}
+
+			&:checked {
+				&::before {
+					background: c.$gray-bright;
+					border: 2px solid c.$gray-bright;
+				}
+
+				&:hover {
+					&::before {
+						background: c.$gray-bright;
+						border: 2px solid c.$gray-bright;
+					}
+				}
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	input[type='radio'] {
+		&::before {
+			left: 0;
+			right: 9px;
+		}
+	}
+}

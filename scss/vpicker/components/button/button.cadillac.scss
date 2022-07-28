@@ -158,7 +158,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		f.$font-weight-normal,
 		.87px,
 		20px,
-		12px 0,
+		11px 20px,
 		$transition,
 		c.$grey-darker,
 		1px solid c.$grey-darker,
@@ -227,7 +227,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		font-size: 16px;
 		letter-spacing: 1.01px;
 		line-height: 22px;
-		padding: 17px 0;
+		padding: 16px 20px;
 	}
 }
 

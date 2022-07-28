@@ -1,0 +1,444 @@
+@use 'button' as b;
+@use '../../carbravo/colors' as c;
+@use '../../carbravo/fonts' as f;
+@use '../../carbravo/icons' as i;
+
+%button-icon-base {
+	svg,
+	img {
+		height: i.$icon-small;
+		vertical-align: middle;
+		width: i.$icon-small;
+	}
+
+	&.icon-left {
+		svg,
+		img {
+			margin-right: 8px;
+		}
+	}
+
+	&.icon-right {
+		svg,
+		img {
+			margin-left: 8px;
+		}
+	}
+}
+
+%gb-primary-button {
+	@include b.primary-button(
+		c.$car-bravo-blue-base,
+		none,
+		c.$white,
+		f.$nexa-w05,
+		18px,
+		f.$font-weight-bold,
+		normal,
+		21.6px,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$car-bravo-midnight-base,
+		none,
+		null
+	);
+
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	font-style: normal;
+	height: 48px;
+	justify-content: center;
+
+	&.gb-small-button {
+		line-height: 2;
+		padding: 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&:active {
+		background-color: c.$car-bravo-midnight-base;
+		color: c.$white;
+	}
+
+	&:focus {
+		background: c.$car-bravo-blue-base;
+		box-shadow: 0 0 8px 4px c.$gray-90;
+	}
+
+	&.disabled {
+		background-color: c.$gray-bright;
+		box-shadow: none;
+		color: c.$gray-base;
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+}
+
+%gb-secondary-button {
+	@include b.secondary-button(
+		transparent,
+		2px solid c.$car-bravo-blue-base,
+		c.$car-bravo-blue-base,
+		f.$nexa-w05,
+		18px,
+		f.$font-weight-bold,
+		normal,
+		21.6px,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$car-bravo-blue-base,
+		2px solid c.$car-bravo-blue-base,
+		c.$white
+	);
+
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+
+	&.gb-small-button {
+		line-height: 2;
+		padding: 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&:active {
+		background-color: transparent;
+		border-color: c.$car-bravo-midnight-base;
+		color: c.$car-bravo-midnight-base;
+	}
+
+	&:focus {
+		background: transparent;
+		border-color: c.$car-bravo-blue-base;
+		box-shadow: 0 0 8px 4px c.$gray-90;
+		color: c.$car-bravo-blue-base;
+	}
+
+	&.disabled {
+		background-color: transparent;
+		border-color: c.$gray-base;
+		box-shadow: none;
+		color: c.$gray-base;
+	}
+
+	&.invert {
+		@include b.button-invert(
+			transparent,
+			2px solid c.$white,
+			c.$white,
+			c.$gray-20,
+			c.$gray-90
+		);
+
+		&:active {
+			background-color: transparent;
+			border: 4px solid c.$white;
+			color: c.$white;
+		}
+
+		&:hover {
+			background-color: c.$white;
+			border: none;
+			color: c.$car-bravo-blue-base;
+		}
+
+		&.disabled {
+			background-color: transparent;
+			border: 2px solid c.$gray-base;
+			color: c.$gray-base;
+		}
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+}
+
+%gb-tertiary-button {
+	@include b.primary-button(
+		transparent,
+		none,
+		c.$car-bravo-blue-base,
+		f.$nexa-w05,
+		18px,
+		f.$font-weight-bold,
+		normal,
+		21.6px,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		transparent,
+		none,
+		c.$car-bravo-midnight-base
+	);
+
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+
+	&.gb-small-button {
+		line-height: 2;
+		padding: 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&:active {
+		color: c.$car-bravo-blue-base;
+	}
+
+	&:focus {
+		color: c.$car-bravo-blue-base;
+	}
+
+	&.disabled {
+		color: c.$gray-base;
+	}
+
+	&.invert {
+		@include b.button-invert(
+			transparent,
+			none,
+			c.$white,
+			transparent,
+			c.$car-bravo-blue-base
+		);
+
+		&:active {
+			color: c.$car-bravo-midnight-base;
+		}
+
+		&.disabled {
+			color: c.$gray-base;
+		}
+
+		&:focus {
+			color: c.$white;
+		}
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+}
+
+%gb-link {
+	@include b.link(
+		c.$car-bravo-blue-base,
+		f.$nexa-w05,
+		1rem,
+		f.$font-weight-medium,
+		1px,
+		1.38,
+		null,
+		c.$car-bravo-blue-base
+	);
+
+	&.invert {
+		@include b.link-invert(
+			c.$white,
+			c.$white
+		);
+	}
+}
+
+%gb-icon-button {
+	@extend %button-icon-base;
+	border-radius: 23px;
+	background-color: c.$car-bravo-green-base;
+	cursor: pointer;
+	display: inline-block;
+	height: i.$icon-medium;
+	padding: 0;
+	width: i.$icon-medium;
+
+	svg,
+	img {
+		color: c.$gray-10;
+		height: i.$icon-small;
+		left: 16px;
+		position: relative;
+		top: 12px;
+		vertical-align: middle;
+		width: i.$icon-small;
+	}
+}
+
+%gb-list-item-primary {
+	@include b.list-item-button(
+		transparent,
+		c.$grey-dark,
+		f.$nexa-w05,
+		.7rem,
+		.7rem,
+		.7rem,
+		f.$font-weight-normal,
+		normal,
+		1,
+		1px solid c.$grey-mid,
+		3px solid transparent,
+		0,
+		1rem,
+		1rem,
+		1rem,
+		null,
+		transparent,
+		none,
+		transparent,
+		3px solid c.$car-bravo-blue-base
+	);
+
+	&:hover { 
+		border-left: 3px solid c.$car-bravo-blue-base;
+		color: c.$grey-dark;
+
+	}
+}
+
+%gb-list-item-description {
+	@include b.list-item-description(
+		.875rem,
+		f.$nexa-w05,
+		f.$font-weight-normal,
+		normal,
+		1.429,
+		c.$grey
+	);
+}
+
+html[dir='rtl'] {
+	%button-icon-base {
+		&.icon-right {
+			svg,
+			img {
+				margin-left: 0;
+				margin-right: 8px;
+			}
+		}
+
+		&.icon-left {
+			svg,
+			img {
+				margin-left: 8px;
+				margin-right: 0;
+			}
+		}
+	}
+
+	%gb-icon-button {
+		svg,
+		img {
+			right: 16px;
+		}
+	}
+}
+
+%gb-primary-button-inline-icon {
+	@extend %gb-primary-button;
+}
+
+%gb-primary-button-stacked-icon {
+	@extend %gb-primary-button;
+}
+
+%gb-secondary-button-inline-icon {
+	@extend %gb-secondary-button;
+}
+
+%gb-secondary-button-stacked-icon {
+	@extend %gb-secondary-button;
+}
+
+%gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button;
+}
+
+%gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button;
+}
+
+.gb-primary-button {
+	@extend %gb-primary-button;
+}
+
+.gb-secondary-button {
+	@extend %gb-secondary-button;
+}
+
+.gb-tertiary-button {
+	@extend %gb-tertiary-button;
+}
+
+.gb-link {
+	@extend %gb-link;
+}
+
+.gb-list-item-primary {
+	@extend %gb-list-item-primary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-icon-button {
+	@extend %gb-icon-button;
+}
+
+.gb-primary-button-inline-icon {
+	@extend %gb-primary-button-inline-icon;
+}
+
+.gb-primary-button-stacked-icon {
+	@extend %gb-primary-button-stacked-icon;
+}
+
+.gb-secondary-button-inline-icon {
+	@extend %gb-secondary-button-inline-icon;
+}
+
+.gb-secondary-button-stacked-icon {
+	@extend %gb-secondary-button-stacked-icon;
+}
+
+.gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button-inline-icon;
+}
+
+.gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button-stacked-icon;
+}

@@ -1,0 +1,20 @@
+@use 'breakpoints';
+
+@include breakpoints.small-only {
+	.hide-small {
+		display: none;
+	}
+}
+
+@include breakpoints.medium-only {
+	.hide-medium {
+		display: none;
+	}
+}
+
+
+@include breakpoints.large-and-above {
+	.hide-large {
+		display: none;
+	}
+}

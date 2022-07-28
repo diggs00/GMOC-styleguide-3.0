@@ -1,0 +1,119 @@
+/*TODO Weds add the sort inline dropdown element. with 2 arrows and that should be it.*/
+
+@use 'dropdown' as d;
+@use '../../../fleet/colors' as c;
+@use '../../../fleet/fonts' as f;
+
+.gb-dropdown {
+	label {
+		@include d.base-label(
+			f.$font-family-gotham,
+			1rem,
+			0,
+			1.5,
+			0 0 .5rem 0
+		);
+	}
+
+	select {
+		@include d.base-select(
+			c.$white,
+			linear-gradient(to right, c.$brand-blue, c.$brand-blue),
+			linear-gradient(to right, c.$blue-darkest, c.$blue-darkest),
+			100% 0,
+			3rem 100%,
+			1px solid c.$grey,
+			f.$font-family-gotham,
+			1rem,
+			0,
+			calc(.85rem + 1px),
+			100%
+		);
+
+		line-height: 1;
+
+		&:focus {
+			background-color: c.$white;
+		}
+	}
+
+	.select-container {
+		&::after {
+			border-bottom: 2px solid c.$white;
+			border-right: 2px solid c.$white;
+			bottom: 2rem;
+			content: '';
+			display: flex;
+			height: 11px;
+			margin: 0 0 0 auto;
+			pointer-events: none;
+			position: relative;
+			right: 1.3125rem;
+			transform: rotate(45deg);
+			width: 11px;
+		}
+	}
+
+	&.inline {
+		display: flex;
+		flex: 0 0 100%;
+		flex-flow: row wrap;
+
+		label {
+			align-items: center;
+			display: flex;
+			width: 100%;
+		}
+
+		.select-container {
+			flex-grow: 1;
+		}
+
+		@media screen and (min-width: 600px) {
+			label {
+				flex: 0 0 25%;
+				margin-bottom: .75rem;
+				max-width: 25%;
+			}
+		}
+	}
+
+	&.sort {
+		.select-container {
+			position: relative;
+
+			&::before {
+				border-bottom: 2px solid c.$white;
+				border-right: 2px solid c.$white;
+				content: '';
+				display: inline-block;
+				height: 11px;
+				margin: 0 0 0 auto;
+				pointer-events: none;
+				position: absolute;
+				right: 1.3125rem;
+				top: .875rem;
+				transform: rotate(-135deg);
+				width: 11px;
+			}
+
+			&::after {
+				border-bottom: 2px solid c.$white;
+				border-right: 2px solid c.$white;
+				bottom: 1.5625rem;
+				right: 1.3125rem;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&.disabled {
+		select {
+			background-color: c.$white;
+			opacity: .45;
+		}
+
+	}
+}
+
+
