@@ -15,7 +15,15 @@
 		svg,
 		img {
 			display: block;
-			margin: auto auto .625rem;
+			margin: auto auto calc(0.5468 * #{com.$gmux-base-font});
+
+			@include bp.medium-and-above {
+				margin: auto auto calc(0.5859 * #{com.$gmux-base-font});
+			}
+
+			@include bp.large-and-above {
+				margin: auto auto calc(0.625 * #{com.$gmux-base-font});
+			}
 		}
 	}
 
@@ -155,7 +163,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		c.$grey-darker,
 		f.$cadillac-sans,
 		14px,
-		f.$font-weight-normal,
+		f.$font-weight-book,
 		.87px,
 		20px,
 		11px 20px,
@@ -168,7 +176,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	text-align: center;
 
 	&.gb-small-button {
-		border-width: 2px;
+		border-width: 1px;
 		line-height: 2;
 		padding: 1px;
 		position: relative;
@@ -230,6 +238,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		padding: 16px 20px;
 	}
 }
+
 
 // %gb-tertiary-button {
 // 	@include b.primary-button(

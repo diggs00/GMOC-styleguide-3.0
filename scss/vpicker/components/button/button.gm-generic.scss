@@ -3,7 +3,7 @@
 @use '../../gm-generic/fonts' as f;
 @use '../../gm-generic/icons' as i;
 
-%button-icon-base {
+%%button-icon-base {
 	svg,
 	img {
 		height: i.$icon-small;
@@ -199,14 +199,14 @@ $transition: background 0.5s, border 0.5s, color 0.5s;
 %vpicker-gb-secondary-button {
 	@include b.secondary-button(
 		transparent,
-		3px solid c.$blue-dark2,
-		c.$blue-dark2,
+		3px solid c.$blue-dark1,
+		c.$blue-dark,
 		f.$font-family-overpass,
 		16px,
 		f.$font-weight-bold,
 		normal,
 		normal,
-		10px 25px 9px 26px,
+		5px 25px 4px 26px,
 		$transition,
 		transparent,
 		3px solid c.$blue-light1,
@@ -214,24 +214,16 @@ $transition: background 0.5s, border 0.5s, color 0.5s;
 	);
 
 	border-radius: 37px;
+	min-height: 40px;
 	-o-object-fit: contain;
 	   object-fit: contain;
 	text-align: center;
 
 	&.gb-small-button {
 		line-height: 1.75;
+		min-height: 25px;
 		padding: 0;
 		position: relative;
-
-		&::after {
-			content: '';
-			height: 170%;
-			left: 0;
-			position: absolute;
-			top: -25%;
-			visibility: visible;
-			width: 100%;
-		}
 	}
 
 	&:active {
@@ -271,9 +263,9 @@ $transition: background 0.5s, border 0.5s, color 0.5s;
 
 	&:focus {
 		background-color: transparent;
-		border: 3px solid c.$blue-dark2;
-		box-shadow: 0 0 3px 3px c.$blue-light1;
-		color: c.$blue-dark2;
+		border: 3px solid c.$blue-dark1;
+		box-shadow: 0 0 3px 3px rgba(c.$form-highlight, .6);
+		color: c.$blue-dark;
 		-o-object-fit: contain;
 		   object-fit: contain;
 	}
@@ -281,7 +273,7 @@ $transition: background 0.5s, border 0.5s, color 0.5s;
 	&.invert {
 		@include b.button-invert(
 			transparent,
-			3px solid c.$blue-light2,
+			3px solid c.$blue-light1,
 			c.$white,
 			transparent,
 			c.$white
@@ -297,6 +289,7 @@ $transition: background 0.5s, border 0.5s, color 0.5s;
 	/* For Inline and Stacked Icon Styling*/
 	@extend %button-icon-base;
 }
+
 
 // %gb-tertiary-button {
 // 	@include b.primary-button(

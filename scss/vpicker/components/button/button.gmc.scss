@@ -18,12 +18,40 @@
 	}
 
 	&.icon-stacked {
+		font-size: 15px;
+		letter-spacing: 2px;
+		line-height: 20px;
+		padding: 10px;
+		word-break: break-word;
+
 		svg,
 		img {
 			display: block;
-			height: i.$icon-large;
+			height: 40px;
 			margin: auto;
-			width: i.$icon-large;
+			width: 40px;
+
+			@media (min-width: 800px) and (max-width: 1199px) {
+				height: 44px;
+				width: 44px;
+			}
+
+			@media print,only screen and (min-width:1200px) {
+				height: 48px;
+				width: 48px;
+			}
+		}
+
+		@media (min-width: 800px) and (max-width: 1199px) {
+			font-size: 16.5px;
+			line-height: 22px;
+			padding: 11px;
+		}
+
+		@media print,only screen and (min-width:1200px) {
+			font-size: 18px;
+			line-height: 24px;
+			padding: 12px;
 		}
 	}
 
@@ -177,8 +205,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		14px,
 		f.$font-weight-bold,
 		1.56px,
-		20px,
-		12px 0,
+		1.43,
+		10px 20px,
 		$transition,
 		c.$brand-black-lighten,
 		2px solid c.$brand-black-lighten,
@@ -247,10 +275,11 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	@media print,only screen and (min-width:800px) {
 		font-size: 16px;
 		letter-spacing: 1.78px;
-		line-height: 24px;
-		padding: 16px 0;
+		line-height: 1.5;
+		padding: 14px 20px;
 	}
 }
+
 
 // %gb-tertiary-button {
 // 	@include b.primary-button(

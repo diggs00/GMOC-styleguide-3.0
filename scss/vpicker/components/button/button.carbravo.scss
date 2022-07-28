@@ -1,7 +1,7 @@
 @use 'button' as b;
-@use '../../buick/colors' as c;
-@use '../../buick/fonts' as f;
-@use '../../buick/icons' as i;
+@use '../../carbravo/colors' as c;
+@use '../../carbravo/fonts' as f;
+@use '../../carbravo/icons' as i;
 
 %button-icon-base {
 	svg,
@@ -11,41 +11,17 @@
 		width: i.$icon-small;
 	}
 
-	&.icon-stacked {
-		svg,
-		img {
-			display: block;
-			margin: auto auto calc(0.2884 * #{com.$gmux-base-font});
-
-			@include bp.medium-and-above {
-				margin: auto auto calc(0.3004 * #{com.$gmux-base-font});
-			}
-
-			@include bp.large-and-above {
-				margin: auto auto calc(0.3124 * #{com.$gmux-base-font});
-			}
-		}
-	}
-
 	&.icon-left {
 		svg,
 		img {
-			margin-right: 7px;
-
-			@media print,only screen and (min-width:800px) {
-				margin-right: 8px;
-			}
+			margin-right: 8px;
 		}
 	}
 
 	&.icon-right {
 		svg,
 		img {
-			margin-left: 7px;
-
-			@media print,only screen and (min-width:800px) {
-				margin-left: 8px;
-			}
+			margin-left: 8px;
 		}
 	}
 }
@@ -159,29 +135,35 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 %vpicker-gb-secondary-button {
 	@include b.secondary-button(
 		transparent,
-		1px solid c.$brand-black,
-		c.$brand-black,
-		f.$font-family-futura,
-		14px,
-		f.$font-weight-normal,
-		2.8px,
-		23px,
-		10px 20px 9px,
-		$transition,
-		c.$brand-black,
-		null,
+		2px solid c.$car-bravo-blue-base,
+		c.$car-bravo-blue-base,
+		f.$nexa-w05,
+		18px,
+		f.$font-weight-bold,
+		normal,
+		21.6px,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$car-bravo-blue-base,
+		2px solid c.$car-bravo-blue-base,
 		c.$white
 	);
 
+	align-items: center;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+
 	&.gb-small-button {
-		border-width: 1px;
 		line-height: 2;
-		padding: 1px;
+		padding: 0;
 		position: relative;
 
 		&::after {
 			content: '';
-			height: 160%;
+			height: 170%;
 			left: 0;
 			position: absolute;
 			top: -25%;
@@ -190,53 +172,57 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		}
 	}
 
-	&.disabled {
+	&:active {
 		background-color: transparent;
-		border: 1px solid c.$brand-black;
-		color: c.$brand-black;
-		opacity: .5;
+		border-color: c.$car-bravo-midnight-base;
+		color: c.$car-bravo-midnight-base;
 	}
 
 	&:focus {
+		background: transparent;
+		border-color: c.$car-bravo-blue-base;
+		box-shadow: 0 0 8px 4px c.$gray-90;
+		color: c.$car-bravo-blue-base;
+	}
+
+	&.disabled {
 		background-color: transparent;
-		border: 1px solid c.$grey-dark;
-		box-shadow: 0 0 3px 3px rgba(c.$grey-dark, .2);
-		color: c.$brand-black;
-
-		&:active,
-		&:hover {
-			background-color: c.$brand-black;
-			color: c.$white;
-		}
-
-		&.disabled {
-			background-color: transparent;
-			border: 1px solid c.$brand-black;
-			box-shadow: none;
-			color: c.$brand-black;
-		}
+		border-color: c.$gray-base;
+		box-shadow: none;
+		color: c.$gray-base;
 	}
 
 	&.invert {
 		@include b.button-invert(
 			transparent,
-			1px solid c.$white-mid,
-			c.$white-mid,
-			transparent,
-			c.$white-mid
+			2px solid c.$white,
+			c.$white,
+			c.$gray-20,
+			c.$gray-90
 		);
+
+		&:active {
+			background-color: transparent;
+			border: 4px solid c.$white;
+			color: c.$white;
+		}
+
+		&:hover {
+			background-color: c.$white;
+			border: none;
+			color: c.$car-bravo-blue-base;
+		}
+
+		&.disabled {
+			background-color: transparent;
+			border: 2px solid c.$gray-base;
+			color: c.$gray-base;
+		}
 	}
+
 	/* For Inline and Stacked Icon Styling*/
 	@extend %button-icon-base;
-
-	@media print,only screen and (min-width:800px) {
-		font-size: 16px;
-		letter-spacing: 3px;
-		line-height: 24px;
-		padding: 15px 20px;
-	}
 }
-
 
 // %gb-tertiary-button {
 // 	@include b.primary-button(
@@ -770,15 +756,9 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 // }
 
 %vpicker-gb-secondary-button-inline-icon {
-	@extend %gb-secondary-button;
+	@extend %vpicker-gb-secondary-button;
 
 	&:hover {
-		background-color: transparent;
-		border: 1px solid c.$web-orange;
-		color: c.$web-orange;
-	}
-
-	&:active {
 		background-color: transparent;
 		border: 1px solid c.$web-orange;
 		color: c.$web-orange;

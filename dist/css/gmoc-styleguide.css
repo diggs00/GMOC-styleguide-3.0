@@ -38845,6 +38845,26 @@ html[dir=rtl] .align-right {
 }
 
 /********************BODY STYLES********************/
+/**/
+/* Breakpoint definitions*/
+/**/
+/**/
+/* Helper functions*/
+/**/
+/**/
+/* Breakpoint Mixins*/
+/**/
+/* Breakpoint only*/
+/* Note: a "large-only" mixin is unnecessary here because "large-only" and*/
+/* "large-and-above" are the same thing and "large-only" is a bit of a misnomer.*/
+/* Breakpoint and every size below it*/
+/* Note: a "large-and-below" mixin is unnecessary here because a class defined*/
+/* without a breakpoint is by default all viewports, i.e. large-and-below.*/
+/* Note: a "small-and-below" mixin is unnecessary here because "small-only" and*/
+/* "small-and-below" are the same thing.*/
+/* Breakpoint and every size above it*/
+/* Note: a "small-and-above" mixin is unnecessary here as anything from 0px wide and above is*/
+/* just a class without a media query.*/
 .vpicker-gb-secondary-button, .vpicker-gb-secondary-button-inline-icon {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -38876,9 +38896,23 @@ html[dir=rtl] .align-right {
 .icon-stacked.vpicker-gb-secondary-button img,
 .icon-stacked.vpicker-gb-secondary-button-inline-icon img {
   display: block;
-  margin: auto auto 0.21739rem;
+  margin: auto auto calc(0.23097 * 16px);
 }
 
+@media only screen and (min-width: 800px) {
+  .icon-stacked.vpicker-gb-secondary-button svg, .icon-stacked.vpicker-gb-secondary-button-inline-icon svg,
+.icon-stacked.vpicker-gb-secondary-button img,
+.icon-stacked.vpicker-gb-secondary-button-inline-icon img {
+    margin: auto auto calc(0.27173 * 16px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .icon-stacked.vpicker-gb-secondary-button svg, .icon-stacked.vpicker-gb-secondary-button-inline-icon svg,
+.icon-stacked.vpicker-gb-secondary-button img,
+.icon-stacked.vpicker-gb-secondary-button-inline-icon img {
+    margin: auto auto calc(0.31249 * 16px);
+  }
+}
 .icon-left.vpicker-gb-secondary-button svg, .icon-left.vpicker-gb-secondary-button-inline-icon svg,
 .icon-left.vpicker-gb-secondary-button img,
 .icon-left.vpicker-gb-secondary-button-inline-icon img {
@@ -38920,7 +38954,7 @@ html[dir=rtl] .align-right {
   font-weight: 700;
   letter-spacing: normal;
   line-height: 23px;
-  padding: 12px 19px;
+  padding: 9px 20px 8px;
   transition: background 0.25s cubic-bezier(0, 1, 0.5, 1);
   width: 100%;
   -o-object-fit: contain;
@@ -38936,7 +38970,7 @@ html[dir=rtl] .align-right {
 
 .gb-small-button.vpicker-gb-secondary-button, .gb-small-button.vpicker-gb-secondary-button-inline-icon {
   line-height: 2;
-  padding: 11px 0 10px;
+  padding: 0;
   position: relative;
 }
 
@@ -38988,14 +39022,14 @@ html[dir=rtl] .align-right {
 .vpicker-gb-secondary-button:hover:focus, .vpicker-gb-secondary-button-inline-icon:hover:focus {
   background-color: #6e6e6e;
   border: 2px solid #6e6e6e;
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
   color: #fff;
 }
 
 .vpicker-gb-secondary-button:focus, .vpicker-gb-secondary-button-inline-icon:focus {
   background-color: transparent;
   border: 2px solid #b3b3b3;
-  box-shadow: 0 0 3px 3px #808080;
+  box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.5);
   color: #262626;
 }
 
@@ -39025,6 +39059,7 @@ html[dir=rtl] .align-right {
   .vpicker-gb-secondary-button, .vpicker-gb-secondary-button-inline-icon {
     font-size: 18px;
     line-height: 32px;
+    padding: 10px 20px;
   }
 }
 /* Components*/

@@ -1,3 +1,6 @@
+@use '../../common/common' as com;
+@use '../../utils/breakpoints' as bp;
+
 @use 'button' as b;
 @use '../../chevy/colors' as c;
 @use '../../chevy/fonts' as f;
@@ -20,7 +23,15 @@
 		svg,
 		img {
 			display: block;
-			margin: auto auto .21739rem;
+			margin: auto auto calc(0.23097 * #{com.$gmux-base-font});
+
+			@include bp.medium-and-above {
+				margin: auto auto calc(0.27173 * #{com.$gmux-base-font});
+			}
+		
+			@include bp.large-and-above {
+				margin: auto auto calc(0.31249 * #{com.$gmux-base-font});
+			}
 		}
 	}
 
@@ -198,7 +209,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 // }
 
 %vpicker-gb-secondary-button {
-	@include b.primary-button(
+@include b.primary-button(
 		transparent,
 		2px solid c.$grey-mid,
 		c.$grey-dark,
@@ -207,7 +218,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		f.$font-weight-bold,
 		normal,
 		23px,
-		12px 19px,
+		9px 20px 8px,
 		background .25s cubic-bezier(0, 1, .5, 1),
 		c.$grey-mid-dark,
 		2px solid c.$grey-mid-dark,
@@ -218,7 +229,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 
 	&.gb-small-button {
 		line-height: 2;
-		padding: 11px 0 10px;
+		padding: 0;
 		position: relative;
 
 		&::after {
@@ -272,7 +283,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		&:focus {
 			background-color: c.$grey-mid-dark;
 			border: 2px solid c.$grey-mid-dark;
-			box-shadow: 0 0 3px 3px c.$grey;
+			box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
 			color: c.$white;
 		}
 	}
@@ -280,7 +291,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	&:focus {
 		background-color: transparent;
 		border: 2px solid c.$grey-mid;
-		box-shadow: 0 0 3px 3px c.$grey;
+		box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
 		color: c.$grey-dark;
 
 		&:active {
@@ -312,6 +323,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	@media print,only screen and (min-width:800px) {
 	  	font-size: 18px;
 	  	line-height: 32px;
+		padding: 10px 20px;
 	}
 }
 

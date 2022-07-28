@@ -1,5 +1,7 @@
 /* Common (global) styles that all brands need*/
 
+$gmux-base-font: 16px;
+
 /* font smoothing across the site*/
 body {
 	-webkit-font-smoothing: antialiased; /* sass-lint:disable-line no-vendor-prefixes*/
