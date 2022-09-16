@@ -13,11 +13,11 @@
 
 @font-face {
   font-family: 'icon-ui';
-  src:url('../../fonts/icon-ui.eot?jbx25w');
-  src:url('../../fonts/icon-ui.eot?jbx25w#iefix') format('embedded-opentype'),
-      url('../../fonts/icon-ui.ttf?jbx25w') format('truetype'),
-      url('../../fonts/icon-ui.woff?jbx25w') format('woff'),
-      url('../../fonts/icon-ui.svg?jbx25w#icon-ui') format('svg');
+  src:url('../../fonts/icon-ui.eot?8qkgmu');
+  src:url('../../fonts/icon-ui.eot?8qkgmu#iefix') format('embedded-opentype'),
+      url('../../fonts/icon-ui.ttf?8qkgmu') format('truetype'),
+      url('../../fonts/icon-ui.woff?8qkgmu') format('woff'),
+      url('../../fonts/icon-ui.svg?8qkgmu#icon-ui') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -429,20 +429,11 @@
 
 
 
-.icon-ui-caution:before {
-  content: "\e901";
-}
-.icon-ui-info:before {
-  content: "\e922";
-}
-.icon-ui-pause:before {
-  content: "\e93d";
-}
-.icon-ui-add:before {
-  content: "\e93e";
-}
 .icon-ui-account:before {
   content: "\e900";
+}
+.icon-ui-add:before {
+  content: "\e901";
 }
 .icon-ui-adddot:before {
   content: "\e902";
@@ -486,176 +477,187 @@
 .icon-ui-bargraph:before {
   content: "\e90f";
 }
-.icon-ui-calendar:before {
+.icon-ui-bullet:before {
   content: "\e910";
 }
-.icon-ui-change:before {
+.icon-ui-calendar:before {
   content: "\e911";
 }
-.icon-ui-chat:before {
+.icon-ui-caution:before {
   content: "\e912";
 }
-.icon-ui-check:before {
+.icon-ui-change:before {
   content: "\e913";
 }
-.icon-ui-checkcircle:before {
+.icon-ui-chat:before {
   content: "\e914";
 }
-.icon-ui-checkfill:before {
+.icon-ui-check:before {
   content: "\e915";
 }
-.icon-ui-circle:before {
+.icon-ui-checkcircle:before {
   content: "\e916";
 }
-.icon-ui-circleopen:before {
+.icon-ui-checkfill:before {
   content: "\e917";
 }
-.icon-ui-clock:before {
+.icon-ui-circle:before {
   content: "\e918";
 }
-.icon-ui-close:before {
+.icon-ui-circleopen:before {
   content: "\e919";
 }
-.icon-ui-closedot:before {
+.icon-ui-clock:before {
   content: "\e91a";
 }
-.icon-ui-closefill:before {
+.icon-ui-close:before {
   content: "\e91b";
 }
-.icon-ui-directions:before {
+.icon-ui-closedot:before {
   content: "\e91c";
 }
-.icon-ui-download:before {
+.icon-ui-closefill:before {
   content: "\e91d";
 }
-.icon-ui-edit:before {
+.icon-ui-connected-services-data:before {
   content: "\e91e";
 }
-.icon-ui-globe:before {
+.icon-ui-connected-services-marketplace:before {
   content: "\e91f";
 }
-.icon-ui-grid:before {
+.icon-ui-connected-services-mobile-app:before {
   content: "\e920";
 }
-.icon-ui-help:before {
+.icon-ui-connected-services-remote-key-fob:before {
   content: "\e921";
 }
-.icon-ui-infofill:before {
+.icon-ui-directions:before {
+  content: "\e922";
+}
+.icon-ui-download-b:before {
   content: "\e923";
 }
-.icon-ui-linegraph:before {
+.icon-ui-download:before {
   content: "\e924";
 }
-.icon-ui-list:before {
+.icon-ui-edit:before {
   content: "\e925";
 }
-.icon-ui-minus:before {
+.icon-ui-editdots:before {
   content: "\e926";
 }
-.icon-ui-minusfill:before {
+.icon-ui-globe:before {
   content: "\e927";
 }
-.icon-ui-newwindow:before {
+.icon-ui-grid:before {
   content: "\e928";
 }
-.icon-ui-notification:before {
+.icon-ui-help:before {
   content: "\e929";
-  color: #7d7d7d;
 }
-.icon-ui-offer-tag:before {
+.icon-ui-info:before {
   content: "\e92a";
 }
-.icon-ui-preferreddealer:before {
+.icon-ui-infofill:before {
   content: "\e92b";
 }
-.icon-ui-print:before {
+.icon-ui-linegraph:before {
   content: "\e92c";
 }
-.icon-ui-refresh:before {
+.icon-ui-list:before {
   content: "\e92d";
 }
-.icon-ui-save:before {
+.icon-ui-minus:before {
   content: "\e92e";
 }
-.icon-ui-search:before {
+.icon-ui-minusfill:before {
   content: "\e92f";
 }
-.icon-ui-swoop:before {
+.icon-ui-newwindow:before {
   content: "\e930";
 }
-.icon-ui-table:before {
+.icon-ui-notification:before {
   content: "\e931";
 }
-.icon-ui-trash:before {
+.icon-ui-offer-tag:before {
   content: "\e932";
-  color: #7e7e7e;
-}
-.icon-ui-upload:before {
-  content: "\e933";
-}
-.icon-ui-video:before {
-  content: "\e934";
-}
-.icon-ui-videofullscreen:before {
-  content: "\e935";
-}
-.icon-ui-videominimize:before {
-  content: "\e936";
-}
-.icon-ui-videooutline:before {
-  content: "\e937";
-}
-.icon-ui-videopause:before {
-  content: "\e938";
-}
-.icon-ui-videoplay:before {
-  content: "\e939";
-}
-.icon-ui-videovolume:before {
-  content: "\e93a";
-}
-.icon-ui-view-document:before {
-  content: "\e93b";
-}
-.icon-ui-view:before {
-  content: "\e93c";
-}
-.icon-ui-bullet:before {
-  content: "\e93f";
-}
-.icon-ui-connected-services-data:before {
-  content: "\e940";
-}
-.icon-ui-connected-services-marketplace:before {
-  content: "\e941";
-}
-.icon-ui-connected-services-mobile-app:before {
-  content: "\e942";
-}
-.icon-ui-connected-services-remote-key-fob:before {
-  content: "\e943";
 }
 .icon-ui-onstar-advisor:before {
-  content: "\e944";
+  content: "\e933";
 }
 .icon-ui-onstar-emergency-contact:before {
-  content: "\e945";
+  content: "\e934";
 }
 .icon-ui-onstar-remote-access:before {
-  content: "\e946";
+  content: "\e935";
 }
 .icon-ui-onstar-roadside-assistance:before {
-  content: "\e947";
+  content: "\e936";
 }
 .icon-ui-onstar-safety-and-security:before {
-  content: "\e948";
+  content: "\e937";
+}
+.icon-ui-pause:before {
+  content: "\e938";
+}
+.icon-ui-preferreddealer:before {
+  content: "\e939";
+}
+.icon-ui-print:before {
+  content: "\e93a";
 }
 .icon-ui-quote:before {
+  content: "\e93b";
+}
+.icon-ui-refresh:before {
+  content: "\e93c";
+}
+.icon-ui-save:before {
+  content: "\e93d";
+}
+.icon-ui-search:before {
+  content: "\e93e";
+}
+.icon-ui-swoop:before {
+  content: "\e93f";
+}
+.icon-ui-table:before {
+  content: "\e940";
+}
+.icon-ui-trash:before {
+  content: "\e941";
+}
+.icon-ui-upload:before {
+  content: "\e942";
+}
+.icon-ui-video:before {
+  content: "\e943";
+}
+.icon-ui-videofullscreen:before {
+  content: "\e944";
+}
+.icon-ui-videominimize:before {
+  content: "\e945";
+}
+.icon-ui-videooutline:before {
+  content: "\e946";
+}
+.icon-ui-videopause:before {
+  content: "\e947";
+}
+.icon-ui-videoplay:before {
+  content: "\e948";
+}
+.icon-ui-videovolume:before {
   content: "\e949";
 }
-.icon-ui-editdots:before {
+.icon-ui-view-document:before {
   content: "\e94a";
 }
+.icon-ui-view:before {
+  content: "\e94b";
+}
+
 
 
 

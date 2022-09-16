@@ -22669,8 +22669,8 @@ ul.switch-list-inline label.disabled {
 }
 @font-face {
   font-family: "icon-ui";
-  src: url("../../fonts/icon-ui.eot?jbx25w");
-  src: url("../../fonts/icon-ui.eot?jbx25w#iefix") format("embedded-opentype"), url("../../fonts/icon-ui.ttf?jbx25w") format("truetype"), url("../../fonts/icon-ui.woff?jbx25w") format("woff"), url("../../fonts/icon-ui.svg?jbx25w#icon-ui") format("svg");
+  src: url("../../fonts/icon-ui.eot?8qkgmu");
+  src: url("../../fonts/icon-ui.eot?8qkgmu#iefix") format("embedded-opentype"), url("../../fonts/icon-ui.ttf?8qkgmu") format("truetype"), url("../../fonts/icon-ui.woff?8qkgmu") format("woff"), url("../../fonts/icon-ui.svg?8qkgmu#icon-ui") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -23152,24 +23152,12 @@ ul.switch-list-inline label.disabled {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ui-caution:before {
-  content: "";
-}
-
-.icon-ui-info:before {
-  content: "";
-}
-
-.icon-ui-pause:before {
-  content: "";
+.icon-ui-account:before {
+  content: "";
 }
 
 .icon-ui-add:before {
-  content: "";
-}
-
-.icon-ui-account:before {
-  content: "";
+  content: "";
 }
 
 .icon-ui-adddot:before {
@@ -23228,230 +23216,244 @@ ul.switch-list-inline label.disabled {
   content: "";
 }
 
-.icon-ui-calendar:before {
+.icon-ui-bullet:before {
   content: "";
 }
 
-.icon-ui-change:before {
+.icon-ui-calendar:before {
   content: "";
 }
 
-.icon-ui-chat:before {
+.icon-ui-caution:before {
   content: "";
 }
 
-.icon-ui-check:before {
+.icon-ui-change:before {
   content: "";
 }
 
-.icon-ui-checkcircle:before {
+.icon-ui-chat:before {
   content: "";
 }
 
-.icon-ui-checkfill:before {
+.icon-ui-check:before {
   content: "";
 }
 
-.icon-ui-circle:before {
+.icon-ui-checkcircle:before {
   content: "";
 }
 
-.icon-ui-circleopen:before {
+.icon-ui-checkfill:before {
   content: "";
 }
 
-.icon-ui-clock:before {
+.icon-ui-circle:before {
   content: "";
 }
 
-.icon-ui-close:before {
+.icon-ui-circleopen:before {
   content: "";
 }
 
-.icon-ui-closedot:before {
+.icon-ui-clock:before {
   content: "";
 }
 
-.icon-ui-closefill:before {
+.icon-ui-close:before {
   content: "";
 }
 
-.icon-ui-directions:before {
+.icon-ui-closedot:before {
   content: "";
 }
 
-.icon-ui-download:before {
+.icon-ui-closefill:before {
   content: "";
 }
 
-.icon-ui-edit:before {
+.icon-ui-connected-services-data:before {
   content: "";
 }
 
-.icon-ui-globe:before {
+.icon-ui-connected-services-marketplace:before {
   content: "";
 }
 
-.icon-ui-grid:before {
+.icon-ui-connected-services-mobile-app:before {
   content: "";
 }
 
-.icon-ui-help:before {
+.icon-ui-connected-services-remote-key-fob:before {
   content: "";
 }
 
-.icon-ui-infofill:before {
+.icon-ui-directions:before {
+  content: "";
+}
+
+.icon-ui-download-b:before {
   content: "";
 }
 
-.icon-ui-linegraph:before {
+.icon-ui-download:before {
   content: "";
 }
 
-.icon-ui-list:before {
+.icon-ui-edit:before {
   content: "";
 }
 
-.icon-ui-minus:before {
+.icon-ui-editdots:before {
   content: "";
 }
 
-.icon-ui-minusfill:before {
+.icon-ui-globe:before {
   content: "";
 }
 
-.icon-ui-newwindow:before {
+.icon-ui-grid:before {
   content: "";
 }
 
-.icon-ui-notification:before {
+.icon-ui-help:before {
   content: "";
-  color: #7d7d7d;
 }
 
-.icon-ui-offer-tag:before {
+.icon-ui-info:before {
   content: "";
 }
 
-.icon-ui-preferreddealer:before {
+.icon-ui-infofill:before {
   content: "";
 }
 
-.icon-ui-print:before {
+.icon-ui-linegraph:before {
   content: "";
 }
 
-.icon-ui-refresh:before {
+.icon-ui-list:before {
   content: "";
 }
 
-.icon-ui-save:before {
+.icon-ui-minus:before {
   content: "";
 }
 
-.icon-ui-search:before {
+.icon-ui-minusfill:before {
   content: "";
 }
 
-.icon-ui-swoop:before {
+.icon-ui-newwindow:before {
   content: "";
 }
 
-.icon-ui-table:before {
+.icon-ui-notification:before {
   content: "";
 }
 
-.icon-ui-trash:before {
+.icon-ui-offer-tag:before {
   content: "";
-  color: #7e7e7e;
-}
-
-.icon-ui-upload:before {
-  content: "";
-}
-
-.icon-ui-video:before {
-  content: "";
-}
-
-.icon-ui-videofullscreen:before {
-  content: "";
-}
-
-.icon-ui-videominimize:before {
-  content: "";
-}
-
-.icon-ui-videooutline:before {
-  content: "";
-}
-
-.icon-ui-videopause:before {
-  content: "";
-}
-
-.icon-ui-videoplay:before {
-  content: "";
-}
-
-.icon-ui-videovolume:before {
-  content: "";
-}
-
-.icon-ui-view-document:before {
-  content: "";
-}
-
-.icon-ui-view:before {
-  content: "";
-}
-
-.icon-ui-bullet:before {
-  content: "";
-}
-
-.icon-ui-connected-services-data:before {
-  content: "";
-}
-
-.icon-ui-connected-services-marketplace:before {
-  content: "";
-}
-
-.icon-ui-connected-services-mobile-app:before {
-  content: "";
-}
-
-.icon-ui-connected-services-remote-key-fob:before {
-  content: "";
 }
 
 .icon-ui-onstar-advisor:before {
-  content: "";
+  content: "";
 }
 
 .icon-ui-onstar-emergency-contact:before {
-  content: "";
+  content: "";
 }
 
 .icon-ui-onstar-remote-access:before {
-  content: "";
+  content: "";
 }
 
 .icon-ui-onstar-roadside-assistance:before {
-  content: "";
+  content: "";
 }
 
 .icon-ui-onstar-safety-and-security:before {
-  content: "";
+  content: "";
+}
+
+.icon-ui-pause:before {
+  content: "";
+}
+
+.icon-ui-preferreddealer:before {
+  content: "";
+}
+
+.icon-ui-print:before {
+  content: "";
 }
 
 .icon-ui-quote:before {
+  content: "";
+}
+
+.icon-ui-refresh:before {
+  content: "";
+}
+
+.icon-ui-save:before {
+  content: "";
+}
+
+.icon-ui-search:before {
+  content: "";
+}
+
+.icon-ui-swoop:before {
+  content: "";
+}
+
+.icon-ui-table:before {
+  content: "";
+}
+
+.icon-ui-trash:before {
+  content: "";
+}
+
+.icon-ui-upload:before {
+  content: "";
+}
+
+.icon-ui-video:before {
+  content: "";
+}
+
+.icon-ui-videofullscreen:before {
+  content: "";
+}
+
+.icon-ui-videominimize:before {
+  content: "";
+}
+
+.icon-ui-videooutline:before {
+  content: "";
+}
+
+.icon-ui-videopause:before {
+  content: "";
+}
+
+.icon-ui-videoplay:before {
+  content: "";
+}
+
+.icon-ui-videovolume:before {
   content: "";
 }
 
-.icon-ui-editdots:before {
+.icon-ui-view-document:before {
   content: "";
+}
+
+.icon-ui-view:before {
+  content: "";
 }
 
 [class^=icon-newnav], [class*=" icon-newnav"] {
