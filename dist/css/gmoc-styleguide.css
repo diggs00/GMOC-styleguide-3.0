@@ -30808,7 +30808,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-first:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30830,7 +30830,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-first.pause:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30876,7 +30876,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-second:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30898,7 +30898,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-item-second.pause:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30936,7 +30936,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-3items .plan-timeline-item-first:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -30979,7 +30979,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-3items .plan-timeline-item-second:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -31006,7 +31006,7 @@ ul.cit2-list-bullet li:last-child {
 }
 .plan-timeline-3items .plan-timeline-item-third:after {
   color: #262626;
-  content: "";
+  content: "";
   display: block;
   font-family: "icon-ui";
   line-height: 1em;
@@ -32017,7 +32017,7 @@ table.cit2-desktop tbody tr.cat-title td {
   display: none;
 }
 .stepper ul li.checked .circle-graphic:before {
-  content: "";
+  content: "";
   font-family: "icon-ui";
 }
 .stepper ul li.checked .title div p.step-title {

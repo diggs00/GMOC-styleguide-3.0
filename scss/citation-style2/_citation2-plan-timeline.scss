@@ -41,7 +41,7 @@ $timeline-size: 32px;
   position: relative;
   &:after{
     color: $grey-dark;
-    content: "\e918"; //icon-ui-clock
+    content: "\e91a"; //icon-ui-clock
     display: block;
     font-family: "icon-ui";
     line-height: 1em;
@@ -65,7 +65,7 @@ $timeline-size: 32px;
   &.pause {
     &:after{
       color: $grey-dark;
-      content: "\e93d"; //icon-ui-pause
+      content: "\e938"; //icon-ui-pause
       display: block;
       font-family: "icon-ui";
       line-height: 1em;
@@ -117,7 +117,7 @@ $timeline-size: 32px;
 
   &:after {
     color: $grey-dark;
-    content: "\e914";// icon-ui-checkcircle
+    content: "\e916";// icon-ui-checkcircle
     display: block;
     font-family: "icon-ui";
     line-height: 1em;
@@ -142,7 +142,7 @@ $timeline-size: 32px;
 
     &:after {
       color: $grey-dark;
-      content: "\e93d"; //icon-ui-pause
+      content: "\e938"; //icon-ui-pause
       display: block;
       font-family: "icon-ui";
       line-height: 1em;
@@ -190,7 +190,7 @@ $timeline-size: 32px;
     position: relative;
     &:after{
       color: $grey-dark;
-      content: "\e918"; //icon-ui-clock
+      content: "\e91a"; //icon-ui-clock
       display: block;
       font-family: "icon-ui";
       line-height: 1em;
@@ -240,7 +240,7 @@ $timeline-size: 32px;
 
     &:after {
       color: $grey-dark;
-      content: "\e918"; //icon-ui-clock
+      content: "\e91a"; //icon-ui-clock
       display: block;
       font-family: "icon-ui";
       line-height: 1em;
@@ -271,7 +271,7 @@ $timeline-size: 32px;
 
     &:after {
       color: $grey-dark;
-      content: "\e914";// icon-ui-checkcircle
+      content: "\e916";// icon-ui-checkcircle
       display: block;
       font-family: "icon-ui";
       line-height: 1em;
