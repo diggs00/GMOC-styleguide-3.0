@@ -410,3 +410,36 @@ ul.tabs li.active {
     }
   }
 }
+
+
+// -------------START Recall CARDS - Used in RECALL PAGE TABS ----------------
+// DB added Oct5-th-2022
+
+.recall-list-active {
+  background-color: $warning-amber;
+}
+
+.recall-list-inactive {
+  background-color: $grey-mid;
+}
+
+.card-recall-item {
+  margin-left:4px;
+  padding: 20px;
+  background-color: $white;
+  border-bottom: 1px solid $grey-light;
+  border-right: 1px solid $grey-light;
+  margin-bottom: 0px;
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    align-items: center;
+  }
+
+  .action {
+    margin-top: 15px;
+    @media (min-width: $screen-desktop) {
+       margin-top: 0px;
+       margin-left: auto;
+    }
+  }
+}
