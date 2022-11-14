@@ -32060,7 +32060,7 @@ table.cit2-desktop tbody tr.cat-title td {
 .stepper {
   display: flex;
 }
-.stepper ul {
+.stepper .stepper-container {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -32069,7 +32069,7 @@ table.cit2-desktop tbody tr.cat-title td {
   z-index: 0;
   position: relative;
 }
-.stepper ul li {
+.stepper .stepper-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32077,8 +32077,11 @@ table.cit2-desktop tbody tr.cat-title td {
   margin-bottom: 0px;
   position: relative;
   margin-right: 20px;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px;
 }
-.stepper ul li:after {
+.stepper .stepper-container button:after {
   content: "";
   height: 2px;
   width: 100%;
@@ -32088,36 +32091,36 @@ table.cit2-desktop tbody tr.cat-title td {
   position: absolute;
   z-index: -1;
 }
-.stepper ul li:last-child {
+.stepper .stepper-container button:last-child {
   margin-right: 0px;
 }
-.stepper ul li:last-child:after {
+.stepper .stepper-container button:last-child:after {
   content: "";
   border-top: 0px;
   width: 0px;
 }
-.stepper ul li.checked {
+.stepper .stepper-container button.checked {
   cursor: pointer;
 }
-.stepper ul li.checked:last-child {
+.stepper .stepper-container button.checked:last-child {
   margin-right: 0px;
 }
-.stepper ul li.checked:last-child:after {
+.stepper .stepper-container button.checked:last-child:after {
   content: "";
   border-top: 0px;
   width: 0px;
 }
-.stepper ul li.active .circle-graphic {
+.stepper .stepper-container button.active .circle-graphic {
   border: 1px solid #2b2b2b;
   background-color: #2b2b2b;
 }
-.stepper ul li.active .circle-graphic div {
+.stepper .stepper-container button.active .circle-graphic div {
   color: #fff;
 }
-.stepper ul li.active .title div p.step-title {
+.stepper .stepper-container button.active .title div p.step-title {
   color: #2b2b2b;
 }
-.stepper ul li.checked:after {
+.stepper .stepper-container button.checked:after {
   content: "";
   height: 2px;
   width: 100%;
@@ -32127,22 +32130,22 @@ table.cit2-desktop tbody tr.cat-title td {
   position: absolute;
   z-index: -1;
 }
-.stepper ul li.checked .circle-graphic {
+.stepper .stepper-container button.checked .circle-graphic {
   border: 1px solid #2b2b2b;
   background-color: #2b2b2b;
   color: #fff;
 }
-.stepper ul li.checked .circle-graphic .gb-body3 {
+.stepper .stepper-container button.checked .circle-graphic .gb-body3 {
   display: none;
 }
-.stepper ul li.checked .circle-graphic:before {
+.stepper .stepper-container button.checked .circle-graphic:before {
   content: "";
   font-family: "icon-ui";
 }
-.stepper ul li.checked .title div p.step-title {
+.stepper .stepper-container button.checked .title div p.step-title {
   color: #2b2b2b;
 }
-.stepper ul li .circle-graphic {
+.stepper .stepper-container button .circle-graphic {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32154,10 +32157,10 @@ table.cit2-desktop tbody tr.cat-title td {
   background: #fff;
   color: #6e6e6e;
 }
-.stepper ul li .circle-graphic .gb-body2 {
+.stepper .stepper-container button .circle-graphic .gb-body2 {
   margin-bottom: 2px;
 }
-.stepper ul li .title div p.step-title {
+.stepper .stepper-container button .title div p.step-title {
   text-align: center;
   overflow-wrap: break-word;
   width: 84px;

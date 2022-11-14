@@ -4,7 +4,7 @@
 
 .stepper {
   display: flex;
-  ul {
+  .stepper-container {
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -13,7 +13,7 @@
     z-index: 0;
     position: relative;
 
-    li {
+    button {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,6 +21,9 @@
       margin-bottom:0px;
       position: relative;
       margin-right:20px;
+      background-color: transparent;
+      padding:0px;
+      border: 0px;
       &:after {
         content: '';
         height: 2px;
