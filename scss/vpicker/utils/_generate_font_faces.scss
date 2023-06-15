@@ -3,7 +3,7 @@ $font-formats: woff2, woff;
 
 @mixin generate-font-faces($font-list, $base-font-url-path) {
 	@each $family-name, $variations in $font-list {
-		@each $filename, $style, $weight in $variations {
+		@each $filename, $style, $weight, $unicode-range in $variations {
 			$font-urls: '';
 
 			@each $ext in $font-file-ext {
@@ -21,6 +21,7 @@ $font-formats: woff2, woff;
 				font-style: $style;
 				font-weight: $weight;
 				src: unquote($font-urls);
+				unicode-range: $unicode-range;
 			}
 		}
 	}

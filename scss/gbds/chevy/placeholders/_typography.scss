@@ -57,7 +57,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		50px,
-		60px,
+		70px,
 		70px,
 		f.$font-weight-bold,
 		56px,
@@ -87,7 +87,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		38px,
-		45px,
+		52px,
 		52px,
 		f.$font-weight-bold,
 		42px,
@@ -116,7 +116,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		32px,
-		30px,
+		36px,
 		36px,
 		f.$font-weight-bold,
 		38px,
@@ -180,7 +180,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		26px,
-		30px,
+		36px,
 		36px,
 		f.$font-weight-normal,
 		34px,
@@ -214,7 +214,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		22px,
-		25px,
+		30px,
 		30px,
 		f.$font-weight-normal,
 		28px,
@@ -255,7 +255,7 @@
 		c.$grey-dark,
 		f.$font-family-louis,
 		18px,
-		20px,
+		24px,
 		24px,
 		f.$font-weight-normal,
 		26px,
@@ -925,6 +925,10 @@
 
 		a {
 		  	color: c.$grey-mid-dark;
+
+			&:hover {
+				color: c.$gold;
+		  	}
 		}
 	}
 }
@@ -978,6 +982,10 @@
 
 		a {
 		  	color: c.$grey-mid-dark;
+			
+			&:hover {
+				color: c.$gold;
+		  	}
 		}
 	}
 }
@@ -1084,6 +1092,10 @@
 
 		a {
 		  	color: c.$grey;
+			
+			&:hover {
+				color: c.$gold;
+		  	}
 		}
 	}
 
@@ -1092,6 +1104,10 @@
 
 		a {
 		  	color: c.$grey-mid-dark;
+			
+			&:hover {
+				color: c.$gold;
+		  	}
 		}
 	}
 }

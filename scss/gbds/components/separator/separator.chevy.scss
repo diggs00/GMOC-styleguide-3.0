@@ -65,11 +65,17 @@
 
 			@include bp.medium-and-above {
 				font-size: calc(1.25 * #{com.$gmux-base-font});
+				padding: 5px 5px 3px;
 			}
 
 			@include bp.large-and-above {
 				font-size: calc(1.4375 * #{com.$gmux-base-font});
+				padding: 5px 5px 3px;
 			}
+		}
+
+		@include bp.medium-and-above {
+			height: 130px;
 		}
 	}
 
@@ -174,7 +180,7 @@
 	@media (min-width: 960px) {
 		.separator-join-combined {
 			@include s.base-separator(
-				$height: 90px
+				$height: 130px
 			);
 			background: linear-gradient(90deg, c.$grey-mid 1px, transparent 1px);
 			background-position: 100% 0;
@@ -201,10 +207,12 @@
 
 				@include bp.medium-and-above {
 					font-size: calc(1.25 * #{com.$gmux-base-font});
+					padding: 5px 5px 3px;
 				}
-	
+
 				@include bp.large-and-above {
 					font-size: calc(1.4375 * #{com.$gmux-base-font});
+					padding: 5px 5px 3px;
 				}
 			}
 		}

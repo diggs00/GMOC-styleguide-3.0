@@ -33,7 +33,7 @@
 		height: $height;
 		margin: 0;
 		padding: $padding;
-		text-align: left;
+		text-align: start;
 		text-decoration: none;
 		width: 100%;
 	}
@@ -53,7 +53,10 @@
 
 .gb-tab-nav {
     display: block;
-    padding: 0 32px;
+	padding-block: 0;
+    padding-inline: 32px;
+	--rotate-stacked-button-arrow: rotate(0deg); /* used to rotate any icons whether the page is ltr or rtl.*/
+	--rotate-back-button-arrow: rotate(180deg);
 
 	@include bp.small-only {
 		padding: 0;
