@@ -33846,6 +33846,410 @@ table.cit2-desktop-compare tbody tr.cat-title td {
   margin-left: auto;
 }
 
+.web-inbox {
+  background-color: #fff;
+}
+.web-inbox .inbox {
+  border-right: none;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox {
+    padding-right: 0px;
+    border-right: 1px solid #e6e6e6;
+  }
+}
+.web-inbox .inbox .inbox-header {
+  display: flex;
+  align-items: center;
+  padding-right: 0px;
+  margin-bottom: 25px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox .inbox-header {
+    margin-bottom: 30px;
+    padding-right: 50px;
+  }
+}
+.web-inbox .inbox .inbox-header .control {
+  margin-left: auto;
+}
+.web-inbox .inbox .inbox-header .control p {
+  margin-bottom: 0px;
+}
+.web-inbox .inbox .inbox-tab-container {
+  width: 100%;
+}
+.web-inbox .inbox .inbox-tab-container .state {
+  position: absolute;
+  left: -10000px;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs {
+  margin-bottom: 20px;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab-labels {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox .inbox-tab-container .inbox-tabs .tab-labels {
+    margin-right: 0px;
+  }
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab-labels label {
+  margin: 0px 1rem 0px 15px;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab-labels label:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab-labels label:focus {
+  outline-style: solid;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab {
+  flex-grow: 1;
+  padding: 11px 0px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab:first-child {
+  border-right: none;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .tab:hover {
+  background-color: #fff;
+}
+.web-inbox .inbox .inbox-tab-container .inbox-tabs .panel {
+  background-color: #fff;
+  padding: 0px;
+  display: none;
+  width: 100%;
+  flex-basis: auto;
+}
+.web-inbox .inbox #tab-notifications:checked ~ .inbox-tabs #tab-notifications-label,
+.web-inbox .inbox #tab-messages:checked ~ .inbox-tabs #tab-messages-label {
+  background-color: #fff;
+  cursor: default;
+  border-bottom: 4px solid #e6ac39;
+}
+.web-inbox .inbox #tab-notifications:checked ~ .inbox-tabs #tab-notifications-content,
+.web-inbox .inbox #tab-messages:checked ~ .inbox-tabs #tab-messages-content {
+  display: inline-block;
+}
+.web-inbox .inbox #tab-notifications2:checked ~ .inbox-tabs #tab-notifications-label,
+.web-inbox .inbox #tab-messages2:checked ~ .inbox-tabs #tab-messages-label {
+  background-color: #fff;
+  cursor: default;
+  border-bottom: 4px solid #e6ac39;
+}
+.web-inbox .inbox #tab-notifications2:checked ~ .inbox-tabs #tab-notifications-content,
+.web-inbox .inbox #tab-messages2:checked ~ .inbox-tabs #tab-messages-content {
+  display: inline-block;
+}
+.web-inbox .inbox #tab-notifications-content .alert-container, .web-inbox .inbox #tab-messages-content .alert-container {
+  margin-top: 0px;
+  padding-right: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .alert-container, .web-inbox .inbox #tab-messages-content .alert-container {
+    margin-top: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+}
+.web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert {
+  position: relative;
+  padding: 30px 15px 30px 15px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-left: 4px solid #e6ac39;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert {
+    border-right: none;
+    padding: 30px 50px 30px 20px;
+  }
+}
+.web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert .title, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert .title {
+  display: flex;
+  align-items: center;
+}
+.web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert .title .icon, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert .title .icon {
+  line-height: 0px;
+  margin-right: 5px;
+  color: #e6ac39;
+}
+.web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert .close, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert .close {
+  margin-left: 15px;
+}
+.web-inbox .inbox #tab-notifications-content .alert-container .inbox-alert .close .gb-icon-button, .web-inbox .inbox #tab-messages-content .alert-container .inbox-alert .close .gb-icon-button {
+  padding: 0px;
+}
+.web-inbox .inbox #tab-notifications-content .content-container, .web-inbox .inbox #tab-messages-content .content-container {
+  margin-top: 0px;
+  padding-right: 0px;
+  margin-right: -15px;
+  margin-left: -15px;
+  overflow-y: auto;
+  max-height: 800px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .content-container, .web-inbox .inbox #tab-messages-content .content-container {
+    padding-top: 25px;
+    padding-right: 25px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item, .web-inbox .inbox #tab-messages-content .content-container .content-item {
+  padding: 25px 15px 25px 40px;
+  display: flex;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .content-container .content-item, .web-inbox .inbox #tab-messages-content .content-container .content-item {
+    padding: 25px 25px 25px 25px;
+  }
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item.selected, .web-inbox .inbox #tab-messages-content .content-container .content-item.selected {
+  cursor: default;
+  background-color: #f2f2f2;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item.selected:hover, .web-inbox .inbox #tab-messages-content .content-container .content-item.selected:hover {
+  background-color: #f2f2f2;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item:hover, .web-inbox .inbox #tab-messages-content .content-container .content-item:hover {
+  background-color: #e6e6e6;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item.unread, .web-inbox .inbox #tab-messages-content .content-container .content-item.unread {
+  padding: 25px 15px 25px 20px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .content-container .content-item.unread, .web-inbox .inbox #tab-messages-content .content-container .content-item.unread {
+    padding: 25px 25px 25px 25px;
+  }
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item.unread span.icon-ui-circle, .web-inbox .inbox #tab-messages-content .content-container .content-item.unread span.icon-ui-circle {
+  font-size: 10px;
+  color: #e6ac39;
+  margin-right: 10px;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item.unread .gb-body2, .web-inbox .inbox #tab-messages-content .content-container .content-item.unread .gb-body2 {
+  font-weight: 700;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item .title, .web-inbox .inbox #tab-messages-content .content-container .content-item .title {
+  display: flex;
+  width: 75%;
+  align-items: center;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item .stamp, .web-inbox .inbox #tab-messages-content .content-container .content-item .stamp {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-left: 10px;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item .stamp .icon-ui-attentionoutline, .web-inbox .inbox #tab-messages-content .content-container .content-item .stamp .icon-ui-attentionoutline {
+  color: #F16100;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .content-item .stamp .gb-body3, .web-inbox .inbox #tab-messages-content .content-container .content-item .stamp .gb-body3 {
+  padding-top: 3px;
+}
+.web-inbox .reading-pane.status-message {
+  display: none;
+}
+@media (min-width: 992px) {
+  .web-inbox .reading-pane.status-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.web-inbox .reading-pane.status-message .status-content {
+  padding: 0px 45px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.web-inbox .reading-pane.status-message .status-content .icon {
+  margin-bottom: 15px;
+}
+.web-inbox .reading-pane .default-message {
+  display: none;
+}
+@media (min-width: 992px) {
+  .web-inbox .reading-pane .default-message {
+    padding: 65px 0px 0px 45px;
+    display: block;
+  }
+}
+.web-inbox .reading-pane .default-message .header {
+  margin-bottom: 30px;
+}
+.web-inbox .reading-pane .default-message .body .item-container {
+  padding: 30px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+.web-inbox .reading-pane .default-message .body .item-container .item {
+  display: flex;
+}
+.web-inbox .reading-pane .default-message .body .item-container .item .icon {
+  margin-right: 10px;
+}
+.web-inbox .reading-pane .default-message .body .item-container .item-status {
+  margin-left: auto;
+}
+.web-inbox .reading-pane .default-message .footer {
+  display: flex;
+  background-color: transparent;
+}
+.web-inbox .reading-pane .default-message .footer a {
+  margin-right: 25px;
+}
+.web-inbox .reading-pane .default-message .footer a:last-child {
+  margin-right: 0px;
+}
+
+.inbox.edit {
+  border-right: none;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .inbox.edit {
+    padding-right: 0px;
+    border-right: 1px solid #e6e6e6;
+  }
+}
+.inbox.edit #tab-notifications-content .edit-container, .inbox.edit #tab-messages-content .edit-container {
+  margin-top: 0px;
+  padding: 34px 0px 34px 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+@media (min-width: 992px) {
+  .inbox.edit #tab-notifications-content .edit-container, .inbox.edit #tab-messages-content .edit-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+    margin-right: 0px;
+    margin-left: -15px;
+  }
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents, .inbox.edit #tab-messages-content .edit-container .edit-contents {
+  display: flex;
+  align-items: center;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox {
+  width: 85px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown {
+  font-size: 16px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.controls, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.controls {
+  display: flex;
+  margin: 0px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.controls li, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.controls li {
+  margin-bottom: 0px;
+  margin-right: 30px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.controls li:last-child, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.controls li:last-child {
+  margin-right: 0px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.controls.disabled a, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.controls.disabled a {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item, .inbox.edit #tab-messages-content .content-container .content-item {
+  padding: 25px 15px 25px 15px;
+  display: flex;
+  background-color: #fff;
+  cursor: default;
+}
+@media (min-width: 992px) {
+  .inbox.edit #tab-notifications-content .content-container .content-item, .inbox.edit #tab-messages-content .content-container .content-item {
+    padding: 25px 25px 25px 0px;
+  }
+}
+.inbox.edit #tab-notifications-content .content-container .content-item.selected, .inbox.edit #tab-messages-content .content-container .content-item.selected {
+  cursor: default;
+  background-color: #fff;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item:hover, .inbox.edit #tab-messages-content .content-container .content-item:hover {
+  background-color: #fff;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item.unread, .inbox.edit #tab-messages-content .content-container .content-item.unread {
+  padding: 25px 15px 25px 15px;
+}
+@media (min-width: 992px) {
+  .inbox.edit #tab-notifications-content .content-container .content-item.unread, .inbox.edit #tab-messages-content .content-container .content-item.unread {
+    padding: 25px 25px 25px 0px;
+  }
+}
+.inbox.edit #tab-notifications-content .content-container .content-item.unread span.icon-ui-circle, .inbox.edit #tab-messages-content .content-container .content-item.unread span.icon-ui-circle {
+  font-size: 10px;
+  color: #e6ac39;
+  margin-right: 10px;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item.unread .gb-body2, .inbox.edit #tab-messages-content .content-container .content-item.unread .gb-body2 {
+  font-weight: 700;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item.unread .gb-checkbox label, .inbox.edit #tab-messages-content .content-container .content-item.unread .gb-checkbox label {
+  font-weight: 700;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title, .inbox.edit #tab-messages-content .content-container .content-item .title {
+  display: flex;
+  width: 75%;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox {
+  width: 100%;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox label, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox label {
+  display: flex;
+  align-items: center;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox input[type=checkbox], .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox input[type=checkbox] {
+  float: left;
+  top: -9px;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox input[type=checkbox]:hover, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox input[type=checkbox]:hover {
+  float: left;
+  top: 7px;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox input[type=checkbox]:hover + label, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox input[type=checkbox]:hover + label {
+  left: 26px;
+  padding: 0 0 0 0px;
+  position: unset !important;
+}
+.inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox label, .inbox.edit #tab-notifications-content .content-container .content-item .title .gb-checkbox input[type=checkbox] + label, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox label, .inbox.edit #tab-messages-content .content-container .content-item .title .gb-checkbox input[type=checkbox] + label {
+  position: unset !important;
+  padding: 0 0 0 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 body {
   background-color: #f6f6f6;
 }
@@ -34133,6 +34537,7 @@ body {
   font-style: normal;
   font-weight: 700;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
 }
 /* Trim off ", " at the end of $font-urls*/
 @font-face {
@@ -34141,6 +34546,7 @@ body {
   font-style: normal;
   font-weight: 500;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
 }
 /* Trim off ", " at the end of $font-urls*/
 @font-face {
@@ -34149,6 +34555,7 @@ body {
   font-style: normal;
   font-weight: 400;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
 }
 /* Trim off ", " at the end of $font-urls*/
 @font-face {
@@ -34157,13 +34564,16 @@ body {
   font-style: normal;
   font-weight: 700;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
 }
 /* Trim off ", " at the end of $font-urls*/
 @font-face {
   font-display: fallback;
   font-family: "NanumGothic";
-  font-style: 400;
-  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular normal.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular normal.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
 }
 body {
   color: #262626;
@@ -34222,7 +34632,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-display1 {
-    font-size: 60px;
+    font-size: 70px;
     letter-spacing: 2px;
     line-height: 60px;
   }
@@ -34245,7 +34655,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-display2 {
-    font-size: 45px;
+    font-size: 52px;
     letter-spacing: 3px;
     line-height: 45px;
   }
@@ -34268,7 +34678,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-display3 {
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 3px;
     line-height: 30px;
   }
@@ -34321,7 +34731,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-headline1 {
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 0.8px;
     line-height: 40px;
   }
@@ -34350,7 +34760,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-headline2 {
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 0.8px;
     line-height: 30px;
   }
@@ -34387,7 +34797,7 @@ body {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .gb-headline3 {
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0.8px;
     line-height: 30px;
   }
@@ -34867,6 +35277,10 @@ body {
   color: #6e6e6e;
 }
 
+.gb-color-grey-mid-dark.gb-body1 a:hover {
+  color: #cd9834;
+}
+
 .gb-body2 {
   color: #262626;
   font-family: Roboto, Helvetica, NanumGothic, sans-serif;
@@ -34906,6 +35320,10 @@ body {
 
 .gb-color-grey-mid-dark.gb-body2 a {
   color: #6e6e6e;
+}
+
+.gb-color-grey-mid-dark.gb-body2 a:hover {
+  color: #cd9834;
 }
 
 .gb-body3 {
@@ -34984,6 +35402,10 @@ body {
 
 .gb-color-grey-mid-dark.gb-body4 a {
   color: #6e6e6e;
+}
+
+.gb-color-grey-mid-dark.gb-body4 a:hover {
+  color: #cd9834;
 }
 
 .gb-body5 {
@@ -35116,7 +35538,8 @@ html[dir=rtl] .align-right {
   padding: 0 0 calc(1.3281 * 16px);
 }
 
-.gb-expander[data-disabled] > .gb-expander-btn::before {
+.gb-expander[data-disabled] > .gb-expander-btn::after, .gb-expander[data-disabled] > .gb-expander-btn::before {
+  background: none;
   content: "";
 }
 
@@ -35155,7 +35578,8 @@ html[dir=rtl] .align-right {
     padding: 0 0 calc(1.3281 * 16px);
   }
 
-  .gb-expander.gb-disabled-sm > .gb-expander-btn::before {
+  .gb-expander.gb-disabled-sm > .gb-expander-btn::after, .gb-expander.gb-disabled-sm > .gb-expander-btn::before {
+    background: none;
     content: "";
   }
 
@@ -35184,7 +35608,8 @@ html[dir=rtl] .align-right {
     padding: 0 0 calc(1.5625 * 16px);
   }
 
-  .gb-expander.gb-disabled-med > .gb-expander-btn::before {
+  .gb-expander.gb-disabled-med > .gb-expander-btn::after, .gb-expander.gb-disabled-med > .gb-expander-btn::before {
+    background: none;
     content: "";
   }
 
@@ -35213,7 +35638,8 @@ html[dir=rtl] .align-right {
     padding: 0 0 calc(1.7968 * 16px);
   }
 
-  .gb-expander.gb-disabled-lg > .gb-expander-btn::before {
+  .gb-expander.gb-disabled-lg > .gb-expander-btn::after, .gb-expander.gb-disabled-lg > .gb-expander-btn::before {
+    background: none;
     content: "";
   }
 
@@ -36138,7 +36564,11 @@ html[dir=rtl] .icon-left.gb-secondary-button-stacked-icon img {
 /* Mixins, variables, etc. for common component styling go in here*/
 .gb-tab-nav {
   display: block;
-  padding: 0 32px;
+  padding-block: 0;
+  padding-inline: 32px;
+  --rotate-stacked-button-arrow: rotate(0deg);
+  /* used to rotate any icons whether the page is ltr or rtl.*/
+  --rotate-back-button-arrow: rotate(180deg);
 }
 
 @media only screen and (max-width: 799px) {
@@ -36192,7 +36622,7 @@ gb-tab-nav .content-button button,
   height: 50px;
   margin: 0;
   padding: 0 15px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   width: 100%;
 }
@@ -36269,7 +36699,7 @@ gb-tab-nav .content-container .back-button,
 gb-tab-nav .content-container .back-button .back-button-label,
 .gb-tab-nav .content-container .back-button .back-button-label {
   padding: 0 30px 0 30px;
-  text-align: left;
+  text-align: start;
 }
 
 @media only screen and (min-width: 800px) {
@@ -36331,7 +36761,7 @@ gb-tab-nav .content-container .stacked-content-title,
     height: auto;
     margin: 0;
     padding: 20px;
-    text-align: left;
+    text-align: start;
     text-decoration: none;
     width: 100%;
   }
@@ -36408,28 +36838,12 @@ gb-tab-nav .content-container .stacked-content-title,
     /* Overriding container movement properties so container content appears over content below it.*/
   }
 
-  @-webkit-keyframes gb-slide-left {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0;
-    }
-  }
   @keyframes gb-slide-left {
     from {
       left: 100%;
     }
     to {
       left: 0;
-    }
-  }
-  @-webkit-keyframes gb-slide-right {
-    from {
-      left: 0;
-    }
-    to {
-      left: 100%;
     }
   }
   @keyframes gb-slide-right {
@@ -36442,13 +36856,11 @@ gb-tab-nav .content-container .stacked-content-title,
   }
   gb-tab-nav.gb-stacked-sm .content-container.opening,
 .gb-tab-nav.gb-stacked-sm .content-container.opening {
-    -webkit-animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   gb-tab-nav.gb-stacked-sm .content-container.closing,
 .gb-tab-nav.gb-stacked-sm .content-container.closing {
-    -webkit-animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -36555,7 +36967,7 @@ gb-tab-nav .content-container .stacked-content-title,
     height: auto;
     margin: 0;
     padding: 20px;
-    text-align: left;
+    text-align: start;
     text-decoration: none;
     width: 100%;
   }
@@ -36632,28 +37044,12 @@ gb-tab-nav .content-container .stacked-content-title,
     /* Overriding container movement properties so container content appears over content below it.*/
   }
 
-  @-webkit-keyframes gb-slide-left {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0;
-    }
-  }
   @keyframes gb-slide-left {
     from {
       left: 100%;
     }
     to {
       left: 0;
-    }
-  }
-  @-webkit-keyframes gb-slide-right {
-    from {
-      left: 0;
-    }
-    to {
-      left: 100%;
     }
   }
   @keyframes gb-slide-right {
@@ -36666,13 +37062,11 @@ gb-tab-nav .content-container .stacked-content-title,
   }
   gb-tab-nav.gb-stacked-med .content-container.opening,
 .gb-tab-nav.gb-stacked-med .content-container.opening {
-    -webkit-animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   gb-tab-nav.gb-stacked-med .content-container.closing,
 .gb-tab-nav.gb-stacked-med .content-container.closing {
-    -webkit-animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -36792,7 +37186,7 @@ gb-tab-nav .content-container .stacked-content-title,
     height: auto;
     margin: 0;
     padding: 20px;
-    text-align: left;
+    text-align: start;
     text-decoration: none;
     width: 100%;
   }
@@ -36869,28 +37263,12 @@ gb-tab-nav .content-container .stacked-content-title,
     /* Overriding container movement properties so container content appears over content below it.*/
   }
 
-  @-webkit-keyframes gb-slide-left {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0;
-    }
-  }
   @keyframes gb-slide-left {
     from {
       left: 100%;
     }
     to {
       left: 0;
-    }
-  }
-  @-webkit-keyframes gb-slide-right {
-    from {
-      left: 0;
-    }
-    to {
-      left: 100%;
     }
   }
   @keyframes gb-slide-right {
@@ -36903,13 +37281,11 @@ gb-tab-nav .content-container .stacked-content-title,
   }
   gb-tab-nav.gb-stacked-lg .content-container.opening,
 .gb-tab-nav.gb-stacked-lg .content-container.opening {
-    -webkit-animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-left 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   gb-tab-nav.gb-stacked-lg .content-container.closing,
 .gb-tab-nav.gb-stacked-lg .content-container.closing {
-    -webkit-animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: gb-slide-right 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -38384,11 +38760,18 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
 @media only screen and (min-width: 800px) {
   .gb-separator .separator-join-vertical .separator-copy {
     font-size: calc(1.25 * 16px);
+    padding: 5px 5px 3px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .gb-separator .separator-join-vertical .separator-copy {
     font-size: calc(1.4375 * 16px);
+    padding: 5px 5px 3px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .gb-separator .separator-join-vertical {
+    height: 130px;
   }
 }
 .gb-separator .separator-join-horizontal {
@@ -38525,7 +38908,7 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
     border-color: unset;
     border-style: none;
     border-width: 0;
-    height: 90px;
+    height: 130px;
     width: 100%;
     background: linear-gradient(90deg, #b3b3b3 1px, transparent 1px);
     background-position: 100% 0;
@@ -38564,11 +38947,13 @@ html[dir=rtl] .gb-toggle input[type=checkbox]:checked::after {
 @media only screen and (min-width: 960px) and (min-width: 800px) {
   .gb-separator .separator-join-combined .separator-copy {
     font-size: calc(1.25 * 16px);
+    padding: 5px 5px 3px;
   }
 }
 @media only screen and (min-width: 960px) and (min-width: 1200px) {
   .gb-separator .separator-join-combined .separator-copy {
     font-size: calc(1.4375 * 16px);
+    padding: 5px 5px 3px;
   }
 }
 /* Components*/
@@ -38814,9 +39199,54 @@ body {
   font-weight: 400;
   src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/roboto-regular-webfont.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/roboto-regular-webfont.woff") format("woff");
 }
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Bold.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Medium.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NotoSansKR-Regular.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NanumGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Bold.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+}
+/* Trim off ", " at the end of $font-urls*/
+@font-face {
+  font-display: fallback;
+  font-family: "NanumGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular.woff2") format("woff2"), url("https://brands.gm-cdn.com/gbds/chevrolet/fonts/NanumGothic-Regular.woff") format("woff");
+  unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+}
 html {
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 17px;
 }
 
@@ -38861,7 +39291,7 @@ html {
 
 .vpicker-gb-headline1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 0.68px;
@@ -38870,7 +39300,7 @@ html {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .vpicker-gb-headline1 {
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 0.8px;
     line-height: 40px;
   }
@@ -38884,7 +39314,7 @@ html {
 }
 .vpicker-gb-headline3 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.72px;
@@ -38893,7 +39323,7 @@ html {
 
 @media (min-width: 800px) and (max-width: 1199px) {
   .vpicker-gb-headline3 {
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0.8px;
     line-height: 30px;
   }
@@ -38907,7 +39337,7 @@ html {
 }
 .vpicker-gb-descriptive1 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2.1px;
@@ -38930,7 +39360,7 @@ html {
 }
 .vpicker-gb-descriptive2 {
   color: #262626;
-  font-family: Louis, Tahoma, sans-serif;
+  font-family: Louis, Tahoma, NotoSansKR, sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 2.19px;
@@ -39073,7 +39503,7 @@ html[dir=rtl] .align-right {
   background-color: transparent;
   border: 2px solid #b3b3b3;
   color: #262626;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, NanumGothic, sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: normal;
