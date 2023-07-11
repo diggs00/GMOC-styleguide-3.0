@@ -34012,9 +34012,10 @@ table.cit2-desktop-compare tbody tr.cat-title td {
 @media (min-width: 992px) {
   .web-inbox .inbox #tab-notifications-content .content-container, .web-inbox .inbox #tab-messages-content .content-container {
     padding-top: 25px;
-    padding-right: 25px;
+    padding-right: 50px;
+    padding-left: 15px;
     margin-right: 0px;
-    margin-left: 0px;
+    margin-left: -15px;
   }
 }
 .web-inbox .inbox #tab-notifications-content .content-container .content-item, .web-inbox .inbox #tab-messages-content .content-container .content-item {
@@ -34071,6 +34072,15 @@ table.cit2-desktop-compare tbody tr.cat-title td {
 }
 .web-inbox .inbox #tab-notifications-content .content-container .content-item .stamp .gb-body3, .web-inbox .inbox #tab-messages-content .content-container .content-item .stamp .gb-body3 {
   padding-top: 3px;
+}
+.web-inbox .inbox #tab-notifications-content .content-container .button-container, .web-inbox .inbox #tab-messages-content .content-container .button-container {
+  margin-top: 20px;
+  padding: 0px 15px;
+}
+@media (min-width: 992px) {
+  .web-inbox .inbox #tab-notifications-content .content-container .button-container, .web-inbox .inbox #tab-messages-content .content-container .button-container {
+    padding: 0px;
+  }
 }
 .web-inbox .reading-pane.status-message {
   display: none;
@@ -34161,11 +34171,47 @@ table.cit2-desktop-compare tbody tr.cat-title td {
   display: flex;
   align-items: center;
 }
-.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox {
+.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox, .inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox.selected, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox.selected {
   width: 85px;
+  position: relative;
 }
-.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown {
+.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown, .inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox.selected label .icon-ui-arrowdown, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox label .icon-ui-arrowdown, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox.selected label .icon-ui-arrowdown {
   font-size: 16px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents .gb-checkbox.inbox-selected input[type=checkbox]:checked::after, .inbox.edit #tab-messages-content .edit-container .edit-contents .gb-checkbox.inbox-selected input[type=checkbox]:checked::after {
+  content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:foo='http://www.example.com/fooML' ><rect x='3.4' y='9.3' fill='%236e6e6e' width='12.9' height='2'/> foo:drag='true'/></svg>");
+  display: block;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.edit-dropdown, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.edit-dropdown {
+  display: none;
+}
+@media (min-width: 992px) {
+  .inbox.edit #tab-notifications-content .edit-container .edit-contents ul.edit-dropdown, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.edit-dropdown {
+    display: block;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px 0px #2826310D;
+    box-shadow: 0px 10px 15px 0px #2826311A;
+    width: 282px;
+    position: absolute;
+    z-index: 999999999;
+    top: 58px;
+    left: 0px;
+  }
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.edit-dropdown li, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.edit-dropdown li {
+  padding: 15px;
+  background-color: white;
+  margin: 0px;
+  cursor: pointer;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.edit-dropdown li:hover, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.edit-dropdown li:hover {
+  background-color: #f2f2f2;
+}
+.inbox.edit #tab-notifications-content .edit-container .edit-contents ul.edit-dropdown li .gb-label p, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.edit-dropdown li .gb-label p {
+  margin: 0px;
 }
 .inbox.edit #tab-notifications-content .edit-container .edit-contents ul.controls, .inbox.edit #tab-messages-content .edit-container .edit-contents ul.controls {
   display: flex;
@@ -34248,6 +34294,15 @@ table.cit2-desktop-compare tbody tr.cat-title td {
   padding: 0 0 0 12px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.inbox.edit #tab-notifications-content .content-container .button-container, .inbox.edit #tab-messages-content .content-container .button-container {
+  margin-top: 20px;
+  padding: 0px 15px;
+}
+@media (min-width: 992px) {
+  .inbox.edit #tab-notifications-content .content-container .button-container, .inbox.edit #tab-messages-content .content-container .button-container {
+    padding: 0px;
+  }
 }
 
 body {

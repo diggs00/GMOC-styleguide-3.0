@@ -1,6 +1,5 @@
 .web-inbox {
     background-color: $white;
-
     .inbox {
         border-right: none;
         padding-top: 70px;
@@ -157,9 +156,10 @@
                 max-height: 800px;
                 @media (min-width: $screen-desktop) {
                     padding-top: 25px;
-                    padding-right: 25px;
+                    padding-right: 50px;
+                    padding-left: 15px;
                     margin-right: 0px;
-                    margin-left: 0px;
+                    margin-left: -15px;
                 }
                 .content-item {
                     padding: 25px 15px 25px 40px;
@@ -211,6 +211,13 @@
                         .gb-body3 {
                             padding-top: 3px;
                         }
+                    }
+                }
+                .button-container {
+                    margin-top: 20px;
+                    padding: 0px 15px;
+                    @media (min-width: $screen-desktop) {
+                        padding: 0px;
                     }
                 }
             }
@@ -302,13 +309,53 @@
                 margin-left: -15px;
             }
             .edit-contents {
+
                 display: flex;
                 align-items: center;
-                .gb-checkbox {
+                .gb-checkbox, .gb-checkbox.selected {
                     width: 85px;
+                    position: relative;
                     label {
                         .icon-ui-arrowdown {
                             font-size: 16px;
+                        }
+                    }
+                }
+
+                // NEED TO MAKE THIS BRAND RELATED
+                .gb-checkbox.inbox-selected input[type=checkbox]:checked::after {
+                    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:foo='http://www.example.com/fooML' ><rect x='3.4' y='9.3' fill='%236e6e6e' width='12.9' height='2'/> foo:drag='true'/></svg>");
+                    display: block;
+                    height: 20px;
+                    position: absolute;
+                    width: 20px;
+                }
+                 // NEED TO MAKE THIS BRAND RELATED
+
+
+                ul.edit-dropdown{
+                    display: none;
+                    @media (min-width: $screen-desktop) {
+                        display: block;
+                        background-color: $white;
+                        box-shadow: 0px 4px 6px 0px #2826310D;
+                        box-shadow: 0px 10px 15px 0px #2826311A;
+                        width: 282px;
+                        position: absolute;
+                        z-index: 999999999;
+                        top: 58px;
+                        left: 0px;
+                    }
+                    li {
+                        padding: 15px;
+                        background-color: white;
+                        margin: 0px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $grey-very-light;
+                        }
+                        .gb-label p {
+                            margin: 0px
                         }
                     }
                 }
@@ -397,6 +444,15 @@
                     }
                 }
             }
+            .button-container {
+                margin-top: 20px;
+                padding: 0px 15px;
+                @media (min-width: $screen-desktop) {
+                    padding: 0px;
+                }
+            }
         }
     }
 }
+
+
