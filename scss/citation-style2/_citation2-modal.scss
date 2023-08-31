@@ -41,7 +41,8 @@
   // width: auto;
   width: inherit;
 
-  margin: $modal-dialog-margin;
+  // margin: $modal-dialog-margin;
+  margin:0px 0px 0px 0px;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
@@ -166,6 +167,118 @@
   overflow: scroll;
 }
 
+// FULL SCREEN MODAL
+.modal-dialog {
+  max-width: 615px;
+  margin: $modal-dialog-margin-y-sm-up auto;
+  &.full-screen {
+    max-width: 100%;
+    margin:0px 0px 0px 0px;
+    .modal.fade & {
+      -webkit-transform: none;
+      transform: none;
+    }
+    .modal.show & {
+      -webkit-transform: none;
+      transform: none;
+    }
+    .modal-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+      // counteract the pointer-events: none; in the .modal-dialog
+      min-height:100vh;
+      color: $modal-content-color;
+      pointer-events: auto;
+      background-color: $modal-content-bg;
+      background-clip: padding-box;
+      border: none;
+      // border: $modal-content-border-width solid $modal-content-border-color;
+      // @include border-radius($modal-content-border-radius);
+      @include box-shadow($modal-content-box-shadow-xs);
+      // Remove focus outline from opened modal
+      outline: 0;
+
+      .modal-header {
+        display: flex;
+        align-items: flex-start; // so the close btn always stays on the upper right corner
+        justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+        padding: 24px 16px 24px 16px;
+        margin-bottom: 16px;
+        // border-bottom: $modal-header-border-width solid $modal-header-border-color;
+        @include border-top-radius($modal-content-border-radius);
+        @media (min-width: $screen-desktop) {
+          padding: 24px 32px 24px 32px;
+          margin-bottom: 48px;
+        }
+        .close-cit2 {
+          padding: 0px;
+          // auto on the left force icon to the right even when there is no .modal-title
+          margin: 0, 0, 0, 0;
+        }
+      }
+
+      .modal-body-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding:0px 16px;
+        @media (min-width: $screen-desktop) {
+          padding:0px;
+        }
+        .modal-body {
+          width:596px;
+          flex: 0 1 auto;
+          padding:0px;
+          .modal-title {
+            margin: 0px 0px 24px 0px;
+            p {
+              margin-bottom: 0px;;
+            }
+          }
+        }
+      }
+      .modal-footer {
+        padding: 32px 16px 24px 16px;
+        display: flex;
+        flex-direction: column;
+        margin: auto 0 0 0;
+        .gb-body1 {
+          order: 1;
+          @media (min-width: $screen-desktop) {
+            order: 0;
+          }
+        }
+        .gb-primary-button {
+          order:0;
+          margin-bottom: 24px;
+          @media (min-width: $screen-desktop) {
+            margin-bottom: 0px;
+            order: 1;
+          }
+        }
+        @media (min-width: $screen-desktop) {
+          padding:32px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .gb-primary-button {
+          @media (min-width: $screen-desktop) {
+            width: 230px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
@@ -179,6 +292,7 @@
       max-width: 615px;
     }
   }
+
 
   .modal-dialog-scrollable {
     max-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
@@ -501,4 +615,10 @@ ul.modal-vpicker-controls-cit2 {
     padding: 50px;
   }
 }
+
+
+
+
+
+
 

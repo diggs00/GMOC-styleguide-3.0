@@ -146,7 +146,7 @@ input[type="number"] {
   padding: $padding-base-vertical $padding-base-horizontal;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  color: $input-color;
+  color: inherit;
   vertical-align: middle;
   background-color: $input-bg;
   border: 1px solid $input-border;

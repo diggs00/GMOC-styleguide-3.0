@@ -39,7 +39,8 @@
 .modal-dialog {
   position: relative;
   // width: auto;
-  margin: $modal-dialog-margin;
+  // margin: $modal-dialog-margin;
+  margin:0px 0px 0px 0px;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
@@ -284,7 +285,5 @@
     }
 	}
 }
-
-
 
 
