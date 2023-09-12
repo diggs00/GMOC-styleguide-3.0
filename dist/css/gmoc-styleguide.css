@@ -30856,6 +30856,17 @@ ul.cit2-badge-familyshare li.child:before {
   font-size: 20px;
 }
 
+.card-simple {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0px;
+  position: relative;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
 ul.cit2-list-bullet {
   list-style: disc;
   margin: 0px;
