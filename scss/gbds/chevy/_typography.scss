@@ -13,7 +13,7 @@
 }
 
 .gb-display4 {
-  	@extend %gb-display4;
+	@extend %gb-display4;
 }
 
 .gb-headline1 {
@@ -29,7 +29,7 @@
 }
 
 .gb-headline4 {
-  	@extend %gb-headline4;
+	@extend %gb-headline4;
 }
 
 .gb-descriptive1 {
@@ -45,7 +45,7 @@
 }
 
 .gb-descriptive-section {
-  	@extend %gb-descriptive-section;
+	@extend %gb-descriptive-section;
 }
 
 .gb-descriptive1-3 {
@@ -53,15 +53,15 @@
 }
 
 .gb-descriptive2-ch {
-  	@extend %gb-descriptive2-ch;
+	@extend %gb-descriptive2-ch;
 }
 
 .gb-button-label {
-  	@extend %gb-button-label;
+	@extend %gb-button-label;
 }
 
 .gb-primary-nav-button-label {
-  	@extend %gb-primary-nav-button-label;
+	@extend %gb-primary-nav-button-label;
 }
 
 .gb-bold1 {
@@ -81,27 +81,28 @@
 }
 
 .gb-label {
-  	@extend %gb-label;
+	@extend %gb-label;
 }
 
-.gb-label1 { /* The correct class should be gb-label, but keeping gb-label1 so this won't break for anyone who is using gb-label1 already.*/
+.gb-label1 {
+	/* The correct class should be gb-label, but keeping gb-label1 so this won't break for anyone who is using gb-label1 already.*/
 	@extend %gb-label;
 }
 
 .gb-label2 {
-  	@extend %gb-label2;
+	@extend %gb-label2;
 }
 
 .gb-disclaimer {
-  	@extend %gb-disclaimer;
+	@extend %gb-disclaimer;
 }
 
 .gb-form-input1 {
-  	@extend %gb-form-input1;
+	@extend %gb-form-input1;
 }
 
 .gb-form-input2 {
-  	@extend %gb-form-input2;
+	@extend %gb-form-input2;
 }
 
 /********************BODY STYLES********************/
@@ -115,13 +116,13 @@
 }
 
 .gb-body3 {
-  	@extend %gb-body3;
+	@extend %gb-body3;
 }
 
 .gb-body4 {
-  	@extend %gb-body4;
+	@extend %gb-body4;
 }
 
 .gb-body5 {
-  	@extend %gb-body5;
+	@extend %gb-body5;
 }

@@ -1,5 +1,6 @@
-$cadillac-sans: CadillacSans, Helvetica, Arial, sans-serif;
-$cadillac-serif: CadillacSerif, Georgia, Times New Roman, Times, serif;
+$cadillac-sans: CadillacSans, Helvetica, Arial, NanumGothic, sans-serif;
+$cadillac-serif: CadillacSerif, Georgia, Times New Roman, Times, NanumGothic,
+	serif;
 
 $base-font-sm: 14px;
 $base-font-med: 15px;
@@ -17,6 +18,8 @@ $font-weight-demi: 600;
 $font-weight-bold: 700;
 $font-weight-ultra: 800;
 $font-weight-xbold: 900;
+$font-hangul-unicode-code: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F,
+	U+D7B0-D7FF;
 
 $font-list: (
 	CadillacSans: (
@@ -36,7 +39,7 @@ $font-list: (
 		('CadillacSansWebArabic-Medium', normal, $font-weight-normal),
 		('CadillacSansWebArabic-SemiBold', normal, $font-weight-demi),
 		('CadillacSansWebArabic-Bold', normal, $font-weight-bold),
-		('CadillacSansWebArabic-ExtraBold', normal, $font-weight-ultra)
+		('CadillacSansWebArabic-ExtraBold', normal, $font-weight-ultra),
 	),
 	CadillacSerif: (
 		('CadillacSerifWeb-Regular', normal, $font-weight-book),
@@ -47,6 +50,15 @@ $font-list: (
 		('CadillacSerifWebArabic-Medium', normal, $font-weight-normal),
 		('CadillacSerifWebArabic-SemiBold', normal, $font-weight-demi),
 		('CadillacSerifWebArabic-Bold', normal, $font-weight-bold),
-		('CadillacSerifWebArabic-Heavy', normal, $font-weight-xbold)
-	)
+		('CadillacSerifWebArabic-Heavy', normal, $font-weight-xbold),
+	),
+	NanumGothic: (
+		('NanumGothic-Bold', normal, $font-weight-bold, $font-hangul-unicode-code),
+		(
+			'NanumGothic-Regular',
+			normal,
+			$font-weight-normal,
+			$font-hangul-unicode-code
+		),
+	),
 );

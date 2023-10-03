@@ -63,11 +63,11 @@
 			background-color: c.$white;
 			border: solid 1px c.$grey-medium;
 			border-radius: 50%;
+			bottom: 1px;
 			display: inline-block;
 			height: 14px;
-			width: 14px;
 			position: relative;
-			bottom: 1px;
+			width: 14px;
 
 			&.valid {
 				background-color: c.$grey-medium;
@@ -85,11 +85,7 @@
 	}
 
 	label {
-		@include i.base-label(f.$cadillac-sans,
-		16px,
-		.99px,
-		1.5,
-		auto);
+		@include i.base-label(f.$cadillac-sans, 16px, .99px, 1.5, auto);
 
 		color: c.$grey-darker;
 	}
@@ -121,7 +117,7 @@
 		&.clear-input,
 		&.show-password {
 			background: none;
-			border: none;
+			border: 0;
 			cursor: pointer;
 			padding: 0;
 		}
@@ -147,9 +143,9 @@
 		}
 	}
 
-	&:focus{
+	&:focus {
 		&input {
-			&[type=date] {
+			&[type='date'] {
 				&::-webkit-datetime-edit {
 					opacity: 1;
 				}
@@ -228,7 +224,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -298,14 +295,16 @@
 			margin: 3px 0;
 		}
 
-		@include i.base-input(c.$white,
-		1px solid c.$grey-extra-light,
-		c.$grey-darker,
-		30%,
-		f.$cadillac-sans,
-		16px,
-		28px 50px 6px 16px,
-		1px solid c.$grey-light);
+		@include i.base-input(
+			c.$white,
+			1px solid c.$grey-extra-light,
+			c.$grey-darker,
+			30%,
+			f.$cadillac-sans,
+			16px,
+			28px 50px 6px 16px,
+			1px solid c.$grey-light
+		);
 
 		&[type],
 		textarea {
@@ -345,12 +344,12 @@
 			}
 		}
 		/*IOS  This is to override IOS appearance for date input types.*/
-		&[type=date] {
-			display: block;
-			text-transform: uppercase;
-			-webkit-appearance: textfield;
+		&[type='date'] {
 			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
 			padding-right: 16px;
+			text-transform: uppercase;
 
 			&::-webkit-datetime-edit-text {
 				padding: 0 6px;
@@ -372,7 +371,6 @@
 
 			&.valid {
 				&:focus {
-
 					&::-webkit-calendar-picker-indicator {
 						opacity: 1;
 					}
@@ -418,7 +416,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -521,7 +520,7 @@
 				}
 			}
 
-			&[type=date] {
+			&[type='date'] {
 				padding-right: 16px;
 			}
 		}

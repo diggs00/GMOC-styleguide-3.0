@@ -1,5 +1,4 @@
-$font-family-muli: Muli, Arial, sans-serif;
-$font-family-stratum: Stratum, Arial, sans-serif;
+$font-family-stratum: Stratum, Arial, NotoSansKR, sans-serif;
 
 $base-font-sm: 10px;
 $base-font-med: 11px;
@@ -17,15 +16,23 @@ $font-weight-demi: 600;
 $font-weight-bold: 700;
 $font-weight-ultra: 800;
 $font-weight-xbold: 900;
+$font-hangul-unicode-code: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F,
+	U+D7B0-D7FF;
 
 $font-list: (
 	stratum: (
 		(stratum-black, normal, $font-weight-xbold),
 		(stratum-light, normal, $font-weight-lighter),
-		(stratum-medium, normal, $font-weight-medium)
+		(stratum-medium, normal, $font-weight-medium),
 	),
-	muli: (
-		(muli-webfont, normal, $font-weight-medium),
-		(muli-bold-webfont, normal, $font-weight-bold)
-	)
+	NotoSansKR: (
+		(NotoSansKR-Bold, normal, $font-weight-bold, $font-hangul-unicode-code),
+		(NotoSansKR-Medium, normal, $font-weight-medium, $font-hangul-unicode-code),
+		(
+			NotoSansKR-Regular,
+			normal,
+			$font-weight-normal,
+			$font-hangul-unicode-code
+		),
+	),
 );

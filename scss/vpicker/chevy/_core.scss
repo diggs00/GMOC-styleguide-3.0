@@ -3,7 +3,7 @@
 
 /* Generic utilities*/
 @use '../utils/generate_font_faces' as gff;
-@use '../utils/root-font' as rf;
+@use '../utils/breakpoints' as bp;
 
 /* Brand utilities and variables*/
 @use 'fonts' as f;
@@ -12,12 +12,7 @@
 /* Core styling*/
 @include gff.generate_font_faces(f.$font-list, f.$base-font-url-path);
 
-@include rf.root-font(
-	f.$font-family-roboto,
-	c.$grey-dark,
-	f.$base-font-sm,
-	600px,
-	f.$base-font-med,
-	1500px,
-	f.$base-font-lg
-);
+body {
+	color: c.$grey-dark;
+	font-family: f.$font-family-roboto;
+}

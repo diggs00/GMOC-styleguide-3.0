@@ -42,15 +42,17 @@
 				.4s,
 				calc(1.09375 * #{com.$gmux-base-font})
 			);
-			bottom: 9px;
+			bottom: 6px;
 			left: 3px;
 
 			@include bp.medium-and-above {
+				bottom: 7.5px;
 				height: calc(1.171875 * #{com.$gmux-base-font});
 				width: calc(1.171875 * #{com.$gmux-base-font});
 			}
 	
 			@include bp.large-and-above {
+				bottom: 9px;
 				height: calc(1.25 * #{com.$gmux-base-font});
 				width: calc(1.25 * #{com.$gmux-base-font});
 			}
@@ -63,7 +65,12 @@
 
 			&::after {
 				background-color: c.$white;
+				left: 0;
 				transform: translateX(20px);
+
+				@include bp.medium-and-above {
+					left: 2px;
+				}
 			}
 		}
 	}
@@ -73,23 +80,23 @@
 		@include t.base-toggle-label(
 			c.$grey-darker,
 			f.$cadillac-sans,
-			calc(0.7656 * #{com.$gmux-base-font}),
+			calc(.7656 * #{com.$gmux-base-font}),
 			1.5,
-			0 calc(calc(0.875 * #{com.$gmux-base-font}) - 8px)
+			0 calc(calc(.875 * #{com.$gmux-base-font}) - 8px)
 		);
 		bottom: 15px;
 		font-weight: f.$font-weight-book;
-		letter-spacing: calc(0.0621 * #{com.$gmux-base-font});
+		letter-spacing: calc(.0621 * #{com.$gmux-base-font});
 
 		@include bp.medium-and-above {
-			font-size: calc(0.8203 * #{com.$gmux-base-font});
-			letter-spacing: calc(0.0665 * #{com.$gmux-base-font});
-			margin: 0 calc(calc(0.9375 * #{com.$gmux-base-font}) - 8px);
+			font-size: calc(.8203 * #{com.$gmux-base-font});
+			letter-spacing: calc(.0665 * #{com.$gmux-base-font});
+			margin: 0 calc(calc(.9375 * #{com.$gmux-base-font}) - 8px);
 		}
 
 		@include bp.large-and-above {
-			font-size: calc(0.875 * #{com.$gmux-base-font});
-			letter-spacing: calc(0.071 * #{com.$gmux-base-font});
+			font-size: calc(.875 * #{com.$gmux-base-font});
+			letter-spacing: calc(.071 * #{com.$gmux-base-font});
 			margin: 0 calc(calc(1 * #{com.$gmux-base-font}) - 8px);
 		}
 	}

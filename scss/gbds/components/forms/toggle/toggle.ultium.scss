@@ -1,0 +1,106 @@
+@use 'toggle' as toggle;
+@use '../../../ultium/colors' as colors;
+@use '../../../ultium/fonts' as fonts;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include toggle.base-toggle-input(
+			48px,
+			48px
+		);
+
+		&::before {
+			@include toggle.outer-toggle(
+				colors.$white,
+				2px solid colors.$black,
+				32px,
+				24px,
+				.4s,
+				42px
+			);
+			left: 6px;
+			top: 14px;
+		}
+
+		&::after {
+			@include toggle.inner-toggle(
+				colors.$black,
+				50%,
+				16px,
+				.4s,
+				16px
+			);
+			bottom: 6px;
+			left: 10px;
+		}
+
+		&:checked {
+			&::before {
+				background-color: colors.$blue-primary;
+				border-color: colors.$blue-primary;
+			}
+
+			&::after {
+				background-color: colors.$white;
+				transform: translateX(19px);
+			}
+		}
+	}
+
+
+	label {
+		@include toggle.base-toggle-label(
+			colors.$black,
+			fonts.$font-family-overpass,
+			1rem,
+			1.25,
+			0 calc(1rem - 8px)
+		);
+		bottom: 18px;
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			&::before {
+				border-color: colors.$disabled-grey;
+			}
+
+			&::after {
+				background-color: colors.$disabled-grey;
+			}
+
+			&:checked {
+				&::before {
+					background-color: colors.$disabled-grey;
+					border-color: colors.$disabled-grey;
+				}
+
+				&::after {
+					background-color: colors.$white;
+				}
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-toggle {
+		input[type='checkbox'] {
+			&::before {
+				left: 0;
+				right: 6px;
+			}
+
+			&::after {
+				left: 0;
+				right: 10px;
+			}
+
+			&:checked {
+				&::after {
+					transform: translateX(-19px);
+				}
+			}
+		}
+	}
+}

@@ -1,7 +1,7 @@
 /*  GMUX GMC Colors*/
 $black: #000000;
 $brand-black: #060505;
-$brand-black-tint-10: rgba(6, 5, 5, 0.1);
+$brand-black-tint-10: rgba(6, 5, 5, .1);
 $brand-black-lighten: #302f2f;
 
 $grey: #b2b2b2;
@@ -10,6 +10,7 @@ $grey-extra-light: #ebebeb;
 
 $font: #464646;
 $font-light: #757575;
+$grey-mid: $font;
 
 $white: #ffffff;
 $white-darken: #d4d4d4;
@@ -28,23 +29,23 @@ $grey-medium: #656565;
 /*--------- Colors - Start ---------//*/
 /*----------------------------------//*/
 
-$black: #000;
-$white: #fff;
+$black: #000000;
+$white: #ffffff;
 
 /*----------------------------------//*/
 /*--------- Colors - End -----------//*/
 /*----------------------------------//*/
 
-$error-red: #b50000;         /* $error-red*/
-$error-red-light: #FF0124;   /* $error-red-light*/
-$success-green: #0a7305;       /* $success-green*/
-$warning-amber: #F16100;       /* $success-green*/
+$error-red: #b50000; /* $error-red*/
+$error-red-light: #ff0124; /* $error-red-light*/
+$success-green: #0a7305; /* $success-green*/
+$warning-amber: #f16100; /* $success-green*/
 
 /*---------- UI Error - Start ----------//*/
 
-$error: $error-red;         /* $error-red*/
-$success: $success-green;   /* $success-green*/
-$warning: $warning-amber;    /* $warning-amber*/
+$error: $error-red; /* $error-red*/
+$success: $success-green; /* $success-green*/
+$warning: $warning-amber; /* $warning-amber*/
 
 /*---------- UI Error - End ----------//*/
 
@@ -54,51 +55,51 @@ $warning: $warning-amber;    /* $warning-amber*/
 
 /*---------- Gray - Start ----------//*/
 
-$gray-50: #f6f6f6;        /* $gray-very-light */
-$gray-100: #EBEBEB;        /* $gray-extra-light*/
-$gray-200: #BFBFBF;        /* $gray-light*/
-$gray-300: #B2B2B2;        /* $gray*/
-$gray-400: #757575;        /* $font-light*/
-$gray-500: #464646;        /* $font*/
-$gray-600: #4b4b4b;       /* $gray-dark */
-$gray-700: #252f32;       /* $gray-darker */
-$gray-800: #181818;       /* $gray-very-dark */
-$gray-900: #181818;       /* $gray-very-dark */
+$gray-50: #f6f6f6; /* $gray-very-light*/
+$gray-100: #ebebeb; /* $gray-extra-light*/
+$gray-200: #bfbfbf; /* $gray-light*/
+$gray-300: #b2b2b2; /* $gray*/
+$gray-400: #757575; /* $font-light*/
+$gray-500: #464646; /* $font*/
+$gray-600: #4b4b4b; /* $gray-dark*/
+$gray-700: #252f32; /* $gray-darker*/
+$gray-800: #181818; /* $gray-very-dark*/
+$gray-900: #181818; /* $gray-very-dark*/
 
-$gray-cool-50:  #fefefe;  /* $gray-cool-50 */
-$gray-cool-100: #fafafa;  /* $gray-tint-10 */
-$gray-cool-200: #d3d5d6;  /* $gray-tint-20 */
-$gray-cool-300: #bdc0c1;  /* $gray-tint-30 */
-$gray-cool-400: #a8acad;  /* $gray-tint-40 */
-$gray-cool-500: #929798;  /* $gray-tint-50 */
-$gray-cool-600: #7c8284;  /* $gray-tint-60 */
-$gray-cool-700: #666d6f;  /* $gray-tint-70 */
-$gray-cool-800: #51595b;  /* $gray-tint-80 */
-$gray-cool-900: #3a4346;  /* $gray-tint-90 */
+$gray-cool-50: #fefefe; /* $gray-cool-50*/
+$gray-cool-100: #fafafa; /* $gray-tint-10*/
+$gray-cool-200: #d3d5d6; /* $gray-tint-20*/
+$gray-cool-300: #bdc0c1; /* $gray-tint-30*/
+$gray-cool-400: #a8acad; /* $gray-tint-40*/
+$gray-cool-500: #929798; /* $gray-tint-50*/
+$gray-cool-600: #7c8284; /* $gray-tint-60*/
+$gray-cool-700: #666d6f; /* $gray-tint-70*/
+$gray-cool-800: #51595b; /* $gray-tint-80*/
+$gray-cool-900: #3a4346; /* $gray-tint-90*/
 
-$gray-warm-50:  #fefefe; 
-$gray-warm-100: #fafafa; 
-$gray-warm-200: #d3d5d6; 
-$gray-warm-300: #bdc0c1; 
-$gray-warm-400: #a8acad; 
-$gray-warm-500: #929798; 
-$gray-warm-600: #7c8284; 
-$gray-warm-700: #666d6f; 
-$gray-warm-800: #51595b; 
-$gray-warm-900: #3a4346; 
+$gray-warm-50: #fefefe;
+$gray-warm-100: #fafafa;
+$gray-warm-200: #d3d5d6;
+$gray-warm-300: #bdc0c1;
+$gray-warm-400: #a8acad;
+$gray-warm-500: #929798;
+$gray-warm-600: #7c8284;
+$gray-warm-700: #666d6f;
+$gray-warm-800: #51595b;
+$gray-warm-900: #3a4346;
 
 /*---------- Gray - End ----------//*/
 
 /*---------- Brand - Start ----------//*/
 
 $brand-primary: #060505;
-$brand-secondary: #302F2F;
+$brand-secondary: #302f2f;
 $brand-tertiary: #000000;
 $brand-auxiliary: $grey-light;
 
-$brand-accent-primary: #DF0000;
-$brand-accent-secondary: #E8001C;
-$brand-accent-tertiary: #BA0000;
+$brand-accent-primary: #df0000;
+$brand-accent-secondary: #e8001c;
+$brand-accent-tertiary: #ba0000;
 
 $brand-primary-darker: $brand-red-darken;
 $brand-primary-light: $brand-red-lighten;

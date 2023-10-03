@@ -10,42 +10,35 @@ gb-tab-nav,
 	.content-button-group {
 		@include tfb.base-content-button-group();
 
-		@include tn.base-tab-button-group(
-			c.$white,
-		);
+		@include tn.base-tab-button-group(c.$white);
 
 		border-bottom: 1px solid c.$font-light;
-		font-family: f.$font-family-muli;
+		font-family: f.$font-family-stratum;
 		padding: 0;
 	}
 
 	.content-button {
 		@include tfb.base-content-button();
 
-		@include tn.base-tab-button(
-			c.$white,
-			c.$font,
-			16px,
-			f.$font-weight-normal,
-			56px,
-			0,
-		);
+		@include tn.base-tab-button(c.$white, c.$font, 16px, f.$font-weight-normal, 56px, 0);
 
-		margin-top: 0;
-		padding: 0 26px 0 0;
+		margin-block-start: 0;
+		padding-inline-end: 26px;
 
 		button {
-			font-family: f.$font-family-muli;
+			font-family: f.$font-family-stratum;
 			letter-spacing: 0;
 			line-height: 1.375;
 		}
 
-		&.active, &:hover, &:focus {
+		&.active,
+		&:hover,
+		&:focus {
 			button {
 				border-bottom: 2px solid c.$brand-red;
 				color: c.$brand-red;
-                font-weight: f.$font-weight-bold;
-				margin-bottom: -1px;
+				font-weight: f.$font-weight-bold;
+				margin-block-end: -1px;
 			}
 		}
 	}
@@ -53,10 +46,7 @@ gb-tab-nav,
 	.content-container {
 		@include tfb.base-content-container();
 
-		@include tn.base-tab-content-container(
-			c.$white,
-			0,
-		);
+		@include tn.base-tab-content-container(c.$white, 0);
 
 		.back-button {
 			@include tfb.base-compact-content-container-back-button(
@@ -66,12 +56,12 @@ gb-tab-nav,
 				15px,
 				f.$font-weight-bold,
 				51px,
-				0 43px,
+				0 43px
 			);
 
-            border-bottom: 1px solid c.$font;
+			border-bottom: 1px solid c.$font;
 			display: none;
-			font-family: f.$font-family-muli;
+			font-family: f.$font-family-stratum;
 			letter-spacing: 2px;
 			line-height: 1.5;
 		}
@@ -79,16 +69,17 @@ gb-tab-nav,
 		.stacked-content-title {
 			align-items: center;
 			background: c.$brand-black;
-            border-bottom: 2px solid c.$brand-red;
+			border-bottom: 2px solid c.$brand-red;
 			color: c.$white;
 			display: none;
-            font-size: 22px;
 			font-family: f.$font-family-stratum;
-            font-weight: f.$font-weight-xbold;
+			font-size: 22px;
+			font-weight: f.$font-weight-xbold;
 			height: 47px;
 			letter-spacing: 1px;
 			line-height: 1.75;
-            padding: 0 16px;
+			padding-block: 0;
+			padding-inline: 16px;
 		}
 	}
 
@@ -98,42 +89,46 @@ gb-tab-nav,
 		.content-button-group {
 			@include tfb.base-compact-content-button-group();
 
-			@include tn.base-tab-button-group(
-				c.$white,
-			);
+			@include tn.base-tab-button-group(c.$white);
 
-			border-bottom: none;
+			border-bottom: 0;
 		}
 
 		.content-button {
 			@include tfb.base-compact-content-button();
 			background: c.$brand-black-lighten;
 			border-bottom: 1px solid c.$font;
-            height: 47px;
-            padding: 8px 5px 9px 15px;
+			height: 47px;
+			padding-block: 8px 9px;
+			padding-inline: 15px 5px;
 
-            button {
+			button {
 				align-items: center;
+				color: c.$white;
 				display: flex;
+				font-weight: f.$font-weight-bold;
+				height: 47px;
 				position: relative;
-                color: c.$white;
-                font-weight: f.$font-weight-bold;
-                height: 47px;
 
 				&::after {
-					content: url("data:image/svg+xml,%3Csvg%20width%3D%2231%22%20height%3D%2231%22%20viewBox%3D%220%200%2031%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11.822%2021.145%205.728-5.73-5.728-5.728%201.743-1.744%207.472%207.473-7.472%207.472z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E");
+					content: url('data:image/svg+xml,%3Csvg%20width%3D%2231%22%20height%3D%2231%22%20viewBox%3D%220%200%2031%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11.822%2021.145%205.728-5.73-5.728-5.728%201.743-1.744%207.472%207.473-7.472%207.472z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
+					height: 31px;
+					inset-inline-end: 0;
 					position: absolute;
-					right: 0;
+					transform: var(--rotate-stacked-button-arrow);
+					width: 31px;
 				}
-            }
+			}
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus {
 				background: c.$brand-primary;
+
 				button {
-					border-bottom: none;
+					border-bottom: 0;
 					color: c.$white;
-                    font-weight: f.$font-weight-bold;
-					margin-bottom: 0;
+					font-weight: f.$font-weight-bold;
+					margin-block-end: 0;
 				}
 			}
 
@@ -142,16 +137,17 @@ gb-tab-nav,
 					background: c.$brand-black-lighten;
 
 					button {
-						border-bottom: none;
-						margin-bottom: 0;
+						border-bottom: 0;
+						margin-block-end: 0;
 					}
 
-					&:hover, &:focus {
+					&:hover,
+					&:focus {
 						background: c.$brand-primary;
 
 						button {
-							border-bottom: none;
-							margin-bottom: 0;
+							border-bottom: 0;
+							margin-block-end: 0;
 						}
 					}
 				}
@@ -166,11 +162,13 @@ gb-tab-nav,
 				display: block;
 
 				&::before {
-					content: url("data:image/svg+xml,%3Csvg%20width%3D%2231%22%20height%3D%2231%22%20viewBox%3D%220%200%2031%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11.822%2021.145%205.728-5.73-5.728-5.728%201.743-1.744%207.472%207.473-7.472%207.472z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E");
-					left: 4px;
+					content: url('data:image/svg+xml,%3Csvg%20width%3D%2231%22%20height%3D%2231%22%20viewBox%3D%220%200%2031%2031%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11.822%2021.145%205.728-5.73-5.728-5.728%201.743-1.744%207.472%207.473-7.472%207.472z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
+					height: 31px;
+					inset-inline-start: 4px;
 					position: absolute;
-					top: 3px;
-					transform: rotate(180deg);
+					top: 10px;
+					transform: var(--rotate-back-button-arrow);
+					width: 31px;
 				}
 
 				/* stylelint-disable-next-line*/
@@ -178,12 +176,15 @@ gb-tab-nav,
 					color: c.$white;
 					font-size: 15px;
 					line-height: 1.5;
-					padding: 0 43px;
+					padding-block: 0;
+					padding-inline: 43px;
 				}
 			}
 
 			/* Overriding container movement properties so container content appears over content below it.*/
-			&.open, &.opening, &.closing {
+			&.open,
+			&.opening,
+			&.closing {
 				position: fixed;
 				z-index: 1;
 			}

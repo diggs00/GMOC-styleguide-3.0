@@ -1,0 +1,89 @@
+@use 'checkbox';
+@use '../../../crossbrand/colors';
+@use '../../../crossbrand/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	position: relative;
+
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$font,
+			fonts.$font-family-overpass,
+			16px,
+			fonts.$font-weight-normal,
+			0,
+			normal
+		);
+
+		margin: 0 5px;
+		position: relative;
+		top: 2px;
+
+		@include bp.medium-and-above {
+			font-size: 18px;
+		}
+	}
+
+	input[type='checkbox'] {
+		$box-size: 18px;
+
+		@include checkbox.base-box(20px);
+
+		background: none;
+		border: 2px solid colors.$font;
+		margin: 3px;
+		position: relative;
+
+		&:checked {
+			background: colors.$font;
+
+			&::after {
+				border: 0;
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M14.25%203l-7.5%209-3-3-1.5%202.25%204.5%204.5L16.5%204.5%2014.25%203z%22%20transform%3D%22translate(-339%20-204)%20translate(338%20191)%20translate(0%2011)%20translate(1%202)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+				height: $box-size;
+				left: -1px;
+				position: absolute;
+				top: -1px;
+				width: $box-size;
+			}
+		}
+	}
+
+	&:hover {
+		input[type='checkbox'] {
+			background: colors.$font;
+
+			&:checked {
+				background: none;
+
+				&::after {
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%20%3Cg%20fill%3D%22%23373F42%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M14.25%203l-7.5%209-3-3-1.5%202.25%204.5%204.5L16.5%204.5%2014.25%203z%22%20transform%3D%22translate(-339%20-248)%20translate(338%20235)%20translate(0%2011)%20translate(1%202)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+				}
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			background: none;
+			border: 2px solid colors.$font;
+			opacity: .4;
+
+			&:checked {
+				background: colors.$font;
+			}
+		}
+
+		&:hover {
+			input[type='checkbox'] {
+				&:checked {
+					&::after {
+						content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M14.25%203l-7.5%209-3-3-1.5%202.25%204.5%204.5L16.5%204.5%2014.25%203z%22%20transform%3D%22translate(-339%20-204)%20translate(338%20191)%20translate(0%2011)%20translate(1%202)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+					}
+				}
+			}
+		}
+	}
+}

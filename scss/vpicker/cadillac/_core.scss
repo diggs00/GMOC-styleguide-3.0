@@ -12,19 +12,18 @@
 /* Core styling*/
 @include gff.generate_font_faces(f.$font-list, f.$base-font-url-path);
 
-@include rf.root-font(
-	f.$cadillac-sans,
-	c.$grey-darker,
-	f.$base-font-sm,
-	600px,
-	f.$base-font-med,
-	960px,
-	f.$base-font-lg,
-	400
-);
-
 body {
-	font-size: 1rem;
+	color: c.$grey-darker;
+	font-family: f.$cadillac-sans;
+	font-size: calc(.875 * #{com.$gmux-base-font});
 	letter-spacing: 1px;
 	line-height: 1.625;
+
+	@include bp.medium-and-above {
+		font-size: calc(.9375 * #{com.$gmux-base-font});
+	}
+
+	@include bp.large-and-above {
+		font-size: calc(1 * #{com.$gmux-base-font});
+	}
 }

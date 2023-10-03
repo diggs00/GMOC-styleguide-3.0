@@ -18,14 +18,14 @@
 		svg,
 		img {
 			display: block;
-			margin: auto auto calc(0.2884 * #{com.$gmux-base-font});
+			margin: auto auto calc(.2884 * #{com.$gmux-base-font});
 
 			@include bp.medium-and-above {
-				margin: auto auto calc(0.3004 * #{com.$gmux-base-font});
+				margin: auto auto calc(.3004 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				margin: auto auto calc(0.3124 * #{com.$gmux-base-font});
+				margin: auto auto calc(.3124 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -59,12 +59,12 @@
 		0,
 		c.$brand-black,
 		f.$font-family-avenir-next,
-		calc(0.8654 * #{com.$gmux-base-font}),
+		calc(.8654 * #{com.$gmux-base-font}),
 		f.$font-weight-book,
 		1px,
 		1.7,
-		0 calc(1.875 * #{com.$gmux-base-font}) calc(0.75 * #{com.$gmux-base-font}) 0,
-		calc(0.75 * #{com.$gmux-base-font}),
+		0 calc(1.875 * #{com.$gmux-base-font}) calc(.75 * #{com.$gmux-base-font}) 0,
+		calc(.75 * #{com.$gmux-base-font}),
 		c.$white-mid,
 		c.$brand-black,
 		20px,
@@ -73,18 +73,18 @@
 	);
 
 	@include bp.medium-and-above {
-		font-size: calc(0.9015 * #{com.$gmux-base-font});
-		margin: 0 calc(1.9531 * #{com.$gmux-base-font}) calc(0.7812 * #{com.$gmux-base-font}) 0;
-		padding: calc(0.7812 * #{com.$gmux-base-font});
+		font-size: calc(.9015 * #{com.$gmux-base-font});
+		margin: 0 calc(1.9531 * #{com.$gmux-base-font}) calc(.7812 * #{com.$gmux-base-font}) 0;
+		padding: calc(.7812 * #{com.$gmux-base-font});
 
 		&::after {
 			margin-left: calc(3.125 * #{com.$gmux-base-font});
 		}
 	}
 	@include bp.large-and-above {
-		font-size: calc(0.9376 * #{com.$gmux-base-font});
-		margin: 0 calc(2.0312 * #{com.$gmux-base-font}) calc(0.8125 * #{com.$gmux-base-font}) 0;
-		padding: calc(0.8125 * #{com.$gmux-base-font});
+		font-size: calc(.9376 * #{com.$gmux-base-font});
+		margin: 0 calc(2.0312 * #{com.$gmux-base-font}) calc(.8125 * #{com.$gmux-base-font}) 0;
+		padding: calc(.8125 * #{com.$gmux-base-font});
 
 		&::after {
 			margin-left: calc(3.25 * #{com.$gmux-base-font});
@@ -92,7 +92,7 @@
 	}
 }
 
-$transition: background 0.25s, border 0.25s, color 0.25s;
+$transition: background .25s, border .25s, color .25s;
 
 %gb-primary-button {
 	@include b.primary-button(
@@ -144,7 +144,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		color: c.$web-orange;
 
 		&:active,
-		&:hover {
+		&:hover,
+		&.gb-target-zone-button-active {
 			background-color: c.$web-orange;
 			color: c.$white;
 		}
@@ -470,7 +471,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		f.$font-weight-book,
 		normal,
 		1,
-		calc(0.75 * #{com.$gmux-base-font}) 0 calc(calc(0.75 * #{com.$gmux-base-font}) - 1px) 0,
+		calc(.75 * #{com.$gmux-base-font}) 0 calc(calc(.75 * #{com.$gmux-base-font}) - 1px) 0,
 		c.$brand-black
 	);
 
@@ -483,18 +484,18 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 
 	@include bp.medium-and-above {
 		font-size: calc(1.3218 * #{com.$gmux-base-font});
-		padding: calc(0.7812 * #{com.$gmux-base-font}) 0 calc(calc(0.7812 * #{com.$gmux-base-font}) - 1px) 0;
+		padding: calc(.7812 * #{com.$gmux-base-font}) 0 calc(calc(.7812 * #{com.$gmux-base-font}) - 1px) 0;
 	}
 	@include bp.large-and-above {
 		font-size: calc(1.3747 * #{com.$gmux-base-font});
-		padding: calc(0.8125 * #{com.$gmux-base-font}) 0 calc(calc(0.8125 * #{com.$gmux-base-font}) - 1px) 0;
+		padding: calc(.8125 * #{com.$gmux-base-font}) 0 calc(calc(.8125 * #{com.$gmux-base-font}) - 1px) 0;
 	}
 }
 
 %gb-icon-button {
 	@extend %button-icon-base;
 	display: inline-block;
-	padding: calc(0.75 * #{com.$gmux-base-font});
+	padding: calc(.75 * #{com.$gmux-base-font});
 	width: auto;
 
 	&:hover {
@@ -506,10 +507,10 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	}
 
 	@include bp.medium-and-above {
-		padding: calc(0.7812 * #{com.$gmux-base-font});
+		padding: calc(.7812 * #{com.$gmux-base-font});
 	}
 	@include bp.large-and-above {
-		padding: calc(0.8125 * #{com.$gmux-base-font});
+		padding: calc(.8125 * #{com.$gmux-base-font});
 	}
 }
 
@@ -522,7 +523,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			padding-bottom: calc(1.1421 * #{com.$gmux-base-font});
 			padding-top: calc(1.1421 * #{com.$gmux-base-font});
 		}
-	
+
 		@include bp.large-and-above {
 			padding-bottom: calc(1.1878 * #{com.$gmux-base-font});
 			padding-top: calc(1.1878 * #{com.$gmux-base-font});
@@ -537,7 +538,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			padding-bottom: calc(1.5625 * #{com.$gmux-base-font});
 			padding-top: calc(1.5625 * #{com.$gmux-base-font});
 		}
-	
+
 		@include bp.large-and-above {
 			padding-bottom: calc(1.625 * #{com.$gmux-base-font});
 			padding-top: calc(1.625 * #{com.$gmux-base-font});
@@ -560,7 +561,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		c.$brand-black,
 		f.$font-family-futura,
 		calc(1.0935 * #{com.$gmux-base-font}),
-		calc(1.1390 * #{com.$gmux-base-font}),
+		calc(1.139 * #{com.$gmux-base-font}),
 		calc(1.1846 * #{com.$gmux-base-font}),
 		f.$font-weight-book,
 		normal,
@@ -616,7 +617,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			padding-bottom: calc(1.9531 * #{com.$gmux-base-font});
 			padding-top: calc(1.9531 * #{com.$gmux-base-font});
 		}
-	
+
 		@include bp.large-and-above {
 			padding-bottom: calc(2.0312 * #{com.$gmux-base-font});
 			padding-top: calc(2.0312 * #{com.$gmux-base-font});
@@ -631,7 +632,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			padding-bottom: calc(2.6562 * #{com.$gmux-base-font});
 			padding-top: calc(2.6562 * #{com.$gmux-base-font});
 		}
-	
+
 		@include bp.large-and-above {
 			padding-bottom: calc(2.7624 * #{com.$gmux-base-font});
 			padding-top: calc(2.7624 * #{com.$gmux-base-font});
@@ -653,8 +654,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		transparent,
 		c.$brand-black,
 		f.$font-family-futura,
-		calc(0.9232 * #{com.$gmux-base-font}),
-		calc(0.9617 * #{com.$gmux-base-font}),
+		calc(.9232 * #{com.$gmux-base-font}),
+		calc(.9617 * #{com.$gmux-base-font}),
 		calc(1.0001 * #{com.$gmux-base-font}),
 		f.$font-weight-book,
 		1px,
@@ -682,8 +683,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		left: -4px;
 		position: absolute;
 		top: 0;
-		transition: left 0.15s;
-		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+		transition: left .15s;
+		transition-timing-function: cubic-bezier(0, 1, .5, 1);
 		width: 4px;
 	}
 
@@ -720,8 +721,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		c.$brand-white,
 		c.$brand-black,
 		f.$font-family-futura,
-		calc(0.9232 * #{com.$gmux-base-font}),
-		calc(0.9617 * #{com.$gmux-base-font}),
+		calc(.9232 * #{com.$gmux-base-font}),
+		calc(.9617 * #{com.$gmux-base-font}),
 		calc(1.0001 * #{com.$gmux-base-font}),
 		f.$font-weight-book,
 		1px,
@@ -749,8 +750,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		left: -4px;
 		position: absolute;
 		top: 0;
-		transition: left 0.15s;
-		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+		transition: left .15s;
+		transition-timing-function: cubic-bezier(0, 1, .5, 1);
 		width: 4px;
 	}
 
@@ -796,7 +797,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 
 %gb-list-item-description {
 	@include b.list-item-description(
-		calc(0.6562 * #{com.$gmux-base-font}),
+		calc(.6562 * #{com.$gmux-base-font}),
 		f.$font-family-futura,
 		f.$font-weight-normal,
 		normal,
@@ -805,11 +806,11 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	);
 
 	@include bp.medium-and-above {
-		font-size: calc(0.6835 * #{com.$gmux-base-font});
+		font-size: calc(.6835 * #{com.$gmux-base-font});
 	}
 
 	@include bp.large-and-above {
-		font-size: calc(0.7109 * #{com.$gmux-base-font});
+		font-size: calc(.7109 * #{com.$gmux-base-font});
 	}
 }
 

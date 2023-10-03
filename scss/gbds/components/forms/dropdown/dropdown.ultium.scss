@@ -1,0 +1,110 @@
+@use 'dropdown' as dropdown;
+@use '../../../ultium/colors' as colors;
+@use '../../../ultium/fonts' as fonts;
+@use '../../../utils/breakpoints' as breakpoints;
+
+.gb-dropdown {
+	.gb-select-container {
+		position: relative;
+
+		label {
+			@include dropdown.base-label(
+				fonts.$font-family-overpass,
+				16px,
+				normal,
+				20px,
+				0
+			);
+			color: colors.$gray-4;
+			height: 20px;
+			left: 16px;
+			pointer-events: none;
+			position: absolute;
+			top: 17px;
+			transition: all .1s ease;
+		}
+
+		select {
+			@include dropdown.base-select(
+				colors.$white,
+				url('data:image/svg+xml,%3Csvg%20width="12"%20height="6"%20viewBox="0%200%2014%208"%20fill="none"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cpath%20d="M13%201L7%207L1%200.999999"%20stroke="black"%20stroke-width="1.3"%20stroke-linecap="round"%20stroke-linejoin="round"/%3E%3C/svg%3E'),
+				url('data:image/svg+xml,%3Csvg%20width="12"%20height="6"%20viewBox="0%200%2014%208"%20fill="none"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cpath%20d="M13%201L7%207L1%200.999999"%20stroke="black"%20stroke-width="1.3"%20stroke-linecap="round"%20stroke-linejoin="round"/%3E%3C/svg%3E'),
+				top 50% right 1rem,
+				14px 8px,
+				1px solid colors.$black,
+				fonts.$font-family-overpass,
+				16px,
+				0,
+				27px 0 9px 14px,
+				100%
+			);
+			border-radius: 1px;
+			color: colors.$black;
+			height: 56px;
+			line-height: 20px;
+
+			&:hover {
+				border: 2px solid colors.$blue-primary;
+			}
+
+			&:focus,
+			&:active {
+				background-image: url('data:image/svg+xml,%3Csvg%20width="14"%20height="8"%20viewBox="0%200%2014%208"%20fill="none"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cpath%20d="M1%207L7%201L13%207"%20stroke="black"%20stroke-width="1.3"%20stroke-linecap="round"%20stroke-linejoin="round"/%3E%3C/svg%3E');
+				border: 2px solid colors.$black;
+			}
+
+			&[disabled] {
+				background-color: colors.$gray-3;
+				border: 1px solid colors.$gray-3;
+				opacity: 1;
+			}
+		}
+	}
+
+	.gb-helper-text {
+		color: colors.$gray-5;
+		font-family: fonts.$font-family-overpass;
+		font-size: 12px;
+		line-height: 1.33;
+		margin: 3px 0;
+		position: relative;
+	}
+
+	&.gb-option-selected {
+		.gb-select-container {
+			label {
+				@include dropdown.base-label(
+					fonts.$font-family-overpass,
+					12px,
+					normal,
+					normal,
+					0
+				);
+				color: colors.$gray-5;
+				pointer-events: none;
+				position: absolute;
+				top: 9px;
+				transition: all .1s ease;
+			}
+		}
+	}
+
+	&.form-error {
+		select {
+			border: 2px solid colors.$error-red;
+			padding: 23px 19px 4px 16px;
+		}
+
+		.gb-helper-text {
+			color: colors.$gray-5;
+			font-family: fonts.$font-family-overpass;
+			margin: 3px 0 0 20px;
+		}
+	}
+
+	&.gb-disabled {
+		label {
+			color: colors.$off-white;
+		}
+	}
+}

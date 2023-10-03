@@ -1,0 +1,317 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../ultium/_colors.scss' as c;
+@use '../../ultium/_fonts.scss' as f;
+@use '../../utils/animations/_container-movement.scss' as cm;
+@use '../../utils/_breakpoints.scss' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+	background-color: c.$black;
+	padding-inline: 40px;
+
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(c.$white);
+
+		border-bottom: solid 1px c.$blue-light-secondary;
+		font-family: f.$font-family-overpass;
+		padding-inline-start: 0;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(c.$white, c.$black, 12px, f.$font-weight-bold, 40px, 0);
+
+		margin-block-start: 0;
+		padding-inline-end: 13px;
+
+		button {
+			font-family: inherit;
+			height: 32px;
+			line-height: 1.1667;
+		}
+
+		&.active {
+			button {
+				border-bottom: solid 3px c.$blue-light-secondary;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+		@include tn.base-tab-content-container(c.$white, 0);
+		left: auto;
+
+		.back-button {
+			cursor: pointer;
+			@include tfb.base-compact-content-container-back-button(
+				c.$white,
+				none,
+				c.$black,
+				18px,
+				f.$font-weight-bold,
+				auto,
+				0 30px 0 30px
+			);
+
+			display: none;
+			font-family: f.$font-family-overpass;
+		}
+
+		.stacked-content-title {
+			display: none;
+		}
+	}
+
+	@mixin slide-left-right($top) {
+		left: auto;
+		position: fixed;
+		right: 100%;
+		top: $top;
+		visibility: hidden;
+		width: 100%;
+	
+		@keyframes gb-slide-left {
+			from {
+				left: auto;
+				right: -100%;
+			}
+	
+			to {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		@keyframes gb-arrow-medium {
+			from {
+				left: auto;
+				right: -100%;
+			}
+	
+			to {
+				left: auto;
+				right: 328px;
+			}
+		}
+
+		@keyframes gb-arrow-small {
+			from {
+				left: 100%;
+				right: auto;
+			}
+	
+			to {
+				left: 25px;
+				right: auto;
+			}
+		}
+	
+		@keyframes gb-slide-right {
+			from {
+				left: auto;
+				right: 0;
+			}
+	
+			to {
+				left: auto;
+				right: -100%;
+			}
+		}
+	
+		&.opening {
+			animation: gb-slide-left cm.$slide-left-time cm.$timing-slide-left-right;
+			@include bp.small-only {
+				max-width: 100%;
+			}
+
+			.back-button {
+				animation: gb-slide-left cm.$slide-left-time cm.$timing-slide-left-right;
+			}
+
+			button.back-button::before {
+				@include bp.medium-and-above {
+					animation: gb-arrow-medium cm.$slide-left-time cm.$timing-slide-left-right;
+				}
+
+				@include bp.small-only {
+					animation: gb-arrow-small cm.$slide-left-time cm.$timing-slide-left-right;
+
+				}
+			}
+		}
+	
+		&.closing {
+			animation: gb-slide-right cm.$slide-right-time cm.$timing-slide-left-right;
+
+			.back-button,
+			button.back-button::before {
+				animation: gb-slide-right cm.$slide-right-time cm.$timing-slide-left-right;
+			}
+		}
+	
+		&.open {
+			left: auto;
+			@include bp.small-only {
+				max-width: 100%;
+			}
+		}
+	
+		&.opening,
+		&.closing,
+		&.open {
+			display: inline-block;
+			position: absolute;
+			visibility: visible;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		padding-inline-end: 50px;
+		padding-top: 80px;
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(c.$black);
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			@include tn.base-tab-button(c.$black, c.$white, 22px, f.$font-weight-bold, auto, 20px);
+
+			button {
+				line-height: 1.28578;
+
+				&::before {
+					border-top: solid transparent;
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2222%22%20fill%3D%22none%22%3E%3Cpath%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.3%22%20d%3D%22m1%201%2010%2010L1%2021%22%2F%3E%3C%2Fsvg%3E');
+					cursor: pointer;
+					position: absolute;
+					right: 4.375rem;
+				}
+
+				&:hover {
+					&::before {
+						content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2222%22%20fill%3D%22none%22%3E%3Cpath%20stroke%3D%22%238DF7FD%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.3%22%20d%3D%22m1%201%2010%2010L1%2021%22%2F%3E%3C%2Fsvg%3E');
+					}
+				}
+			}
+
+			&:active,
+			&:hover,
+			&:focus {
+				button {
+					color: c.$blue-light-secondary;
+				}
+			}
+
+			border-top: 1px solid c.$blue-light-secondary;
+		}
+
+		.content-container {
+
+			@include slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			padding-top: 61px;
+
+			.back-button {
+				background-color: c.$black;
+				display: block;
+				position: fixed;
+				right: 0;
+				top: 56px;
+				z-index: 1;
+
+				@include bp.small-only {
+					width: 100%;
+				}
+
+				@include bp.medium-and-above {
+					width: 360px;
+				}
+
+				&::before {
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22none%22%3E%3Cpath%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.3%22%20d%3D%22M13%208H3m0%200%204%204M3%208l4-4%22%2F%3E%3C%2Fsvg%3E');
+					height: 14px;
+					inset-inline-start: 4px;
+					left: auto;
+					line-height: 2;
+					position: fixed;
+					right: 328px;
+					top: 54px;
+					width: 7px;
+					
+					@include bp.small-only {
+						left: 25px;
+						right: auto;
+					}
+				}
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$white;
+					font-family: f.$font-family-overpass;
+					font-size: 14px;
+					letter-spacing: .72px;
+					line-height: 2;
+					padding-left: 45px;
+					text-align: left;
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			@include bp.small-only {
+				&.open,
+				&.opening,
+				&.closing {
+					background-color: c.$black;
+					left: auto;
+					position: fixed;
+					right: 0;
+					width: 100%;
+					z-index: 1;
+				}
+			}
+
+			@include bp.medium-and-above {
+				&.open,
+				&.opening,
+				&.closing {
+					background-color: c.$black;
+					left: auto;
+					position: fixed;
+					right: 0;
+					width: 360px;
+					z-index: 1;
+				}
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

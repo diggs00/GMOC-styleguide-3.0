@@ -1,4 +1,4 @@
-$black: #000;
+$black: #000000;
 $brownish-grey: #6e6e6e;
 $grey-very-dark: #181818;
 $grey-darker: #252f32;
@@ -6,6 +6,7 @@ $grey-dark: #4b4b4b;
 $grey: #797776;
 $grey-extra-light: #dddddd;
 $grey-light: #c8c8c8;
+$grey-mid: $grey-dark;
 $grey-very-light: #f6f6f6;
 $grey-tint-90: #3a4346;
 $grey-tint-80: #51595b;
@@ -37,23 +38,22 @@ $grey-medium: #656565;
 $grey-mid-dark: #6e6e6e;
 $amber: #e06a05;
 
-
 /* Unified color variables*/
 /*----------------------------------//*/
 /*--------- Colors - Start ---------//*/
 /*----------------------------------//*/
 
-$black: #000;
-$white: #fff;
+$black: #000000;
+$white: #ffffff;
 
 /*----------------------------------//*/
 /*--------- Colors - End -----------//*/
 /*----------------------------------//*/
 
-$error-red: #b50000;         /* $error-red*/
-$error-red-light: #FF0124;   /* $error-red-light*/
-$success-green: #0a7305;       /* $success-green*/
-$warning-amber: #F16100;       /* $success-green*/
+$error-red: #b50000; /* $error-red*/
+$error-red-light: #ff0124; /* $error-red-light*/
+$success-green: #0a7305; /* $success-green*/
+$warning-amber: #f16100; /* $success-green*/
 
 /*----------------------------------//*/
 /*--------- Colors - Start ---------//*/
@@ -61,54 +61,54 @@ $warning-amber: #F16100;       /* $success-green*/
 
 /*---------- Gray - Start ----------//*/
 
-$gray-50: #f6f6f6;        /* $gray-very-light */
-$gray-100: #f6f6f6;       /* $gray-very-light */
-$gray-200: #f6f6f6;       /* $gray-very-light*/
-$gray-300: #ddd;          /* $gray-extra-light*/
-$gray-400: #c8c8c8;       /* $gray-light*/
-$gray-500: #797776;       /* $gray*/
-$gray-600: #4B4B4B;       /* $gray-dark*/
-$gray-700: #222F32;       /* $gray-darker*/
-$gray-800: #181818;       /* $gray-very-dark*/
-$gray-900: #181818;       /* $gray-very-dark*/
+$gray-50: #f6f6f6; /* $gray-very-light*/
+$gray-100: #f6f6f6; /* $gray-very-light*/
+$gray-200: #f6f6f6; /* $gray-very-light*/
+$gray-300: #dddddd; /* $gray-extra-light*/
+$gray-400: #c8c8c8; /* $gray-light*/
+$gray-500: #797776; /* $gray*/
+$gray-600: #4b4b4b; /* $gray-dark*/
+$gray-700: #222f32; /* $gray-darker*/
+$gray-800: #181818; /* $gray-very-dark*/
+$gray-900: #181818; /* $gray-very-dark*/
 
-$gray-cool-50:  #fefefe;  /* $gray-cool-50 */
-$gray-cool-100: #fafafa;  /* $gray-tint-10*/
-$gray-cool-200: #D3D5D6;  /* $gray-tint-20*/
-$gray-cool-300: #BCC0C1;  /* $gray-tint-30*/
-$gray-cool-400: #A7ACAD;  /* $gray-tint-40*/
-$gray-cool-500: #919798;  /* $gray-tint-50*/
-$gray-cool-600: #7B8284;  /* $gray-tint-60*/
-$gray-cool-700: #646D6F;  /* $gray-tint-70*/
-$gray-cool-800: #4F595B;  /* $gray-tint-80*/
-$gray-cool-900: #384346;  /* $gray-tint-90*/
+$gray-cool-50: #fefefe; /* $gray-cool-50*/
+$gray-cool-100: #fafafa; /* $gray-tint-10*/
+$gray-cool-200: #d3d5d6; /* $gray-tint-20*/
+$gray-cool-300: #bcc0c1; /* $gray-tint-30*/
+$gray-cool-400: #a7acad; /* $gray-tint-40*/
+$gray-cool-500: #919798; /* $gray-tint-50*/
+$gray-cool-600: #7b8284; /* $gray-tint-60*/
+$gray-cool-700: #646d6f; /* $gray-tint-70*/
+$gray-cool-800: #4f595b; /* $gray-tint-80*/
+$gray-cool-900: #384346; /* $gray-tint-90*/
 
-$gray-warm-50:  #fefefe; 
-$gray-warm-100: #fafafa; 
-$gray-warm-200: #d3d5d6; 
-$gray-warm-300: #bdc0c1; 
-$gray-warm-400: #a8acad; 
-$gray-warm-500: #929798; 
-$gray-warm-600: #7c8284; 
-$gray-warm-700: #666d6f; 
-$gray-warm-800: #51595b; 
-$gray-warm-900: #3a4346; 
+$gray-warm-50: #fefefe;
+$gray-warm-100: #fafafa;
+$gray-warm-200: #d3d5d6;
+$gray-warm-300: #bdc0c1;
+$gray-warm-400: #a8acad;
+$gray-warm-500: #929798;
+$gray-warm-600: #7c8284;
+$gray-warm-700: #666d6f;
+$gray-warm-800: #51595b;
+$gray-warm-900: #3a4346;
 
 /*---------- Gray - End ----------//*/
 
 /*---------- Brand - Start ----------//*/
 
-$brand-primary: #BEAD76;
+$brand-primary: #bead76;
 $brand-secondary: #821529;
-$brand-tertiary: #13426B;
+$brand-tertiary: #13426b;
 $brand-auxiliary: $gray-500;
 
-$brand-accent-primary: #9E8D6A;
-$brand-accent-secondary: #6A0316;
-$brand-accent-tertiary: #0B304B;
+$brand-accent-primary: #9e8d6a;
+$brand-accent-secondary: #6a0316;
+$brand-accent-tertiary: #0b304b;
 
-$brand-primary-darker: #7B6C50;
-$brand-primary-light: #DBD2B3;
+$brand-primary-darker: #7b6c50;
+$brand-primary-light: #dbd2b3;
 
 /*---------- Brand - End ----------//*/
 
@@ -125,10 +125,10 @@ $font-hover-state: $font-color-secondary;
 
 /*---------- Form - Start ----------//*/
 
-$error: $error-red;         /* $error-red*/
-$error-light: $error-red-light;   /* $error-red-light*/
-$success: $success-green;   /* $success-green*/
-$warning: $warning-amber;    /* $warning-amber*/
+$error: $error-red; /* $error-red*/
+$error-light: $error-red-light; /* $error-red-light*/
+$success: $success-green; /* $success-green*/
+$warning: $warning-amber; /* $warning-amber*/
 
 /*---------- Form - End ----------//*/
 

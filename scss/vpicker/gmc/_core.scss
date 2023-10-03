@@ -1,9 +1,9 @@
 /* Common (global) cross-brand styles*/
-@use '../common/common';
+@use '../common/common' as com;
 
 /* Generic utilities*/
 @use '../utils/generate_font_faces' as gff;
-@use '../utils/root-font' as rf;
+@use '../utils/breakpoints' as bp;
 
 /* Brand utilities and variables*/
 @use 'fonts' as f;
@@ -12,17 +12,17 @@
 /* Core styling*/
 @include gff.generate_font_faces(f.$font-list, f.$base-font-url-path);
 
-@include rf.root-font(
-	f.$font-family-muli,
-	c.$font,
-	f.$base-font-sm,
-	600px,
-	f.$base-font-med,
-	960px,
-	f.$base-font-lg,
-);
-
 body {
-	font-size: 1.6rem;
+	color: c.$font;
+	font-family: f.$font-family-stratum;
+	font-size: calc(1 * #{com.$gmux-base-font});
 	line-height: 2;
+
+	@include bp.medium-and-above {
+		font-size: calc(1.1 * #{com.$gmux-base-font});
+	}
+
+	@include bp.large-and-above {
+		font-size: calc(1.2 * #{com.$gmux-base-font});
+	}
 }

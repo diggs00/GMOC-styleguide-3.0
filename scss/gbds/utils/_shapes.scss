@@ -1,9 +1,14 @@
 /* Draw a triangle pointing straight up, down, left and right */
-@mixin icon-triangle($orientation, $height, $width, $color, $position : absolute) {
+@mixin icon-triangle(
+	$orientation,
+	$height,
+	$width,
+	$color,
+	$position: absolute
+) {
 	border: 0;
 	content: '';
 	position: $position;
-
 
 	@if $orientation == 'up' {
 		border-bottom: $height solid $color;

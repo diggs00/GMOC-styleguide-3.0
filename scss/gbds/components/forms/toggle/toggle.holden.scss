@@ -1,0 +1,100 @@
+@use '../../../common/common' as com;
+@use '../../../utils/breakpoints' as bp;
+
+@use 'toggle' as t;
+@use '../../../holden/colors' as c;
+@use '../../../holden/fonts' as f;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include t.base-toggle-input(
+			48px,
+			48px
+		);
+
+		&::before {
+			@include t.outer-toggle(
+				c.$white,
+				2px solid c.$grey-mid,
+				29px,
+				22px,
+				.4s,
+				36px
+			);
+			left: 6px;
+			top: 14px;
+		}
+
+		&::after {
+			@include t.inner-toggle(
+				c.$grey-dark,
+				50%,
+				14px,
+				.4s,
+				14px
+			);
+			bottom: 4px;
+			left: 10px;
+		}
+
+		&:checked {
+			&::before {
+				background-color: c.$grey-dark;
+				border-color: c.$grey-dark;
+			}
+
+			&::after {
+				background-color: c.$white;
+				transform: translateX(15px);
+			}
+		}
+	}
+
+
+	label {
+		@include t.base-toggle-label(
+			c.$brand-black,
+			f.$font-family-avenir-next,
+			calc(.975 * #{com.$gmux-base-font}),
+			1.5,
+			0 calc(calc(.75 * #{com.$gmux-base-font}) - 8px)
+		);
+		bottom: 17px;
+
+		@include bp.medium-and-above {
+			font-size: calc(1.0156 * #{com.$gmux-base-font});
+			margin: 0 calc(calc(.78125 * #{com.$gmux-base-font}) - 8px);
+		}
+
+		@include bp.large-and-above {
+			font-size: calc(1.05625 * #{com.$gmux-base-font});
+			margin: 0 calc(calc(.8125 * #{com.$gmux-base-font}) - 8px);
+		}
+	}
+
+	&.disabled {
+		opacity: 30%;
+	}
+}
+
+html[dir='rtl'] {
+	.gb-toggle {
+		input[type='checkbox'] {
+			&::before {
+				left: 0;
+				right: 6px;
+			}
+
+			&::after {
+				left: 0;
+				right: 10px;
+			}
+
+			&:checked {
+				&::after {
+					transform: translateX(-15px);
+				}
+			}
+		}
+	}
+}

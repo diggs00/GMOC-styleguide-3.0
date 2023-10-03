@@ -3,26 +3,26 @@
 @use '../../fleet/fonts' as f;
 @use '../../fleet/icons' as i;
 
-$transition: background 0.25s, border 0.25s, color 0.25s;
+$transition: background .25s, border .25s, color .25s;
 
 %link-button-icon-arrow-base {
-	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20viewBox%3D%270%200%2011%2018%27%20id%3D%27arrow-right%27%3E%3Ctitle%3Earrow-right%3C%2Ftitle%3E%3Cg%20id%3D%27Page-1%27%20stroke%3D%27none%27%20stroke-width%3D%271%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20id%3D%27arrow-right%27%20transform%3D%27translate(5.000000%2C%209.000000)%20rotate(-90.000000)%20translate(-5.000000%2C%20-9.000000)%20translate(-3.000000%2C%205.000000)%27%20stroke%3D%27%23007DBE%27%20stroke-width%3D%272.5%27%3E%3Cpolyline%20id%3D%27Path-2%27%20transform%3D%27translate(8.000000%2C%204.000000)%20rotate(90.000000)%20translate(-8.000000%2C%20-4.000000)%20%27%20points%3D%274%20-4%2012%204%204%2012%27%3E%3C%2Fpolyline%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%2018%22%3E%3Cpath%20d%3D%22m1%201%208%208-8%208%22%20stroke%3D%22%23007DBE%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
 	display: inline-block;
 }
 
 %link-button-invert-icon-arrow-base {
-	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20viewBox%3D%270%200%2011%2018%27%20id%3D%27arrow-right%27%3E%3Ctitle%3Earrow-right%3C%2Ftitle%3E%3Cg%20id%3D%27Page-1%27%20stroke%3D%27none%27%20stroke-width%3D%271%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20id%3D%27arrow-right%27%20transform%3D%27translate(5.000000%2C%209.000000)%20rotate(-90.000000)%20translate(-5.000000%2C%20-9.000000)%20translate(-3.000000%2C%205.000000)%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272.5%27%3E%3Cpolyline%20id%3D%27Path-2%27%20transform%3D%27translate(8.000000%2C%204.000000)%20rotate(90.000000)%20translate(-8.000000%2C%20-4.000000)%20%27%20points%3D%274%20-4%2012%204%204%2012%27%3E%3C%2Fpolyline%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%2018%22%3E%3Cpath%20d%3D%22m1%201%208%208-8%208%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
 	display: inline-block;
 
 }
 
 %list-item-button-icon-arrow-base {
-	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20viewBox%3D%270%200%2011%2018%27%20id%3D%27arrow-right%27%3E%3Ctitle%3Earrow-right%3C%2Ftitle%3E%3Cg%20id%3D%27Page-1%27%20stroke%3D%27none%27%20stroke-width%3D%271%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20id%3D%27arrow-right%27%20transform%3D%27translate(5.000000%2C%209.000000)%20rotate(-90.000000)%20translate(-5.000000%2C%20-9.000000)%20translate(-3.000000%2C%205.000000)%27%20stroke%3D%27%23252525%27%20stroke-width%3D%272.5%27%3E%3Cpolyline%20id%3D%27Path-2%27%20transform%3D%27translate(8.000000%2C%204.000000)%20rotate(90.000000)%20translate(-8.000000%2C%20-4.000000)%20%27%20points%3D%274%20-4%2012%204%204%2012%27%3E%3C%2Fpolyline%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%2018%22%3E%3Cpath%20d%3D%22m1%201%208%208-8%208%22%20stroke%3D%22%23252525%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
 	display: inline-block;
 }
 
 %list-item-button-invert-icon-arrow-base {
-	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20viewBox%3D%270%200%2011%2018%27%20id%3D%27arrow-right%27%3E%3Ctitle%3Earrow-right%3C%2Ftitle%3E%3Cg%20id%3D%27Page-1%27%20stroke%3D%27none%27%20stroke-width%3D%271%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cg%20id%3D%27arrow-right%27%20transform%3D%27translate(5.000000%2C%209.000000)%20rotate(-90.000000)%20translate(-5.000000%2C%20-9.000000)%20translate(-3.000000%2C%205.000000)%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272.5%27%3E%3Cpolyline%20id%3D%27Path-2%27%20transform%3D%27translate(8.000000%2C%204.000000)%20rotate(90.000000)%20translate(-8.000000%2C%20-4.000000)%20%27%20points%3D%274%20-4%2012%204%204%2012%27%3E%3C%2Fpolyline%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%2018%22%3E%3Cpath%20d%3D%22m1%201%208%208-8%208%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
 	display: inline-block;
 }
 
@@ -124,11 +124,12 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			border-color: c.$brand-blue;
 		}
 
-		&.active {
+		&.active,
+		&.gb-target-zone-button-active {
 			background-color: c.$brand-blue;
 			border-color: c.$brand-blue;
 			color: c.$white;
-	
+
 			&:hover,
 			&:active {
 				background-color: c.$brand-blue;
@@ -139,7 +140,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 
 	}
 
-	&.active {
+	&.active,
+	&.gb-target-zone-button-active {
 		background-color: c.$blue-darkest;
 		border-color: c.$blue-darkest;
 
@@ -194,7 +196,7 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 			2px solid c.$white,
 			c.$white,
 			c.$white,
-			c.$grey-dark
+			c.$grey-very-dark
 		);
 
 		&.active {
@@ -238,13 +240,13 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	);
 
 	align-items: center;
-	display: inline-flex;
+	display: inline-block;
 	height: 3rem;
-	justify-content: flex-start;
 
 	.gb-link-label {
 		font-family: f.$font-family-gotham;
-		padding: 0 .5rem;
+		padding-left: 0;
+		padding-right: .5rem;
 	}
 
 	&.invert {
@@ -278,19 +280,44 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	}
 
 	&.icon-right {
+		.gb-link-label {
+			padding-left: 0;
+			padding-right: .5rem;
+		}
+
 		&::after {
 			height: i.$icon-small;
-			width: .625rem;
+			width: .5rem;
+		}
+
+		&::before {
+			content: '';
 		}
 	}
 
 	&.icon-left {
-		&::before {
-			height: i.$icon-small;
-			margin: 0 .1875rem;
-			transform: rotate(180deg);
-			width: .625rem;
+		.gb-link-label {
+			padding-left: .5rem;
+			padding-right: 0;
 		}
+
+		&::after {
+			content: '';
+			width: 0;
+		}
+
+		&::before {
+			bottom: 2px;
+			height: i.$icon-small;
+			position: relative;
+			transform: rotate(180deg);
+			width: .5rem;
+		}
+	}
+
+	&::after {
+		@extend %link-button-icon-arrow-base;
+		width: .5rem;
 	}
 }
 
@@ -682,5 +709,36 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	@extend %gb-list-item-inline-icon-tertiary;
 }
 
+html[dir='rtl'] {
+	.gb-link {
+		&.icon-right {
+			&::before {
+				height: 0;
+				width: 0;
+			}
+		}
 
+		&.icon-left {
+			.gb-link-label {
+				padding-left: 0;
+				padding-right: .5rem;
+			}
 
+			&::before {
+				bottom: 0;
+				transform: rotate(0deg);
+			}
+		}
+
+		.gb-link-label {
+			padding-left: .5rem;
+			padding-right: 0;
+		}
+
+		&::after {
+			bottom: 2px;
+			position: relative;
+			transform: rotate(180deg);
+		}
+	}
+}

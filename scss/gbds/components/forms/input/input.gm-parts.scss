@@ -1,0 +1,85 @@
+@use 'input' as i;
+@use '../../../gm-parts/colors' as c;
+@use '../../../gm-parts/fonts' as f;
+
+.gb-input {
+	label {
+		@include i.base-label(
+			f.$font-family-overpass,
+			1rem,
+			0,
+			1.375rem,
+			0 0 1rem
+		);
+		font-weight: f.$font-weight-normal;
+		text-transform: uppercase;
+	}
+
+	input,
+	textarea {
+		@include i.base-input(
+			c.$white,
+			1px solid c.$parts-black,
+			c.$parts-black,
+			45%,
+			f.$font-family-overpass,
+			1.125rem,
+			1.5rem 1rem,
+			1px solid c.$parts-black,
+		);
+		line-height: 1.375rem;
+
+		&::-moz-placeholder {
+			color: c.$grey-dark;
+		}
+
+		&::placeholder {
+			color: c.$grey-dark;
+		}
+	}
+
+	input {
+		max-height: 4.438rem;
+	}
+
+	&.form-error,
+	&.form-success {
+		p {
+			font-family: f.$font-family-overpass;
+			font-size: .75rem;
+			letter-spacing: .03125rem;
+			line-height: 1.125rem;
+			margin-top: 1rem;
+		}
+	}
+
+	&.form-error {
+		input,
+		textarea {
+			border-color: c.$error-red;
+		}
+
+		p {
+			color: c.$error-red;
+		}
+	}
+
+	&.form-success {
+		input,
+		textarea {
+			border-color: c.$success-green;
+		}
+
+		p {
+			color: c.$success-green;
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-input {
+		direction: rtl;
+		display: flex;
+		flex-flow: column wrap;
+	}
+}

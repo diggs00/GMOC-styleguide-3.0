@@ -27,7 +27,7 @@ gb-tab-nav,
 		@include tn.base-tab-button(
 			c.$white,
 			c.$grey-mid-dark,
-			calc(0.6375 * #{com.$gmux-base-font}),
+			calc(.6375 * #{com.$gmux-base-font}),
 			f.$font-weight-bold,
 			50px,
 			0 15px,
@@ -53,11 +53,11 @@ gb-tab-nav,
 		}
 
 		@include bp.medium-and-above {
-			font-size: calc(0.75 * #{com.$gmux-base-font});
+			font-size: calc(.75 * #{com.$gmux-base-font});
 		}
 
 		@include bp.large-and-above {
-			font-size: calc(0.8624 * #{com.$gmux-base-font});
+			font-size: calc(.8624 * #{com.$gmux-base-font});
 		}
 	}
 
@@ -74,7 +74,7 @@ gb-tab-nav,
 				c.$grey-light,
 				none,
 				c.$grey-dark,
-				calc(0.6375 * #{com.$gmux-base-font}),
+				calc(.6375 * #{com.$gmux-base-font}),
 				f.$font-weight-bold,
 				50px,
 				0 30px 0 30px,
@@ -83,11 +83,11 @@ gb-tab-nav,
 			display: none;
 
 			@include bp.medium-and-above {
-				font-size: calc(0.75 * #{com.$gmux-base-font});
+				font-size: calc(.75 * #{com.$gmux-base-font});
 			}
 	
 			@include bp.large-and-above {
-				font-size: calc(0.8624 * #{com.$gmux-base-font});
+				font-size: calc(.8624 * #{com.$gmux-base-font});
 			}
 		}
 
@@ -113,7 +113,7 @@ gb-tab-nav,
 			@include tn.base-tab-button(
 				c.$white,
 				c.$grey-dark,
-				calc(0.6375 * #{com.$gmux-base-font}),
+				calc(.6375 * #{com.$gmux-base-font}),
 				f.$font-weight-bold,
 				auto,
 				20px,
@@ -130,35 +130,35 @@ gb-tab-nav,
 				position: relative;
 
 				&::after {
-					border-bottom: calc(0.2789 * #{com.$gmux-base-font}) solid transparent;
-					border-left: calc(0.4329 * #{com.$gmux-base-font}) solid c.$grey;
-					border-top: calc(0.2789 * #{com.$gmux-base-font}) solid transparent;
+					border-bottom: calc(.2789 * #{com.$gmux-base-font}) solid transparent;
+					border-left: calc(.4329 * #{com.$gmux-base-font}) solid c.$grey;
+					border-top: calc(.2789 * #{com.$gmux-base-font}) solid transparent;
 					content: '';
 					position: absolute;
 					right: calc(1.9921 * #{com.$gmux-base-font});
 	
 					@include bp.medium-and-above {
-						border-bottom: calc(0.3281 * #{com.$gmux-base-font}) solid transparent;
-						border-left: calc(0.5093 * #{com.$gmux-base-font}) solid c.$grey;
-						border-top: calc(0.3281 * #{com.$gmux-base-font}) solid transparent;
+						border-bottom: calc(.3281 * #{com.$gmux-base-font}) solid transparent;
+						border-left: calc(.5093 * #{com.$gmux-base-font}) solid c.$grey;
+						border-top: calc(.3281 * #{com.$gmux-base-font}) solid transparent;
 						right: calc(2.3437 * #{com.$gmux-base-font});
 					}
 	
 					@include bp.large-and-above {
-						border-bottom: calc(0.3773 * #{com.$gmux-base-font}) solid transparent;
-						border-left: calc(0.5857 * #{com.$gmux-base-font}) solid c.$grey;
-						border-top: calc(0.3773 * #{com.$gmux-base-font}) solid transparent;
+						border-bottom: calc(.3773 * #{com.$gmux-base-font}) solid transparent;
+						border-left: calc(.5857 * #{com.$gmux-base-font}) solid c.$grey;
+						border-top: calc(.3773 * #{com.$gmux-base-font}) solid transparent;
 						right: calc(2.6953 * #{com.$gmux-base-font});
 					}
 				}
 			}
 
 			@include bp.medium-and-above {
-				font-size: calc(0.75 * #{com.$gmux-base-font});
+				font-size: calc(.75 * #{com.$gmux-base-font});
 			}
 	
 			@include bp.large-and-above {
-				font-size: calc(0.8624 * #{com.$gmux-base-font});
+				font-size: calc(.8624 * #{com.$gmux-base-font});
 			}
 		}
 
@@ -176,7 +176,7 @@ gb-tab-nav,
 					border-right: 8px solid c.$black;
 					border-top: 5px solid transparent;
 					content: '';
-					left: calc(0.9296 * #{com.$gmux-base-font});
+					left: calc(.9296 * #{com.$gmux-base-font});
 					position: absolute;
 					top: 21px;
 
@@ -199,7 +199,9 @@ gb-tab-nav,
 			}
 
 			/* Overriding container movement properties so container content appears over content below it.*/
-			&.open, &.opening, &.closing {
+			&.open,
+			&.opening,
+			&.closing {
 				position: fixed;
 				z-index: 1;
 			}

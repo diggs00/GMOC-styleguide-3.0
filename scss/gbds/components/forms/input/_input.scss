@@ -48,6 +48,16 @@
 			opacity: $disabled-opacity;
 		}
 	}
+
+	/*ios date bugfix*/
+	&[type='date'] {
+		min-width: intrinsic;
+
+		&::-webkit-date-and-time-value {
+			padding: 24px 0 0 8px;
+			text-align: left;
+		}
+	}
 }
 
 @mixin inline-svg-img(

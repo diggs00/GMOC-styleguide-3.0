@@ -1,0 +1,348 @@
+@use 'expander' as e;
+@use '../../gm-parts/colors' as c;
+@use '../../gm-parts/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+@use '../../gm-parts/placeholders';
+
+$plus-img: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%22-5%20-5%2030%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19%2011h-8v8H8v-8H0V8h8V0h3v8h8v3Z%22%20fill%3D%22%23262626%22%2F%3E%3C%2Fsvg%3E');
+$plus-img-white: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%22-5%20-5%2030%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19%2011h-8v8H8v-8H0V8h8V0h3v8h8v3Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+$minus-img: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h16v4H0z%22%20fill%3D%22%23262626%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+$minus-white: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%20.375h16v4.25H0z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+$arrow-right-white: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22m10%208-4%204V4z%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			c.$white,
+			c.$parts-black,
+			f.$font-family-overpass,
+			18px,
+			f.$font-weight-ultra,
+			normal,
+			32px,
+			32px,
+			16px,
+			c.$parts-black,
+			f.$font-weight-ultra
+		);
+
+		border: 1px solid c.$brand-good;
+		height: 84px;
+
+		span,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+		}
+
+		&::before {
+			background-image: $plus-img;
+			background-position: center;
+			background-repeat: no-repeat;
+			content: '';
+			height: 16px;
+			width: 16px;
+		}
+
+		&:hover {
+			background-color: c.$parts-black;
+
+			.gb-headline1 {
+				color: c.$white;
+			}
+
+			&::before {
+				background-image: $plus-img-white;
+			}
+		}
+	
+		@include bp.large-and-above {
+			height: 86px;
+			justify-content: flex-start;
+
+			/* Expander icon (+ and -) go in front of text at large only*/
+			&::before {
+				margin-right: 16px;
+				order: unset;
+			}
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .3s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			background-color: c.$white;
+
+			&::before {
+				background-image: $minus-img;
+				content: '';
+			}
+
+			&:hover {
+				.gb-headline1 {
+					color: c.$parts-black;
+				}
+			}
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&[data-disabled] {
+		>.gb-expander-btn {
+			@include e.expander-btn-disabled(32px, c.$parts-black);
+
+			@include bp.medium-and-above {
+				padding: 32px;
+			}
+
+			@include bp.large-and-above {
+				padding: 32px 0;
+			}
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	/* For alternate version 'B', ie, content ABOVE button*/
+	&.gb-option-b {
+		flex-direction: column;
+
+		>.gb-expander-btn {
+			background-color: c.$gm-blue;
+			color: c.$white;
+
+			display: flex;
+			flex-wrap: wrap;
+			font-family: f.$font-family-overpass;
+			font-size: 18px;
+			font-weight: f.$font-weight-ultra;
+			height: 68px;
+			justify-content: center;
+			
+			@include e.expander-btn-option-b(
+				$arrow-right-white,
+				14px,
+				0,
+				1rem 3rem 1rem 3rem,
+				24px
+			);
+
+			.gb-headline1 {
+				line-height: 1rem;
+			}
+
+			&::after {
+				transform: rotate(90deg);
+			}
+
+			&:hover {
+				.gb-headline1 {
+					color: c.$white;
+				}
+			}
+		}
+
+		&.active {
+			> .gb-expander-btn {
+				&::after {
+					transform: rotate(270deg);
+				}
+			}
+		}
+
+		@include bp.small-only {
+			&.gb-active-sm {
+				>.gb-expander-btn {
+					background-color: c.$gm-blue;
+		
+					&::after {
+						transform: rotate(270deg);
+					}
+
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						.gb-headline1 {
+							color: c.$white;
+						}
+					}
+				}
+			}
+		}
+	
+		@include bp.medium-only {
+			&.gb-active-med {
+				>.gb-expander-btn {
+					background-color: c.$gm-blue;
+
+					&::after {
+						transform: rotate(270deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						.gb-headline1 {
+							color: c.$white;
+						}
+					}
+				}
+			}
+		}
+	
+		@include bp.large-and-above {
+			align-items: center;
+			display: flex;
+
+			&.gb-active-lg {
+				>.gb-expander-btn {
+					background-color: c.$gm-blue;
+
+					&::after {
+						transform: rotate(270deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						.gb-headline1 {
+							color: c.$white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$brand-good, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+
+				&:hover {
+					.gb-headline1 {
+						color: c.$parts-black;
+					}
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(32px, c.$parts-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$brand-good, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+
+				&:hover {
+					.gb-headline1 {
+						color: c.$parts-black;
+					}
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(32px, c.$parts-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$brand-good, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+
+				&:hover {
+					.gb-headline1 {
+						color: c.$parts-black;
+					}
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(32px 0, c.$parts-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}

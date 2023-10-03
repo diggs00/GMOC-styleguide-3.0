@@ -1,0 +1,213 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../onstar/colors' as c;
+@use '../../onstar/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+
+gb-tab-nav,
+.gb-tab-nav {
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			c.$white,
+		);
+
+		font-family: f.$font-family-circular;
+		padding-left: 16px;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			c.$white,
+			c.$parts-black,
+			18px,
+			f.$font-weight-normal,
+			auto,
+			0,
+		);
+
+		margin-top: 0;
+		padding: 16px;
+		
+		button {
+			line-height: 1.225;
+		}
+
+		&.active {
+			button {
+				border-bottom: 2px solid c.$gm-blue;
+				font-weight: f.$font-weight-bold;
+				padding-bottom: 14px;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			c.$white,
+			0,
+		);
+
+		padding-left: 32px;
+
+		.back-button {
+			@include tfb.base-compact-content-container-back-button(
+				c.$white,
+				none,
+				c.$parts-black,
+				18px,
+				f.$font-weight-bold,
+				auto,
+				16px 32px 16px 32px,
+			);
+
+			display: none;
+			line-height: 1.2;
+		}
+
+		.stacked-content-title {
+			display: none;
+			font-family: f.$font-family-circular;
+			font-size: 18px;
+			font-weight: f.$font-weight-normal,;
+			line-height: 1.11;
+			padding: 16px 0;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			@include tn.base-tab-button(
+				c.$white,
+				c.$parts-black,
+				18px,
+				f.$font-weight-bold,
+				auto,
+				32px 64px 32px 8px,
+			);
+
+			border-bottom: 1px solid c.$brand-good;
+			padding: 0;
+
+			button {
+				align-items: center;
+				display: flex;
+				position: relative;
+
+				&::after {
+					border-bottom: .2625rem solid transparent;
+					border-left: .4075rem solid c.$parts-black;
+					border-top: .2625rem solid transparent;
+					content: '';
+					position: absolute;
+					right: 1.875rem;
+				}
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			.back-button {
+				display: block;
+
+				&::before {
+					border-bottom: 4px solid transparent;
+					border-right: 8px solid c.$gm-blue;
+					border-top: 4px solid transparent;
+					content: '';
+					left: 14px;
+					position: absolute;
+					top: 22px;
+				}
+
+				/* stylelint-disable-next-line*/
+				.back-button-label {
+					color: c.$parts-black;
+					font-size: 18px;
+					line-height: 1.12;
+				}
+			}
+
+			.stacked-content-title {
+				background-color: c.$gm-gray;
+				display: flex;
+				font-family: f.$font-family-circular;
+				font-size: 18px;
+				font-weight: f.$font-weight-demi;
+				line-height: 1.11;
+				padding: 16px 8px;
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open,
+			&.opening,
+			&.closing {
+				position: fixed;
+				z-index: 1;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}
+
+html[dir='rtl'] {
+	gb-tab-nav,
+	.gb-tab-nav {
+		.content-button-group {
+			font-family: f.$font-family-frutiger !important;
+		}
+
+		.content-container {
+			.stacked-content-title {
+				font-family: f.$font-family-frutiger !important;
+			}
+		}
+
+		&.gb-stacked-sm,
+		&.gb-stacked-med,
+		&.gb-stacked-lg {
+			.content-container {
+				.stacked-content-title {
+					font-family: f.$font-family-frutiger !important;
+				}
+			}
+		}
+	}
+}

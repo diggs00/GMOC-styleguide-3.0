@@ -53,21 +53,21 @@
 	label {
 		@include t.base-toggle-label(
 			c.$font,
-			f.$font-family-muli,
-			calc(0.75 * #{com.$gmux-base-font}),
+			f.$font-family-stratum,
+			calc(.75 * #{com.$gmux-base-font}),
 			1.5,
-			0 calc(0.625 * #{com.$gmux-base-font})
+			0 calc(.625 * #{com.$gmux-base-font})
 		);
 		bottom: 20px;
 
 		@include bp.medium-and-above {
-			font-size: calc(0.825 * #{com.$gmux-base-font});
-			margin: 0 calc(0.6875 * #{com.$gmux-base-font});
+			font-size: calc(.825 * #{com.$gmux-base-font});
+			margin: 0 calc(.6875 * #{com.$gmux-base-font});
 		}
 
 		@include bp.large-and-above {
-			font-size: calc(0.8999 * #{com.$gmux-base-font});
-			margin: 0 calc(0.75 * #{com.$gmux-base-font});
+			font-size: calc(.8999 * #{com.$gmux-base-font});
+			margin: 0 calc(.75 * #{com.$gmux-base-font});
 		}
 	}
 

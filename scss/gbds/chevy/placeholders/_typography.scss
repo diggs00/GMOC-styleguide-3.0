@@ -8,15 +8,15 @@
 /********************TEXT ALIGN STYLES********************/
 
 .gb-align-left {
-  	text-align: left;
+	text-align: left;
 }
 
 .gb-align-center {
-  	text-align: center;
+	text-align: center;
 }
 
 .gb-align-right {
-  	text-align: right;
+	text-align: right;
 }
 
 /********************HEADLINE STYLES********************/
@@ -78,7 +78,7 @@
 
 	&.heavy {
 		@extend %headline-heavy;
-	  	line-height: 76px;
+		line-height: 76px;
 	}
 }
 
@@ -157,21 +157,21 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 
 		@media print, only screen and (max-width: 800px) {
-		  	font-size: 24px;
-		  	letter-spacing: 2.35px;
-		  	line-height: 30px;
+			font-size: 24px;
+			letter-spacing: 2.35px;
+			line-height: 30px;
 		}
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 }
 
@@ -202,9 +202,9 @@
 	&.heavy {
 		@extend %headline-heavy;
 
-	  	@media print,only screen and (min-width:1200px) {
-		  	font-size: 35px;
-		  	letter-spacing: .92px;
+		@media print,only screen and (min-width:1200px) {
+			font-size: 35px;
+			letter-spacing: .92px;
 		}
 	}
 }
@@ -237,15 +237,15 @@
 		@extend %headline-heavy;
 
 		@media print,only screen and (max-width:800px) {
-		  font-size: 21px;
-		  letter-spacing: .68px;
-		  line-height: 26px;
+			font-size: 21px;
+			letter-spacing: .68px;
+			line-height: 26px;
 		}
 
-	  	@media print,only screen and (min-width:1200px) {
-		  	font-size: 29px;
-		  	letter-spacing: .92px;
-		  	line-height: 35px;
+		@media print,only screen and (min-width:1200px) {
+			font-size: 29px;
+			letter-spacing: .92px;
+			line-height: 35px;
 		}
 	}
 }
@@ -264,7 +264,7 @@
 		.72px,
 		.8px,
 		.96px
-   	);
+	);
 
 	a {
 		@extend %headline-link;
@@ -280,7 +280,7 @@
 }
 
 %gb-headline4 {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-dark,
 		f.$font-family-louis,
 		16px,
@@ -296,15 +296,15 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 }
 
@@ -336,11 +336,11 @@
 		@extend %headline-heavy;
 	}
 
-  	&.gb-color-grey-mid-dark {
+	&.gb-color-grey-mid-dark {
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 		}
 	}
 }
@@ -377,7 +377,7 @@
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 		}
 	}
 }
@@ -430,17 +430,17 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 
-	  	color: c.$grey-mid-dark;
+		color: c.$grey-mid-dark;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 }
 
@@ -475,7 +475,7 @@
 }
 
 %gb-descriptive2-ch {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-mid-dark,
 		f.$font-family-louis,
 		12px,
@@ -491,12 +491,12 @@
 	);
 
 	a {
-	  	@extend %headline-link;
-	  	color: c.$grey-mid-dark;
+		@extend %headline-link;
+		color: c.$grey-mid-dark;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
@@ -521,11 +521,11 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 }
 
@@ -546,24 +546,24 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.gb-color-grey-mid-dark {
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 		}
 	}
 }
 
 %gb-bold1 {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-dark,
 		f.$font-family-louis,
 		calc(2.125 * #{com.$gmux-base-font}),
@@ -579,11 +579,11 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 }
 
@@ -663,7 +663,7 @@
 }
 
 %gb-label {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-dark,
 		f.$font-family-roboto,
 		12px,
@@ -679,22 +679,22 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 
 	&.gb-color-grey-mid-dark {
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 		}
 	}
 
@@ -702,7 +702,7 @@
 		color: c.$font-color-error;
 
 		a {
-		  	color: c.$font-color-error;
+			color: c.$font-color-error;
 		}
 	}
 
@@ -710,7 +710,7 @@
 		color: c.$error-light;
 
 		a {
-		  	color: c.$error-light;
+			color: c.$error-light;
 		}
 	}
 }
@@ -732,28 +732,28 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 
 	&.gb-color-grey-mid-dark {
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 		}
 	}
 }
 
 %gb-disclaimer {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-mid-dark,
 		f.$font-family-roboto,
 		12px,
@@ -769,15 +769,15 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 }
 
@@ -798,22 +798,22 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 
 	&.gb-color-grey-mid {
 		color: c.$grey-mid;
 
 		a {
-		  	color: c.$grey-mid;
+			color: c.$grey-mid;
 		}
 	}
 }
@@ -835,22 +835,22 @@
 	);
 
 	a {
-	  	@extend %headline-link;
+		@extend %headline-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 	}
 
 	&.heavy {
-	  	@extend %headline-heavy;
+		@extend %headline-heavy;
 	}
 
 	&.gb-color-error-light {
 		color: c.$error-light;
 
 		a {
-		  	color: c.$error-light;
+			color: c.$error-light;
 		}
 	}
 }
@@ -862,9 +862,9 @@
 	text-decoration: underline;
 
 	&:active,
-	&:visited:not([href="#"]),
+	&:visited:not([href='#']),
 	&:hover {
-	  	color: c.$gold;
+		color: c.$gold;
 	}
 }
 
@@ -873,10 +873,10 @@
 	text-decoration: underline;
 
 	&:hover,
-	&:visited:not([href="#"]),
+	&:visited:not([href='#']),
 	&:active {
-	  	color: c.$gold;
-	  	text-decoration: underline;
+		color: c.$gold;
+		text-decoration: underline;
 	}
 }
 
@@ -897,15 +897,15 @@
 	);
 
 	a {
-	  	@extend %body-link;
+		@extend %body-link;
 
 		&:hover {
-		  	color: c.$gold;
+			color: c.$gold;
 		}
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 
 		a {
 			@extend %body-link-invert;
@@ -913,10 +913,10 @@
 	}
 
 	&.heavy {
-	  	font-weight: f.$font-weight-bold;
+		font-weight: f.$font-weight-bold;
 
 		p {
-		  	font-weight: f.$font-weight-bold;
+			font-weight: f.$font-weight-bold;
 		}
 	}
 
@@ -924,11 +924,11 @@
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 
 			&:hover {
 				color: c.$gold;
-		  	}
+			}
 		}
 	}
 }
@@ -953,7 +953,7 @@
 		@extend %body-link;
 
 		&:hover {
-		  	color: c.$gold;
+			color: c.$gold;
 		}
 	}
 
@@ -969,7 +969,7 @@
 		font-weight: f.$font-weight-bold;
 
 		p {
-		  	font-weight: f.$font-weight-bold;
+			font-weight: f.$font-weight-bold;
 		}
 	}
 
@@ -981,17 +981,17 @@
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 			
 			&:hover {
 				color: c.$gold;
-		  	}
+			}
 		}
 	}
 }
 
 %gb-body3 {
-  	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey-dark,
 		f.$font-family-roboto,
 		14px,
@@ -1010,38 +1010,38 @@
 		@extend %body-link;
 
 		&:hover {
-		  	color: c.$gold;
+			color: c.$gold;
 		}
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 
 		a {
-		  	@extend %body-link-invert;
+			@extend %body-link-invert;
 		}
 	}
 
 	&.heavy {
-	  	font-weight: f.$font-weight-bold;
+		font-weight: f.$font-weight-bold;
 
 		p {
-		  	font-weight: f.$font-weight-bold;
+			font-weight: f.$font-weight-bold;
 		}
 	}
 
 	li {
-	  	margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	&.gb-color-grey-mid-dark {
 		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 
 			&:hover {
-			  	color: c.$gold;
+				color: c.$gold;
 			}
 		}
 	}
@@ -1064,56 +1064,56 @@
 	);
 
 	a {
-	  	@extend %body-link;
+		@extend %body-link;
 	}
 
 	&.invert {
-	  	@extend %headline-invert;
+		@extend %headline-invert;
 
 		a {
-		  	@extend %body-link-invert;
+			@extend %body-link-invert;
 		}
 	}
 
 	&.heavy {
-	  	font-weight: f.$font-weight-bold;
+		font-weight: f.$font-weight-bold;
 
 		p {
-		  	font-weight: f.$font-weight-bold;
+			font-weight: f.$font-weight-bold;
 		}
 	}
 
 	li {
-	  	margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	&.gb-color-grey {
 		color: c.$grey;
 
 		a {
-		  	color: c.$grey;
+			color: c.$grey;
 			
 			&:hover {
 				color: c.$gold;
-		  	}
+			}
 		}
 	}
 
 	&.gb-color-grey-mid-dark {
-	  	color: c.$grey-mid-dark;
+		color: c.$grey-mid-dark;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$grey-mid-dark;
 			
 			&:hover {
 				color: c.$gold;
-		  	}
+			}
 		}
 	}
 }
 
 %gb-body5 {
-   	@include gbt.gb-typography(
+	@include gbt.gb-typography(
 		c.$grey,
 		f.$font-family-roboto,
 		12px,
@@ -1159,8 +1159,8 @@
 		a {
 			color: c.$grey-mid-dark;
 
-		  	&:hover {
-			  	color: c.$gold;
+			&:hover {
+				color: c.$gold;
 			}
 		}
 	}
@@ -1168,10 +1168,10 @@
 
 html[dir='rtl'] {
 	.align-left {
-	  	text-align: right;
+		text-align: right;
 	}
 
 	.align-right {
-	  	text-align: left;
+		text-align: left;
 	}
 }

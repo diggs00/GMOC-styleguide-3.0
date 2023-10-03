@@ -22,7 +22,10 @@
 	$transition,
 	$hover-bg-color,
 	$hover-border,
-	$hover-color
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
 ) {
 	@extend %button-base;
 
@@ -44,6 +47,12 @@
 		background-color: $hover-bg-color;
 		border: $hover-border;
 		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
 	}
 }
 
@@ -60,7 +69,11 @@
 	$transition,
 	$hover-bg-color,
 	$hover-border,
-	$hover-color
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
 ) {
 	@extend %button-base;
 
@@ -83,6 +96,258 @@
 		border: $hover-border;
 		color: $hover-color;
 	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
+}
+
+@mixin secondary-plain-button(
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
+) {
+	@extend %button-base;
+
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: $padding;
+	transition: $transition;
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $hover-bg-color;
+		border: $hover-border;
+		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
+}
+
+@mixin tertiary-plain-button(
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
+) {
+	@extend %button-base;
+
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: $padding;
+	transition: $transition;
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $hover-bg-color;
+		border: $hover-border;
+		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
+}
+
+@mixin tertiary-underlined-button(
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
+) {
+	@extend %button-base;
+
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: $padding;
+	transition: $transition;
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $hover-bg-color;
+		border: $hover-border;
+		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
+}
+
+@mixin tertiary-color-button(
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
+) {
+	@extend %button-base;
+
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: $padding;
+	transition: $transition;
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $hover-bg-color;
+		border: $hover-border;
+		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
+}
+
+@mixin plain-text-button(
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color
+
+) {
+	@extend %button-base;
+
+	background-color: $bg-color;
+	border: $border;
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing;
+	line-height: $line-height;
+	padding: $padding;
+	transition: $transition;
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $hover-bg-color;
+		border: $hover-border;
+		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		border: $target-zone-active-border;
+		color: $target-zone-active-color;
+	}
+
 }
 
 @mixin filter-button(
@@ -141,7 +406,9 @@
 	$border,
 	$color,
 	$hover-bg-color,
-	$hover-color
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-color: $hover-color
 ) {
 	background-color: $bg-color;
 	border: $border;
@@ -151,6 +418,11 @@
 	&:active {
 		background-color: $hover-bg-color;
 		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		color: $target-zone-active-color;
 	}
 }
 
@@ -162,7 +434,8 @@
 	$letter-spacing,
 	$line-height,
 	$padding,
-	$hover-color
+	$hover-color,
+	$target-zone-active-color: $hover-color
 ) {
 	color: $color;
 	cursor: pointer;
@@ -175,21 +448,49 @@
 	padding: $padding;
 	text-align: inherit;
 	text-decoration: none;
-  	width: 100%;
+	width: 100%;
 
+	&:active,
+	&:focus,
 	&:hover {
 		color: $hover-color;
+	}
+
+	&.gb-target-zone-button {
+		background: transparent;
+		border: 0;
+	}
+
+	&.gb-target-zone-button-active {
+		color: $target-zone-active-color;
+
+		&:focus,
+		&:hover {
+			color: $target-zone-active-color;
+		}
 	}
 }
 
 @mixin link-invert(
 	$color,
-	$hover-color
+	$hover-color,
+	$target-zone-active-color: $hover-color
 ) {
 	color: $color;
 
+	&:active,
+	&:focus,
 	&:hover {
 		color: $hover-color;
+	}
+
+	&.gb-target-zone-button-active {
+		color: $target-zone-active-color;
+
+		&:focus,
+		&:hover {
+			color: $target-zone-active-color;
+		}
 	}
 }
 
@@ -281,4 +582,160 @@
 	height: $size;
 	vertical-align: middle;
 	width: $size;
+}
+
+@mixin content-relationship (
+	$bg-color,
+	$font-color,
+	$font-family,
+	$font-size-sm,
+	$font-size-med,
+	$font-size-lg,
+	$font-weight,
+	$letter-spacing-sm,
+	$letter-spacing-med,
+	$letter-spacing-lg,
+	$line-height-sm,
+	$line-height-med,
+	$line-height-lg,
+	$border-bottom,
+	$border-inline-start,
+	$border-radius,
+	$padding-sm,
+	$padding-med,
+	$padding-lg,
+	$transition,
+	$hover-background-color,
+	$hover-border-inline-start-width,
+	$hover-border-inline-start-color,
+	$active-background-color,
+	$active-border-inline-start-width,
+	$active-border-inline-start-color,
+	$active-color
+
+) {
+	background-color: $bg-color;
+	border-bottom: $border-bottom;
+	border-inline-start: $border-inline-start;
+	border-radius: $border-radius;
+	border-style: none;
+	border-width: 0;
+	color: $font-color;
+	cursor: pointer;
+	display: block;
+	font-family: $font-family;
+	font-size: $font-size-sm;
+	font-weight: $font-weight;
+	letter-spacing: $letter-spacing-sm;
+	line-height: $line-height-sm;
+	margin-inline-start: calc(20px + $active-border-inline-start-width);
+	padding: $padding-sm;
+	padding-inline-start: 0;
+	text-decoration: none;
+	transition-duration: 0s;
+	transition-property: padding, border;
+	transition-timing-function: cubic-bezier(.5, .2, .2, .75);
+
+	@media (min-width: 800px) and (max-width: 1199px) {
+		font-size: $font-size-med;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: $font-size-lg;
+	}
+
+	&:focus {
+		background-color: $bg-color;
+	}
+
+	&:hover {
+		background-color: $hover-background-color;
+		border-inline-start: $hover-border-inline-start-width solid $hover-border-inline-start-color;
+		padding-inline-start: 10px;
+		transition-duration: .5s;
+	}
+
+	&:active,
+	&.gb-target-zone-button-active {
+		background-color: $active-background-color;
+		border-inline-start: $active-border-inline-start-width solid $active-border-inline-start-color;
+		color: $active-color;
+		margin-inline-start: 0;
+		padding-inline-start: 20px;
+		transition: none;
+	}
+}
+
+@mixin gb-tab-toggle (
+	$bg-color,
+	$border,
+	$color,
+	$font-family,
+	$font-size,
+	$font-weight,
+	$letter-spacing,
+	$line-height,
+	$padding,
+	$transition,
+	$hover-bg-color,
+	$hover-border,
+	$hover-color,
+	$target-zone-active-bg-color: $hover-bg-color,
+	$target-zone-active-border: $hover-border,
+	$target-zone-active-color: $hover-color,
+	$bg-color-invert,
+	$border-invert,
+	$color-invert,
+	$hover-bg-color-invert,
+	$hover-color-invert,
+	$target-zone-active-bg-color-invert: $hover-bg-color-invert,
+	$target-zone-active-color-invert: $hover-color-invert,
+	$icon-margin-inline-end,
+	$icon-margin-inline-start
+) {
+	@include secondary-button(
+		$bg-color,
+		$border,
+		$color,
+		$font-family,
+		$font-size,
+		$font-weight,
+		$letter-spacing,
+		$line-height,
+		$padding,
+		$transition,
+		$hover-bg-color,
+		$hover-border,
+		$hover-color,
+	);
+
+	&:active,
+	&.gb-target-zone-button-active {
+		background-color: $target-zone-active-bg-color;
+		color: $target-zone-active-color;
+	}
+
+	&.invert {
+		@include button-invert(
+			$bg-color-invert,
+			$border-invert,
+			$color-invert,
+			$hover-bg-color-invert,
+			$hover-color-invert,
+			$target-zone-active-bg-color-invert,
+			$target-zone-active-color-invert
+		);
+	}
+
+	&.icon-left {
+		> img {
+			margin-inline-end: $icon-margin-inline-end;
+		}
+	}
+
+	&.icon-right {
+		> img {
+			margin-inline-start: $icon-margin-inline-start;
+		}
+	}
 }

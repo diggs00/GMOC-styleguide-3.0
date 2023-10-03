@@ -79,11 +79,7 @@
 	}
 
 	label {
-		@include i.base-label(f.$font-family-avenir-next,
-		16px,
-		normal,
-		1.5,
-		auto);
+		@include i.base-label(f.$font-family-avenir-next, 16px, normal, 1.5, auto);
 
 		color: c.$brand-black;
 	}
@@ -113,7 +109,7 @@
 		&.clear-input,
 		&.show-password {
 			background: none;
-			border: none;
+			border: 0;
 			cursor: pointer;
 			padding: 0;
 		}
@@ -137,9 +133,9 @@
 		}
 	}
 
-	&:focus{
+	&:focus {
 		&input {
-			&[type=date] {
+			&[type='date'] {
 				&::-webkit-datetime-edit {
 					opacity: 1;
 				}
@@ -167,7 +163,6 @@
 		input {
 			&[type],
 			textarea {
-
 				&:focus {
 					~ .gb-input-label {
 						color: c.$error-red;
@@ -217,7 +212,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -236,11 +232,12 @@
 		.gb-pw-str-indicator {
 			border-radius: 25px;
 			border-top: solid 4px c.$success-green;
-			margin: 0 16px 15px 16px;
+			margin: 0 16px 15px;
 
 			&.good-pw {
 				border-top-color: c.$amber;
 			}
+
 			&.weak-pw {
 				border-top-color: c.$error-red;
 			}
@@ -268,8 +265,8 @@
 	}
 
 	input {
-		border-bottom-width: 2px;
 		border-bottom-color: transparent;
+		border-bottom-width: 2px;
 
 		&::-moz-placeholder {
 			color: c.$brand-black;
@@ -289,14 +286,16 @@
 			opacity: .5;
 		}
 
-		@include i.base-input(c.$white,
-		1px solid c.$grey-very-light,
-		c.$brand-black,
-		30%,
-		f.$font-family-avenir-next,
-		16px,
-		24px 50px 6px 16px,
-		1px solid c.$grey-very-light);
+		@include i.base-input(
+			c.$white,
+			1px solid c.$grey-very-light,
+			c.$brand-black,
+			30%,
+			f.$font-family-avenir-next,
+			16px,
+			24px 50px 6px 16px,
+			1px solid c.$grey-very-light
+		);
 
 		&[type],
 		textarea {
@@ -335,12 +334,12 @@
 		}
 
 		/*IOS  This is to override IOS appearance for date input types.*/
-		&[type=date] {
-			display: block;
-			text-transform: uppercase;
-			-webkit-appearance: textfield;
+		&[type='date'] {
 			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
 			padding-right: 16px;
+			text-transform: uppercase;
 
 			&::-webkit-datetime-edit-text {
 				padding: 0 6px;
@@ -362,7 +361,6 @@
 
 			&.valid {
 				&:focus {
-
 					&::-webkit-calendar-picker-indicator {
 						opacity: 1;
 					}
@@ -396,7 +394,6 @@
 			line-height: 1.33;
 
 			&.gb-caps-img {
-
 				@include i.inline-svg-img(
 					url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20fill%3D%22%232B2B2B%22%20d%3D%22M11.426%2013.629a.47.47%200%201%201%200%20.94H8.652a.47.47%200%201%201%200-.94h2.774zm-1.015-8.47%203.74%203.991c.09.096.118.241.07.367a.318.318%200%200%201-.293.207h-2.03v2.47c0%20.39-.295.705-.66.705H8.84c-.365%200-.66-.315-.66-.704V9.724H6.15a.316.316%200%200%201-.292-.207.352.352%200%200%201%20.07-.367l3.74-3.991a.515.515%200%200%201%20.744%200z%22%2F%3E%3Cpath%20stroke%3D%22%232B2B2B%22%20d%3D%22M10%20.778a9.206%209.206%200%200%201%206.518%202.704A9.208%209.208%200%200%201%2019.222%2010a9.195%209.195%200%200%201-2.7%206.521c-1.67%201.669-3.975%202.701-6.522%202.701s-4.852-1.032-6.521-2.7A9.2%209.2%200%200%201%20.778%2010a9.197%209.197%200%200%201%202.7-6.521A9.2%209.2%200%200%201%2010%20.778z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'),
 					16px 16px,
@@ -407,7 +404,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -504,7 +502,7 @@
 				}
 			}
 
-			&[type=date] {
+			&[type='date'] {
 				padding-right: 16px;
 			}
 		}
@@ -522,7 +520,6 @@
 			.gb-pw-label {
 				font-size: 16px;
 				line-height: 1.38;
-
 			}
 
 			.gb-pw-info-item {

@@ -1,0 +1,332 @@
+@use 'expander' as e;
+@use '../../onstar/colors' as c;
+@use '../../onstar/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+@use '../../onstar/placeholders';
+
+$plus-img: url("data:image/svg+xml,%3Csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cg%20id='icon-system'%3E%3Cpath%20id='Vector'%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20%2011V13H13V20H11V13H4V11H11V4H13V11H20Z'%20fill='%23002EFF'/%3E%3C/g%3E%3C/svg%3E");
+$minus-img: url("data:image/svg+xml,%3Csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cg%20id='icon-system'%3E%3Cpath%20id='Vector'%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20%2011V13H4V11H20Z'%20fill='%23002EFF'/%3E%3C/g%3E%3C/svg%3E");
+$arrow-down-blue: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%3E%3Cg%20id='icon-system'%3E%3Cpath%20id='Vector'%20d='M4%208L12%2016L20%208'%20stroke='%23002EFF'%20stroke-width='2.5'/%3E%3C/g%3E%3C/svg%3E");
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			c.$white,
+			c.$brand-black,
+			f.$font-family-circular,
+			18px,
+			f.$font-weight-medium,
+			-.4px,
+			1.22,
+			16px,
+			16px,
+			c.$brand-black,
+			f.$font-weight-demi
+		);
+
+		border-bottom: 1px solid c.$med-gray;
+
+		&:hover {
+			.gb-expander-headline {
+				color: c.$primary-blue;
+			}
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+		}
+
+		span {
+			margin-block: 0;
+			margin-inline-end: 20px;
+			margin-inline-start: 0;
+		}
+
+		&::before {
+			background-image: $plus-img;
+			background-position: center;
+			background-repeat: no-repeat;
+			content: '';
+			height: 16px;
+			margin-inline-start: 16px;
+			min-width: 16px;
+		}
+
+		@include bp.medium-and-above {
+			padding-inline-start: 32px;
+		}
+	
+		@include bp.large-and-above {
+			justify-content: flex-start;
+			padding-inline-end: 32px;
+
+			/* Expander icon (+ and -) go in front of text at large only*/
+			&::before {
+				margin-inline-end: 16px;
+				margin-inline-start: 0;
+				order: unset;
+			}
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .3s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			background-color: c.$white;
+
+			&::before {
+				background-image: $minus-img;
+				content: '';
+			}
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	/* For alternate version 'B', ie, content ABOVE button*/
+	&.gb-option-b {
+		flex-direction: column;
+
+		>.gb-expander-btn {
+			border-width: 0;
+			color: c.$brand-black;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			font-family: f.$font-family-circular;
+			font-size: 16px;
+			font-weight: f.$font-weight-demi;
+			line-height: 1.25;
+			
+			@include e.expander-btn-option-b(
+				$arrow-down-blue,
+				24px,
+				0,
+				32px,
+				100%
+			);
+
+			&:hover {
+				.gb-headline1 {
+					color: c.$brand-black;
+				}
+			}
+
+			@include bp.medium-and-above {
+				font-size: 18px;
+				line-height: 1.45;
+			}
+		}
+
+		.gb-expander-headline {
+			padding-inline-end: 0;
+		}
+
+		&.active {
+			> .gb-expander-btn {
+				padding: 30px;
+
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		@include bp.small-only {
+			&.gb-active-sm {
+				>.gb-expander-btn {
+					background-color: c.$white;
+		
+					&::after {
+						transform: rotate(180deg);
+					}
+
+					&::before {
+						background-image: none;
+						content: none !important;
+					}
+				}
+			}
+		}
+	
+		@include bp.medium-only {
+			&.gb-active-med {
+				>.gb-expander-btn {
+					background-color: c.$white;
+
+					&::after {
+						transform: rotate(180deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: none !important;
+					}
+				}
+			}
+
+			>.gb-expander-btn {
+				padding-block: 40px;
+				padding-inline: 24px;
+			}
+
+			&.active {
+				> .gb-expander-btn {
+					padding-block: 40px;
+					padding-inline: 20px;
+				}
+			}
+		}
+	
+		@include bp.large-and-above {
+			display: flex;
+
+			>.gb-expander-btn {
+				padding-block: 16px;
+				padding-inline: 0;
+
+				&::after {
+					margin-block-start: 8px;
+				}
+			}
+
+			&.active {
+				> .gb-expander-btn {
+					padding-block: 16px;
+					padding-inline: 0;
+				}
+			}
+
+			&.gb-active-lg {
+				>.gb-expander-btn {
+					background-color: c.$white;
+
+					&::after {
+						transform: rotate(180deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: none !important;
+					}
+				}
+			}
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$med-gray, null, c.$primary-blue);
+
+				&::before {
+					background-image: $minus-img;
+					content: '' !important;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(16px, c.$brand-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$med-gray, null, c.$primary-blue);
+
+				&::before {
+					background-image: $minus-img;
+					content: '' !important;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(16px 32px, c.$brand-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$med-gray, null, c.$primary-blue);
+
+				&::before {
+					background-image: $minus-img;
+					content: '' !important;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(16px 32px, c.$brand-black);
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-expander {
+		>.gb-expander-btn {
+			font-family: f.$font-family-frutiger !important;
+		}
+
+		&.gb-option-b {
+			>.gb-expander-btn {
+				font-family: f.$font-family-frutiger !important;
+			}
+		}
+	}
+}

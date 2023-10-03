@@ -1,0 +1,97 @@
+@use 'checkbox';
+@use '../../../mobile/colors';
+@use '../../../mobile/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	position: relative;
+
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$white,
+			fonts.$font-family-gmglobal-sans,
+			14px,
+			fonts.$font-weight-normal,
+			0,
+			normal
+		);
+
+		margin: 0 5px;
+		position: relative;
+		top: 2px;
+
+		@include bp.medium-and-above {
+			font-size: 18px;
+		}
+	}
+
+	input[type='checkbox'] {
+		$box-size: 12px;
+
+		@include checkbox.base-box(22px);
+
+		background: none;
+		border: 1px solid colors.$accent-gray-1;
+		border-radius: 2px;
+		margin: 3px;
+		position: relative;
+
+		&:checked {
+			background: colors.$white;
+			border: 0;
+
+			&::after {
+				border: 0;
+				content: url('data:image/svg+xml, %3Csvg%20width%3D%2211.69%22%20height%3D%2211.55%22%20viewBox%3D%220%200%2015%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M5.67615%2015.4392C6.05049%2015.4392%206.34649%2015.2737%206.55543%2014.9516L14.7824%201.99748C14.9391%201.74502%2015%201.55349%2015%201.35326C15%200.874442%2014.6866%200.561035%2014.2078%200.561035C13.8595%200.561035%2013.668%200.67421%2013.4591%201.00503L5.64132%2013.463L1.58445%208.15245C1.3668%207.84774%201.14916%207.72586%200.835752%207.72586C0.339524%207.72586%200%208.06539%200%208.5442C0%208.74444%200.0870575%208.97079%200.252467%209.17972L4.77075%2014.9342C5.03192%2015.2737%205.3018%2015.4392%205.67615%2015.4392Z%22%20fill%3D%22%23000000%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+				height: $box-size;
+				left: 5px;
+				position: absolute;
+				top: 2px;
+				width: $box-size;
+			}
+		}
+	}
+
+	&:hover {
+		input[type='checkbox'] {
+			background: none;
+
+			&:checked {
+				background: colors.$white;
+			}
+		}
+	}
+
+	&.disabled {
+		label, /* Override Legacy Quantum Style*/
+		input[type='checkbox'] + label {
+			@include checkbox.base-label(
+				colors.$accent-gray-2,
+				fonts.$font-family-gmglobal-sans,
+				14px,
+				fonts.$font-weight-normal,
+				0,
+				normal
+			);
+	
+			margin: 0 5px;
+			position: relative;
+			top: 2px;
+	
+			@include bp.medium-and-above {
+				font-size: 18px;
+			}
+		}
+
+		input[type='checkbox'] {
+			background: none;
+			border: 1px solid colors.$accent-gray-2;
+
+			&:checked {
+				background: colors.$accent-gray-2;
+				border: 0;
+			}
+		}
+	}
+}

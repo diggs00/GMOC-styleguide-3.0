@@ -79,11 +79,7 @@
 	}
 
 	label {
-		@include i.base-label(f.$font-family-roboto,
-		16px,
-		normal,
-		1.5,
-		auto);
+		@include i.base-label(f.$font-family-roboto, 16px, normal, 1.5, auto);
 
 		color: c.$grey-dark;
 	}
@@ -112,7 +108,7 @@
 		&.clear-input,
 		&.show-password {
 			background: none;
-			border: none;
+			border: 0;
 			cursor: pointer;
 			padding: 0;
 		}
@@ -136,9 +132,9 @@
 		}
 	}
 
-	&:focus{
+	&:focus {
 		&input {
-			&[type=date] {
+			&[type='date'] {
 				&::-webkit-datetime-edit {
 					opacity: 1;
 				}
@@ -166,7 +162,6 @@
 		input {
 			&[type],
 			textarea {
-
 				&:focus {
 					~ .gb-input-label {
 						color: c.$error;
@@ -217,7 +212,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -276,14 +272,16 @@
 			margin: 3px 0;
 		}
 
-		@include i.base-input(c.$white,
-		1px solid c.$grey-light,
-		c.$grey-dark,
-		30%,
-		f.$font-family-roboto,
-		16px,
-		24px 50px 6px 16px,
-		1px solid c.$grey-light);
+		@include i.base-input(
+			c.$white,
+			1px solid c.$grey-light,
+			c.$grey-dark,
+			30%,
+			f.$font-family-roboto,
+			16px,
+			24px 50px 6px 16px,
+			1px solid c.$grey-light
+		);
 
 		&[type],
 		textarea {
@@ -318,15 +316,14 @@
 				border-bottom-color: c.$grey-dark;
 				cursor: text;
 			}
-
 		}
 		/*IOS  This is to override IOS appearance for date input types.*/
-		&[type=date] {
-			display: block;
-			text-transform: uppercase;
-			-webkit-appearance: textfield;
+		&[type='date'] {
 			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
 			padding-right: 16px;
+			text-transform: uppercase;
 
 			&::-webkit-datetime-edit-text {
 				padding: 0 6px;
@@ -381,7 +378,6 @@
 			line-height: 1.33;
 
 			&.gb-caps-img {
-
 				@include i.inline-svg-img(
 					url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cpath%20fill%3D%22%236E6E6E%22%20fill-rule%3D%22nonzero%22%20d%3D%22M10%20.278A9.733%209.733%200%200%201%2019.722%2010c0%205.37-4.353%209.722-9.722%209.722A9.721%209.721%200%200%201%20.278%2010%209.721%209.721%200%200%201%2010%20.278zm0%201.494a8.228%208.228%200%200%200%200%2016.456A8.239%208.239%200%200%200%2018.228%2010%208.228%208.228%200%200%200%2010%201.772zm1.426%2011.857a.47.47%200%201%201%200%20.94H8.652a.47.47%200%201%201%200-.94h2.774zm-1.015-8.47%203.74%203.991c.09.096.118.241.07.367a.318.318%200%200%201-.293.207h-2.03v2.47c0%20.39-.295.705-.66.705H8.84c-.365%200-.66-.315-.66-.704V9.724H6.15a.316.316%200%200%201-.292-.207.352.352%200%200%201%20.07-.367l3.74-3.991a.515.515%200%200%201%20.744%200z%22%2F%3E%3C%2Fsvg%3E'),
 					16px 16px,
@@ -392,7 +388,8 @@
 					20px,
 					3px,
 					4px,
-					0 5px 0 0);
+					0 5px 0 0
+				);
 			}
 		}
 	}
@@ -412,7 +409,6 @@
 
 			&:hover {
 				border: 1px solid c.$grey-light;
-
 			}
 		}
 
@@ -428,7 +424,6 @@
 			}
 		}
 	}
-
 
 	@media (min-width: 800px) {
 		.clear-input,
@@ -487,7 +482,7 @@
 				}
 			}
 
-			&[type=date] {
+			&[type='date'] {
 				padding-right: 16px;
 			}
 		}

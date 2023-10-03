@@ -13,24 +13,24 @@
 		vertical-align: middle;
 		width: i.$icon-small;
 
-	  	@media print,only screen and (min-width:800px) {
+		@media print,only screen and (min-width:800px) {
 			height: i.$icon-large;
 			width: i.$icon-large;
-	  	}
+		}
 	}
 
 	&.icon-stacked {
 		svg,
 		img {
 			display: block;
-			margin: auto auto calc(0.23097 * #{com.$gmux-base-font});
+			margin: auto auto calc(.23097 * #{com.$gmux-base-font});
 
 			@include bp.medium-and-above {
-				margin: auto auto calc(0.27173 * #{com.$gmux-base-font});
+				margin: auto auto calc(.27173 * #{com.$gmux-base-font});
 			}
-		
+
 			@include bp.large-and-above {
-				margin: auto auto calc(0.31249 * #{com.$gmux-base-font});
+				margin: auto auto calc(.31249 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -54,7 +54,7 @@
 		img {
 			margin-left: 5px;
 			position: relative;
-		  	right: 0;
+			right: 0;
 			top: -2px;
 
 			@media print,only screen and (min-width:800px) {
@@ -64,165 +64,145 @@
 	}
 }
 
-// %gb-filter-button {
-// 	@include b.primary-button(
-// 		transparent,
-// 		1px solid c.$grey,
-// 		c.$grey-mid-dark,
-// 		f.$font-family-louis,
-// 		12px,
-// 		f.$font-weight-normal,
-// 		2.19px,
-// 		18px,
-// 		12px 19px,
-// 		background .5s cubic-bezier(0, 1, .5, 1),
-// 		transparent,
-// 		1px solid c.$grey,
-// 		c.$grey-mid-dark,
-// 	);
-
-// 	-o-object-fit: contain;
-
-// 	   object-fit: contain;
-
-// 	&:active {
-// 	  	background-color: c.$grey;
-// 	  	color: c.$white;
-// 	}
-
-// 	&.disabled {
-// 		opacity: .5;
-// 	}
-
-// 	@media print,only screen and (min-width:800px) {
-// 		font-size: 16px;
-// 	  	letter-spacing: 3px;
-// 		line-height: 27px;
-// 	}
-// }
-
-$transition: background 0.25s, border 0.25s, color 0.25s;
-
-// %gb-primary-button {
-// 	@include b.primary-button(
-// 		transparent,
-// 		2px solid c.$gold,
-// 		c.$grey-dark,
-// 		f.$font-family-roboto,
-// 		14px,
-// 		f.$font-weight-bold,
-// 		normal,
-// 		23px,
-// 		12px 19px,
-// 		background .5s cubic-bezier(0, 1, .5, 1),
-// 		c.$gold,
-// 		null,
-// 		c.$grey-dark
-// 	);
-
-// 	-o-object-fit: contain;
-
-// 	   object-fit: contain;
-
-// 	&.gb-small-button {
-// 		line-height: 23px;
-// 		padding: 11px 0 10px;
-// 		position: relative;
-
-// 		&::after {
-// 			content: '';
-// 			height: 170%;
-// 			left: 0;
-// 			position: absolute;
-// 			top: -25%;
-// 			visibility: visible;
-// 			width: 100%;
-// 		}
-// 	}
-
-//   	&.disabled {
-// 		opacity: .5;
-
-// 		&:hover {
-// 			background-color: transparent;
-
-// 			&:focus,
-// 			&:active {
-// 				background-color: transparent;
-// 			}
-// 		}
-
-// 		&:active {
-// 			background-color: transparent;
-
-// 			&:focus {
-// 				background-color: transparent;
-// 			}
-// 		}
-// 	}
-
-// 	&:hover {
-// 		background-color: c.$gold;
-// 		border: 2px solid c.$gold;
-// 		color: c.$grey-dark;
-
-// 		&:active {
-// 			box-shadow: none;
-// 		}
-
-// 		&:focus {
-// 			box-shadow: 0 0 3px 3px c.$grey;
-// 		}
-// 	}
-
-// 	&:focus {
-// 		background-color: transparent;
-// 		box-shadow: 0 0 3px 3px c.$grey;
-
-// 		&:active,
-// 		&:hover {
-// 			background-color: c.$gold;
-// 		}
-
-// 		&.disabled {
-// 			box-shadow: none;
-// 		}
-// 	}
-
-// 	&.invert {
-// 		@include b.button-invert(
-// 			c.$grey-very-dark,
-// 			2px solid c.$gold,
-// 			c.$white,
-// 			c.$gold,
-// 			c.$grey-dark
-// 		);
-// 	}
-
-// 	/* For Inline and Stacked Icon Styling*/
-// 	@extend %button-icon-base;
-
-// 	@media print,only screen and (min-width:800px) {
-// 		font-size: 18px;
-// 		line-height: 32px;
-// 	}
-// }
-
-%vpicker-gb-secondary-button {
-@include b.primary-button(
+%gb-filter-button {
+	@include b.primary-button(
 		transparent,
-		2px solid c.$grey-mid,
+		1px solid c.$grey,
+		c.$grey-mid-dark,
+		f.$font-family-louis,
+		12px,
+		f.$font-weight-normal,
+		2.19px,
+		18px,
+		12px 20px 11px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		transparent,
+		1px solid c.$grey,
+		c.$grey-mid-dark,
+	);
+
+	-o-object-fit: contain;
+
+	   object-fit: contain;
+
+	&:active {
+		background-color: c.$grey;
+		color: c.$white;
+	}
+
+	&.disabled {
+		opacity: .5;
+	}
+
+	@media print,only screen and (min-width:800px) {
+		font-size: 16px;
+		letter-spacing: 3px;
+		line-height: 27px;
+		padding: 7px 20px;
+	}
+}
+
+$transition: background .25s, border .25s, color .25s;
+
+%gb-primary-button {
+	@include b.primary-button(
+		transparent,
+		2px solid c.$gold-ui,
 		c.$grey-dark,
 		f.$font-family-roboto,
-		14px,
+		12px,
 		f.$font-weight-bold,
 		normal,
-		23px,
-		9px 20px 8px,
+		2,
+		14px 0,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$gold-ui,
+		3px solid c.$gold-ui,
+		c.$grey-dark
+	);
+
+	-o-object-fit: contain;
+
+	   object-fit: contain;
+
+	&.gb-small-button {
+		line-height: 23px;
+		padding: 2.5px;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&.disabled {
+		opacity: .5;
+
+		&:active,
+		&:hover {
+			background-color: transparent;
+
+			&:focus,
+			&:active {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&.invert {
+		@include b.button-invert(
+			transparent,
+			3px solid c.$gold-light,
+			c.$white,
+			c.$gold-ui,
+			c.$white
+		);
+
+		&:hover,
+		&:active,
+		&.gb-target-zone-button-active {
+			border-color: c.$gold-ui;
+		}
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+
+	@media print,only screen and (min-width:800px) {
+		border-width: 3px;
+		font-size: 16px;
+		line-height: 1.75;
+		padding: 16px;
+	}
+
+	@media print,only screen and (min-width:1200px) {
+		font-size: 16px;
+		line-height: 2;
+		padding: 18px;
+	}
+}
+
+%gb-secondary-button {
+	@include b.secondary-button(
+		transparent,
+		2px solid c.$grey-button,
+		c.$grey-dark,
+		f.$font-family-roboto,
+		12px,
+		f.$font-weight-bold,
+		normal,
+		1.916,
+		14px 0,
 		background .25s cubic-bezier(0, 1, .5, 1),
-		c.$grey-mid-dark,
-		2px solid c.$grey-mid-dark,
-		c.$white
+		c.$grey-button,
+		2px solid c.$grey-button,
+		c.$grey-dark
 	);
 	-o-object-fit: contain;
 	   object-fit: contain;
@@ -246,31 +226,651 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 	&.disabled {
 		opacity: .5;
 
+		&:active,
+		&:focus,
+		&:hover,
+		&.gb-target-zone-button-active {
+			background-color: transparent;
+			border: 2px solid c.$grey-button;
+			color: c.$grey-dark;
+		}
+	}
+
+	&:focus {
+		background-color: transparent;
+		border: 2px solid c.$grey-button;
+		color: c.$grey-dark;
+
+		&:active,
+		&:hover,
+		&.gb-target-zone-button-active {
+			background-color: c.$grey-button;
+		}
+	}
+
+	&.invert {
+		@include b.button-invert(
+			transparent,
+			2px solid c.$grey-button-invert,
+			c.$white,
+			c.$grey-button-invert,
+			c.$white
+		);
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+
+	@media print,only screen and (min-width:800px) {
+		border: 3px solid c.$grey-button;
+		font-size: 14px;
+		line-height: 2;
+		padding: 16px 0;
+
+		&:active,
+		&:focus,
+		&:hover,
+		&.gb-target-zone-button-active {
+			border: 3px solid c.$grey-button;
+		}
+
+		&.invert {
+			border: 3px solid c.$grey-button-invert;
+		}
+	}
+
+	@media print,only screen and (min-width:1200px) {
+		font-size: 16px;
+		padding: 18px 0;
+	}
+
+}
+
+%gb-tertiary-button {
+	@include b.primary-button(
+		transparent,
+		2px solid c.$white,
+		c.$grey-dark,
+		f.$font-family-roboto,
+		14px,
+		f.$font-weight-bold,
+		normal,
+		23px,
+		9px 20px 8px,
+		background .25s cubic-bezier(0, 1, .5, 1),
+		transparent,
+		2px solid c.$grey-mid,
+		c.$grey-dark
+	);
+
+	-o-object-fit: contain;
+
+	   object-fit: contain;
+	text-decoration: underline;
+
+	&.gb-small-button {
+		line-height: 2;
+		padding: 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&.disabled {
+		opacity: .5;
+
+		&:hover {
+			border: 2px solid c.$white;
+		}
+
+		&:active {
+			border: 2px solid c.$white;
+		}
+	}
+
+	&:hover {
+		&:active {
+			box-shadow: none;
+		}
+
+		&:focus {
+			box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
+		}
+	}
+
+	&:focus {
+		box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
+
+		&.disabled {
+			border: 2px solid c.$white;
+			box-shadow: none;
+		}
+	}
+
+	&.invert {
+		@include b.button-invert(
+			c.$grey-very-dark,
+			2px solid c.$grey-mid,
+			c.$white,
+			c.$white,
+			c.$grey-dark
+		);
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+
+	@media print,only screen and (min-width:800px) {
+		font-size: 18px;
+		line-height: 32px;
+		padding: 10px 20px;
+	}
+}
+
+%gb-link-footer {
+	@include b.link(
+		c.$grey-dark,
+		f.$font-family-roboto,
+		12px,
+		f.$font-weight-bold,
+		normal,
+		normal,
+		0,
+		c.$gold
+	);
+
+	margin: 0;
+
+	&.invert {
+		@include b.link-invert(
+			c.$white,
+			c.$gold
+		);
+	}
+}
+
+%gb-link {
+	@include b.link(
+		c.$grey-dark,
+		f.$font-family-roboto,
+		12px,
+		f.$font-weight-bold,
+		normal,
+		1.9479,
+		10px 0,
+		c.$gold-text
+	);
+
+	&.invert {
+		@include b.link-invert(
+			c.$white,
+			c.$gold-light
+		);
+	}
+}
+
+%gb-icon-button {
+	@extend %button-icon-base;
+	color: c.$grey;
+	cursor: pointer;
+	padding: 12px 0;
+	width: auto;
+
+	&:hover {
+		color: c.$grey-dark;
+
+		svg {
+			fill: c.$grey-dark;
+		}
+	}
+}
+
+%gb-list-item-padding {
+	&.small-list {
+		padding-bottom: 18px;
+		padding-top: 18px;
+	}
+
+	&.large-list {
+		padding-bottom: 28px;
+		padding-top: 28px;
+	}
+
+	&.no-padding {
+		padding-left: 0;
+		padding-right: 0;
+
+		&::after {
+			right: 0;
+		}
+	}
+}
+
+%gb-list-item-primary {
+	@include b.list-item-button(
+		transparent,
+		c.$grey-dark,
+		f.$font-family-roboto,
+		calc(.7437 * #{com.$gmux-base-font}),
+		calc(.875 * #{com.$gmux-base-font}),
+		calc(1.0062 * #{com.$gmux-base-font}),
+		f.$font-weight-normal,
+		normal,
+		1,
+		1px solid c.$grey-mid,
+		3px solid transparent,
+		0,
+		18px 5%,
+		18px 30px,
+		18px 30px,
+		$transition,
+		transparent,
+		none,
+		transparent,
+		3px solid c.$gold
+	);
+
+	&:hover {
+		border-left: 3px solid c.$gold;
+		color: c.$grey-dark;
+
+	}
+
+	@extend %button-icon-base;
+
+	@extend %gb-list-item-padding;
+}
+
+%gb-list-item-tertiary {
+	@include b.list-item-button(
+		transparent,
+		c.$grey-mid,
+		f.$font-family-roboto,
+		calc(.7437 * #{com.$gmux-base-font}),
+		calc(.875 * #{com.$gmux-base-font}),
+		calc(1.0062 * #{com.$gmux-base-font}),
+		f.$font-weight-normal,
+		normal,
+		1,
+		1px solid c.$grey-mid,
+		3px solid transparent,
+		0,
+		18px 5%,
+		18px 30px,
+		18px 30px,
+		$transition,
+		transparent,
+		none,
+		transparent,
+		3px solid c.$gold
+	);
+
+	&:hover {
+		border-left: 3px solid c.$gold;
+		color: c.$grey-dark;
+
+	}
+
+	@extend %button-icon-base;
+
+	@extend %gb-list-item-padding;
+}
+
+%gb-list-item-description {
+	@include b.list-item-description(
+		calc(.9296 * #{com.$gmux-base-font}),
+		f.$font-family-roboto,
+		f.$font-weight-normal,
+		normal,
+		1.429,
+		c.$grey
+	);
+
+	@include bp.medium-and-above {
+		font-size: calc(1.0937 * #{com.$gmux-base-font});
+	}
+	@include bp.large-and-above {
+		font-size: calc(1.2578 * #{com.$gmux-base-font});
+	}
+}
+
+%gb-list-item-inline-icon-primary {
+	@extend %gb-list-item-primary;
+
+	&::after {
+		display: none;
+	}
+}
+
+%gb-list-item-inline-icon-secondary {
+	@extend %gb-list-item-primary;
+}
+
+%gb-list-item-inline-icon-tertiary {
+	@extend %gb-list-item-tertiary;
+}
+
+%gb-primary-button-inline-icon {
+	@extend %gb-primary-button;
+}
+
+%gb-primary-button-stacked-icon {
+	@extend %gb-primary-button;
+
+	&:hover {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px c.$gold;
+	}
+
+	&.invert {
 		&:hover {
 			background-color: transparent;
-			border: 2px solid c.$grey-mid;
-			box-shadow: none;
-			color: c.$grey-dark;
+			box-shadow: inset 0 0 0 2px c.$gold;
+		}
+	}
+}
+
+%gb-secondary-button-inline-icon {
+	@extend %gb-secondary-button;
+}
+
+%gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button;
+
+	&:hover {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px c.$grey-mid;
+	}
+
+	&.invert {
+		&:hover {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 2px c.$grey-mid;
+		}
+	}
+}
+
+%gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button;
+}
+
+%gb-secondary-button-stacked-icon {
+	@extend %gb-secondary-button;
+
+	&:hover {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px c.$grey-mid;
+	}
+
+	&.invert {
+		&:hover {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 2px c.$grey-mid;
+		}
+	}
+}
+
+%gb-tab-toggle {
+	@include b.gb-tab-toggle(
+		transparent,
+		0,
+		c.$grey-dark,
+		f.$font-family-louis,
+		17px,
+		f.$font-weight-normal,
+		.68px,
+		1.5294,
+		6px 0,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		transparent,
+		0,
+		c.$grey-dark,
+		transparent,
+		0,
+		c.$grey-dark,
+		transparent,
+		0,
+		c.$white,
+		transparent,
+		c.$white,
+		transparent,
+		c.$white,
+		21px,
+		21px
+	);
+
+	text-align: start;
+
+	.gb-link-label {
+		border-inline-start: 2px solid transparent;
+		padding-inline-end: 24px;
+		padding-inline-start: 22px;
+	}
+
+	&:hover,
+	&:active,
+	&.gb-target-zone-button-active {
+		.gb-link-label {
+			border-inline-start-color: c.$gold-ui;
+			transition: border-color .5s cubic-bezier(0, 1, .5, 1);
+		}
+	}
+
+	@media print,only screen and (min-width:800px) {
+		font-size: 20px;
+		letter-spacing: .8px;
+		line-height: 1.5;
+	}
+}
+
+html[dir='rtl'] {
+	%button-icon-base {
+		&.icon-right {
+			svg,
+			img {
+				left: 1px;
+				margin-right: 5px;
+				position: relative;
+				top: -2px;
+
+				@media print, only screen and (min-width: 800px) {
+					margin-right: 7px;
+				}
+			}
+		}
+
+		&.icon-left {
+			svg,
+			img {
+				margin-left: 5px;
+				position: relative;
+				right: 0;
+				top: -2px;
+
+				@media print, only screen and (min-width: 800px) {
+					margin-left: 7px;
+				}
+			}
+		}
+	}
+}
+
+.gb-primary-button {
+	@extend %gb-primary-button;
+}
+
+.gb-secondary-button {
+	@extend %gb-secondary-button;
+}
+
+.gb-tertiary-button {
+	@extend %gb-tertiary-button;
+}
+
+.gb-link-footer {
+	@extend %gb-link-footer;
+}
+
+.gb-link {
+	@extend %gb-link;
+
+	@media print,only screen and (min-width:800px) {
+		font-size: 14px;
+		line-height: 1.9643;
+	}
+
+	@media print,only screen and (min-width:1200px) {
+		font-size: 16px;
+		line-height: 1.9766;
+	}
+}
+
+.gb-filter-button {
+	@extend %gb-filter-button;
+}
+
+.gb-list-item-primary {
+	@extend %gb-list-item-primary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-list-item-secondary {
+	@extend %gb-list-item-primary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-list-item-tertiary {
+	@extend %gb-list-item-tertiary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-list-item-inline-icon-primary {
+	@extend %gb-list-item-inline-icon-primary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-list-item-inline-icon-secondary {
+	@extend %gb-list-item-inline-icon-secondary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-list-item-inline-icon-tertiary {
+	@extend %gb-list-item-inline-icon-tertiary;
+
+	.gb-list-item-description {
+		@extend %gb-list-item-description;
+	}
+}
+
+.gb-icon-button {
+	@extend %gb-icon-button;
+}
+
+.gb-primary-button-inline-icon {
+	@extend %gb-primary-button-inline-icon;
+}
+
+.gb-primary-button-stacked-icon {
+	@extend %gb-primary-button-stacked-icon;
+}
+
+.gb-secondary-button-inline-icon {
+	@extend %gb-secondary-button-inline-icon;
+}
+
+.gb-secondary-button-stacked-icon {
+	@extend %gb-secondary-button-stacked-icon;
+}
+
+.gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button-inline-icon;
+}
+
+.gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button-stacked-icon;
+}
+
+.gb-tab-toggle,
+.gb-content-relation-button {
+	@extend %gb-tab-toggle;
+}
+
+.gb-chevrolet-ev-primary {
+	border-radius: 30px;
+	@include b.primary-button (
+		c.$chevy-ev-wrapper-blue,
+		2px solid c.$chevy-ev-wrapper-blue,
+		c.$white,
+		f.$font-family-roboto,
+		12px,
+		f.$font-weight-bold,
+		normal,
+		20px,
+		9px 20px 8px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$chevy-ev-primary-btn-hover,
+		2px solid c.$chevy-ev-primary-btn-hover,
+		c.$white
+	);
+
+	&.gb-small-button {
+		line-height: 23px;
+		padding: 2.5px;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&.disabled {
+		opacity: .5;
+
+		&:hover {
+			background-color: c.$chevy-ev-wrapper-blue;
+			border-color: c.$chevy-ev-wrapper-blue;
+
 
 			&:focus,
 			&:active {
-				background-color: transparent;
-				border: 2px solid c.$grey-mid;
-				box-shadow: none;
-				color: c.$grey-dark;
+				background-color: c.$chevy-ev-wrapper-blue;
 			}
 		}
 
 		&:active {
-			background-color: transparent;
-			border: 2px solid c.$grey-mid;
-			box-shadow: none;
-			color: c.$grey-dark;
+			background-color: c.$chevy-ev-wrapper-blue;
 
 			&:focus {
-				background-color: transparent;
-				border: 2px solid c.$grey-mid;
-				color: c.$grey-dark;
+				background-color: c.$chevy-ev-wrapper-blue;
 			}
 		}
 	}
@@ -281,23 +881,17 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		}
 
 		&:focus {
-			background-color: c.$grey-mid-dark;
-			border: 2px solid c.$grey-mid-dark;
 			box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
-			color: c.$white;
 		}
 	}
 
 	&:focus {
-		background-color: transparent;
-		border: 2px solid c.$grey-mid;
+		background-color: c.$chevy-ev-wrapper-blue;
 		box-shadow: 0 0 3px 3px rgba(c.$grey, .5);
-		color: c.$grey-dark;
 
-		&:active {
-			background-color: c.$grey-mid-dark;
-			border: 2px solid c.$grey-mid-dark;
-			color: c.$white;
+		&:active,
+		&:hover {
+			background-color: c.$chevy-ev-primary-btn-hover;
 		}
 
 		&.disabled {
@@ -305,482 +899,8 @@ $transition: background 0.25s, border 0.25s, color 0.25s;
 		}
 	}
 
-	&.invert {
-		@include b.button-invert(
-			c.$grey-very-dark,
-			2px solid c.$grey-mid,
-			c.$white,
-			c.$grey-mid-dark,
-			c.$white
-		);
-
-		border: 2px solid c.$grey-mid-dark;
-	}
-
-	/* For Inline and Stacked Icon Styling*/
-	@extend %button-icon-base;
-
 	@media print,only screen and (min-width:800px) {
-	  	font-size: 18px;
-	  	line-height: 32px;
-		padding: 10px 20px;
+		font-size: 18px;
+		padding: 14px 20px;
 	}
 }
-
-// %gb-tertiary-button {
-// 	@include b.primary-button(
-// 		transparent,
-// 		2px solid c.$white,
-// 		c.$grey-dark,
-// 		f.$font-family-roboto,
-// 		14px,
-// 		f.$font-weight-bold,
-// 		normal,
-// 		23px,
-// 		12px 19px,
-// 		background .25s cubic-bezier(0, 1, .5, 1),
-// 		transparent,
-// 		2px solid c.$grey-mid,
-// 		c.$grey-dark
-// 	);
-
-// 	-o-object-fit: contain;
-
-// 	   object-fit: contain;
-// 	text-decoration: underline;
-
-// 	&.gb-small-button {
-// 		line-height: 2;
-// 		padding: 11px 0 10px;
-// 		position: relative;
-
-// 		&::after {
-// 			content: '';
-// 			height: 170%;
-// 			left: 0;
-// 			position: absolute;
-// 			top: -25%;
-// 			visibility: visible;
-// 			width: 100%;
-// 		}
-// 	}
-
-// 	&.disabled {
-// 		opacity: .5;
-
-// 		&:hover {
-// 			border: 2px solid c.$white;
-// 		}
-
-// 		&:active {
-// 			border: 2px solid c.$white;
-// 		}
-// 	}
-
-// 	&:hover {
-// 		&:active {
-// 			box-shadow: none;
-// 		}
-
-// 		&:focus {
-// 			box-shadow: 0 0 3px 3px c.$grey;
-// 		}
-// 	}
-
-// 	&:focus {
-// 		box-shadow: 0 0 3px 3px c.$grey;
-
-// 		&.disabled {
-// 			border: 2px solid c.$white;
-// 			box-shadow: none;
-// 		}
-// 	}
-
-// 	&.invert {
-// 		@include b.button-invert(
-// 			c.$grey-very-dark,
-// 			2px solid c.$grey-mid,
-// 			c.$white,
-// 			c.$white,
-// 			c.$grey-dark
-// 		);
-// 	}
-
-// 	/* For Inline and Stacked Icon Styling*/
-// 	@extend %button-icon-base;
-
-// 	@media print,only screen and (min-width:800px) {
-// 	  	font-size: 18px;
-// 	  	line-height: 32px;
-// 	}
-// }
-
-// %gb-link-footer {
-// 	@include b.link(
-// 		c.$grey-dark,
-// 		f.$font-family-roboto,
-// 		12px,
-// 		f.$font-weight-bold,
-// 		normal,
-// 		normal,
-// 		12px 19px,
-// 		c.$gold
-// 	);
-
-// 	margin: 13px 0 0;
-
-// 	&.invert {
-// 		@include b.link-invert(
-// 			c.$white,
-// 			c.$gold
-// 		);
-// 	}
-// }
-
-// %gb-link {
-// 	@include b.link(
-// 		c.$grey-dark,
-// 		f.$font-family-roboto,
-// 		12px,
-// 		f.$font-weight-bold,
-// 		normal,
-// 		18px,
-// 		12px 19px,
-// 		c.$gold
-// 	);
-
-// 	&.invert {
-// 		@include b.link-invert(
-// 			c.$white,
-// 			c.$gold
-// 		);
-// 	}
-// }
-
-// %gb-icon-button {
-// 	@extend %button-icon-base;
-// 	color: c.$grey;
-// 	cursor: pointer;
-// 	display: inline-block;
-// 	padding: 12px 19px;
-// 	width: auto;
-
-// 	&:hover {
-// 		color: c.$grey-dark;
-
-// 		svg {
-// 			fill: c.$grey-dark;
-// 		}
-// 	}
-// }
-
-// %gb-list-item-padding {
-// 	&.small-list {
-// 		padding-bottom: 18px;
-// 		padding-top: 18px;
-// 	}
-
-// 	&.large-list {
-// 		padding-bottom: 28px;
-// 		padding-top: 28px;
-// 	}
-
-// 	&.no-padding {
-// 		padding-left: 0;
-// 		padding-right: 0;
-
-// 		&::after {
-// 			right: 0;
-// 		}
-// 	}
-// }
-
-// %gb-list-item-primary {
-// 	@include b.list-item-button(
-// 		transparent,
-// 		c.$grey-dark,
-// 		f.$font-family-roboto,
-// 		.7rem,
-// 		.7rem,
-// 		.7rem,
-// 		f.$font-weight-normal,
-// 		normal,
-// 		1,
-// 		1px solid c.$grey-mid,
-// 		3px solid transparent,
-// 		0,
-// 		18px 5%,
-// 		18px 30px,
-// 		18px 30px,
-// 		$transition,
-// 		transparent,
-// 		none,
-// 		transparent,
-// 		3px solid c.$gold
-// 	);
-
-// 	&:hover {
-// 		border-left: 3px solid c.$gold;
-// 		color: c.$grey-dark;
-
-// 	}
-
-// 	@extend %button-icon-base;
-
-// 	@extend %gb-list-item-padding;
-// }
-
-// %gb-list-item-tertiary {
-// 	@include b.list-item-button(
-// 		transparent,
-// 		c.$grey-mid,
-// 		f.$font-family-roboto,
-// 		.7rem,
-// 		.7rem,
-// 		.7rem,
-// 		f.$font-weight-normal,
-// 		normal,
-// 		1,
-// 		1px solid c.$grey-mid,
-// 		3px solid transparent,
-// 		0,
-// 		18px 5%,
-// 		18px 30px,
-// 		18px 30px,
-// 		$transition,
-// 		transparent,
-// 		none,
-// 		transparent,
-// 		3px solid c.$gold
-// 	);
-
-// 	&:hover {
-// 		border-left: 3px solid c.$gold;
-// 		color: c.$grey-dark;
-
-// 	}
-
-// 	@extend %button-icon-base;
-
-// 	@extend %gb-list-item-padding;
-// }
-
-// %gb-list-item-description {
-// 	@include b.list-item-description(
-// 		.875rem,
-// 		f.$font-family-roboto,
-// 		f.$font-weight-normal,
-// 		normal,
-// 		1.429,
-// 		c.$grey
-// 	);
-// }
-
-// %gb-list-item-inline-icon-primary {
-// 	@extend %gb-list-item-primary;
-
-// 	&::after {
-// 		display: none;
-// 	}
-// }
-
-// %gb-list-item-inline-icon-secondary {
-// 	@extend %gb-list-item-primary;
-// }
-
-// %gb-list-item-inline-icon-tertiary {
-// 	@extend %gb-list-item-tertiary;
-// }
-
-// %gb-primary-button-inline-icon {
-// 	@extend %gb-primary-button;
-// }
-
-// %gb-primary-button-stacked-icon {
-// 	@extend %gb-primary-button;
-
-// 	&:hover {
-// 		background-color: transparent;
-// 		box-shadow: inset 0 0 0 2px c.$gold;
-// 	}
-
-// 	&.invert {
-// 		&:hover {
-// 			background-color: transparent;
-// 			box-shadow: inset 0 0 0 2px c.$gold;
-// 		}
-// 	}
-// }
-
-%vpicker-gb-secondary-button-inline-icon {
-	@extend %vpicker-gb-secondary-button;
-}
-
-// %gb-tertiary-button-stacked-icon {
-// 	@extend %gb-tertiary-button;
-
-// 	&:hover {
-// 		background-color: transparent;
-// 		box-shadow: inset 0 0 0 2px c.$grey-mid;
-// 	}
-
-// 	&.invert {
-// 		&:hover {
-// 			background-color: transparent;
-// 			box-shadow: inset 0 0 0 2px c.$grey-mid;
-// 		}
-// 	}
-// }
-
-// %gb-tertiary-button-inline-icon {
-//   @extend %gb-tertiary-button;
-// }
-
-// %gb-secondary-button-stacked-icon {
-// 	@extend %gb-secondary-button;
-
-// 	&:hover {
-// 		background-color: transparent;
-// 		box-shadow: inset 0 0 0 2px c.$grey-mid;
-// 	}
-
-// 	&.invert {
-// 		&:hover {
-// 			background-color: transparent;
-// 			box-shadow: inset 0 0 0 2px c.$grey-mid;
-// 		}
-// 	}
-// }
-
-// html[dir='rtl'] {
-// 	%button-icon-base {
-// 		&.icon-right {
-// 			svg,
-// 			img {
-// 				left: 1px;
-// 				margin-right: 5px;
-// 				position: relative;
-// 				top: -2px;
-
-// 				@media print, only screen and (min-width: 800px) {
-// 					margin-right: 7px;
-// 				}
-// 			}
-// 		}
-
-// 		&.icon-left {
-// 			svg,
-// 			img {
-// 				margin-left: 5px;
-// 				position: relative;
-// 				right: 0;
-// 				top: -2px;
-
-// 				@media print, only screen and (min-width: 800px) {
-// 					margin-left: 7px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// .gb-primary-button {
-// 	@extend %gb-primary-button;
-// }
-
-.vpicker-gb-secondary-button {
-	@extend %vpicker-gb-secondary-button;
-}
-
-// .gb-tertiary-button {
-//   	@extend %gb-tertiary-button;
-// }
-
-// .gb-link-footer {
-// 	@extend %gb-link-footer;
-// }
-
-// .gb-link {
-// 	@extend %gb-link;
-// }
-
-// .gb-filter-button {
-// 	@extend %gb-filter-button;
-// }
-
-// .gb-list-item-primary {
-// 	@extend %gb-list-item-primary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-list-item-secondary {
-// 	@extend %gb-list-item-primary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-list-item-tertiary {
-// 	@extend %gb-list-item-tertiary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-list-item-inline-icon-primary {
-// 	@extend %gb-list-item-inline-icon-primary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-list-item-inline-icon-secondary {
-// 	@extend %gb-list-item-inline-icon-secondary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-list-item-inline-icon-tertiary {
-// 	@extend %gb-list-item-inline-icon-tertiary;
-
-// 	.gb-list-item-description {
-// 		@extend %gb-list-item-description;
-// 	}
-// }
-
-// .gb-icon-button {
-// 	@extend %gb-icon-button;
-// }
-
-// .gb-primary-button-inline-icon {
-// 	@extend %gb-primary-button-inline-icon;
-// }
-
-// .gb-primary-button-stacked-icon {
-// 	@extend %gb-primary-button-stacked-icon;
-// }
-
-.vpicker-gb-secondary-button-inline-icon {
-	@extend %vpicker-gb-secondary-button-inline-icon;
-}
-
-// .gb-secondary-button-stacked-icon {
-// 	@extend %gb-secondary-button-stacked-icon;
-// }
-
-// .gb-tertiary-button-inline-icon {
-//   	@extend %gb-tertiary-button-inline-icon;
-// }
-
-// .gb-tertiary-button-stacked-icon {
-//   	@extend %gb-tertiary-button-stacked-icon;
-// }
-

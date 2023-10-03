@@ -1,0 +1,96 @@
+@use 'radio' as r;
+@use '../../../onstar/colors' as c;
+@use '../../../onstar/fonts' as f;
+
+.gb-radio {
+	input[type='radio'] {
+		@include r.base-radio-input(
+			1.5rem,
+			0,
+			1.5rem,
+		);
+		align-items: center;
+		position: absolute;
+
+		&::before {
+			background: c.$white;
+			border: 2px solid c.$primary-blue;
+			border-radius: 20px;
+			content: '';
+			display: inline-block;
+			height: 1.5rem;
+			left: 6px;
+			position: absolute;
+			top: 6px;
+			width: 1.5rem;
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$brand-black,
+				f.$font-family-circular,
+				1rem,
+				1.5rem,
+				0 0 0 2.25rem,
+			);
+			font-weight: f.$font-weight-normal;
+			top: 3px;
+			vertical-align: super;
+		}
+
+		&:checked {
+			&::before {
+				background: c.$primary-blue;
+				border: 2px solid c.$primary-blue;
+				box-shadow: inset 0 0 0 3px c.$white;
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='radio'] {
+			position: relative;
+
+			&::before {
+				border: 2px solid c.$med-gray;
+			}
+
+			+label {
+				color: c.$med-gray;
+				margin-left: 10px;
+				vertical-align: sub;
+			}
+
+			&:checked {
+				&::before {
+					background: c.$med-gray;
+				}
+			}
+		}
+	}
+
+	@media print,only screen and (min-width:800px) {
+		input[type='radio'] + label {
+			@include r.base-radio-label(
+				c.$brand-black,
+				f.$font-family-circular,
+				1rem,
+				1.625rem,
+				0 0 0 2.25rem,
+			);
+			font-weight: f.$font-weight-normal;
+			top: 5px;
+			vertical-align: super;
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-radio {
+		input[type='radio'] {
+			+label {
+				font-family: f.$font-family-frutiger !important;
+			}
+		}
+	}
+}

@@ -22,36 +22,42 @@
 	&.icon-left {
 		svg,
 		img {
-			margin-right: 20px;
+			margin-right: 12px;
 		}
 	}
 
 	&.icon-right {
 		svg,
 		img {
-			margin-left: 20px;
+			margin-left: 12px;
 		}
 	}
 }
 
 %gb-primary-button {
 	@include b.primary-button(
-		c.$blue-ev,
-		2px solid c.$blue-ev,
+		c.$chevy-ev-blue-base,
+		1px solid c.$chevy-ev-blue-base,
 		c.$white,
 		f.$font-family-roboto,
-		.875rem,
-		f.$font-weight-medium,
-		1px,
-		1.43,
-		.8rem,
-		null,
-		null,
-		null,
+		16px,
+		f.$font-weight-bold,
+		normal,
+		1,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$chevy-ev-blue-bright,
+		1px solid c.$chevy-ev-blue-bright,
 		null
 	);
 
+	align-items: center;
 	border-radius: 24px;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+	text-transform: uppercase;
 
 	&.gb-small-button {
 		line-height: 2;
@@ -69,14 +75,43 @@
 		}
 	}
 
+	&:active {
+		background-color: c.$chevy-ev-blue-bright;
+		border-color: c.$chevy-ev-blue-bright;
+		color: c.$white;
+	}
+
+	&:focus {
+		background: c.$chevy-ev-blue-base;
+		box-shadow: 0 0 10px #4682ef;
+	}
+
+	&.disabled {
+		background-color: c.$gray-10;
+		border-color: c.$gray-10;
+		box-shadow: none;
+		color: c.$gray-50;
+	}
+
 	&.invert {
 		@include b.button-invert(
 			c.$white,
-			2px solid c.$white,
-			c.$grey-dark,
-			null,
+			1px solid c.$white,
+			c.$gray-90,
+			c.$gray-20,
 			null
 		);
+
+		&:hover,
+		&:active {
+			border-color: c.$gray-20;
+		}
+
+		&.disabled {
+			background-color: c.$gray-90;
+			border-color: c.$gray-90;
+			color: c.$gray-80;
+		}
 	}
 
 	/* For Inline and Stacked Icon Styling*/
@@ -86,21 +121,26 @@
 %gb-secondary-button {
 	@include b.secondary-button(
 		transparent,
-		2px solid c.$grey,
-		c.$grey,
+		1px solid c.$gray-90,
+		c.$gray-90,
 		f.$font-family-roboto,
-		.875rem,
-		f.$font-weight-medium,
-		1px,
-		1.43,
-		.8rem,
-		null,
-		null,
-		null,
-		null
+		16px,
+		f.$font-weight-bold,
+		normal,
+		1,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		c.$gray-100-chevy-ev,
+		1px solid c.$gray-100-chevy-ev,
+		c.$white
 	);
 
+	align-items: center;
 	border-radius: 24px;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
 
 	&.gb-small-button {
 		line-height: 2;
@@ -118,14 +158,120 @@
 		}
 	}
 
+	&:active {
+		background-color: c.$gray-100-chevy-ev;
+		border-color: c.$gray-100-chevy-ev;
+		color: c.$white;
+	}
+
+	&:focus {
+		background: transparent;
+		border-color: c.$gray-80;
+		box-shadow: 0 0 10px #4682ef;
+		color: c.$gray-90;
+	}
+
+	&.disabled {
+		background-color: transparent;
+		border-color: c.$gray-30;
+		box-shadow: none;
+		color: c.$gray-50;
+	}
+
 	&.invert {
 		@include b.button-invert(
 			transparent,
-			2px solid c.$white,
+			1px solid c.$white,
 			c.$white,
-			null,
-			null
+			c.$gray-20,
+			c.$gray-90
 		);
+
+		&:hover,
+		&:active {
+			border-color: c.$gray-20;
+		}
+
+		&.disabled {
+			background-color: transparent;
+			border-color: c.$gray-90;
+			color: c.$gray-80;
+		}
+	}
+
+	/* For Inline and Stacked Icon Styling*/
+	@extend %button-icon-base;
+}
+
+%gb-tertiary-button {
+	@include b.primary-button(
+		transparent,
+		none,
+		c.$chevy-ev-blue-base,
+		f.$font-family-roboto,
+		16px,
+		f.$font-weight-bold,
+		normal,
+		1,
+		12px 24px,
+		background .5s cubic-bezier(0, 1, .5, 1),
+		transparent,
+		none,
+		c.$chevy-ev-blue-bright
+	);
+
+	align-items: center;
+	border-radius: 24px;
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+	justify-content: center;
+
+	&.gb-small-button {
+		line-height: 2;
+		padding: 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 170%;
+			left: 0;
+			position: absolute;
+			top: -25%;
+			visibility: visible;
+			width: 100%;
+		}
+	}
+
+	&:active {
+		color: c.$chevy-ev-blue-bright;
+	}
+
+	&:focus {
+		color: c.$chevy-ev-blue-base;
+	}
+
+	&.disabled {
+		color: c.$gray-50;
+	}
+
+	&.invert {
+		@include b.button-invert(
+			transparent,
+			none,
+			c.$white,
+			transparent,
+			c.$chevy-ev-blue-bright
+		);
+
+		&:hover,
+		&:active {
+			color: c.$chevy-ev-blue-bright;
+		}
+
+		&.disabled {
+			color: c.$gray-50;
+		}
 	}
 
 	/* For Inline and Stacked Icon Styling*/
@@ -134,14 +280,14 @@
 
 %gb-link {
 	@include b.link(
-		c.$blue-ev,
+		c.$chevy-ev-blue-base,
 		f.$font-family-roboto,
 		1rem,
 		f.$font-weight-medium,
 		1px,
 		1.38,
 		null,
-		c.$blue-ev
+		c.$chevy-ev-blue-bright
 	);
 
 	&.invert {
@@ -154,17 +300,177 @@
 
 %gb-icon-button {
 	@extend %button-icon-base;
-	color: c.$grey;
+	background-color: c.$gray-100-chevy-ev;
+	border-radius: 23px;
 	cursor: pointer;
 	display: inline-block;
-	padding: 0.8rem 0;
-	width: auto;
+	height: i.$icon-medium;
+	padding: 0;
+	width: i.$icon-medium;
 
-	&:hover {
-		color: c.$grey-dark;
+	svg,
+	img {
+		color: c.$gray-10;
+		height: i.$icon-small;
+		left: 12px;
+		position: relative;
+		top: 12px;
+		vertical-align: middle;
+		width: i.$icon-small;
+	}
+
+	&.disabled {
+		background-color: c.$gray-10;
 
 		svg {
-			fill: c.$grey-dark;
+			color: c.$gray-50-chevy-ev;
+		}
+
+		&:active,
+		&:hover {
+			background-color: c.$gray-10;
+		}
+	}
+
+	&:active,
+	&:hover {
+		background-color: c.$gray-80;
+	}
+
+	&.invert {
+		background-color: c.$white;
+
+		svg {
+			color: c.$gray-90;
+		}
+
+		&:active,
+		&:hover {
+			background-color: c.$gray-20;
+		}
+
+		&.disabled {
+			background-color: c.$gray-90;
+
+			svg {
+				color: c.$gray-80;
+			}
+
+			&:active,
+			&:hover {
+				background-color: c.$gray-90;
+			}
+		}
+	}
+
+	@media print,only screen and (min-width:800px) {
+		border-radius: 48px;
+		height: i.$icon-large;
+		width: i.$icon-large;
+
+		svg,
+		img {
+			height: i.$icon-medium;
+			left: 24px;
+			top: 24px;
+			width: i.$icon-medium;
+		}
+	}
+}
+
+%gb-icon-outline-button {
+	@extend %button-icon-base;
+	background-color: transparent;
+	border: 2px solid c.$gray-90;
+	border-radius: 23px;
+	cursor: pointer;
+	display: inline-block;
+	height: i.$icon-medium;
+	padding: 0;
+	width: i.$icon-medium;
+
+	svg,
+	img {
+		color: c.$gray-90;
+		height: i.$icon-small;
+		left: 10px;
+		position: relative;
+		top: 10px;
+		vertical-align: middle;
+		width: i.$icon-small;
+	}
+
+	&.disabled {
+		border-color: c.$gray-30;
+
+		svg {
+			color: c.$gray-50-chevy-ev;
+		}
+
+		&:active,
+		&:hover {
+			background-color: transparent;
+
+			svg {
+				color: c.$gray-50-chevy-ev;
+			}
+		}
+	}
+
+	&:active,
+	&:hover {
+		background-color: c.$gray-100-chevy-ev;
+		/*border-color: c.$gray-100-chevy-ev;*/
+
+		svg,
+		img {
+			color: c.$gray-10;
+		}
+	}
+
+	&.invert {
+		border-color: c.$gray-10;
+
+		svg {
+			color: c.$gray-10;
+		}
+
+		&:active,
+		&:hover {
+			background-color: c.$gray-20;
+			border-color: c.$gray-20;
+
+			svg {
+				color: c.$gray-90;
+			}
+		}
+
+		&.disabled {
+			background-color: transparent;
+			border-color: c.$gray-90;
+
+			svg {
+				color: c.$gray-80;
+			}
+
+			&:active,
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+
+	@media print,only screen and (min-width:800px) {
+		border-radius: 48px;
+		height: i.$icon-large;
+		width: i.$icon-large;
+
+		svg,
+		img {
+			height: i.$icon-medium;
+			left: 22px;
+			top: 22px;
+			width: i.$icon-medium;
 		}
 	}
 }
@@ -190,11 +496,11 @@
 		transparent,
 		none,
 		transparent,
-		3px solid c.$blue-ev
+		3px solid c.$chevy-ev-blue-base
 	);
 
 	&:hover { 
-		border-left: 3px solid c.$blue-ev;
+		border-left: 3px solid c.$chevy-ev-blue-bright;
 		color: c.$grey-dark;
 
 	}
@@ -211,7 +517,45 @@
 	);
 }
 
+html[dir='rtl'] {
+	%button-icon-base {
+		&.icon-right {
+			svg,
+			img {
+				margin-right: 12px;
+			}
+		}
 
+		&.icon-left {
+			svg,
+			img {
+				margin-left: 12px;
+			}
+		}
+	}
+
+	%gb-icon-button {
+		svg,
+		img {
+			right: 12px;
+
+			@media print,only screen and (min-width:800px) {
+				right: 24px;
+			}
+		}
+	}
+
+	%gb-icon-outline-button {
+		svg,
+		img {
+			right: 10px;
+
+			@media print,only screen and (min-width:800px) {
+				right: 22px;
+			}
+		}
+	}
+}
 
 %gb-primary-button-inline-icon {
 	@extend %gb-primary-button;
@@ -229,12 +573,24 @@
 	@extend %gb-secondary-button;
 }
 
+%gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button;
+}
+
+%gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button;
+}
+
 .gb-primary-button {
 	@extend %gb-primary-button;
 }
 
 .gb-secondary-button {
 	@extend %gb-secondary-button;
+}
+
+.gb-tertiary-button {
+	@extend %gb-tertiary-button;
 }
 
 .gb-link {
@@ -253,6 +609,10 @@
 	@extend %gb-icon-button;
 }
 
+.gb-icon-outline-button {
+	@extend %gb-icon-outline-button;
+}
+
 .gb-primary-button-inline-icon {
 	@extend %gb-primary-button-inline-icon;
 }
@@ -267,4 +627,12 @@
 
 .gb-secondary-button-stacked-icon {
 	@extend %gb-secondary-button-stacked-icon;
+}
+
+.gb-tertiary-button-inline-icon {
+	@extend %gb-tertiary-button-inline-icon;
+}
+
+.gb-tertiary-button-stacked-icon {
+	@extend %gb-tertiary-button-stacked-icon;
 }

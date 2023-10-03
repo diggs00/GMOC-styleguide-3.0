@@ -6,13 +6,7 @@
 	position: relative;
 
 	label {
-		@include i.base-label(
-			f.$nexa-w05,
-			14px,
-			normal,
-			1.2,
-			auto
-		);
+		@include i.base-label(f.$nexa-w05, 14px, normal, 1.2, auto);
 		color: c.$car-bravo-midnight-base;
 	}
 
@@ -40,9 +34,9 @@
 		color: c.$gray-base;
 		display: flex;
 		flex-direction: row;
-		font-weight: f.$font-weight-normal;
 		font-family: f.$nexa-w05;
 		font-size: 14px;
+		font-weight: f.$font-weight-normal;
 		line-height: 1.2;
 		margin: 8px auto 8px 16px;
 
@@ -93,9 +87,9 @@
 		top: 21px;
 
 		.gb-icon-cont {
-			width: 12px;
-			height: 12px;
 			display: inline-block;
+			height: 12px;
+			width: 12px;
 
 			.gb-icon-img-hover {
 				opacity: 0;
@@ -103,13 +97,12 @@
 
 			.gb-icon-img,
 			.gb-icon-img-hover {
+				cursor: pointer;
 				display: block;
 				height: auto;
 				max-width: 100%;
-				position:absolute;
-				cursor:pointer;
+				position: absolute;
 			}
-
 		}
 	}
 
@@ -159,8 +152,8 @@
 		&[type],
 		textarea {
 			border-radius: 4px;
-			line-height: 1.4;
 			letter-spacing: -.25px;
+			line-height: 1.4;
 
 			&.optional {
 				~ .gb-input-label {
@@ -193,13 +186,12 @@
 			&:focus {
 				border-color: c.$car-bravo-midnight-base;
 
-
 				~ .gb-input-label {
 					color: c.$car-bravo-midnight-base;
 					display: block;
 					font-size: 12px;
-					line-height: 1.2;
 					letter-spacing: -.25px;
+					line-height: 1.2;
 					top: 8px;
 				}
 			}
@@ -209,17 +201,16 @@
 			}
 		}
 		/*IOS  This is to override IOS appearance for date input types.*/
-		&[type=date] {
-			display: block;
-			text-transform: uppercase;
-			-webkit-appearance: textfield;
+		&[type='date'] {
 			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
 			min-height: 52px;
 			padding: 24px 40px 6px 16px;
+			text-transform: uppercase;
 
 			&::-webkit-datetime-edit-text {
 				padding: 0 6px;
-
 			}
 
 			&::-webkit-datetime-edit-day-field {
@@ -232,7 +223,6 @@
 
 			&.valid {
 				&:focus {
-
 					&::-webkit-calendar-picker-indicator {
 						opacity: 1;
 					}
@@ -369,13 +359,13 @@
 					20px,
 					3px,
 					4px,
-					0 8px 0 0);
+					0 8px 0 0
+				);
 			}
 		}
 	}
 
 	&.disabled {
-
 		input {
 			border: 1px solid c.$car-bravo-midnight-accent-base;
 
@@ -384,8 +374,8 @@
 				&[disabled] {
 					background-color: c.$car-bravo-midnight-accent-bright;
 					border: 1px solid c.$car-bravo-midnight-accent-base;
-					color: c.$car-bravo-midnight-accent-base;
 					box-shadow: none;
+					color: c.$car-bravo-midnight-accent-base;
 
 					~ .gb-input-label {
 						color: c.$car-bravo-midnight-accent-base;
@@ -395,8 +385,8 @@
 				~ .gb-input-icon {
 					.gb-icon-cont {
 						.gb-icon-img {
-							opacity: .6;
 							cursor: not-allowed;
+							opacity: .6;
 						}
 
 						.gb-icon-img-hover {
@@ -405,7 +395,7 @@
 
 						.gb-icon-img,
 						.gb-icon-img-hover {
-							cursor:not-allowed;
+							cursor: not-allowed;
 						}
 					}
 				}
@@ -441,23 +431,22 @@
 	}
 
 	&.gb-pw {
-
 		.gb-helper-text {
 			color: c.$gray-base;
-			line-height: 1.5;
 			font-weight: f.$font-weight-normal;
+			line-height: 1.5;
 		}
 
 		input {
 			@include i.base-input(
-			c.$white,
-			1px solid c.$car-bravo-midnight-bright,
-			c.$car-bravo-midnight-base,
-			100%,
-			f.$nexa-w05,
-			18px,
-			16.5px 97px 4.5px 16px,
-			1px solid c.$car-bravo-midnight-bright
+				c.$white,
+				1px solid c.$car-bravo-midnight-bright,
+				c.$car-bravo-midnight-base,
+				100%,
+				f.$nexa-w05,
+				18px,
+				16.5px 97px 4.5px 16px,
+				1px solid c.$car-bravo-midnight-bright
 			);
 
 			&[type],
@@ -465,8 +454,8 @@
 				&:active,
 				&:focus {
 					~ .gb-input-label {
+						font-weight: f.$font-weight-bold;
 						top: 5px;
-						font-weight:  f.$font-weight-bold;
 					}
 
 					~ .show-password {
@@ -478,8 +467,8 @@
 
 		.gb-input-label {
 			font-size: 18px;
+			letter-spacing: -.25px;
 			line-height: 1.4;
-			letter-spacing: -0.25px;
 			top: 12px;
 
 			&.hover {
@@ -490,97 +479,93 @@
 		}
 
 		.show-password {
-		color: c.$gray-base;
-		display: inline-block;
-		font-family: f.$nexa-w05;
-		font-size: 18px;
-		font-style: normal;
-		font-weight: f.$font-weight-bold;
-		line-height: 1.4;
-		opacity: 0;
-		position: absolute;
-		right: 17px;
-		text-transform: uppercase;
-		top: 16px;
+			color: c.$gray-base;
+			display: inline-block;
+			font-family: f.$nexa-w05;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: f.$font-weight-bold;
+			line-height: 1.4;
+			opacity: 0;
+			position: absolute;
+			right: 17px;
+			text-transform: uppercase;
+			top: 16px;
 
-		&:hover {
-			cursor: pointer;
-		}
+			&:hover {
+				cursor: pointer;
+			}
 
-		&:focus {
-			opacity: 1;
-		}
-	}
-
-	button {
-		&.show-password {
-			background: none;
-			border: none;
-			cursor: pointer;
-			padding: 0;
-		}
-	}
-
-	&.form-error {
-
-		input {
-
-			&[type],
-			textarea {
-
-				&:active,
-				&:focus {
-					~.gb-input-label {
-						font-weight: f.$font-weight-normal;
-					}
-				}
+			&:focus {
+				opacity: 1;
 			}
 		}
 
-		.gb-input-label {
-			font-weight: f.$font-weight-normal;
-			color: c.$error-base;
+		button {
+			&.show-password {
+				background: none;
+				border: 0;
+				cursor: pointer;
+				padding: 0;
+			}
 		}
 
-		.gb-error-text-container {
-			.gb-error-text {
-				font-weight: f.$font-weight-normal;
-				font-size: 14px;
-				line-height: 1.5;
-
-				&.gb-error-img {
-					&::before {
-						background-size: 16px 16px;
-						height: 16px;
-						width: 16px;
+		&.form-error {
+			input {
+				&[type],
+				textarea {
+					&:active,
+					&:focus {
+						~ .gb-input-label {
+							font-weight: f.$font-weight-normal;
+						}
 					}
+				}
+			}
 
+			.gb-input-label {
+				color: c.$error-base;
+				font-weight: f.$font-weight-normal;
+			}
+
+			.gb-error-text-container {
+				.gb-error-text {
+					font-size: 14px;
+					font-weight: f.$font-weight-normal;
+					line-height: 1.5;
+
+					&.gb-error-img {
+						&::before {
+							background-size: 16px 16px;
+							height: 16px;
+							width: 16px;
+						}
+					}
+				}
+			}
+
+			.gb-pw-info-container {
+				.gb-pw-label {
+					color: c.$error-base;
 				}
 			}
 		}
 
 		.gb-pw-info-container {
 			.gb-pw-label {
-				color: c.$error-base;
+				color: c.$gray-base;
+				display: block;
+				font-family: f.$nexa-w05;
+				font-size: 14px;
+				font-style: normal;
+				line-height: 150%;
+				margin: 8px auto 8px 16px;
+			}
+
+			.gb-pw-info-item {
+				@extend %gb-pw-info-item;
 			}
 		}
-	}
-
-	.gb-pw-info-container {
-		.gb-pw-label {
-			color: c.$gray-base;
-			display: block;
-			font-family: f.$nexa-w05;
-			font-size: 14px;
-			font-style: normal;
-			line-height: 150%;
-			margin: 8px auto 8px 16px;
-		}
-
-		.gb-pw-info-item {
-			@extend %gb-pw-info-item;
-		}
-	}
 	}
 }
 

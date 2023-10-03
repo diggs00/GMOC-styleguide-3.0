@@ -1,0 +1,118 @@
+@use 'toggle' as t;
+@use '../../../mobile/colors' as c;
+@use '../../../mobile/fonts' as f;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include t.base-toggle-input(
+			22px,
+			38px
+		);
+
+		&::before {
+			@include t.outer-toggle(
+				c.$toggle-off-grey,
+				1px solid c.$toggle-off-grey,
+				29px,
+				13.3px,
+				.4s,
+				32.3px
+			);
+			left: 0;
+			top: 3px;
+		}
+
+		&::after {
+			@include t.inner-toggle(
+				c.$toggle-grey,
+				50%,
+				19px,
+				.4s,
+				19px
+			);
+			background: c.$toggle-off-icon-grey;
+			bottom: 13px;
+			filter: c.$toggle-drop-shadow;
+			left: -2px;
+
+
+
+
+		}
+
+		&:checked {
+			&::before {
+				background-color: c.$toggle-on-blue;
+				border-color: c.$toggle-on-blue;
+			}
+
+			&::after {
+				background: c.$toggle-on-icon;
+				background-color: c.$toggle-blue;
+				filter: c.$toggle-drop-shadow;
+				transform: translateX(18px);
+			}
+		}
+	}
+
+
+	label {
+		@include t.base-toggle-label(
+			c.$grey-medium,
+			f.$font-family-gmglobal-sans,
+			1rem,
+			1.375,
+			0 calc(1rem - 8px)
+		);
+		bottom: 6px;
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			&::before {
+				background-color: c.$toggle-disabled;
+				border-color: c.$toggle-disabled;
+			}
+
+			&::after {
+				background: c.$toggle-icon-disabled-gradient;
+				background-color: c.$toggle-icon-disabled;
+				filter: c.$toggle-drop-shadow-disabled;
+			}
+
+			&:checked {
+				&::before {
+					background-color: c.$toggle-disabled;
+					border-color: c.$toggle-disabled;
+				}
+
+				&::after {
+					background-color: c.$toggle-icon-disabled;
+					filter: c.$toggle-drop-shadow-disabled;
+				}
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-toggle {
+		input[type='checkbox'] {
+			&::before {
+				left: 0;
+				right: 6px;
+			}
+
+			&::after {
+				left: 0;
+				right: 9px;
+			}
+
+			&:checked {
+				&::after {
+					transform: translateX(-18px);
+				}
+			}
+		}
+	}
+}

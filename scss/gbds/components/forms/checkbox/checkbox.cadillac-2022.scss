@@ -1,0 +1,109 @@
+@use 'checkbox';
+@use '../../../cadillac-2022/colors';
+@use '../../../cadillac-2022/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$gray-1,
+			fonts.$cadillac-gothic,
+			1rem,
+			fonts.$font-weight-lighter,
+			normal,
+			1.2rem
+		);
+
+		margin: 0 .5rem;
+		position: relative;
+		top: .125rem;
+	}
+
+	input[type='checkbox'] {
+		@include checkbox.base-box(1.25rem);
+
+		background: colors.$white;
+		border: 1px solid colors.$gray-1;
+		margin: 0;
+
+		&:checked {
+			background: colors.$gray-1;
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='12'%20viewBox='0%200%2016%2012'%20fill='none'%3E%3Cpath%20d='M2%205.69231L6.2%2010L14%202'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3E%3C/svg%3E");
+				left: .0625rem;
+				position: relative;
+				top: .0625rem;
+			}
+		}
+
+		&.gb-alt-icon {
+			&:checked {
+				background-color: transparent;
+
+				&::after {
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23282828%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%2020h20V0H0v20Z%22%20clip-rule%3D%22evenodd%22%2F%3E%3Cpath%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%222%22%20d%3D%22M4.375%2010.313h10.938%22%2F%3E%3C%2Fsvg%3E');
+					display: block;
+					height: 20px;
+					left: -1px;
+					position: relative;
+					top: -1px;
+					width: 20px;
+				}
+			}
+		}
+	}
+
+	&.disabled {
+		label,
+		input[type='checkbox'] + label {
+			color: colors.$gray-4;
+			cursor: default;
+		}
+
+		input[type='checkbox'] {
+			border-color: colors.$gray-4;
+			cursor: default;
+
+			&:checked {
+				background: colors.$gray-4;
+			}
+		}
+	}
+
+	.gb-comp-icon {
+		display: inline-block;
+		height: 24px;
+		left: 10px;
+		padding: 4px;
+		position: relative;
+		vertical-align: middle;
+		width: 24px;
+
+		svg {
+			bottom: 5px;
+			height: inherit;
+			max-width: inherit;
+			position: relative;
+			right: 5px;
+			width: inherit;
+		}
+
+		&.brand-default {
+			align-items: center;
+			display: inline-flex;
+			justify-content: center;
+
+			&::after {
+				bottom: 4px;
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22m19.23%208.64-7.22%204.74-7.23-4.74-.77%201.04%207.55%204.96h.89L20%209.68l-.77-1.04Z%22%2F%3E%3C%2Fsvg%3E');
+				display: block;
+				height: 16px;
+				position: relative;
+				right: 6px;
+				width: 16px;
+			}
+		}
+	}
+}

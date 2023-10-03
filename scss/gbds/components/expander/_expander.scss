@@ -74,10 +74,10 @@
 @mixin expander-btn-disabled($padding, $color) {
 	background: none;
 	border: 0;
-	pointer-events: none;
 	color: $color;
 	cursor: default;
 	padding: $padding;
+	pointer-events: none;
 
 	&::after,
 	&::before {

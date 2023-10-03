@@ -1,8 +1,0 @@
-@use '../utils/generate-vertical-spacing' as vs;
-
-@include vs.generate-vertical-spacing(
-	1rem,
-	2rem,
-	4rem,
-	8rem
-);

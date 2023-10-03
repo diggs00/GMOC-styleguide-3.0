@@ -21,7 +21,15 @@
 	}
 
 	label + input[type='checkbox'] {
-		margin: 0 0 0 10px;
+		
+		@include bp.medium-and-above {
+			margin: 2px 0 3px 10px;
+
+			&:hover {
+				margin: 1px 7px 0 10px;
+			}
+		}
+		
 	}
 
 	input[type='checkbox'] {
@@ -64,10 +72,10 @@
 		}
 
 		&:checked::after {
-			content: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%228%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.265%203.82a.704.704%200%200%200-1.048%200%20.84.84%200%200%200%200%201.128l2.619%202.819a.704.704%200%200%200%201.05-.003l5.9-6.406A.84.84%200%200%200%209.78.231a.704.704%200%200%200-1.048.005L3.357%206.073%201.265%203.821Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+			content: url('data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%228%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.265%203.82a.704.704%200%200%200-1.048%200%20.84.84%200%200%200%200%201.128l2.619%202.819a.704.704%200%200%200%201.05-.003l5.9-6.406A.84.84%200%200%200%209.78.231a.704.704%200%200%200-1.048.005L3.357%206.073%201.265%203.821Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
 			left: 5px;
 			position: absolute;
-			top: 0px;
+			top: 0;
 		}
 
 		@include bp.medium-and-above {
@@ -107,8 +115,12 @@
 				border: 1px solid colors.$gray-bright;
 				border-radius: 4px;
 				height: 20px;
-				margin: 2px 10px 3px 1px;
+				margin: 3px 3px 5px auto;
 				width: 20px;
+
+				@include bp.medium-and-above {
+					margin: 2px 10px 3px 1px;
+				}
 			}
 		}
 	}
@@ -116,7 +128,7 @@
 	&.gb-indeterminate {
 		input {
 			&:indeterminate::after {
-				content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%222%22%20viewBox%3D%220%200%2012%202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2212%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+				content: url('data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%222%22%20viewBox%3D%220%200%2012%202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2212%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E');
 				left: 4px;
 				position: absolute;
 				top: -3px;

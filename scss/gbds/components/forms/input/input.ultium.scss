@@ -1,0 +1,468 @@
+@use 'input' as input;
+@use '../../../ultium/colors' as colors;
+@use '../../../ultium/fonts' as fonts;
+
+$body1-font-family: fonts.$font-family-overpass;
+$body1-font-style: normal;
+$body1-font-weight: fonts.$font-weight-normal;
+$body1-font-size: 16px;
+$body1-line-height: 20px;
+
+$body3-font-family: fonts.$font-family-overpass;
+$body3-font-style: normal;
+$body3-font-weight: fonts.$font-weight-normal;
+$body3-font-size: 12px;
+$body3-font-line-height: 16px;
+
+$input-label-top: 18px;
+$input-label-left: 16px;
+$input-label-color: colors.$gray-4;
+$input-label-font-size: $body1-font-size;
+
+$input-label-populated-top: 9px;
+$input-label-populated-left: 16px;
+$input-label-populated-color: colors.$gray-5;
+$input-label-populated-font-size: $body3-font-size;
+
+.gb-input {
+	position: relative;
+
+	%gb-datetime-indicators-visible {
+		&::-webkit-datetime-edit {
+			opacity: 1;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 1;
+		}
+	}
+
+	%gb-datetime-indicators-hidden {
+		&::-webkit-datetime-edit {
+			opacity: 0;
+			overflow: visible;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+		}
+	}
+
+	%gb-text-container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+	}
+
+	%gb-pw-info-item {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		font-family: fonts.$font-family-overpass;
+		font-size: $body3-font-size;
+		line-height: 1.33;
+		margin: 5px auto 5px 13px;
+
+		.gb-pw-info-text {
+			line-height: 16px;
+			margin-left: 6px;
+		}
+
+		.gb-pw-info-icon-check {
+			border-bottom: solid 1px colors.$white;
+			border-right: solid 1px colors.$white;
+			display: none;
+			height: 7px;
+			margin: 3px 5px;
+			transform: rotate(45deg);
+			width: 4px;
+		}
+
+		.gb-pw-info-icon {
+			background-color: colors.$white;
+			border: solid 2px colors.$black;
+			border-radius: 50%;
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+
+			&.valid {
+				background-color: colors.$success-green;
+				border: solid 1px colors.$success-green;
+
+				/* stylelint-disable-next-line*/
+				.gb-pw-info-icon-check {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	label {
+		@include input.base-label(
+			$body1-font-family,
+			$body1-font-size,
+			0,
+			$body1-line-height,
+			auto
+		);
+
+		color: colors.$gray-4;
+		font-style: $body1-font-style;
+		font-weight: $body1-font-weight;
+		line-height: $body1-line-height;
+	}
+
+	.clear-input,
+	.show-password {
+		display: inline-block;
+		font-family: fonts.$font-family-overpass;
+		font-size: 14px;
+		font-weight: fonts.$font-weight-bold;
+		line-height: $body1-line-height;
+		opacity: 0;
+		position: absolute;
+		right: 17px;
+		text-align: end;
+		text-transform: uppercase;
+		top: 18px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+	button {
+		&.clear-input,
+		&.show-password {
+			background: none;
+			border: 0;
+			cursor: pointer;
+			padding: 0;
+		}
+	}
+
+	.gb-input-label {
+		color: colors.$gray-4;
+		font-size: $input-label-font-size;
+		height: 21px;
+		left: 16px;
+		position: absolute;
+		top: 18px;
+
+		&.hover {
+			color: colors.$gray-5;
+			display: block;
+			font-size: $input-label-populated-font-size;
+			left: 16px;
+			line-height: $body3-font-line-height;
+			top: 9px;
+		}
+	}
+
+	&:focus {
+		&input {
+			&[type='date'] {
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.form-error {
+		.gb-helper-text-container {
+			display: none;
+		}
+
+		.gb-pw-info-container {
+			display: none;
+		}
+
+		input {
+			&[type],
+			textarea {
+				border: colors.$error-red solid 2px;
+
+				&:focus {
+					border: colors.$error-red solid 2px;
+				}
+
+				&:hover {
+					border: colors.$error-red solid 2px;
+				}
+			}
+		}
+
+		.gb-error-text-container {
+			@extend %gb-text-container;
+		}
+	}
+
+	.gb-error-text-container {
+		display: none;
+		margin: 0;
+		padding: 3px 0 0;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-error-text {
+			color: colors.$gray-5;
+			font-family: fonts.$font-family-overpass;
+			font-size: $body3-font-size;
+
+			&.gb-error-img {
+				@include input.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg%20width="16"%20height="16"%20viewBox="0%200%2016%2016"%20fill="none"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cpath%20d="M2.91927%2010.1334L3.48219%2010.4584L2.91927%2010.1334ZM6.15243%204.53342L5.58952%204.20842L6.15243%204.53342ZM9.84766%204.53342L10.4106%204.20842L9.84766%204.53342ZM13.0808%2010.1334L13.6437%209.80842L13.0808%2010.1334ZM7.45755%202.78196L7.72193%203.37576V3.37576L7.45755%202.78196ZM8.54232%202.78196L8.27794%203.37576L8.54232%202.78196ZM2.59766%2013.0788L2.2156%2013.6046H2.2156L2.59766%2013.0788ZM2.05521%2012.1394L2.70165%2012.0715L2.05521%2012.1394ZM13.4024%2013.0788L13.7845%2013.6046L13.4024%2013.0788ZM13.9449%2012.1394L14.5913%2012.2073L13.9449%2012.1394ZM8.0332%2010.6667H8.6832C8.6832%2010.3077%208.39219%2010.0167%208.0332%2010.0167V10.6667ZM8.0332%2010.7334L8.03304%2011.3834C8.20546%2011.3834%208.37083%2011.315%208.49277%2011.1931C8.6147%2011.0712%208.6832%2010.9058%208.6832%2010.7334H8.0332ZM7.9668%2010.7334H7.3168C7.3168%2011.0923%207.60771%2011.3833%207.96664%2011.3834L7.9668%2010.7334ZM7.9668%2010.6667V10.0167C7.60781%2010.0167%207.3168%2010.3077%207.3168%2010.6667H7.9668ZM8.65%206.00006C8.65%205.64107%208.35899%205.35006%208%205.35006C7.64102%205.35006%207.35%205.64107%207.35%206.00006H8.65ZM7.35%208.66672C7.35%209.02571%207.64102%209.31672%208%209.31672C8.35899%209.31672%208.65%209.02571%208.65%208.66672H7.35ZM11.2332%2012.6834H4.76693V13.9834H11.2332V12.6834ZM3.48219%2010.4584L6.71535%204.85842L5.58952%204.20842L2.35636%209.80842L3.48219%2010.4584ZM9.28474%204.85842L12.5179%2010.4584L13.6437%209.80842L10.4106%204.20842L9.28474%204.85842ZM6.71535%204.85842C7.02492%204.32224%207.23509%203.95945%207.41484%203.705C7.59654%203.44777%207.68767%203.39102%207.72193%203.37576L7.19317%202.18816C6.83166%202.34911%206.57337%202.64303%206.35303%202.95495C6.13073%203.26965%205.88624%203.69449%205.58952%204.20842L6.71535%204.85842ZM10.4106%204.20842C10.1138%203.69444%209.86928%203.2696%209.6469%202.95488C9.42649%202.64294%209.16815%202.34909%208.8067%202.18816L8.27794%203.37576C8.31226%203.39104%208.40345%203.44786%208.58519%203.70507C8.76497%203.9595%208.9752%204.32229%209.28474%204.85842L10.4106%204.20842ZM7.72193%203.37576C7.89885%203.29699%208.10102%203.29699%208.27794%203.37576L8.8067%202.18816C8.2932%201.95953%207.70667%201.95953%207.19317%202.18816L7.72193%203.37576ZM4.76693%2012.6834C4.14782%2012.6834%203.72858%2012.6827%203.41839%2012.6543C3.10484%2012.6255%203.0101%2012.575%202.97972%2012.5529L2.2156%2013.6046C2.5357%2013.8372%202.91931%2013.914%203.29962%2013.9488C3.68331%2013.984%204.17346%2013.9834%204.76693%2013.9834V12.6834ZM2.35636%209.80842C2.05961%2010.3224%201.81398%2010.7466%201.65264%2011.0964C1.4927%2011.4433%201.36741%2011.8139%201.40877%2012.2073L2.70165%2012.0715C2.69772%2012.0341%202.70132%2011.9267%202.83316%2011.6408C2.9636%2011.358%203.17264%2010.9946%203.48219%2010.4584L2.35636%209.80842ZM2.97972%2012.5529C2.82294%2012.439%202.72188%2012.2639%202.70165%2012.0715L1.40877%2012.2073C1.46754%2012.7665%201.76095%2013.2743%202.2156%2013.6046L2.97972%2012.5529ZM11.2332%2013.9834C11.8267%2013.9834%2012.3168%2013.984%2012.7005%2013.9488C13.0808%2013.914%2013.4644%2013.8372%2013.7845%2013.6046L13.0204%2012.5529C12.99%2012.575%2012.8952%2012.6255%2012.5817%2012.6543C12.2716%2012.6827%2011.8524%2012.6834%2011.2332%2012.6834V13.9834ZM12.5179%2010.4584C12.8274%2010.9946%2013.0365%2011.358%2013.1669%2011.6408C13.2988%2011.9267%2013.3024%2012.0341%2013.2984%2012.0715L14.5913%2012.2073C14.6327%2011.8139%2014.5074%2011.4433%2014.3475%2011.0964C14.1861%2010.7466%2013.9405%2010.3224%2013.6437%209.80842L12.5179%2010.4584ZM13.7845%2013.6046C14.2391%2013.2743%2014.5326%2012.7665%2014.5913%2012.2073L13.2984%2012.0715C13.2782%2012.2639%2013.1771%2012.439%2013.0204%2012.5529L13.7845%2013.6046ZM7.3832%2010.6667V10.7334H8.6832V10.6667H7.3832ZM8.03337%2010.0834L7.96696%2010.0834L7.96664%2011.3834L8.03304%2011.3834L8.03337%2010.0834ZM8.6168%2010.7334V10.6667H7.3168V10.7334H8.6168ZM7.9668%2011.3167H8.0332V10.0167H7.9668V11.3167ZM7.35%206.00006V8.66672H8.65V6.00006H7.35Z"%20fill="%23C64804"/%3E%3C/svg%3E'),
+					16px 16px,
+					20px 20px,
+					16px,
+					16px,
+					20px,
+					20px,
+					5px,
+					5px,
+					0 5px 0 0
+				);
+			}
+		}
+	}
+
+	.gb-pw-info-container {
+		.gb-pw-label {
+			color: colors.$gray-5;
+			display: block;
+			font-family: fonts.$font-family-overpass;
+			font-size: 14px;
+			font-weight: fonts.$font-weight-normal;
+			line-height: $body1-line-height;
+			margin: 19px auto 4px 13px;
+		}
+
+		.gb-pw-str-indicator {
+			border-radius: 25px;
+			border-top: solid 4px colors.$success-green;
+			margin: 0 0 0 13px;
+
+			&.good-pw {
+				border-top-color: colors.$yellow-secondary;
+			}
+
+			&.weak-pw {
+				border-top-color: colors.$error-red;
+			}
+		}
+
+		.gb-pw-info-item {
+			@extend %gb-pw-info-item;
+		}
+	}
+
+	.gb-helper-text-icon-container {
+		display: inline-block;
+		height: 16px;
+		margin: 0;
+		padding: 0;
+		width: 16px;
+
+		.gb-helper-text-icon-image {
+			bottom: 5px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+
+	input {
+		&::-moz-placeholder {
+			color: colors.$gray-5;
+			font-family: fonts.$font-family-overpass;
+			font-size: $input-label-font-size;
+			margin: 3px 0;
+		}
+		&::placeholder {
+			color: colors.$gray-5;
+			font-family: fonts.$font-family-overpass;
+			font-size: $input-label-font-size;
+			margin: 3px 0;
+		}
+
+		@include input.base-input(
+			colors.$white,
+			1px solid colors.$black,
+			colors.$black,
+			100%,
+			fonts.$font-family-overpass,
+			fonts.$base-font-med,
+			27px 14px 9px 14px,
+			2px solid colors.$black
+		);
+
+		&[type],
+		textarea {
+			border-radius: 1px;
+			height: 56px;
+			line-height: normal;
+
+			&:active {
+				border: 2px solid colors.$black;
+			}
+
+			&:focus {
+				~ .gb-input-label {
+					color: colors.$gray-4;
+					display: block;
+					font-size: $input-label-populated-font-size;
+					left: 16px;
+					line-height: $body3-font-line-height;
+					top: 9px;
+				}
+
+				~ .clear-input {
+					opacity: 1;
+				}
+
+				~ .show-password {
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				border: 2px solid colors.$blue-primary;
+			}
+		}
+		/*IOS  This is to override IOS appearance for date input types.*/
+		&[type='date'] {
+			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
+			padding-right: 16px;
+			text-transform: uppercase;
+
+			&::-webkit-datetime-edit-text {
+				padding: 0 6px;
+			}
+
+			&::-webkit-datetime-edit-day-field {
+				padding-left: 6px;
+			}
+
+			&::-webkit-datetime-edit-year-field {
+				padding-left: 6px;
+			}
+
+			@extend %gb-datetime-indicators-hidden;
+
+			&:focus {
+				@extend %gb-datetime-indicators-visible;
+			}
+
+			&.valid {
+				&:focus {
+					&::-webkit-calendar-picker-indicator {
+						opacity: 1;
+					}
+				}
+
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.gb-helper-text-container {
+		margin: 0;
+		padding: 5px 0 14px;
+
+		@extend %gb-text-container;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-helper-text {
+			color: colors.$gray-5;
+			font-family: fonts.$font-family-overpass;
+			font-size: $body3-font-size;
+			line-height: 16px;
+
+			&.gb-caps-img {
+				@include input.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg%20width="16"%20height="16"%20viewBox="0%200%2016%2016"%20fill="none"%20xmlns="http://www.w3.org/2000/svg"%3E%3Cpath%20d="M8%200C3.57333%200%200%203.57333%200%208C0%2012.4267%203.57333%2016%208%2016C12.4267%2016%2016%2012.4267%2016%208C16%203.57333%2012.4267%200%208%200Z"%20fill="%23474B51"/%3E%3Cpath%20d="M10.0012%208.01979H11.3543C11.7126%208.01802%2012%207.73343%2012%207.38482C12%207.23185%2011.9436%207.086%2011.8399%206.97039L8.48981%203.21745C8.25519%202.95421%207.84597%202.92575%207.5768%203.15519C7.55497%203.17476%207.53315%203.19432%207.51314%203.21745L4.16118%206.96861C3.92474%207.23185%203.95202%207.63205%204.21938%207.8615C4.3376%207.96288%204.48856%208.01802%204.64679%208.01979H5.99994V9.97631C5.99994%2010.172%206.16363%2010.332%206.36369%2010.332H9.63744C9.8375%2010.332%2010.0012%2010.172%2010.0012%209.97631V8.01979Z"%20fill="white"/%3E%3Cpath%20d="M9.6375%2011.0435H6.36375C6.16369%2011.0435%206%2011.2035%206%2011.3992V12.6442C6%2012.8399%206.16369%2013%206.36375%2013H9.6375C9.83757%2013%2010.0013%2012.8399%2010.0013%2012.6442V11.3992C10.0013%2011.2035%209.83757%2011.0435%209.6375%2011.0435Z"%20fill="white"/%3E%3C/svg%3E'),
+					16px 16px,
+					20px 20px,
+					16px,
+					16px,
+					20px,
+					20px,
+					3px,
+					4px,
+					0 5px 0 0
+				);
+			}
+		}
+	}
+
+	&.disabled {
+		input {
+			border: 1px solid colors.$gray-3;
+
+			&[type],
+			textarea {
+				&[disabled] {
+					background-color: colors.$gray-3;
+					color: colors.$off-white;
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				border: 1px solid colors.$gray-2;
+			}
+		}
+
+		.gb-input-label {
+			color: colors.$off-white;
+		}
+
+		.gb-helper-text-container {
+			visibility: hidden;
+		}
+	}
+
+	&.form-success {
+		.gb-helper-text-container {
+			.gb-helper-text {
+				color: colors.$success-green;
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-input {
+		direction: rtl;
+		display: flex;
+		flex-flow: column wrap;
+	}
+}

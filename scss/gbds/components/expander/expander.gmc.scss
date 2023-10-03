@@ -13,12 +13,12 @@
 		@include e.expander-btn(
 			c.$brand-red,
 			c.$white,
-			f.$font-family-muli,
-			calc(0.9375 * #{com.$gmux-base-font}),
+			f.$font-family-stratum,
+			calc(.9375 * #{com.$gmux-base-font}),
 			f.$font-weight-bold,
 			2px,
 			1.4,
-			calc(0.563 * #{com.$gmux-base-font}) 0 calc(0.563 * #{com.$gmux-base-font}) calc(1.873 * #{com.$gmux-base-font}),
+			calc(.563 * #{com.$gmux-base-font}) 0 calc(.563 * #{com.$gmux-base-font}) calc(1.873 * #{com.$gmux-base-font}),
 			25px,
 			c.$white,
 			f.$font-weight-xbold
@@ -33,12 +33,12 @@
 
 		@include bp.medium-and-above {
 			font-size: calc(1.03125 * #{com.$gmux-base-font});
-			padding: calc(0.594 * #{com.$gmux-base-font}) 0 calc(0.594 * #{com.$gmux-base-font}) calc(1.375 * #{com.$gmux-base-font});
+			padding: calc(.594 * #{com.$gmux-base-font}) 0 calc(.594 * #{com.$gmux-base-font}) calc(1.375 * #{com.$gmux-base-font});
 		}
 	
 		@include bp.large-and-above {
 			font-size: calc(1.125 * #{com.$gmux-base-font});
-			padding: calc(0.75 * #{com.$gmux-base-font}) calc(1.5 * #{com.$gmux-base-font});
+			padding: calc(.75 * #{com.$gmux-base-font}) calc(1.5 * #{com.$gmux-base-font});
 		}
 	}
 
@@ -60,14 +60,14 @@
 
 	&[data-disabled] {
 		>.gb-expander-btn {
-			@include e.expander-btn-disabled(0 0 calc(0.78125 * #{com.$gmux-base-font}), inherit);
+			@include e.expander-btn-disabled(0 0 calc(.78125 * #{com.$gmux-base-font}), inherit);
 
 			@include bp.medium-and-above {
-				padding: 0 0 calc(0.8593 * #{com.$gmux-base-font});
+				padding: 0 0 calc(.8593 * #{com.$gmux-base-font});
 			}
 		
 			@include bp.large-and-above {
-				padding: 0 0 calc(0.9375 * #{com.$gmux-base-font});
+				padding: 0 0 calc(.9375 * #{com.$gmux-base-font});
 			}
 		}
 
@@ -92,7 +92,7 @@
 
 		&.gb-disabled-sm {
 			>.gb-expander-btn {
-				@include e.expander-btn-disabled(0 0 calc(0.78125 * #{com.$gmux-base-font}), inherit);
+				@include e.expander-btn-disabled(0 0 calc(.78125 * #{com.$gmux-base-font}), inherit);
 			}
 	
 			>.gb-expander-content {
@@ -116,7 +116,7 @@
 
 		&.gb-disabled-med {
 			>.gb-expander-btn {
-				@include e.expander-btn-disabled(0 0 calc(0.8593 * #{com.$gmux-base-font}), inherit);
+				@include e.expander-btn-disabled(0 0 calc(.8593 * #{com.$gmux-base-font}), inherit);
 			}
 	
 			>.gb-expander-content {
@@ -140,7 +140,7 @@
 
 		&.gb-disabled-lg {
 			>.gb-expander-btn {
-				@include e.expander-btn-disabled(0 0 calc(0.9375 * #{com.$gmux-base-font}), inherit);
+				@include e.expander-btn-disabled(0 0 calc(.9375 * #{com.$gmux-base-font}), inherit);
 			}
 	
 			>.gb-expander-content {

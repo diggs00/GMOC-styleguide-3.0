@@ -1,0 +1,308 @@
+@use 'expander' as e;
+@use '../../vyon/colors' as c;
+@use '../../vyon/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+@use '../../vyon/placeholders';
+
+$plus-img: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzA2MDYwNiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNS4yNSAxMmEuNzUuNzUgMCAwIDEgLjc1LS43NWgxMmEuNzUuNzUgMCAwIDEgMCAxLjVINmEuNzUuNzUgMCAwIDEtLjc1LS43NVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiMwNjA2MDYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDUuMjVhLjc1Ljc1IDAgMCAxIC43NS43NXYxMmEuNzUuNzUgMCAwIDEtMS41IDBWNmEuNzUuNzUgMCAwIDEgLjc1LS43NVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+$minus-img: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzA2MDYwNiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNS4yNSAxMmEuNzUuNzUgMCAwIDEgLjc1LS43NWgxMmEuNzUuNzUgMCAwIDEgMCAxLjVINmEuNzUuNzUgMCAwIDEtLjc1LS43NVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+$arrow-white: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNCA4Ij48cGF0aCBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0uMjkzLjI5M2ExIDEgMCAwIDEgMS40MTQgMEw3IDUuNTg2IDEyLjI5My4yOTNhMSAxIDAgMSAxIDEuNDE0IDEuNDE0bC02IDZhMSAxIDAgMCAxLTEuNDE0IDBsLTYtNmExIDEgMCAwIDEgMC0xLjQxNFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			transparent,
+			c.$body-gray,
+			f.$vyon-sans,
+			18px,
+			f.$font-weight-normal,
+			normal,
+			20px,
+			18px 16px,
+			null,
+			null,
+			null
+		);
+
+		border-bottom: 1px solid c.$gray-500;
+		height: 56px;
+
+		span,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+		}
+
+		&::before {
+			background-image: $plus-img;
+			background-position: center;
+			background-repeat: no-repeat;
+			content: '';
+			height: 24px;
+			width: 24px;
+		}
+	
+		&:hover {
+			background-color: c.$gray-300;
+		}
+
+		@include bp.medium-and-above {
+			height: 80px;
+			justify-content: flex-start;
+			padding: 24px 32px;
+
+			/* Expander icon (+ and -) go in front of text at large only*/
+			&::before {
+				margin-inline-end: 16px;
+				order: unset;
+			}
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .3s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			background-color: transparent;
+
+			&::before {
+				background-image: $minus-img;
+				content: '';
+			}
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&[data-disabled] {
+		>.gb-expander-btn {
+			@include e.expander-btn-disabled(18px 16px, c.$body-gray);
+
+			@include bp.medium-and-above {
+				padding: 24px 32px;
+			}
+
+			border: 0;
+		}
+		
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+	
+	/* For alternate version 'B', ie, content ABOVE button*/
+	&.gb-option-b {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+
+		>.gb-expander-btn {
+			@include e.expander-btn-option-b(
+				$arrow-white,
+				8px,
+				0 0 0 13px,
+				12px 24px,
+				14px
+			);
+
+			background-color: c.$black;
+			border-block: 0;
+			border-radius: 45px;
+			color: c.$white;
+			display: flex;
+			font-family: f.$vyon-sans;
+			font-size: 18px;
+			font-weight: f.$font-weight-normal;
+			height: 50px;
+			justify-content: center;
+
+			&:hover {
+				background-color: c.$black;
+			}
+		}
+
+		&.active {
+			> .gb-expander-btn {
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		@include bp.small-only {
+			&.gb-active-sm {
+				>.gb-expander-btn {
+					background-color: c.$black;
+		
+					&::after {
+						transform: rotate(180deg);
+					}
+
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						background-color: c.$black;
+					}
+				}
+			}
+		}
+	
+		@include bp.medium-only {
+			&.gb-active-med {
+				>.gb-expander-btn {
+					background-color: c.$black;
+
+					&::after {
+						transform: rotate(180deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						background-color: c.$black;
+					}
+				}
+			}
+		}
+	
+		@include bp.large-and-above {
+			&.gb-active-lg {
+				>.gb-expander-btn {
+					background-color: c.$black;
+
+					&::after {
+						transform: rotate(180deg);
+					}
+		
+					&::before {
+						background-image: none;
+						content: unset;
+					}
+
+					&:hover {
+						background-color: c.$black;
+					}
+				}
+			}
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(transparent, c.$gray-500, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(18px 16px, c.$body-gray);
+
+				&::before {
+					content: none;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(transparent, c.$gray-500, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(24px 32px, c.$body-gray);
+
+				&::before {
+					content: none;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(transparent, c.$gray-500, null, null);
+
+				&::before {
+					background-image: $minus-img;
+					content: '';
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(24px 32px, c.$body-gray);
+
+				&::before {
+					content: none;
+				}
+			}
+
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}

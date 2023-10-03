@@ -10,9 +10,7 @@ gb-tab-nav,
 	.content-button-group {
 		@include tfb.base-content-button-group();
 
-		@include tn.base-tab-button-group(
-			c.$white,
-		);
+		@include tn.base-tab-button-group(c.$white);
 
 		border-bottom: 1px solid c.$grey-tint-30;
 		font-family: f.$font-family-futura;
@@ -22,14 +20,7 @@ gb-tab-nav,
 	.content-button {
 		@include tfb.base-content-button();
 
-		@include tn.base-tab-button(
-			c.$white,
-			c.$grey-dark,
-			15px,
-			f.$font-weight-book,
-			56px,
-			0,
-		);
+		@include tn.base-tab-button(c.$white, c.$grey-dark, 15px, f.$font-weight-book, 56px, 0);
 
 		margin-top: 0;
 		padding: 0 32px 0 0;
@@ -40,7 +31,9 @@ gb-tab-nav,
 			line-height: 1.375;
 		}
 
-		&.active, &:hover, &:focus {
+		&.active,
+		&:hover,
+		&:focus {
 			button {
 				border-bottom: 2px solid c.$brand-black;
 				color: c.$brand-black;
@@ -52,10 +45,7 @@ gb-tab-nav,
 	.content-container {
 		@include tfb.base-content-container();
 
-		@include tn.base-tab-content-container(
-			c.$white,
-			0,
-		);
+		@include tn.base-tab-content-container(c.$white, 0);
 
 		.back-button {
 			@include tfb.base-compact-content-container-back-button(
@@ -65,7 +55,7 @@ gb-tab-nav,
 				15px,
 				f.$font-weight-book,
 				50px,
-				0 30px 0 30px,
+				0 30px 0 30px
 			);
 
 			display: none;
@@ -93,11 +83,9 @@ gb-tab-nav,
 		.content-button-group {
 			@include tfb.base-compact-content-button-group();
 
-			@include tn.base-tab-button-group(
-				c.$white,
-			);
+			@include tn.base-tab-button-group(c.$white);
 
-			border-bottom: none;
+			border-bottom: 0;
 		}
 
 		.content-button {
@@ -114,15 +102,17 @@ gb-tab-nav,
 				position: relative;
 
 				&::after {
-					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M6.138%207.457L11.63%2012.927%2017.176%207.499%2018.641%208.97%2011.617%2015.845%204.66%208.915z%22%20transform%3D%22translate(-328.000000%2C%20-118.000000)%20translate(0.000000%2C%20106.000000)%20translate(328.559062%2C%2012.144361)%20translate(11.650848%2C%2011.650848)%20rotate(-90.000000)%20translate(-11.650848%2C%20-11.650848)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%3E%3Cpath%20d%3D%22m8.016%2017.308%205.47-5.492L8.058%206.27l1.471-1.465%206.875%207.024-6.93%206.957z%22%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 					position: absolute;
 					right: 10px;
 				}
 			}
 
-			&.active, &:hover, &:focus {
+			&.active,
+			&:hover,
+			&:focus {
 				button {
-					border-bottom: none;
+					border-bottom: 0;
 					color: c.$brand-black;
 					margin-bottom: 0;
 				}
@@ -137,13 +127,12 @@ gb-tab-nav,
 				display: block;
 
 				&::before {
-					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2023%2023%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M5.206%207.457L10.698%2012.927%2016.245%207.499%2017.71%208.97%2010.686%2015.845%203.728%208.915z%22%20transform%3D%22translate(-9.000000%2C%20-118.000000)%20translate(0.000000%2C%20106.000000)%20translate(9.069171%2C%2012.569900)%20translate(10.718958%2C%2011.651042)%20rotate(90.000000)%20translate(-10.718958%2C%20-11.651042)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2223%22%20height%3D%2223%22%3E%3Cpath%20d%3D%22m14.9822%206.708-5.47%205.492%205.428%205.547-1.471%201.465-6.875-7.024%206.93-6.958z%22%20fill%3D%22%23666%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 					left: 9px;
 					position: absolute;
 					top: 12px;
 				}
 
-				/* stylelint-disable-next-line*/
 				.back-button-label {
 					color: c.$brand-black;
 					font-size: 15px;
@@ -153,7 +142,9 @@ gb-tab-nav,
 			}
 
 			/* Overriding container movement properties so container content appears over content below it.*/
-			&.open, &.opening, &.closing {
+			&.open,
+			&.opening,
+			&.closing {
 				position: fixed;
 				z-index: 1;
 			}

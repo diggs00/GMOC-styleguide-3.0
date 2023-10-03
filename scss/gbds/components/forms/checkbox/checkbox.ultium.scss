@@ -1,0 +1,70 @@
+@use 'checkbox';
+@use '../../../ultium/colors';
+@use '../../../ultium/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	position: relative;
+
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$black,
+			fonts.$font-family-overpass,
+			16px,
+			fonts.$font-weight-normal,
+			0,
+			normal
+		);
+		margin: 0 5px;
+		position: relative;
+		top: 2px;
+	}
+
+	input[type='checkbox'] {
+		$check-mark-size: 18px;
+
+		@include checkbox.base-box(22px);
+
+		background: none;
+		border: 2px solid colors.$black;
+		border-radius: 2px;
+		bottom: 0%;
+		left: 0%;
+		margin: 3px;
+		position: relative;
+		right: 0%;
+		top: 0%;
+
+		&:checked {
+			background: colors.$black;
+
+			+ label {
+				font-weight: fonts.$font-weight-bold;
+			}
+
+			&::after {
+				border: 0;
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20d%3D%22M14.25%203l-7.5%209-3-3-1.5%202.25%204.5%204.5L16.5%204.5%2014.25%203z%22%20transform%3D%22translate(-339%20-204)%20translate(338%20191)%20translate(0%2011)%20translate(1%202)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+				height: $check-mark-size;
+				position: relative;
+				width: $check-mark-size;
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			background: none;
+			border: 2px solid colors.$gray-3;
+
+			&:checked {
+				background: colors.$gray-3;
+			}
+		}
+
+		label {
+			color: colors.$gray-3;
+		}
+	}
+}

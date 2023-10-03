@@ -52,26 +52,26 @@
 
 		.separator-copy {
 			@include s.base-separater-copy(
-				f.$font-family-muli,
-				calc(0.75 * #{com.$gmux-base-font}),
+				f.$font-family-stratum,
+				calc(.75 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				1.5,
 				c.$font,
-				calc(0.625 * #{com.$gmux-base-font}),
-				calc(0.6875 * #{com.$gmux-base-font}),
-				calc(0.75 * #{com.$gmux-base-font})
+				calc(.625 * #{com.$gmux-base-font}),
+				calc(.6875 * #{com.$gmux-base-font}),
+				calc(.75 * #{com.$gmux-base-font})
 			);
 			background-color: c.$grey-extra-light;
 			padding: 5px 5px 3px;
 			top: calc(50% - 15px);
 
 			@include bp.medium-and-above {
-				font-size: calc(0.825 * #{com.$gmux-base-font});
+				font-size: calc(.825 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.8999 * #{com.$gmux-base-font});
+				font-size: calc(.8999 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -82,15 +82,15 @@
 
 		.separator-copy {
 			@include s.base-separater-copy(
-				f.$font-family-muli,
-				calc(0.75 * #{com.$gmux-base-font}),
+				f.$font-family-stratum,
+				calc(.75 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				0,
 				c.$font,
-				calc(0.625 * #{com.$gmux-base-font}),
-				calc(0.6875 * #{com.$gmux-base-font}),
-				calc(0.75 * #{com.$gmux-base-font})
+				calc(.625 * #{com.$gmux-base-font}),
+				calc(.6875 * #{com.$gmux-base-font}),
+				calc(.75 * #{com.$gmux-base-font})
 			);
 			background-color: c.$grey-extra-light;
 			padding: 5px 5px 3px;
@@ -114,11 +114,11 @@
 			}
 
 			@include bp.medium-and-above {
-				font-size: calc(0.825 * #{com.$gmux-base-font});
+				font-size: calc(.825 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.8999 * #{com.$gmux-base-font});
+				font-size: calc(.8999 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -129,15 +129,15 @@
 
 		.separator-copy {
 			@include s.base-separater-copy(
-				f.$font-family-muli,
-				calc(0.75 * #{com.$gmux-base-font}),
+				f.$font-family-stratum,
+				calc(.75 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				1.5,
 				c.$font,
-				calc(0.625 * #{com.$gmux-base-font}),
-				calc(0.6875 * #{com.$gmux-base-font}),
-				calc(0.75 * #{com.$gmux-base-font})
+				calc(.625 * #{com.$gmux-base-font}),
+				calc(.6875 * #{com.$gmux-base-font}),
+				calc(.75 * #{com.$gmux-base-font})
 			);
 			background-color: c.$grey-extra-light;
 			padding: 5px 5px 3px;
@@ -161,11 +161,11 @@
 			}
 
 			@include bp.medium-and-above {
-				font-size: calc(0.825 * #{com.$gmux-base-font});
+				font-size: calc(.825 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.8999 * #{com.$gmux-base-font});
+				font-size: calc(.8999 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -184,15 +184,15 @@
 
 			.separator-copy {
 				@include s.base-separater-copy(
-					f.$font-family-muli,
-					calc(0.75 * #{com.$gmux-base-font}),
+					f.$font-family-stratum,
+					calc(.75 * #{com.$gmux-base-font}),
 					f.$font-weight-normal,
 					0,
 					1.5,
 					c.$font,
-					calc(0.625 * #{com.$gmux-base-font}),
-					calc(0.6875 * #{com.$gmux-base-font}),
-					calc(0.75 * #{com.$gmux-base-font})
+					calc(.625 * #{com.$gmux-base-font}),
+					calc(.6875 * #{com.$gmux-base-font}),
+					calc(.75 * #{com.$gmux-base-font})
 				);
 				background-color: c.$grey-extra-light;
 				padding: 5px 5px 3px;
@@ -203,11 +203,11 @@
 				}
 
 				@include bp.medium-and-above {
-					font-size: calc(0.825 * #{com.$gmux-base-font});
+					font-size: calc(.825 * #{com.$gmux-base-font});
 				}
 	
 				@include bp.large-and-above {
-					font-size: calc(0.8999 * #{com.$gmux-base-font});
+					font-size: calc(.8999 * #{com.$gmux-base-font});
 				}
 			}
 		}

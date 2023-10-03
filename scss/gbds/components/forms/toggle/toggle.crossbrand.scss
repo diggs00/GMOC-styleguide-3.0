@@ -1,0 +1,106 @@
+@use 'toggle' as t;
+@use '../../../crossbrand/colors' as c;
+@use '../../../crossbrand/fonts' as f;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include t.base-toggle-input(
+			48px,
+			48px
+		);
+
+		&::before {
+			@include t.outer-toggle(
+				c.$white,
+				1px solid c.$grey-50,
+				29px,
+				20px,
+				.4s,
+				36px
+			);
+			left: 6px;
+			top: 14px;
+		}
+
+		&::after {
+			@include t.inner-toggle(
+				c.$grey,
+				50%,
+				14px,
+				.4s,
+				14px
+			);
+			bottom: 3px;
+			left: 9px;
+		}
+
+		&:checked {
+			&::before {
+				background-color: c.$grey;
+				border-color: c.$grey;
+			}
+
+			&::after {
+				background-color: c.$white;
+				transform: translateX(16px);
+			}
+		}
+	}
+
+
+	label {
+		@include t.base-toggle-label(
+			c.$grey-medium,
+			f.$font-family-gmglobal-sans,
+			1rem,
+			1.5,
+			0 calc(1rem - 8px)
+		);
+		bottom: 18px;
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			&::before {
+				border-color: c.$grey-20;
+			}
+
+			&::after {
+				background-color: c.$grey-20;
+			}
+
+			&:checked {
+				&::before {
+					background-color: c.$grey-20;
+					border-color: c.$grey-20;
+				}
+	
+				&::after {
+					background-color: c.$white;
+				}
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-toggle {
+		input[type='checkbox'] {
+			&::before {
+				left: 0;
+				right: 6px;
+			}
+
+			&::after {
+				left: 0;
+				right: 9px;
+			}
+
+			&:checked {
+				&::after {
+					transform: translateX(-16px);
+				}
+			}
+		}
+	}
+}

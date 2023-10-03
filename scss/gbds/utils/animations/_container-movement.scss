@@ -6,7 +6,7 @@
 		  the CSS variable "--vh" on window resize (Important for iOS Safari)
 */
 
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$timing-function: cubic-bezier(.4, 0, .2, 1) !default;
 $timing-scale-up-down: $timing-function !default;
 $timing-slide-left-right: $timing-function !default;
 
@@ -21,15 +21,15 @@ $fade-in-time: 1s !default;
 /* Adds styles to scale an element down and back up absolutely positioned with its parent without*/
 /* squishing the contents of the element. Intended to be used on container elements.*/
 @mixin scale-up-down($width, $top: 100%) {
-	top: $top;
-	width: $width;
 	max-height: 0;
 	overflow: hidden;
 
 	/* Fixed position so the element doesn't impact document flow while hidden,*/
 	/* alternative to display: none;*/
 	position: fixed;
+	top: $top;
 	visibility: hidden;
+	width: $width;
 
 	@keyframes gb-scale-down {
 		from {
@@ -66,21 +66,23 @@ $fade-in-time: 1s !default;
 		overflow-y: auto;
 	}
 
-	&.opening, &.closing, &.open {
+	&.opening,
+	&.closing,
+	&.open {
 		display: inline-block;
-		visibility: visible;
 		position: absolute;
+		visibility: visible;
 	}
 }
 
 /* Adds styles to slide an element left and right absolutely positioned to its parent.*/
 /* Intended to be used on container elements.*/
 @mixin slide-left-right($top) {
+	left: 100%;
 	position: fixed;
 	top: $top;
-	left: 100%;
-	width: 100%;
 	visibility: hidden;
+	width: 100%;
 
 	@keyframes gb-slide-left {
 		from {
@@ -114,10 +116,59 @@ $fade-in-time: 1s !default;
 		left: 0;
 	}
 
-	&.opening, &.closing, &.open {
+	&.opening,
+	&.closing,
+	&.open {
+		display: inline-block;
+		position: absolute;
+		visibility: visible;
+	}
+}
+
+@mixin slide-from-left($width) {
+	left: 100%;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+
+	@keyframes gb-slide-from-left {
+		from {
+			left: -$width;
+		}
+
+		to {
+			left: 0;
+		}
+	}
+
+	@keyframes gb-slide-from-right {
+		from {
+			left: 0;
+		}
+
+		to {
+			left: -$width;
+		}
+	}
+
+	&.opening {
+		animation: gb-slide-from-left $slide-left-time $timing-slide-left-right;
+	}
+
+	&.closing {
+		animation: gb-slide-from-right $slide-right-time $timing-slide-left-right;
+	}
+
+	&.open {
+		left: 0;
+	}
+
+	&.opening,
+	&.closing,
+	&.open {
 		display: inline-block;
 		visibility: visible;
-		position: absolute;
 	}
 }
 

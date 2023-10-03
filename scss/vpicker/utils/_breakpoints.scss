@@ -6,8 +6,8 @@
 
 $small: 799px;
 $medium: (
-	"min": 800px,
-	"max": 1199px,
+	'min': 800px,
+	'max': 1199px,
 );
 $large: 1200px;
 
@@ -38,7 +38,6 @@ $screen: 'only screen';
 /* Note: a "large-only" mixin is unnecessary here because "large-only" and*/
 /* "large-and-above" are the same thing and "large-only" is a bit of a misnomer.*/
 
-
 @mixin small-only {
 	@media #{max($small)} {
 		@content;
@@ -46,7 +45,7 @@ $screen: 'only screen';
 }
 
 @mixin medium-only {
-	@media #{range(map.get($medium, "min"), map.get($medium, "max"))} {
+	@media #{range(map.get($medium, 'min'), map.get($medium, 'max'))} {
 		@content;
 	}
 }
@@ -60,7 +59,7 @@ $screen: 'only screen';
 /* "small-and-below" are the same thing.*/
 
 @mixin medium-and-below {
-	@media #{max(map.get($medium, "max"))} {
+	@media #{max(map.get($medium, 'max'))} {
 		@content;
 	}
 }
@@ -71,7 +70,7 @@ $screen: 'only screen';
 /* just a class without a media query.*/
 
 @mixin medium-and-above {
-	@media #{min(map.get($medium, "min"))} {
+	@media #{min(map.get($medium, 'min'))} {
 		@content;
 	}
 }

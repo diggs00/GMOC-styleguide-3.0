@@ -1,0 +1,158 @@
+@use '../../common/common' as com;
+
+@use 'expander' as e;
+@use '../../holden/colors' as c;
+@use '../../holden/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+
+.gb-expander {
+	@extend %expander-base;
+
+	>.gb-expander-btn {
+		@include e.expander-btn(
+			c.$brand-white,
+			c.$brand-black,
+			f.$font-family-futura,
+			calc(1.0177 * #{com.$gmux-base-font}),
+			f.$font-weight-book,
+			1px,
+			1.3,
+			calc(.8999 * #{com.$gmux-base-font}) calc(1.5 * #{com.$gmux-base-font}),
+			calc(1.875 * #{com.$gmux-base-font}),
+			c.$web-orange,
+			f.$font-weight-lighter
+		);
+
+		border-bottom: 2px solid c.$grey-very-light;
+
+		&:hover {
+			@include e.expander-btn-hover(c.$white-mid, null, null, c.$brand-black);
+		}
+
+		@include bp.medium-and-above {
+			font-size: calc(1.0601 * #{com.$gmux-base-font});
+			padding: calc(.9375 * #{com.$gmux-base-font}) calc(1.5625 * #{com.$gmux-base-font});
+
+			&::before {
+				font-size: calc(1.9531 * #{com.$gmux-base-font});
+			}
+		}
+	
+		@include bp.large-and-above {
+			font-size: calc(1.1025 * #{com.$gmux-base-font});
+			padding: calc(.975 * #{com.$gmux-base-font}) calc(1.625 * #{com.$gmux-base-font});
+			
+			&::before {
+				font-size: calc(2.0312 * #{com.$gmux-base-font});
+			}
+		}
+	}
+
+	/* For Open / Close Animation*/
+	>.gb-expander-content {
+		@include e.expander-content(height .3s ease);
+	}
+
+	&.active {
+		>.gb-expander-btn {
+			@include e.expander-btn-active(c.$white, c.$white, null, c.$brand-black);
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&[data-disabled] {
+		>.gb-expander-btn {
+			@include e.expander-btn-disabled(0 0 calc(.9375 * #{com.$gmux-base-font}), null);
+
+			@include bp.medium-and-above {
+				padding: 0 0 calc(.9765 * #{com.$gmux-base-font});
+			}
+			
+			@include bp.large-and-above {
+				padding: 0 0 calc(1.0156 * #{com.$gmux-base-font});
+			}
+		}
+
+		>.gb-expander-content {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	/*Classes if consumer wants a more control of when expander is active or disabled*/
+	@include bp.small-only {
+		&.gb-active-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$white, null, c.$brand-black);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-sm {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 calc(.9375 * #{com.$gmux-base-font}), null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-active-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$white, null, c.$brand-black);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-med {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 calc(.9765 * #{com.$gmux-base-font}), null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-active-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-active(c.$white, c.$white, null, c.$brand-black);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+
+		&.gb-disabled-lg {
+			>.gb-expander-btn {
+				@include e.expander-btn-disabled(0 0 calc(1.0156 * #{com.$gmux-base-font}), null);
+			}
+	
+			>.gb-expander-content {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}

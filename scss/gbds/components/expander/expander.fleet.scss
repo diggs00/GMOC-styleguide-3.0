@@ -25,7 +25,7 @@
 		margin-bottom: 1px;
 
 		&::before {
-			content: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20d%3D%22M13.795%200v24h-2.5V0z%22%2F%3E%3Cpath%20d%3D%22M24%2010.703v2.5H0v-2.5z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+			content: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20d%3D%22M13.795%200v24h-2.5V0z%22%2F%3E%3Cpath%20d%3D%22M24%2010.703v2.5H0v-2.5z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 
 		}
 
@@ -44,7 +44,7 @@
 			@include e.expander-btn-active(c.$white, c.$grey-lighter, c.$grey-very-dark, c.$grey-very-dark);
 
 			&::before {
-				content: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M24%20.75v2.5H0V.75z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E");
+				content: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M24%20.75v2.5H0V.75z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
 				transform: initial;
 			}
 		}

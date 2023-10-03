@@ -19,7 +19,8 @@
 		tab is closed and the view switches from stacked to regular view. 
 		Otherwise no content containers would be visible.
 	*/
-	&.visible, 
+	&.visible,
+ 
 	&.last-opened {
 		display: block;
 	}

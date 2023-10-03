@@ -1,0 +1,200 @@
+@use 'tab-nav' as tn;
+@use 'tab-flyout-behavior' as tfb;
+@use '../../cadillac-2022/colors' as c;
+@use '../../cadillac-2022/fonts' as f;
+@use '../../utils/animations/container-movement' as cm;
+@use '../../utils/breakpoints' as bp;
+@use '../../utils/gb_typography' as gbt;
+@use '../../common/common.scss' as com;
+@use '../../cadillac-2022/typography';
+
+gb-tab-nav,
+.gb-tab-nav {
+	padding: 0;
+
+	.content-button-group {
+		@include tfb.base-content-button-group();
+
+		@include tn.base-tab-button-group(
+			transparent,
+		);
+
+		padding: 0 40px;
+	}
+
+	.content-button {
+		@include tfb.base-content-button();
+
+		@include tn.base-tab-button(
+			transparent,
+			null,
+			null,
+			null,
+			auto,
+			40px 0 10px 0,
+		);
+
+		padding-right: 30px;
+
+		button {
+			@extend %gb-headline3;
+		}
+
+		&.active,
+		&:hover,
+		&:focus {
+			button {
+				border-bottom: 2px solid c.$gray-1;
+				font-weight: f.$font-weight-book;
+			}
+		}
+	}
+
+	.content-container {
+		@include tfb.base-content-container();
+
+		@include tn.base-tab-content-container(
+			transparent,
+			0 40px,
+		);
+
+		.back-button {
+			@extend %gb-label;
+			@include tfb.base-compact-content-container-back-button(
+				c.$gray-7,
+				none,
+				null,
+				null,
+				null,
+				auto,
+				20px 20px 20px 0,
+			);
+
+			display: none;
+		}
+
+		.stacked-content-title {
+			@extend %gb-body3;
+			background: c.$gray-6;
+			border-bottom: 1px solid c.$gray-5;
+			border-top: 1px solid c.$gray-5;
+			display: none;
+			padding: 5px 20px;
+		}
+	}
+
+	@mixin stacked-tabs() {
+		@include tfb.base-compact-content-button-container-parent();
+
+		.content-button-group {
+			@include tfb.base-compact-content-button-group();
+
+			@include tn.base-tab-button-group(
+				c.$white,
+			);
+		}
+
+		.content-button {
+			@include tfb.base-compact-content-button();
+
+			border-bottom: 1px solid c.$gray-5;
+			height: 56px;
+			padding: 20px;
+
+			button {
+				align-items: center;
+				display: flex;
+				position: relative;
+
+				&::after {
+					content: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.50001 2.5L3.76001 3.66L10.43 8.5L3.76001 13.34L4.50001 14.5L11.76 9.23V7.77L4.50001 2.5Z' fill='%23282828'/%3E%3C/svg%3E%0A");
+					height: 12px;
+					position: absolute;
+					right: 4.24px;
+					top: 2px;
+					width: 8;
+				}
+			}
+
+			&.active,
+			&:hover,
+			&:focus {
+				button {
+					border-bottom: 0;
+					font-weight: f.$font-weight-light;
+				}
+			}
+
+			&:hover {
+				background-color: c.$gray-6;
+			}
+		}
+
+		.content-container {
+			@include cm.slide-left-right(100%);
+			@include tfb.base-compact-content-container();
+
+			@include tn.base-tab-content-container(
+				c.$gray-6,
+				0,
+			);
+
+			.back-button {
+				cursor: pointer;
+				display: block;
+
+				&::before {
+					bottom: 20px;
+					content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.27 3.16L11.52 2L4.34001 7.22L4.26001 7.27V8.73L11.52 14L12.27 12.84L5.60001 8L12.27 3.16Z' fill='%23282828'/%3E%3C/svg%3E%0A");
+					left: 24.26px;
+					position: absolute;
+					top: 20px;
+				}
+
+				.back-button-label {
+					padding-left: 46px;
+					position: relative;
+				}
+			}
+
+			/* Overriding container movement properties so container content appears over content below it.*/
+			&.open,
+			&.opening,
+			&.closing {
+				position: fixed;
+				z-index: 1;
+			}
+
+			.stacked-content-title {
+				display: flex;
+			}
+		}
+	}
+
+	@include bp.small-only {
+		&.gb-stacked-sm {
+			@include stacked-tabs;
+
+			.content-button {
+				background-color: c.$gray-6;
+				border-bottom: transparent;
+				
+				button {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	@include bp.medium-only {
+		&.gb-stacked-med {
+			@include stacked-tabs;
+		}
+	}
+
+	@include bp.large-and-above {
+		&.gb-stacked-lg {
+			@include stacked-tabs;
+		}
+	}
+}

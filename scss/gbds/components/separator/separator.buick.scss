@@ -49,29 +49,29 @@
 		.separator-copy {
 			@include s.base-separater-copy(
 				f.$font-family-avenir-next,
-				calc(0.8654 * #{com.$gmux-base-font}),
+				calc(.8654 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				1.5,
 				c.$brand-black,
-				calc(0.75 * #{com.$gmux-base-font}),
-				calc(0.78125 * #{com.$gmux-base-font}),
-				calc(0.8125 * #{com.$gmux-base-font})
+				calc(.75 * #{com.$gmux-base-font}),
+				calc(.78125 * #{com.$gmux-base-font}),
+				calc(.8125 * #{com.$gmux-base-font})
 			);
 			background-color: c.$white;
-			padding: calc(0.75 * #{com.$gmux-base-font});
+			padding: calc(.75 * #{com.$gmux-base-font});
 			top: 50%;
 			transform: translateY(-50%);
 			width: 100%;
 
 			@include bp.medium-and-above {
-				font-size: calc(0.9015 * #{com.$gmux-base-font});
-				padding: calc(0.78125 * #{com.$gmux-base-font});
+				font-size: calc(.9015 * #{com.$gmux-base-font});
+				padding: calc(.78125 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.9376 * #{com.$gmux-base-font});
-				padding: calc(0.8125 * #{com.$gmux-base-font});
+				font-size: calc(.9376 * #{com.$gmux-base-font});
+				padding: calc(.8125 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -83,14 +83,14 @@
 		.separator-copy {
 			@include s.base-separater-copy(
 				f.$font-family-avenir-next,
-				calc(0.8654 * #{com.$gmux-base-font}),
+				calc(.8654 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				1.5,
 				c.$brand-black,
-				calc(0.75 * #{com.$gmux-base-font}),
-				calc(0.78125 * #{com.$gmux-base-font}),
-				calc(0.8125 * #{com.$gmux-base-font})
+				calc(.75 * #{com.$gmux-base-font}),
+				calc(.78125 * #{com.$gmux-base-font}),
+				calc(.8125 * #{com.$gmux-base-font})
 			);
 			background-color: c.$white;
 			padding: calc(1.5 * #{com.$gmux-base-font});
@@ -114,12 +114,12 @@
 			}
 
 			@include bp.medium-and-above {
-				font-size: calc(0.9015 * #{com.$gmux-base-font});
+				font-size: calc(.9015 * #{com.$gmux-base-font});
 				padding: calc(1.5625 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.9376 * #{com.$gmux-base-font});
+				font-size: calc(.9376 * #{com.$gmux-base-font});
 				padding: calc(1.625 * #{com.$gmux-base-font});
 			}
 		}
@@ -132,17 +132,17 @@
 		.separator-copy {
 			@include s.base-separater-copy(
 				f.$font-family-avenir-next,
-				calc(0.8654 * #{com.$gmux-base-font}),
+				calc(.8654 * #{com.$gmux-base-font}),
 				f.$font-weight-normal,
 				0,
 				1.5,
 				c.$brand-black,
-				calc(0.75 * #{com.$gmux-base-font}),
-				calc(0.78125 * #{com.$gmux-base-font}),
-				calc(0.8125 * #{com.$gmux-base-font})
+				calc(.75 * #{com.$gmux-base-font}),
+				calc(.78125 * #{com.$gmux-base-font}),
+				calc(.8125 * #{com.$gmux-base-font})
 			);
 			background-color: c.$white;
-			padding: calc(0.75 * #{com.$gmux-base-font});
+			padding: calc(.75 * #{com.$gmux-base-font});
 			position: static;
 
 			&::before {
@@ -163,13 +163,13 @@
 			}
 
 			@include bp.medium-and-above {
-				font-size: calc(0.9015 * #{com.$gmux-base-font});
-				padding: calc(0.78125 * #{com.$gmux-base-font});
+				font-size: calc(.9015 * #{com.$gmux-base-font});
+				padding: calc(.78125 * #{com.$gmux-base-font});
 			}
 
 			@include bp.large-and-above {
-				font-size: calc(0.9376 * #{com.$gmux-base-font});
-				padding: calc(0.8125 * #{com.$gmux-base-font});
+				font-size: calc(.9376 * #{com.$gmux-base-font});
+				padding: calc(.8125 * #{com.$gmux-base-font});
 			}
 		}
 	}
@@ -189,17 +189,17 @@
 			.separator-copy {
 				@include s.base-separater-copy(
 					f.$font-family-avenir-next,
-					calc(0.8654 * #{com.$gmux-base-font}),
+					calc(.8654 * #{com.$gmux-base-font}),
 					f.$font-weight-normal,
 					0,
 					1.5,
 					c.$brand-black,
-					calc(0.75 * #{com.$gmux-base-font}),
-					calc(0.78125 * #{com.$gmux-base-font}),
-					calc(0.8125 * #{com.$gmux-base-font})
+					calc(.75 * #{com.$gmux-base-font}),
+					calc(.78125 * #{com.$gmux-base-font}),
+					calc(.8125 * #{com.$gmux-base-font})
 				);
 				background-color: c.$white;
-				padding: calc(0.75 * #{com.$gmux-base-font});
+				padding: calc(.75 * #{com.$gmux-base-font});
 				top: 50%;
 				transform: translateY(-50%);
 
@@ -208,13 +208,13 @@
 				}
 
 				@include bp.medium-and-above {
-					font-size: calc(0.9015 * #{com.$gmux-base-font});
-					padding: calc(0.78125 * #{com.$gmux-base-font});
+					font-size: calc(.9015 * #{com.$gmux-base-font});
+					padding: calc(.78125 * #{com.$gmux-base-font});
 				}
 	
 				@include bp.large-and-above {
-					font-size: calc(0.9376 * #{com.$gmux-base-font});
-					padding: calc(0.8125 * #{com.$gmux-base-font});
+					font-size: calc(.9376 * #{com.$gmux-base-font});
+					padding: calc(.8125 * #{com.$gmux-base-font});
 				}
 			}
 		}

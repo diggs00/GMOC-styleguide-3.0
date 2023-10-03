@@ -13,11 +13,11 @@
 			c.$white,
 			c.$grey-darker,
 			f.$cadillac-sans,
-			calc(0.9843 * #{com.$gmux-base-font}),
+			calc(.9843 * #{com.$gmux-base-font}),
 			f.$font-weight-book,
 			3px,
 			1.5,
-			calc(0.875 * #{com.$gmux-base-font}) calc(1.75 * #{com.$gmux-base-font}),
+			calc(.875 * #{com.$gmux-base-font}) calc(1.75 * #{com.$gmux-base-font}),
 			28px,
 			c.$gold-dark,
 			f.$font-weight-book
@@ -31,7 +31,7 @@
 
 		@include bp.medium-and-above {
 			font-size: calc(1.0546 * #{com.$gmux-base-font});
-			padding: calc(0.9375 * #{com.$gmux-base-font}) calc(1.875 * #{com.$gmux-base-font});
+			padding: calc(.9375 * #{com.$gmux-base-font}) calc(1.875 * #{com.$gmux-base-font});
 		}
 	
 		@include bp.large-and-above {

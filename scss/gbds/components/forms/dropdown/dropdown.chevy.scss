@@ -51,8 +51,8 @@
 			}
 
 			&[disabled] {
-				border: 1px solid c.$grey-light;
 				background-color: c.$grey-light;
+				border: 1px solid c.$grey-light;
 				opacity: 1;
 			}
 		}
@@ -95,7 +95,7 @@
 			color: #6e6e6e;
 			font-size: 14px;
 			line-height: 1.29;
-			margin: 0px 19px 3px 16px;
+			margin: 0 19px 3px 16px;
 		}
 	}
 
@@ -118,7 +118,7 @@
 		}
 
 		@include bp.medium-and-above {
-			.gb-select-container{
+			.gb-select-container {
 				label {
 					font-size: 14px;
 					line-height: 1.29;
@@ -147,7 +147,7 @@
 			margin: 0 0 0 38px;
 
 			&::before {
-				content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23E25959%22%20stroke-width%3D%222%22%20d%3D%22M7.644%202.259c.237-.197.34-.207.433-.18.093.026.176.088.227.179h0l6.163%2011.046c.031.056.048.12.048.183%200%20.105-.043.199-.11.267-.07.068-.163.11-.268.11h0H1.86c-.064%200-.127-.016-.183-.047-.091-.05-.153-.133-.18-.225-.026-.093-.018-.196.033-.287h0z%22%20transform%3D%22translate(-351%20-1707)%20translate(338%201642)%20translate(13%2065)%22%2F%3E%3Cpath%20fill%3D%22%23E25959%22%20d%3D%22M8%2011c.368%200%20.667.298.667.667%200%20.368-.299.666-.667.666-.368%200-.667-.298-.667-.666%200-.369.299-.667.667-.667zm.667-4l-.154%203.333H7.51L7.333%207h1.334z%22%20transform%3D%22translate(-351%20-1707)%20translate(338%201642)%20translate(13%2065)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+				content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23E25959%22%20stroke-width%3D%222%22%20d%3D%22M7.644%202.259c.237-.197.34-.207.433-.18.093.026.176.088.227.179h0l6.163%2011.046c.031.056.048.12.048.183%200%20.105-.043.199-.11.267-.07.068-.163.11-.268.11h0H1.86c-.064%200-.127-.016-.183-.047-.091-.05-.153-.133-.18-.225-.026-.093-.018-.196.033-.287h0z%22%20transform%3D%22translate(-351%20-1707)%20translate(338%201642)%20translate(13%2065)%22%2F%3E%3Cpath%20fill%3D%22%23E25959%22%20d%3D%22M8%2011c.368%200%20.667.298.667.667%200%20.368-.299.666-.667.666-.368%200-.667-.298-.667-.666%200-.369.299-.667.667-.667zm.667-4l-.154%203.333H7.51L7.333%207h1.334z%22%20transform%3D%22translate(-351%20-1707)%20translate(338%201642)%20translate(13%2065)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 				height: 16px;
 				left: -25px;
 				position: absolute;
@@ -156,12 +156,11 @@
 		}
 
 		@include bp.medium-and-above {
-	
 			.gb-helper-text {
 				margin: 1px 0 0 38px;
 	
 				&::before {
-					content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23E25959%22%20stroke-width%3D%222%22%20d%3D%22M9.637%202.16c.237-.197.34-.206.433-.18.092.027.175.089.226.18h0l8.291%2014.86c.032.056.048.12.048.184%200%20.104-.042.198-.11.266s-.163.11-.267.11h0H1.741c-.064%200-.127-.016-.183-.046-.091-.05-.153-.134-.18-.226-.026-.093-.018-.196.033-.287h0z%22%20transform%3D%22translate(-850%20-1710)%20translate(834%201642)%20translate(16%2068)%22%2F%3E%3Cpath%20fill%3D%22%23E25959%22%20d%3D%22M10%2013.75c.46%200%20.833.373.833.833%200%20.46-.373.834-.833.834-.46%200-.833-.373-.833-.834%200-.46.373-.833.833-.833zm.833-5l-.192%204.167H9.39L9.167%208.75h1.666z%22%20transform%3D%22translate(-850%20-1710)%20translate(834%201642)%20translate(16%2068)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+					content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-rule%3D%22nonzero%22%3E%3Cg%3E%3Cg%3E%3Cpath%20stroke%3D%22%23E25959%22%20stroke-width%3D%222%22%20d%3D%22M9.637%202.16c.237-.197.34-.206.433-.18.092.027.175.089.226.18h0l8.291%2014.86c.032.056.048.12.048.184%200%20.104-.042.198-.11.266s-.163.11-.267.11h0H1.741c-.064%200-.127-.016-.183-.046-.091-.05-.153-.134-.18-.226-.026-.093-.018-.196.033-.287h0z%22%20transform%3D%22translate(-850%20-1710)%20translate(834%201642)%20translate(16%2068)%22%2F%3E%3Cpath%20fill%3D%22%23E25959%22%20d%3D%22M10%2013.75c.46%200%20.833.373.833.833%200%20.46-.373.834-.833.834-.46%200-.833-.373-.833-.834%200-.46.373-.833.833-.833zm.833-5l-.192%204.167H9.39L9.167%208.75h1.666z%22%20transform%3D%22translate(-850%20-1710)%20translate(834%201642)%20translate(16%2068)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 					height: 20px;
 					width: 20px;
 				}

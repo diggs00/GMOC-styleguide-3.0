@@ -1,0 +1,88 @@
+@use '../../../common/common' as com;
+@use '../../../utils/breakpoints' as bp;
+
+@use 'toggle' as t;
+@use '../../../cadillac-2022/colors' as c;
+@use '../../../cadillac-2022/fonts' as f;
+
+.gb-toggle {
+	input[type='checkbox'] {
+		@include t.base-toggle-input(
+			3rem,
+			3rem
+		);
+
+		&::before {
+			@include t.outer-toggle(
+				c.$white,
+				1px solid c.$gray-1,
+				2rem,
+				1.5rem,
+				.4s,
+				3rem
+			);
+			top: .875rem;
+		}
+
+		&::after {
+			@include t.inner-toggle(
+				c.$gray-1,
+				50%,
+				1.25rem,
+				.4s,
+				1.25rem
+			);
+			bottom: .5rem;
+			left: .125rem;
+		}
+
+		&:checked {
+			&::before {
+				background-color: c.$gray-1;
+			}
+
+			&::after {
+				background-color: c.$white;
+				transform: translateX(1.5rem);
+			}
+		}
+	}
+
+	label {
+		@include t.base-toggle-label(
+			c.$gray-1,
+			f.$cadillac-gothic,
+			1rem,
+			1.2rem,
+			0 0 0 7.125rem
+		);
+		bottom: .9375rem;
+		font-weight: f.$font-weight-lighter;
+		letter-spacing: -.25px;
+		margin: 0 .5rem;
+	}
+
+	&.disabled {
+		pointer-events: none;
+
+		input[type='checkbox'] {
+			&::before {
+				border-color: c.$gray-4;
+			}
+
+			&::after {
+				background-color: c.$gray-4;
+			}
+
+			&:checked {
+				&::before {
+					background-color: c.$gray-4;
+				}
+
+				&::after {
+					background-color: c.$white;
+				}
+			}
+		}
+	}
+}

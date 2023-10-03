@@ -25,15 +25,15 @@
 	.gb-small-margin {
 		margin-bottom: calc(1.5625 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-medium-margin {
 		margin-bottom: calc(3.125 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-large-margin {
 		margin-bottom: calc(6.25 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-xlarge-margin {
 		margin-bottom: calc(6.25 * #{com.$gmux-base-font}) !important;
 	}
@@ -43,22 +43,22 @@
 	.gb-small-margin {
 		margin-bottom: calc(1.7968 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-medium-margin {
 		margin-bottom: calc(3.5937 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-large-margin {
 		margin-bottom: calc(7.1875 * #{com.$gmux-base-font}) !important;
 	}
-	
+
 	.gb-xlarge-margin {
 		margin-bottom: calc(7.1875 * #{com.$gmux-base-font}) !important;
 	}
 }
 
 /* Chevy has a specific xlarge margin override for small only viewports*/
-@media print,only screen and (min-width:420px) {
+@media print, only screen and (min-width: 420px) {
 	.gb-xlarge-margin {
 		margin-bottom: calc(7.9687 * #{com.$gmux-base-font}) !important;
 	}

@@ -38,7 +38,7 @@
 		21.6px,
 		12px 24px,
 		background .5s cubic-bezier(0, 1, .5, 1),
-		c.$car-bravo-midnight-base,
+		c.$car-bravo-blue-base-hover,
 		none,
 		null
 	);
@@ -99,8 +99,8 @@
 		21.6px,
 		12px 24px,
 		background .5s cubic-bezier(0, 1, .5, 1),
-		c.$car-bravo-blue-base,
-		2px solid c.$car-bravo-blue-base,
+		c.$car-bravo-blue-base-hover,
+		2px solid c.$car-bravo-blue-base-hover,
 		c.$white
 	);
 
@@ -148,13 +148,7 @@
 	}
 
 	&.invert {
-		@include b.button-invert(
-			transparent,
-			2px solid c.$white,
-			c.$white,
-			c.$gray-20,
-			c.$gray-90
-		);
+		@include b.button-invert(transparent, 2px solid c.$white, c.$white, c.$gray-20, c.$gray-90);
 
 		&:active {
 			background-color: transparent;
@@ -164,7 +158,7 @@
 
 		&:hover {
 			background-color: c.$white;
-			border: none;
+			border: 0;
 			color: c.$car-bravo-blue-base;
 		}
 
@@ -231,13 +225,7 @@
 	}
 
 	&.invert {
-		@include b.button-invert(
-			transparent,
-			none,
-			c.$white,
-			transparent,
-			c.$car-bravo-blue-base
-		);
+		@include b.button-invert(transparent, none, c.$white, transparent, c.$car-bravo-blue-base);
 
 		&:active {
 			color: c.$car-bravo-midnight-base;
@@ -269,17 +257,14 @@
 	);
 
 	&.invert {
-		@include b.link-invert(
-			c.$white,
-			c.$white
-		);
+		@include b.link-invert(c.$white, c.$white);
 	}
 }
 
 %gb-icon-button {
 	@extend %button-icon-base;
-	border-radius: 23px;
 	background-color: c.$car-bravo-green-base;
+	border-radius: 23px;
 	cursor: pointer;
 	display: inline-block;
 	height: i.$icon-medium;
@@ -322,22 +307,14 @@
 		3px solid c.$car-bravo-blue-base
 	);
 
-	&:hover { 
+	&:hover {
 		border-left: 3px solid c.$car-bravo-blue-base;
 		color: c.$grey-dark;
-
 	}
 }
 
 %gb-list-item-description {
-	@include b.list-item-description(
-		.875rem,
-		f.$nexa-w05,
-		f.$font-weight-normal,
-		normal,
-		1.429,
-		c.$grey
-	);
+	@include b.list-item-description(.875rem, f.$nexa-w05, f.$font-weight-normal, normal, 1.429, c.$grey);
 }
 
 html[dir='rtl'] {

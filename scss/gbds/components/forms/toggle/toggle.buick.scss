@@ -55,20 +55,20 @@
 		@include t.base-toggle-label(
 			c.$brand-black,
 			f.$font-family-avenir-next,
-			calc(0.975 * #{com.$gmux-base-font}),
+			calc(.975 * #{com.$gmux-base-font}),
 			1.5,
-			0 calc(calc(0.75 * #{com.$gmux-base-font}) - 8px)
+			0 calc(calc(.75 * #{com.$gmux-base-font}) - 8px)
 		);
 		bottom: 17px;
 
 		@include bp.medium-and-above {
 			font-size: calc(1.0156 * #{com.$gmux-base-font});
-			margin: 0 calc(calc(0.78125 * #{com.$gmux-base-font}) - 8px);
+			margin: 0 calc(calc(.78125 * #{com.$gmux-base-font}) - 8px);
 		}
 
 		@include bp.large-and-above {
 			font-size: calc(1.05625 * #{com.$gmux-base-font});
-			margin: 0 calc(calc(0.8125 * #{com.$gmux-base-font}) - 8px);
+			margin: 0 calc(calc(.8125 * #{com.$gmux-base-font}) - 8px);
 		}
 	}
 

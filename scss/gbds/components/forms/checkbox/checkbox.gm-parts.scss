@@ -1,0 +1,66 @@
+@use 'checkbox';
+@use '../../../gm-parts/colors';
+@use '../../../gm-parts/fonts';
+@use '../../../gm-parts/icons';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	padding-bottom: 1rem;
+	position: relative;
+
+	label,
+	/* Override Legacy Quantum Style*/
+	input[type='checkbox']+label {
+		@include checkbox.base-label(
+			colors.$parts-black,
+			fonts.$font-family-overpass,
+			1rem,
+			fonts.$font-weight-normal,
+			0,
+			normal
+		);
+
+		margin: 0;
+		position: relative;
+		text-transform: uppercase;
+
+		@include bp.medium-and-above {
+			font-size: 1rem;
+		}
+	}
+
+	input[type='checkbox'] {
+		$box-size: 1rem;
+		@include checkbox.base-box(2rem);
+		background: none;
+		border: 1px solid colors.$parts-black;
+		margin: .188rem 1rem .188rem .25rem;
+		position: relative;
+
+		&:checked {
+			background: colors.$gm-gray-fe;
+
+			&::after {
+				border: 0;
+				content: icons.$checkmark;
+				height: $box-size;
+				left: .438rem;
+				position: absolute;
+				top: .35rem;
+				width: $box-size;
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='checkbox'] {
+			background: none;
+			border: 1px solid colors.$parts-black;
+			opacity: .4;
+
+			&:checked {
+				background: colors.$gm-gray-fe;
+			}
+		}
+	}
+}

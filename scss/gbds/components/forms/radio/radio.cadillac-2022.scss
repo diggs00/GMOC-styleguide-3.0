@@ -1,0 +1,67 @@
+@use '../../../common/common' as com;
+@use '../../../utils/breakpoints' as bp;
+
+@use 'radio' as r;
+@use '../../../cadillac-2022/colors' as c;
+@use '../../../cadillac-2022/fonts' as f;
+
+.gb-radio {
+	input[type='radio'] {
+		@include r.base-radio-input(
+			1.25rem,
+			0,
+			1.25rem,
+		);
+
+		background: c.$white;
+		border: 1px solid c.$gray-1;
+		border-radius: calc(.875 * #{com.$gmux-base-font});
+
+		&:checked {
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%3E%3Ccircle%20cx='7'%20cy='7'%20r='6.25'%20fill='%23282828'/%3E%3C/svg%3E");
+				height: .7813rem;
+				left: .125rem;
+				position: relative;
+				top: .125rem;
+				width: .7813rem;
+			}
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$gray-1,
+				f.$cadillac-gothic,
+				1rem,
+				1.2rem,
+				0 .5rem,
+			);
+
+			font-weight: f.$font-weight-lighter;
+			top: .125rem;
+		}
+	}
+
+	&.disabled {
+		input[type='radio'] {
+			border: 1px solid c.$gray-4;
+			cursor: default;
+
+			&:checked {
+				&::after {
+					content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%3E%3Ccircle%20cx='7'%20cy='7'%20r='6.25'%20fill='%23A0A0A0'/%3E%3C/svg%3E");
+					height: .7813rem;
+					left: .125rem;
+					position: relative;
+					top: .125rem;
+					width: .7813rem;
+				}
+			}
+
+			+label {
+				color: c.$gray-4;
+				cursor: default;
+			}
+		}
+	}
+}

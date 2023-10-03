@@ -15,7 +15,7 @@
 
 		&::before {
 			background: c.$grey-light;
-			border-radius: calc(0.875 * #{com.$gmux-base-font});
+			border-radius: calc(.875 * #{com.$gmux-base-font});
 			content: '';
 			display: inline-block;
 			height: calc(1.4218 * #{com.$gmux-base-font});
@@ -23,7 +23,7 @@
 			width: calc(1.421875 * #{com.$gmux-base-font});
 
 			@include bp.medium-and-above {
-				border-radius: calc(0.9375 * #{com.$gmux-base-font});
+				border-radius: calc(.9375 * #{com.$gmux-base-font});
 				height: calc(1.5234 * #{com.$gmux-base-font});
 				width: calc(1.5234 * #{com.$gmux-base-font});
 			}
@@ -52,26 +52,26 @@
 		&:checked {
 			&:hover {
 				&::before {
-					box-shadow: inset 0 0 0 calc(0.4375 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.4375 * #{com.$gmux-base-font}) c.$grey-light;
 
 					@include bp.medium-and-above {
-						box-shadow: inset 0 0 0 calc(0.4687 * #{com.$gmux-base-font}) c.$grey-light;
+						box-shadow: inset 0 0 0 calc(.4687 * #{com.$gmux-base-font}) c.$grey-light;
 					}
 					@include bp.large-and-above {
-						box-shadow: inset 0 0 0 calc(0.5 * #{com.$gmux-base-font}) c.$grey-light;
+						box-shadow: inset 0 0 0 calc(.5 * #{com.$gmux-base-font}) c.$grey-light;
 					}
 				}
 			}
 
 			&::before {
 				background: c.$white;
-				box-shadow: inset 0 0 0 calc(0.4375 * #{com.$gmux-base-font}) c.$grey-light;
+				box-shadow: inset 0 0 0 calc(.4375 * #{com.$gmux-base-font}) c.$grey-light;
 
 				@include bp.medium-and-above {
-					box-shadow: inset 0 0 0 calc(0.4687 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.4687 * #{com.$gmux-base-font}) c.$grey-light;
 				}
 				@include bp.large-and-above {
-					box-shadow: inset 0 0 0 calc(0.5 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.5 * #{com.$gmux-base-font}) c.$grey-light;
 				}
 			}
 		}
@@ -83,13 +83,13 @@
 
 			&::before {
 				background: c.$grey-extra-light;
-				box-shadow: inset 0 0 0 calc(0.4375 * #{com.$gmux-base-font}) c.$grey-light;
+				box-shadow: inset 0 0 0 calc(.4375 * #{com.$gmux-base-font}) c.$grey-light;
 
 				@include bp.medium-and-above {
-					box-shadow: inset 0 0 0 calc(0.4687 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.4687 * #{com.$gmux-base-font}) c.$grey-light;
 				}
 				@include bp.large-and-above {
-					box-shadow: inset 0 0 0 calc(0.5 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.5 * #{com.$gmux-base-font}) c.$grey-light;
 				}
 			}
 			
@@ -97,26 +97,26 @@
 				&:hover {
 					/* stylelint-disable-next-line*/
 					&::before {
-						box-shadow: inset 0 0 0 calc(0.4375 * #{com.$gmux-base-font}) c.$grey-light;
+						box-shadow: inset 0 0 0 calc(.4375 * #{com.$gmux-base-font}) c.$grey-light;
 
 						@include bp.medium-and-above {
-							box-shadow: inset 0 0 0 calc(0.4687 * #{com.$gmux-base-font}) c.$grey-light;
+							box-shadow: inset 0 0 0 calc(.4687 * #{com.$gmux-base-font}) c.$grey-light;
 						}
 						@include bp.large-and-above {
-							box-shadow: inset 0 0 0 calc(0.5 * #{com.$gmux-base-font}) c.$grey-light;
+							box-shadow: inset 0 0 0 calc(.5 * #{com.$gmux-base-font}) c.$grey-light;
 						}
 					}
 				}
 		
 				&::before {
 					background: c.$white;
-					box-shadow: inset 0 0 0 calc(0.4375 * #{com.$gmux-base-font}) c.$grey-light;
+					box-shadow: inset 0 0 0 calc(.4375 * #{com.$gmux-base-font}) c.$grey-light;
 
 					@include bp.medium-and-above {
-						box-shadow: inset 0 0 0 calc(0.4687 * #{com.$gmux-base-font}) c.$grey-light;
+						box-shadow: inset 0 0 0 calc(.4687 * #{com.$gmux-base-font}) c.$grey-light;
 					}
 					@include bp.large-and-above {
-						box-shadow: inset 0 0 0 calc(0.5 * #{com.$gmux-base-font}) c.$grey-light;
+						box-shadow: inset 0 0 0 calc(.5 * #{com.$gmux-base-font}) c.$grey-light;
 					}
 				}
 			}

@@ -1,0 +1,59 @@
+@use 'checkbox';
+@use '../../../cadillaceu/colors';
+@use '../../../cadillaceu/fonts';
+@use '../../../utils/breakpoints' as bp;
+
+.gb-checkbox {
+	label, /* Override Legacy Quantum Style*/
+	input[type='checkbox'] + label {
+		@include checkbox.base-label(
+			colors.$black,
+			fonts.$cadillac-gothic,
+			1rem,
+			fonts.$font-weight-normal,
+			normal,
+			1.375rem
+		);
+
+		margin: 0 .5rem;
+		position: relative;
+		top: .125rem;
+	}
+
+	input[type='checkbox'] {
+		@include checkbox.base-box(1rem);
+
+		background: colors.$white;
+		border: 1.5px solid colors.$black;
+		border-radius: 6px;
+		margin: 0;
+
+		&:checked {
+			background: colors.$black;
+
+			&::after {
+				bottom: 4px;
+				content: url("data:image/svg+xml,%3Csvg%20width='10'%20height='8'%20viewBox='0%200%2010%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M1%204.26664L3.66353%206.93331L9%201.59998'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+				left: 2px;
+				position: relative;
+			}
+		}
+	}
+
+	&.disabled {
+		label,
+		input[type='checkbox'] + label {
+			color: colors.$gray-400;
+			cursor: default;
+		}
+
+		input[type='checkbox'] {
+			border-color: colors.$gray-400;
+			cursor: default;
+
+			&:checked {
+				background: colors.$gray-400;
+			}
+		}
+	}
+}

@@ -36,8 +36,8 @@
 
 %gb-primary-button {
 	@include b.primary-button(
-		c.$blue-ev,
-		1px solid c.$blue-ev,
+		c.$chevy-ev-blue-base,
+		1px solid c.$chevy-ev-blue-base,
 		c.$white,
 		f.$font-family-roboto,
 		16px,
@@ -83,7 +83,7 @@
 
 	&:focus {
 		background: c.$chevy-ev-blue-base;
-		box-shadow: 0 0 10px #4682EF;
+		box-shadow: 0 0 10px #4682ef;
 	}
 
 	&.disabled {
@@ -167,7 +167,7 @@
 	&:focus {
 		background: transparent;
 		border-color: c.$gray-80;
-		box-shadow: 0 0 10px #4682EF;
+		box-shadow: 0 0 10px #4682ef;
 		color: c.$gray-90;
 	}
 
@@ -280,14 +280,14 @@
 
 %gb-link {
 	@include b.link(
-		c.$blue-ev,
+		c.$chevy-ev-blue-base,
 		f.$font-family-roboto,
 		1rem,
 		f.$font-weight-medium,
 		1px,
 		1.38,
 		null,
-		c.$blue-ev
+		c.$chevy-ev-blue-bright
 	);
 
 	&.invert {
@@ -300,8 +300,8 @@
 
 %gb-icon-button {
 	@extend %button-icon-base;
-	border-radius: 23px;
 	background-color: c.$gray-100-chevy-ev;
+	border-radius: 23px;
 	cursor: pointer;
 	display: inline-block;
 	height: i.$icon-medium;
@@ -380,9 +380,9 @@
 
 %gb-icon-outline-button {
 	@extend %button-icon-base;
+	background-color: transparent;
 	border: 2px solid c.$gray-90;
 	border-radius: 23px;
-	background-color: transparent;
 	cursor: pointer;
 	display: inline-block;
 	height: i.$icon-medium;
@@ -496,11 +496,11 @@
 		transparent,
 		none,
 		transparent,
-		3px solid c.$blue-ev
+		3px solid c.$chevy-ev-blue-base
 	);
 
 	&:hover { 
-		border-left: 3px solid c.$blue-ev;
+		border-left: 3px solid c.$chevy-ev-blue-bright;
 		color: c.$grey-dark;
 
 	}

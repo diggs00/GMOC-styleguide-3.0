@@ -1,0 +1,102 @@
+@use 'radio' as r;
+@use '../../../gm-parts/colors' as c;
+@use '../../../gm-parts/fonts' as f;
+
+.gb-radio {
+	padding-bottom: 1rem;
+
+	input[type='radio'] {
+		@include r.base-radio-input(
+			2rem,
+			.188rem 1rem 0 .313rem,
+			2rem,
+		);
+		align-items: center;
+		position: relative;
+
+		&::before {
+			background: c.$white;
+			border: 1px solid c.$parts-black;
+			border-radius: 50%;
+			content: '';
+			display: inline-block;
+			height: 2rem;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 2rem;
+		}
+
+		+label {
+			@include r.base-radio-label(
+				c.$parts-black,
+				f.$font-family-overpass,
+				1rem,
+				normal,
+				0,
+			);
+			display: inline;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+
+		&:checked {
+			&::before {
+				background: c.$gm-gray-fe;
+			}
+
+			&::after {
+				background-color: c.$parts-black;
+				background-size: 16px 16px;
+				border-radius: 50%;
+				content: '';
+				height: 40%;
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 40%;
+			}
+		}
+	}
+
+	&.disabled {
+		input[type='radio'] {
+			position: relative;
+
+			&::before {
+				border: 1px solid c.$parts-black;
+				opacity: .4;
+			}
+
+			&::after {
+				opacity: .4;
+			}
+
+			+label {
+				color: c.$parts-black;
+				vertical-align: middle;
+			}
+
+			&:checked {
+				&::before {
+					background: c.$grey-almost;
+				}
+			}
+		}
+	}
+
+	@media print,
+		only screen and (min-width:800px) {
+		input[type='radio']+label {
+			@include r.base-radio-label(
+				c.$parts-black,
+				f.$font-family-overpass,
+				1rem,
+				normal,
+				0,
+			);
+			vertical-align: middle;
+		}
+	}
+}

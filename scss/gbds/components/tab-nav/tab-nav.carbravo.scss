@@ -116,7 +116,9 @@ gb-tab-nav,
 			}
 
 			/* Overriding container movement properties so container content appears over content below it.*/
-			&.open, &.opening, &.closing {
+			&.open,
+			&.opening,
+			&.closing {
 				position: fixed;
 				z-index: 1;
 			}

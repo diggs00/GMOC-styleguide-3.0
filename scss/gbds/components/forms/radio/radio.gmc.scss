@@ -44,7 +44,7 @@
 		+label {
 			@include r.base-radio-label(
 				c.$font,
-				f.$font-family-muli,
+				f.$font-family-stratum,
 				16px,
 				1.5,
 				5px 0 6px calc(2.5 * #{com.$gmux-base-font}),
@@ -76,13 +76,13 @@
 
 			&::before {
 				background: c.$brand-black;
-				box-shadow: inset 0 0 0 calc(0.15625 * #{com.$gmux-base-font}) c.$white;
+				box-shadow: inset 0 0 0 calc(.15625 * #{com.$gmux-base-font}) c.$white;
 
 				@include bp.medium-and-above {
-					box-shadow: inset 0 0 0 calc(0.1718 * #{com.$gmux-base-font}) c.$white;
+					box-shadow: inset 0 0 0 calc(.1718 * #{com.$gmux-base-font}) c.$white;
 				}
 				@include bp.large-and-above {
-					box-shadow: inset 0 0 0 calc(0.1875 * #{com.$gmux-base-font}) c.$white;
+					box-shadow: inset 0 0 0 calc(.1875 * #{com.$gmux-base-font}) c.$white;
 				}
 			}
 		}
@@ -148,7 +148,7 @@
 			}
 
 			+label {
-				margin-left: calc(0.9375 * #{com.$gmux-base-font});
+				margin-left: calc(.9375 * #{com.$gmux-base-font});
 				vertical-align: revert;
 
 				@include bp.medium-and-above {
@@ -165,7 +165,7 @@
 		input[type='radio'] + label {
 			@include r.base-radio-label(
 				c.$font,
-				f.$font-family-muli,
+				f.$font-family-stratum,
 				18px,
 				normal,
 				5px 0 6px calc(2.1875 * #{com.$gmux-base-font}),

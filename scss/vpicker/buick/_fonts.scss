@@ -22,13 +22,13 @@ $font-weight-xbold: 900;
 $font-list: (
 	'Futura': (
 		('Futura-Book-webfont', normal, $font-weight-book),
-		('Futura-Bold-webfont', normal, $font-weight-bold)
+		('Futura-Bold-webfont', normal, $font-weight-bold),
 	),
 	'AvenirNext': (
 		('AvenirNext-Regular-webfont', normal, $font-weight-normal),
-		('AvenirNext-Demi-webfont', normal, $font-weight-demi)
+		('AvenirNext-Demi-webfont', normal, $font-weight-demi),
 	),
 	'Harriet Text': (
 		('HarrietText-Regular-webfont', normal, $font-weight-normal),
-	)
+	),
 );

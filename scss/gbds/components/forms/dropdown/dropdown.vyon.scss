@@ -1,0 +1,112 @@
+@use 'dropdown' as d;
+@use '../../../vyon/colors' as c;
+@use '../../../vyon/fonts' as f;
+@use '../../../utils/breakpoints' as bp;
+
+.gb-dropdown {
+	height: 3.4375rem;
+
+	.gb-select-container {
+		position: relative;
+
+		label {
+			@include d.base-label(
+				f.$vyon-sans,
+				1rem,
+				normal,
+				1.375rem,
+				17px 16px
+			);
+			color: c.$black;
+			font-weight: f.$font-weight-normal;
+			position: absolute;
+		}
+
+		select {
+			@include d.base-select(
+				c.$white,
+				none,
+				none,
+				null,
+				null,
+				none,
+				f.$vyon-sans,
+				1rem,
+				0,
+				1.625rem 1rem .5rem,
+				100%
+			);
+			border-radius: 16px;
+			height: 3.5rem;
+
+			&:focus {
+				border-color: c.$black;
+			}
+		}
+
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg%20width='18'%20height='9'%20viewBox='0%200%2018%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0.549748%200.419682C0.842641%200.126789%201.31752%200.126789%201.61041%200.419682L8.13041%206.93968C8.60752%207.41679%209.39264%207.41679%209.86975%206.93968L16.3897%200.419682C16.6826%200.126789%2017.1575%200.126789%2017.4504%200.419682C17.7433%200.712575%2017.7433%201.18745%2017.4504%201.48034L10.9304%208.00034C9.86751%209.06324%208.13264%209.06324%207.06975%208.00034L0.549748%201.48034C0.256855%201.18745%200.256855%200.712575%200.549748%200.419682Z'%20fill='%23060606'/%3E%3C/svg%3E%0A");
+			height: 1.5rem;
+			margin: 0 0 0 auto;
+			position: absolute;
+			right: .875rem;
+			top: 1.125rem;
+			width: 1.5rem;
+		}
+	}
+
+	.gb-helper-text {
+		color: c.$black;
+		font-size: .875rem;
+		letter-spacing: normal;
+		line-height: 1rem;
+		margin: .625rem 1rem 0;
+	}
+
+	&.form-error {
+		.gb-helper-text {
+			color: c.$error-red;
+			display: flex;
+			line-height: 1.875rem;
+			margin-top: .375rem;
+
+			&::before {
+				content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNSI+PHBhdGggc3Ryb2tlPSIjRDIxQzFDIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMTIgOC40Njh2NS4yNU0yMS4wOCA5LjI5OHY2Ljg0YzAgMS4xMi0uNiAyLjE2LTEuNTcgMi43M2wtNS45NCAzLjQzYy0uOTcuNTYtMi4xNy41Ni0zLjE1IDBsLTUuOTQtMy40M2EzLjE1IDMuMTUgMCAwIDEtMS41Ny0yLjczdi02Ljg0YzAtMS4xMi42LTIuMTYgMS41Ny0yLjczbDUuOTQtMy40M2MuOTctLjU2IDIuMTctLjU2IDMuMTUgMGw1Ljk0IDMuNDNjLjk3LjU3IDEuNTcgMS42IDEuNTcgMi43M1oiLz48cGF0aCBzdHJva2U9IiNEMjFDMUMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTIgMTYuOTE4di4xIi8+PC9zdmc+');
+				height: 1.5rem;
+				margin-right: .625rem;
+				width: 1.5rem;
+			}
+		}
+	}
+
+	&.gb-option-selected {
+		.gb-select-container {
+			label {
+				@include d.base-label(
+					f.$vyon-sans,
+					.75rem,
+					normal,
+					.875rem,
+					0
+				);
+				color: c.$gray-500;
+				left: 1rem;
+				position: absolute;
+				top: .5rem;
+			}
+		}
+	}
+}
+
+.gb-disabled {
+	.gb-select-container {
+		label {
+			color: c.$gray-500;
+		}
+
+		select {
+			background-color: c.$gray-300;
+			opacity: 1;
+		}
+	}
+}

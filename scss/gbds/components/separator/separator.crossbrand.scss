@@ -1,0 +1,235 @@
+@use 'separator' as s;
+@use '../../crossbrand/colors' as c;
+@use '../../crossbrand/fonts' as f;
+@use '../../utils/breakpoints' as bp;
+
+.gb-separator {
+	.separator-invisible {
+		@include s.base-separator(
+		);
+	}
+
+	.separator-primary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$white,
+			solid
+		);
+	}
+
+	.separator-secondary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$cool-grey1c,
+			solid
+		);
+	}
+
+	.separator-tertiary {
+		@include s.base-separator(
+			1px 0 0 0,
+			c.$blue-dark2,
+			solid
+		);
+	}
+
+	.separator-join-vertical {
+		@include s.base-separator-join(
+			3rem 0
+		);
+		height: 152px;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-overpass,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$font,
+				1rem,
+				1rem,
+				1rem
+			);
+
+			&::before {
+				@include s.base-separator(
+					0 0 0 1px,
+					c.$brown-grey,
+					solid
+				);
+
+				bottom: 100%;
+				content: '';
+				height: 3rem;
+				left: 50%;
+				position: absolute;
+			}
+
+			&::after {
+				@include s.base-separator(
+					0 0 0 1px,
+					c.$brown-grey,
+					solid
+				);
+
+				content: '';
+				height: 3rem;
+				left: 50%;
+				position: absolute;
+				top: 100%;
+			}
+		}
+	}
+
+	.separator-join-horizontal {
+		@include s.base-separator-join(
+		);
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-overpass,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$font,
+				1rem,
+				1rem,
+				1rem
+			);
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$brown-grey,
+					solid
+				);
+
+				content: '';
+				position: absolute;
+				right: calc(100% + 1rem);
+				top: 50%;
+				width: 48rem;
+
+			}
+
+			&::after {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$brown-grey,
+					solid
+				);
+
+				content: '';
+				left: calc(100% + 1rem);
+				position: absolute;
+				top: 50%;
+				width: 48rem;
+			}
+		}
+	}
+
+	.separator-join-combined {
+		@include s.base-separator-join(
+			3rem 0
+		);
+		height: 152px;
+
+		.separator-copy {
+			@include s.base-separater-copy(
+				f.$font-family-overpass,
+				1.125rem,
+				f.$font-weight-bold,
+				0,
+				1.5,
+				c.$font,
+				1rem,
+				1rem,
+				1rem
+			);
+
+			&::before {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$brown-grey,
+					solid
+				);
+
+				content: '';
+				position: absolute;
+				right: calc(100% + 1rem);
+				top: 50%;
+				width: 48rem;
+
+			}
+
+			&::after {
+				@include s.base-separator(
+					1px 0 0 0,
+					c.$brown-grey,
+					solid
+				);
+
+				content: '';
+				left: calc(100% + 1rem);
+				position: absolute;
+				top: 50%;
+				width: 48rem;
+			}
+		}
+	}
+
+	@include bp.large-and-above {
+		.separator-join-combined {
+			@include s.base-separator-join(
+				3rem 0
+			);
+			height: 152px;
+	
+			.separator-copy {
+				@include s.base-separater-copy(
+					f.$font-family-overpass,
+					1.125rem,
+					f.$font-weight-bold,
+					0,
+					1.5,
+					c.$font,
+					1rem,
+					1rem,
+					1rem
+				);
+	
+				&::before {
+					@include s.base-separator(
+						0 0 0 1px,
+						c.$brown-grey,
+						solid
+					);
+	
+					bottom: 100%;
+					content: '';
+					height: 3rem;
+					left: 50%;
+					position: absolute;
+					right: unset;
+					top: unset;
+				}
+	
+				&::after {
+					@include s.base-separator(
+						0 0 0 1px,
+						c.$brown-grey,
+						solid
+					);
+	
+					content: '';
+					height: 3rem;
+					left: 50%;
+					position: absolute;
+					top: 100%;
+				}
+			}
+		}
+	}
+}

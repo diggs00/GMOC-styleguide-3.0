@@ -37,7 +37,7 @@
 		&:checked {
 			&::before {
 				background: c.$brand-blue;
-				box-shadow: inset 0 0 0 0.45rem c.$white;
+				box-shadow: inset 0 0 0 .45rem c.$white;
 			}
 		}
 	}

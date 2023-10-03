@@ -1,0 +1,127 @@
+@use 'dropdown' as d;
+@use '../../../gm-parts/colors' as c;
+@use '../../../gm-parts/fonts' as f;
+@use '../../../gm-parts/icons' as i;
+
+.gb-dropdown {
+	label {
+		@include d.base-label(
+			f.$font-family-overpass,
+			1rem,
+			0,
+			1.375rem,
+			0 0 1rem
+		);
+		font-weight: f.$font-weight-normal;
+		text-transform: uppercase;
+	}
+
+	select {
+		@include d.base-select(
+			c.$white,
+			null,
+			null,
+			null,
+			null,
+			1px solid c.$parts-black,
+			f.$font-family-overpass,
+			1.125rem,
+			0,
+			1.5rem 4rem 1.5rem 1rem,
+			100%
+		);
+
+		background-image: i.$chevron-down-blue, linear-gradient(to right, rgba(c.$parts-black, .5), rgba(c.$parts-black, .5));
+		background-position: calc(100% - 1.5rem) center, calc(100% - 4rem) 0;
+		background-repeat: no-repeat;
+		background-size: 1rem, 1px 100%;
+		border-radius: 0;
+		color: c.$parts-black;
+		flex-grow: 1;
+		line-height: 1.125rem;
+		max-height: 5rem;
+		transition: background-image .25s;
+		transition-timing-function: cubic-bezier(0, 1, .5, 1);
+		white-space: pre-wrap;
+
+		&::-moz-placeholder {
+			color: rgba(c.$parts-black, .5);
+		}
+
+		&::placeholder {
+			color: rgba(c.$parts-black, .5);
+		}
+
+		&:hover {
+			background-image: i.$chevron-down-white, linear-gradient(to right, c.$gm-blue, c.$gm-blue);
+			background-position: calc(100% - 1.5rem) center, 100% 0;
+			background-size: 1rem, 4rem 100%;
+		}
+
+		&:focus {
+			background-color: c.$white;
+		}
+	}
+
+	&.inline {
+		display: flex;
+		flex: 0 0 100%;
+		flex-flow: row wrap;
+
+		label {
+			align-items: center;
+			display: flex;
+			width: 100%;
+		}
+
+		.select-container {
+			flex-grow: 1;
+		}
+
+		@media screen and (min-width: 600px) {
+			label {
+				flex: 0 0 25%;
+				margin-bottom: .75rem;
+				max-width: 25%;
+			}
+		}
+	}
+
+	&.disabled {
+		select {
+			background-color: c.$white;
+			opacity: .45;
+		}
+	}
+
+	&.form-error,
+	&.form-success {
+		p {
+			font-family: f.$font-family-overpass;
+			font-size: .75rem;
+			letter-spacing: .03125rem;
+			line-height: 1.125rem;
+			margin-top: 1rem;
+		}
+	}
+
+	&.form-error {
+		select {
+			border-color: c.$error-red;
+		}
+
+		p {
+			color: c.$error-red;
+		}
+	}
+
+	&.form-success {
+		select {
+			border-color: c.$success-green;
+		}
+
+		p {
+			color: c.$success-green;
+		}
+	}
+}

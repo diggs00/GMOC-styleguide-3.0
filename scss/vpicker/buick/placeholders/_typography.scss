@@ -22,10 +22,11 @@
 %headline-link {
 	color: c.$grey-dark;
 	cursor: pointer;
+	text-decoration: underline;
 
 	&:hover {
-		color: c.$gold;
-		text-decoration: none;
+		color: c.$web-orange;
+		text-decoration: underline;
 	}
 }
 
@@ -33,8 +34,7 @@
 	color: c.$white;
 
 	&:hover {
-		color: c.$gold;
-		text-decoration: none;
+		color: c.$grey;
 	}
 }
 
@@ -47,7 +47,7 @@
 }
 
 %headline-heavy {
-	font-weight: f.$font-weight-xbold;
+	font-weight: f.$font-weight-ultra;
 }
 
 // %gb-display1 {
@@ -175,22 +175,26 @@
 
 %gb-headline1 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$brand-black,
+		f.$font-family-futura,
 		26px,
-		30px,
+		36px,
 		36px,
 		f.$font-weight-normal,
-		34px,
-		40px,
+		36px,
 		46px,
-		.68px,
-		.8px,
-		.95px
+		46px,
+		normal,
+		null,
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
 		@extend %headline-link;
+	}
+
+	&.gb-color-brand-black {
+		color: c.$brand-black;
 	}
 
 	&.invert {
@@ -198,11 +202,11 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
+		font-weight: f.$font-weight-bold;
+		letter-spacing: 1.5px;
+		@media print,only screen and (min-width:800px) {
 
-	  	@media print,only screen and (min-width:1200px) {
-		  	font-size: 35px;
-		  	letter-spacing: .92px;
+			letter-spacing: 2.77px;
 		}
 	}
 }
@@ -250,22 +254,26 @@
 
 %gb-headline3 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$brand-black,
+		f.$font-family-futura,
+		16px,
 		18px,
-		20px,
+		18px,
+		f.$font-weight-bold,
+		22px,
 		24px,
-		f.$font-weight-normal,
-		26px,
-		30px,
-		36px,
-		.72px,
-		.8px,
-		.96px
-   	);
+		24px,
+		2px,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
 
 	a {
 		@extend %headline-link;
+	}
+
+	&.gb-color-brand-black {
+		color: c.$brand-black;
 	}
 
 	&.invert {
@@ -273,7 +281,7 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
+		font-weight: f.$font-weight-bold;
 	}
 }
 
@@ -309,7 +317,7 @@
 %gb-descriptive1 {
 	@include gbt.gb-typography(
 		c.$grey-dark,
-		f.$font-family-louis,
+		f.$font-family-futura,
 		14px,
 		18px,
 		18px,
@@ -317,36 +325,28 @@
 		20px,
 		26px,
 		26px,
-		2.1px,
-		2.7px,
-		2.7px
+		1.25px,
+		1.5px,
+		1.5px
 	);
 
 	a {
 		@extend %headline-link;
 	}
 
+	&.gb-color-brand-black {
+		color: c.$brand-black;
+	}
+
 	&.invert {
 		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-
-  	&.gb-color-grey-mid-dark {
-		color: c.$grey-mid-dark;
-
-		a {
-		  	color: c.$grey-mid-dark;
-		}
 	}
 }
 
 %gb-descriptive2 {
 	@include gbt.gb-typography(
 		c.$grey-dark,
-		f.$font-family-louis,
+		f.$font-family-futura,
 		12px,
 		14px,
 		14px,
@@ -354,29 +354,21 @@
 		18px,
 		22px,
 		22px,
-		2.19px,
-		2.68px,
-		2.68px
+		2px,
+		null,
+		2px
 	);
 
 	a {
 		@extend %headline-link;
 	}
 
+	&.gb-color-brand-black {
+		color: c.$brand-black;
+	}
+
 	&.invert {
 		@extend %headline-invert;
-	}
-
-	&.heavy {
-		@extend %headline-heavy;
-	}
-
-	&.gb-color-grey-mid-dark {
-		color: c.$grey-mid-dark;
-
-		a {
-		  	color: c.$grey-mid-dark;
-		}
 	}
 }
 
@@ -1147,13 +1139,3 @@
 // 		}
 // 	}
 // }
-
-html[dir='rtl'] {
-	.align-left {
-	  	text-align: right;
-	}
-
-	.align-right {
-	  	text-align: left;
-	}
-}

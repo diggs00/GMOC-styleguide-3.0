@@ -1,0 +1,506 @@
+@use 'input' as i;
+@use '../../../crossbrand-2023/colors' as c;
+@use '../../../crossbrand-2023/fonts' as f;
+
+.gb-input {
+	position: relative;
+
+	%gb-datetime-indicators-visible {
+		&::-webkit-datetime-edit {
+			opacity: 1;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 1;
+		}
+	}
+
+	%gb-datetime-indicators-hidden {
+		&::-webkit-datetime-edit {
+			opacity: 0;
+			overflow: visible;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+		}
+	}
+
+	%gb-text-container {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+	}
+
+	%gb-pw-info-item {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		font-family: f.$font-family-overpass;
+		font-size: 12px;
+		line-height: 1.33;
+		margin: 5px auto 5px 16px;
+
+		.gb-pw-info-text {
+			margin-left: 6px;
+		}
+
+		.gb-pw-info-icon-check {
+			border-bottom: solid 1px c.$white;
+			border-right: solid 1px c.$white;
+			display: none;
+			height: 6px;
+			margin: 2px 4px;
+			transform: rotate(45deg);
+			width: 3px;
+		}
+
+		.gb-pw-info-icon {
+			background-color: c.$white;
+			border: solid 1px c.$font;
+			border-radius: 50%;
+			display: inline-block;
+			height: 14px;
+			width: 14px;
+
+			&.valid {
+				background-color: c.$font;
+
+				/* stylelint-disable-next-line*/
+				.gb-pw-info-icon-check {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	label {
+		@include i.base-label(f.$font-family-overpass, 16px, normal, 1.5, auto);
+
+		color: c.$font;
+	}
+
+	.clear-input,
+	.show-password {
+		display: inline-block;
+		font-family: f.$font-family-overpass;
+		font-size: 12px;
+		opacity: 0;
+		position: absolute;
+		right: 17px;
+		text-transform: uppercase;
+		top: 18px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+	button {
+		&.clear-input,
+		&.show-password {
+			background: none;
+			border: 0;
+			cursor: pointer;
+			padding: 0;
+		}
+	}
+
+	.gb-input-label {
+		color: c.$font;
+		font-size: 16px;
+		height: 21px;
+		left: 16px;
+		position: absolute;
+		top: 18px;
+
+		&.hover {
+			color: c.$font;
+			display: block;
+			font-size: 12px;
+			left: 16px;
+			line-height: normal;
+			top: 9px;
+		}
+	}
+
+	&:focus {
+		&input {
+			&[type='date'] {
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.form-error {
+		.gb-input-label {
+			color: c.$error;
+		}
+
+		.gb-helper-text-container {
+			display: none;
+		}
+
+		.gb-pw-info-container {
+			display: none;
+		}
+
+		input {
+			&[type],
+			textarea {
+				&:focus {
+					~ .gb-input-label {
+						color: c.$error;
+					}
+				}
+
+				border-bottom: c.$error solid 2px;
+
+				&:focus {
+					border-bottom: c.$error solid 2px;
+				}
+
+				&:hover {
+					border-bottom: c.$error solid 2px;
+				}
+			}
+		}
+
+		.gb-error-text-container {
+			@extend %gb-text-container;
+		}
+	}
+
+	.gb-error-text-container {
+		display: none;
+		margin: 0;
+		padding: 12px 19px 14px 16px;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-error-text {
+			color: c.$error;
+			font-family: f.$font-family-overpass;
+			font-size: 14px;
+			padding-bottom: 2px;
+
+			&.gb-error-img {
+				@include i.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20stroke%3D%22%23B50000%22%20stroke-width%3D%222%22%20d%3D%22M9.637%202.16c.237-.197.34-.206.433-.18a.382.382%200%200%201%20.226.18l8.291%2014.86a.375.375%200%200%201-.329.56H1.741a.38.38%200%200%201-.33-.559z%22%2F%3E%3Cpath%20fill%3D%22%23B50000%22%20d%3D%22M10%2013.75a.833.833%200%201%201%200%201.666.833.833%200%200%201%200-1.666zm.833-5-.192%204.167H9.39L9.167%208.75h1.666z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E'),
+					16px 16px,
+					20px 20px,
+					16px,
+					16px,
+					20px,
+					20px,
+					3px,
+					4px,
+					0 5px 0 0
+				);
+			}
+		}
+	}
+
+	.gb-pw-info-container {
+		.gb-pw-label {
+			color: c.$font;
+			display: block;
+			font-family: f.$font-family-overpass;
+			font-size: 14px;
+			font-weight: f.$font-weight-bold;
+			line-height: 1.43;
+			margin: 19px auto 4px 16px;
+		}
+
+		.gb-pw-str-indicator {
+			border-radius: 25px;
+			border-top: solid 4px c.$success;
+			margin: 0 16px;
+
+			&.good-pw {
+				border-top-color: c.$amber;
+			}
+
+			&.weak-pw {
+				border-top-color: c.$error;
+			}
+		}
+
+		.gb-pw-info-item {
+			@extend %gb-pw-info-item;
+		}
+	}
+
+	.gb-helper-text-icon-container {
+		display: inline-block;
+		height: 16px;
+		margin: 0;
+		padding: 0;
+		width: 16px;
+
+		.gb-helper-text-icon-image {
+			bottom: 3px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+
+	input {
+		&::-moz-placeholder {
+			color: c.$grey-light;
+			font-family: f.$font-family-overpass;
+			font-size: 16px;
+			margin: 3px 0;
+		}
+		&::placeholder {
+			color: c.$grey-light;
+			font-family: f.$font-family-overpass;
+			font-size: 16px;
+			margin: 3px 0;
+		}
+
+		@include i.base-input(
+			c.$white,
+			1px solid c.$grey-light,
+			c.$font,
+			30%,
+			f.$font-family-overpass,
+			16px,
+			27px 50px 6px 16px,
+			1px solid c.$grey-light
+		);
+
+		&[type],
+		textarea {
+			border-bottom-color: c.$font;
+			border-radius: 8px 8px 0 0;
+			height: 56px;
+			line-height: normal;
+
+			&:focus {
+				border-bottom: solid 2px c.$font;
+				padding-bottom: 5px;
+
+				~ .gb-input-label {
+					color: c.$font;
+					display: block;
+					font-size: 12px;
+					left: 16px;
+					line-height: normal;
+					top: 9px;
+				}
+
+				~ .clear-input {
+					opacity: 1;
+				}
+
+				~ .show-password {
+					opacity: 1;
+				}
+			}
+		}
+		/*IOS  This is to override IOS appearance for date input types.*/
+		&[type='date'] {
+			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			display: block;
+			padding-right: 16px;
+			text-transform: uppercase;
+
+			&::-webkit-datetime-edit-text {
+				padding: 0 6px;
+			}
+
+			&::-webkit-datetime-edit-day-field {
+				padding-left: 6px;
+			}
+
+			&::-webkit-datetime-edit-year-field {
+				padding-left: 6px;
+			}
+
+			@extend %gb-datetime-indicators-hidden;
+
+			&:focus {
+				@extend %gb-datetime-indicators-visible;
+			}
+
+			&.valid {
+				&:focus {
+					&::-webkit-calendar-picker-indicator {
+						opacity: 1;
+					}
+				}
+
+				&::-webkit-datetime-edit {
+					opacity: 1;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.gb-helper-text-container {
+		margin: 0;
+		padding: 7px 19px 14px 16px;
+
+		@extend %gb-text-container;
+
+		.gb-helper-text-icon-container {
+			margin-right: 5px;
+		}
+
+		.gb-helper-text {
+			color: c.$font;
+			font-family: f.$font-family-overpass;
+			font-size: 12px;
+
+			&.gb-caps-img {
+				@include i.inline-svg-img(
+					url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20fill%3D%22%23373F42%22%20fill-rule%3D%22nonzero%22%20d%3D%22M8%20.222A7.787%207.787%200%200%201%2015.778%208%207.778%207.778%200%200%201%208%2015.778%207.778%207.778%200%200%201%20.222%208%207.778%207.778%200%200%201%208%20.222zm0%201.196a6.582%206.582%200%200%200%200%2013.164A6.591%206.591%200%200%200%2014.582%208%206.582%206.582%200%200%200%208%201.418zm1.14%209.485a.376.376%200%201%201%20.001.752H6.92a.376.376%200%200%201%200-.752h2.22zm-.81-6.776%202.99%203.193a.283.283%200%200%201%20.055.293.252.252%200%200%201-.234.166H9.52v1.977c0%20.311-.237.563-.528.563H7.07c-.291%200-.528-.252-.528-.563V7.779H4.92a.252.252%200%200%201-.234-.166.28.28%200%200%201%20.055-.293l2.992-3.193a.412.412%200%200%201%20.596%200z%22%2F%3E%3C%2Fsvg%3E'),
+					16px 16px,
+					20px 20px,
+					16px,
+					16px,
+					20px,
+					20px,
+					3px,
+					4px,
+					0 5px 0 0
+				);
+			}
+		}
+	}
+
+	&.disabled {
+		input {
+			border: 1px solid c.$cool-grey1c-10;
+
+			&[type],
+			textarea {
+				&[disabled] {
+					background-color: c.$cool-grey1c-10;
+					color: c.$font;
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				border: 1px solid c.$cool-grey1c-10;
+			}
+		}
+
+		.gb-helper-text-container {
+			visibility: hidden;
+		}
+	}
+
+	&.form-success {
+		.gb-helper-text-container {
+			.gb-helper-text {
+				color: c.$success;
+			}
+		}
+	}
+
+	@media (min-width: 800px) {
+		.clear-input,
+		.show-password {
+			font-size: 14px;
+			right: 20px;
+			top: 22px;
+		}
+
+		.gb-input-label {
+			font-size: 18px;
+			top: 18px;
+
+			&.hover {
+				font-size: 14px;
+				top: 8px;
+			}
+		}
+
+		.gb-helper-text-icon-container {
+			height: 20px;
+			width: 20px;
+
+			.gb-helper-text-icon-image {
+				bottom: 0;
+			}
+		}
+
+		.gb-pw-info-container {
+			.gb-pw-info-item {
+				font-size: 14px;
+			}
+		}
+
+		input {
+			&::-moz-placeholder {
+				font-size: 18px;
+			}
+			&::placeholder {
+				font-size: 18px;
+			}
+
+			&[type],
+			textarea {
+				font-size: 18px;
+				height: 60px;
+				line-height: 1.125rem;
+				padding: 29px 65px 6px 16px;
+
+				&:focus {
+					padding-bottom: 5px;
+
+					~ .gb-input-label {
+						font-size: 14px;
+						top: 8px;
+					}
+				}
+			}
+
+			&[type='date'] {
+				padding-right: 16px;
+			}
+		}
+
+		.gb-helper-text-container {
+			padding: 5px 12px 12px 16px;
+
+			.gb-helper-text {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.gb-input {
+		direction: rtl;
+		display: flex;
+		flex-flow: column wrap;
+	}
+}

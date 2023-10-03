@@ -20,11 +20,11 @@
 /********************HEADLINE STYLES********************/
 
 %headline-link {
-	color: c.$grey-dark;
+	color: c.$font;
 	cursor: pointer;
 
 	&:hover {
-		color: c.$gold;
+		color: c.$brand-red-darken;
 		text-decoration: none;
 	}
 }
@@ -33,8 +33,7 @@
 	color: c.$white;
 
 	&:hover {
-		color: c.$gold;
-		text-decoration: none;
+		color: c.$white;
 	}
 }
 
@@ -48,6 +47,23 @@
 
 %headline-heavy {
 	font-weight: f.$font-weight-xbold;
+	position: relative;
+	text-align: center;
+
+	&::after {
+		background-color: c.$brand-red;
+		content: '';
+		display: block;
+		height: 3px;
+		margin: auto;
+		max-width: 96px;
+		position: relative;
+		width: 100%;
+
+		@media print,only screen and (min-width:800px) {
+			max-width: 120px;
+		}
+	}
 }
 
 // %gb-display1 {
@@ -175,18 +191,18 @@
 
 %gb-headline1 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$font,
+		f.$font-family-stratum,
 		26px,
-		30px,
 		36px,
-		f.$font-weight-normal,
+		36px,
+		f.$font-weight-xbold,
 		34px,
-		40px,
 		46px,
-		.68px,
-		.8px,
-		.95px
+		46px,
+		normal,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -198,14 +214,10 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
-
-	  	@media print,only screen and (min-width:1200px) {
-		  	font-size: 35px;
-		  	letter-spacing: .92px;
-		}
+		font-weight: f.$font-weight-xbold;
 	}
 }
+
 
 // %gb-headline2 {
 // 	@include gbt.gb-typography(
@@ -250,19 +262,19 @@
 
 %gb-headline3 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$font,
+		f.$font-family-stratum,
 		18px,
-		20px,
 		24px,
-		f.$font-weight-normal,
+		24px,
+		f.$font-weight-xbold,
 		26px,
-		30px,
 		36px,
-		.72px,
-		.8px,
-		.96px
-   	);
+		36px,
+		normal,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
+	);
 
 	a {
 		@extend %headline-link;
@@ -273,7 +285,7 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
+		font-weight: f.$font-weight-xbold;
 	}
 }
 
@@ -308,18 +320,18 @@
 
 %gb-descriptive1 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$font,
+		f.$font-family-stratum,
 		14px,
 		18px,
 		18px,
-		f.$font-weight-normal,
+		f.$font-weight-bold,
 		20px,
+		22px,
 		26px,
-		26px,
-		2.1px,
-		2.7px,
-		2.7px
+		1.31px,
+		1.5px, /* No Override so no need to pass again*/
+		1.42px /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -331,32 +343,24 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
-	}
-
-  	&.gb-color-grey-mid-dark {
-		color: c.$grey-mid-dark;
-
-		a {
-		  	color: c.$grey-mid-dark;
-		}
+		font-weight: f.$font-weight-bold;
 	}
 }
 
 %gb-descriptive2 {
 	@include gbt.gb-typography(
-		c.$grey-dark,
-		f.$font-family-louis,
+		c.$font,
+		f.$font-family-stratum,
 		12px,
 		14px,
 		14px,
-		f.$font-weight-normal,
+		f.$font-weight-bold,
 		18px,
 		22px,
 		22px,
-		2.19px,
-		2.68px,
-		2.68px
+		1px,
+		null, /* No Override so no need to pass again*/
+		null /* No Override so no need to pass again*/
 	);
 
 	a {
@@ -368,14 +372,14 @@
 	}
 
 	&.heavy {
-		@extend %headline-heavy;
+		font-weight: f.$font-weight-bold;
 	}
 
-	&.gb-color-grey-mid-dark {
-		color: c.$grey-mid-dark;
+	&.gb-color-brand-red {
+		color: c.$brand-red;
 
 		a {
-		  	color: c.$grey-mid-dark;
+			color: c.$brand-red;
 		}
 	}
 }
@@ -1147,13 +1151,3 @@
 // 		}
 // 	}
 // }
-
-html[dir='rtl'] {
-	.align-left {
-	  	text-align: right;
-	}
-
-	.align-right {
-	  	text-align: left;
-	}
-}
