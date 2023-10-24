@@ -20,3 +20,29 @@
   background-color: $brand-primary;
 }
 
+
+
+//
+// PROGRESS BAR - FULL SCREEN MODAL
+// --------------------------------------------------
+
+.progressbar-modal {
+  display: flex;
+  height: 1px;
+  background-color: $black;
+  margin-bottom: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.progressbar-modal-fill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $black;
+  height: 4px;
+  position: absolute;
+  top:-1px;
+}
